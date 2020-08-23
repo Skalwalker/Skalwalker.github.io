@@ -1,38 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Alert from 'react-bootstrap/Alert';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { Navbar, Nav } from 'react-bootstrap';
+import { routes } from './routes'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Alert variant="success">
-          <Alert.Heading>Hey, nice to see you</Alert.Heading>
-          <p>
-            Aww yeah, you successfully read this important alert message. This example
-            text is going to run a bit longer so that you can see how spacing within an
-            alert works with this kind of content.
-          </p>
-          <hr />
-          <p className="mb-0">
-            Whenever you need to, be sure to use margin utilities to keep things nice
-            and tidy.
-          </p>
-        </Alert>
-      </header>
+    <div>
+      <Router>
+        <div>
+        <Navbar style={{ height: '8vh', zIndex: 100 }} bg="light" expand="md">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ml-auto">
+              <Link className='nav-link' to="/">Home</Link>
+              <Link className='nav-link' to="/About">About</Link>
+              <Link className='nav-link' to="/Skills">Skills</Link>
+              <Link className='nav-link' to="/Experience">Experience</Link>
+              <Link className='nav-link' to="/Achivements">Achivements</Link>
+              <Link className='nav-link' to="/Crafts">Crafts</Link>
+              <Link className='nav-link' to="/Contact Me">Contact Me</Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+        </div>
+        <div>
+          <Switch>
+            {routes.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                children={<route.main />}
+              />
+            ))}
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
