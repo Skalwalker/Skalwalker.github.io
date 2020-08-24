@@ -16,9 +16,7 @@ class Home extends React.Component {
           </div>
           <Carousel.Caption className='mb-5'>
             <p>
-              Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay 
-              Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay 
-              Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay Renato gay 
+              Under Construction Under Construction Under Construction Under Construction Under Construction Under Construction Under Construction Under Construction Under Construction Under Construction Under Construction Under Construction Under Construction Under Construction Under Construction
             </p>
             <Button size='lg' variant="outline-light" className='mb-3'>
               Learn More
