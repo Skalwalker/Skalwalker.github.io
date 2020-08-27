@@ -16,14 +16,14 @@ exports.__esModule = true;
 var react_1 = require("react");
 var Carousel_1 = require("react-bootstrap/Carousel");
 var react_bootstrap_1 = require("react-bootstrap");
-var Backgroud_1 = require("../components/Backgroud");
+var Background_1 = require("../components/Background");
 var Home = /** @class */ (function (_super) {
     __extends(Home, _super);
     function Home() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Home.prototype.render = function () {
-        return (react_1["default"].createElement(Backgroud_1["default"], null,
+        return (react_1["default"].createElement(Background_1["default"], null,
             react_1["default"].createElement(Carousel_1["default"], { prevIcon: (react_1["default"].createElement("div", null)), nextIcon: (react_1["default"].createElement("div", null)) },
                 react_1["default"].createElement(Carousel_1["default"].Item, null,
                     react_1["default"].createElement("div", { className: "d-block w-100", style: { height: '92vh' } },

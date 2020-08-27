@@ -1,12 +1,12 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import { Button } from 'react-bootstrap'
-import Backgroud from '../components/Backgroud'
+import Background from '../components/Background'
 
 class Home extends React.Component {
   render() {
     return (
-      <Backgroud>
+      <Background>
       <Carousel prevIcon={(<div></div>)} nextIcon={(<div></div>)}>
         <Carousel.Item>
           <div className="d-block w-100" style={{ height: '92vh' }} >
@@ -24,7 +24,7 @@ class Home extends React.Component {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      </Backgroud>
+      </Background>
     )
   }
 }
