@@ -20,7 +20,7 @@ class About extends React.Component {
               <Nav className="d-none d-md-block bg-light sidebar">
                 <div className="vertical">
                   <Nav.Item className = 'nav-item-custom'>
-                      <Nav.Link href="/about/core">Core</Nav.Link>
+                    <Link className='nav-link' to="/about/core">Core</Link>
                   </Nav.Item>
                   <Nav.Item className = 'nav-item-custom'>
                       <Nav.Link href="/about/work">Work</Nav.Link>
