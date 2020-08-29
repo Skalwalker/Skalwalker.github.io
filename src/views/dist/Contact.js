@@ -18,6 +18,7 @@ var Background_1 = require("../components/Background");
 var Form_1 = require("react-bootstrap/Form");
 var Col_1 = require("react-bootstrap/Col");
 var Row_1 = require("react-bootstrap/Row");
+var react_bootstrap_1 = require("react-bootstrap");
 var Contact = /** @class */ (function (_super) {
     __extends(Contact, _super);
     function Contact() {
@@ -25,27 +26,31 @@ var Contact = /** @class */ (function (_super) {
     }
     Contact.prototype.render = function () {
         return (react_1["default"].createElement(Background_1["default"], null,
+            react_1["default"].createElement(Row_1["default"], null,
+                react_1["default"].createElement(Col_1["default"], { md: { span: 4, offset: 4 }, className: "text-center" },
+                    react_1["default"].createElement("h2", { style: { color: '#FFFFFF', fontSize: '70px' } }, " Contact Me"))),
             react_1["default"].createElement(Row_1["default"], { className: "justify-content-xl-center" },
-                react_1["default"].createElement(Col_1["default"], { xl: "auto", id: "page-content-wrapper", style: style.nameDiv },
+                react_1["default"].createElement(Col_1["default"], { md: { span: 6, offset: 3 }, style: style.nameDiv },
                     react_1["default"].createElement(Form_1["default"], null,
                         react_1["default"].createElement(Form_1["default"].Group, { controlId: "formContact" },
                             react_1["default"].createElement(Form_1["default"].Label, { style: style.nameStyle }, "Email Address"),
                             react_1["default"].createElement(Form_1["default"].Control, { type: "email", placeholder: "Enter email" }),
-                            react_1["default"].createElement(Form_1["default"].Text, { className: "text-muted", style: { color: '#FFFFFF' } }, "We'll never share your email with anyone else.")),
+                            react_1["default"].createElement(Form_1["default"].Text, { style: { color: '#FFFFFF' } }, "We'll never share your email with anyone else.")),
                         react_1["default"].createElement(Form_1["default"].Group, null,
                             react_1["default"].createElement(Form_1["default"].Label, { style: style.nameStyle }, "Subject"),
                             react_1["default"].createElement(Form_1["default"].Control, { type: "text", placeholder: "Normal text" })),
                         react_1["default"].createElement(Form_1["default"].Group, { controlId: "exampleForm.ControlTextarea1" },
                             react_1["default"].createElement(Form_1["default"].Label, { style: style.nameStyle }, "Content"),
-                            react_1["default"].createElement(Form_1["default"].Control, { as: "textarea" })))))));
+                            react_1["default"].createElement(Form_1["default"].Control, { as: "textarea" })),
+                        react_1["default"].createElement(react_bootstrap_1.Button, { size: 'lg', variant: "outline-light", className: 'ml-3 float-right' }, "Submit"))))));
     };
     return Contact;
 }(react_1["default"].Component));
 var style = {
     nameDiv: {
         height: '90%',
-        width: '100%',
-        display: 'flex',
+        // width: '100%',
+        display: 'block',
         alignItems: 'center',
         justifyContent: 'center',
         margin: 0
