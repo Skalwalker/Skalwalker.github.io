@@ -1,6 +1,12 @@
 import React from 'react';
 import Home from './views/Home';
 import About from './views/About';
+import Contact from './views/Contact';
+import Skills from './views/Skills';
+import Experience from './views/Experience';
+import Achiev from './views/Achiev';
+import Craft from './views/Craft';
+
 
 const aboutRoutes = [
     {
@@ -33,27 +39,27 @@ const routes = [
   },
   {
     path: "/skills",
-    main: () => <h2>opa</h2>
+    main: () => <Skills/>
   },
   {
     path: "/experience",
-    main: () => <h2>opa</h2>
+    main: () => <Experience/>
   },
   {
     path: "/achivements",
-    main: () => <h2>opa</h2>
+    main: () => <Achiev/>
   },
   {
     path: "/crafts",
-    main: () => <h2>opa</h2>
+    main: () => <Craft/>
   },
   {
     path: "/contact",
-    main: () => <h2>opa</h2>
+    main: () => <Contact/>
   }
 ];
 
-export { 
-    routes, 
+export {
+    routes,
     aboutRoutes
 }

@@ -6,14 +6,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Backgroud from '../components/Backgroud';
+import Background from '../components/Background';
 import { Nav, Container, Row, Col } from 'react-bootstrap';
 import { aboutRoutes } from '../routes'
 
 class About extends React.Component {
   render() {
     return (
-      <Backgroud>
+      <Background>
         <Container fluid>
           <Row>
             <Col xs={3} id="sidebar-wrapper">
@@ -44,10 +44,10 @@ class About extends React.Component {
                   />
                 ))}
               </Switch>
-            </Col> 
+            </Col>
           </Row>
         </Container>
-      </Backgroud>
+      </Background>
     )
   }
 }

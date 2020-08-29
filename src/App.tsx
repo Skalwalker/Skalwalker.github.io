@@ -18,12 +18,12 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <Link className='nav-link' to="/">Home</Link>
-              <Link className='nav-link' to="/About">About</Link>
-              <Link className='nav-link' to="/Skills">Skills</Link>
-              <Link className='nav-link' to="/Experience">Experience</Link>
-              <Link className='nav-link' to="/Achivements">Achivements</Link>
-              <Link className='nav-link' to="/Crafts">Crafts</Link>
-              <Link className='nav-link' to="/Contact Me">Contact Me</Link>
+              <Link className='nav-link' to="/about">About</Link>
+              <Link className='nav-link' to="/skills">Skills</Link>
+              <Link className='nav-link' to="/experience">Experience</Link>
+              <Link className='nav-link' to="/achivements">Achivements</Link>
+              <Link className='nav-link' to="/crafts">Crafts</Link>
+              <Link className='nav-link' to="/contact">Contact Me</Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
