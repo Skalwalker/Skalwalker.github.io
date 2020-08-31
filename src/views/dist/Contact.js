@@ -42,7 +42,7 @@ var Contact = /** @class */ (function (_super) {
                         react_1["default"].createElement(Form_1["default"].Group, { controlId: "exampleForm.ControlTextarea1" },
                             react_1["default"].createElement(Form_1["default"].Label, { style: style.nameStyle }, "Content"),
                             react_1["default"].createElement(Form_1["default"].Control, { as: "textarea" })),
-                        react_1["default"].createElement(react_bootstrap_1.Button, { size: 'lg', variant: "outline-light", className: 'ml-3 float-right' }, "Submit"))))));
+                        react_1["default"].createElement(react_bootstrap_1.Button, { size: 'lg', variant: "outline-light", className: 'mb-3 float-right' }, "Submit"))))));
     };
     return Contact;
 }(react_1["default"].Component));

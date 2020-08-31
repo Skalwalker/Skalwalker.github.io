@@ -36,7 +36,7 @@ class Contact extends React.Component {
                       <Form.Label style={style.nameStyle}>Content</Form.Label>
                       <Form.Control as="textarea"/>
                   </Form.Group>
-                  <Button size='lg' variant="outline-light" className='ml-3 float-right'>
+                  <Button size='lg' variant="outline-light" className='mb-3 float-right'>
                   Submit
                   </Button>
               </Form>
