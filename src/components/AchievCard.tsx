@@ -1,8 +1,19 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import {Row, Col} from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
-class AchievCard extends React.Component {
+
+type MyProps = {title: string, date: string};
+type MyState = { };
+
+class AchievCard extends React.Component<MyProps, MyState> {
+
+  static defaultProps = {
+    title: 'Stranger',
+    date: 'Stranger'
+  };
+
   render () {
     return (
         <Card style={{margin:'15px', height:'70px', width: '18rem' }}>
@@ -21,7 +32,8 @@ class AchievCard extends React.Component {
     )
   }
 }
-export default AchievCard;
+
+// AchievCard.
 
 const style = {
   cardImgLeft: {
@@ -34,3 +46,5 @@ const style = {
     // margin: 0
   }
 }
+
+export default AchievCard;
