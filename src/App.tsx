@@ -18,7 +18,7 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <Link className='nav-link' to="/">Home</Link>
-              <Link className='nav-link' to="/about">About</Link>
+              <Link className='nav-link' to="/about/core">About</Link>
               <Link className='nav-link' to="/skills">Skills</Link>
               <Link className='nav-link' to="/experience">Experience</Link>
               <Link className='nav-link' to="/achivements">Achivements</Link>

@@ -6,24 +6,28 @@ import Skills from './views/Skills';
 import Experience from './views/Experience';
 import Achiev from './views/Achiev';
 import Craft from './views/Craft';
+import Core from './views/aboutViews/Core'
+import Work from './views/aboutViews/Work'
+import Likes from './views/aboutViews/Likes'
+import Description from './views/aboutViews/Description'
 
 
 const aboutRoutes = [
     {
         path: "/about/core",
-        main: () => (<div>CORE</div>)
+        main: () => <Core />
     },
     {
         path: "/about/work",
-        main: () => (<div>WORK</div>)
+        main: () => <Work />
     },
     {
         path: "/about/likes",
-        main: () => (<div>LIKES</div>)
+        main: () => <Likes />
     },
     {
         path: "/about/description",
-        main: () => (<div>DESCRIPTION</div>)
+        main: () => <Description />
     },
 ]
 
