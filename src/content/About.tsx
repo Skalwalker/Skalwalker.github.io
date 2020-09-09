@@ -1,0 +1,165 @@
+const core = {
+    img: "",
+    text: "I believe my core attributes are defined by my personality. I am passionate about the idea of machines learning to facilitate human tasks, as long as it is developed in a humanitarian and egalitarian way. My greatest strength is my way of approaching a problem, thinking outside the box, trying to solve a problem in innovative ways, rather than brute-forcing through code. Finally, but most importantly, I consider it crucial to stay with who I am, do my hobbies, be connected to nature, and enjoy my free time. This is what keeps my gears running, helping me to be extremely productive when needed."
+}
+
+const desc = {
+    profile_img: "",
+    char_name: "Renato Avellar Nobre",
+    alignment: "Neutral Good",
+    birthday: "02/06/1997",
+    homeland: "Brasília - DF",
+    class: "Programmer",
+    race: "Human",
+    gender: "Male",
+    hair: "Blonde",
+    eyes: "Blue",
+    text: "My name is Renato Nobre, I came from the far lands of Brasília, Brazil. A place ruled by government and bureaucracy. In this place, I got my Computer Science Bachelors, at the University of Brasília (UnB). During my period I focused my studies on artificial intelligence, machine learning, and data science. While I was there I also enrolled in extracurricular activities, I need to gather more skill points to improve my specialization and also farm some reputation for my name. I joined a robotics competition team, I became a tutor for multiple classes, and I made undergraduate scientific research in machine learning. Meanwhile, I needed to gather more gold coins, for that I worked in a socio-environmental company, I developed an iOS App, and I worked as a researcher in natural language processing. Now I am looking for new horizons, new adventures, I am looking to become a Master or a Doctor.",
+    languages: [
+        {
+            type: "Portuguese",
+            level: "Native"
+        },
+        {
+            type: "English",
+            level: "Advanced 103 on TOEFL"
+        },
+        {
+            type: "German",
+            level: "Very Basic"
+        }
+    ]
+}
+
+const work = {
+    placeholder_text: "",
+    orbs: [
+        {
+            title: "Machine Learning Orb",
+            text: "My work is mainly focused on implementing machine learning solutions. I enjoy understanding and preparing a data set, selecting a machine learning algorithm, and training it.  When the model is ready, I enjoy making a great software out of it, where people can use to facilitate their lives.",
+            img: ""
+        },
+        {
+            title: "Research Orb",
+            text: "Research is highly motivating for me. I enjoy reading new approaches to a problem in the field, as well as writing and proposing my own solutions to a journal. However, when a research is made just for the purpose of publishing and gaining renown, it loses the shine in my eyes. Research should be applied to create solutions to existing problems, not only to write a paper about it.",
+            img: ""
+        },
+        {
+            title: "Innovative Orb",
+            text: "Innovation is what a look for while approaching a problem. I like to solve challenges in ways that have not yet been tried, or in ways that possibly will improve the solution outcome. This feat can be both a curse or a blessing, sometimes it might lead me to an overkill approach, or a not usable one, but sometimes it can lead to glory.",
+            img: ""
+        },
+        {
+            title: "Side Projects Orb",
+            text: "I really enjoy a side project, and it doesn't have to be programming related. From gardening and cooking to guild management at online games. Most of my hobbies are side projects, I usually spend my free time on things that give me the feeling of reward. That being eating a great food I cooked, winning a competitive match on a game,  or writing my own algorithms to earn more money on the stock market.",
+            img: ""
+        },
+        {
+            title: "Multidisciplinary Orb",
+            text: "Working solutions for problems from different fields is what keeps my gears spinning. I get motivated learning new fields, such as: agriculture, medicine, economy, and enjoying proposing new solutions to these existing fields, where most of the time technology is barely used. On the down side, spending too much time on a single field might make me unmotivated over time.",
+            img: ""
+        },
+    ]
+}
+
+const like = [
+    {
+        title: "To Cook",
+        img: ""
+    },
+    {
+        title: "World of Warcraft",
+        img: ""
+    },
+    {
+        title: "Westworld",
+        img: ""
+    },
+    {
+        title: "Game of Thrones",
+        img: ""
+    },
+    {
+        title: "FPS",
+        img: ""
+    },
+    {
+        title: "Saints",
+        img: ""
+    },
+    {
+        title: "Board Games",
+        img: ""
+    },
+    {
+        title: "Sandman",
+        img: ""
+    },
+    {
+        title: "Artificial Intelligence",
+        img: ""
+    },
+    {
+        title: "Dogs",
+        img: ""
+    },
+    {
+        title: "Coffee",
+        img: ""
+    },
+    {
+        title: "Innovation",
+        img: ""
+    },
+    {
+        title: "Marvel",
+        img: ""
+    },
+    {
+        title: "Python",
+        img: ""
+    },
+    {
+        title: "Gardening",
+        img: "Jazz"
+    },
+    {
+        title: "Piano",
+        img: ""
+    },
+    {
+        title: "Red Hot Chilli Peppers",
+        img: ""
+    },
+    {
+        title: "Robotics",
+        img: ""
+    },
+    {
+        title: "Stock Markets",
+        img: ""
+    },
+    {
+        title: "Star Wars",
+        img: ""
+    },
+    {
+        title: "Sushi",
+        img: ""
+    },
+    {
+        title: "Pizza",
+        img: ""
+    },
+    {
+        title: "Santa Barbara",
+        img: ""
+    }
+]
+
+export {
+    core,
+    desc,
+    work,
+    like
+}
