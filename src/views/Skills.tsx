@@ -1,14 +1,19 @@
 import React from 'react';
 import Background from '../components/Background'
-import { Col } from 'react-bootstrap';
+import { Col, Row, Container } from 'react-bootstrap';
+import Canvas from '../components/Canvas';
 //  Nav, Container, Row,
 
 class Skill extends React.Component {
   render() {
     return (
-      <Background>
-          <Col xs={12} id="page-content-wrapper"></Col>
-      </Background>
+      <Container className='h-100'>
+        <Row className='h-100'>
+          <Col xs={12}>
+            <Canvas />
+          </Col>
+        </Row>
+      </Container>
     )
   }
 }

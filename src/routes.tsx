@@ -11,7 +11,6 @@ import Work from './views/aboutViews/Work'
 import Likes from './views/aboutViews/Likes'
 import Description from './views/aboutViews/Description'
 
-
 const aboutRoutes = [
     {
         path: "/about/core",
