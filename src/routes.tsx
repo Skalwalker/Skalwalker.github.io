@@ -10,6 +10,15 @@ import Core from './views/aboutViews/Core'
 import Work from './views/aboutViews/Work'
 import Likes from './views/aboutViews/Likes'
 import Description from './views/aboutViews/Description'
+import { craft } from './content/Craft'
+import Background from './components/Background'
+
+const craftRoutes = () => {
+  let routes = []
+  for (let i = 0; i < craft.crafts.length; i++) {
+    routes.push({path: "/crafts/" + craft.crafts[i].url, main: () => <Background />})
+  }
+}
 
 const aboutRoutes = [
     {

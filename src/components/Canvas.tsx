@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 
-const Tree = (props: any) => {
+const Canvas = (props: any) => {
   
   const canvasRef = useRef(document.createElement("canvas"))
   
@@ -24,7 +24,7 @@ const Tree = (props: any) => {
   let position = [0, 0];
   let previous_position = [0, 0];
   let drag_position = [0, 0];
-  let zoom = 2;
+  let zoom = 1;
 
   document.addEventListener('mousedown', e => {
     dragging = true;
@@ -79,8 +79,10 @@ const Tree = (props: any) => {
   useEffect(() => {
     
     const canvas = canvasRef.current as HTMLCanvasElement;
-    const context = canvas.getContext('2d')
-    let frameCount = 0
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const context = canvas.getContext('2d');
+    let frameCount = 0;
     let animationFrameId: any
     
     //Our draw came here
@@ -98,4 +100,4 @@ const Tree = (props: any) => {
   return <canvas ref={canvasRef} {...props}/>
 }
 
-export default Tree
+export default Canvas

@@ -1,7 +1,9 @@
 import React from 'react';
 import Background from '../components/Background'
 import { Col, Container, Row } from 'react-bootstrap';
-// Nav, Container, Row,
+import { extra_activ, prof_educ } from '../content/Experience'
+import ExtraActivity from '../components/ExtraActivity'
+import ProfEdu from '../components/ProfEdu'
 
 class Experience extends React.Component {
   render() {
@@ -14,46 +16,34 @@ class Experience extends React.Component {
             </Col>
           </Row>
           <Row style={{height: '30vh'}}>
-            <Col md={{span: 1, offset: 2}}>
-              <div className='d-flex' style={{height: '70px', width: '70px', borderRadius: '35px', backgroundColor: 'white', margin: 'auto', marginTop: '70px', color: 'black', fontSize: '20px'}}>
-                <div className='my-auto mx-auto'>
-                  1650
-                </div>
-              </div>
-              <div style={{height: '50%', width: '20%', backgroundColor: 'white',margin: 'auto'}}></div>
-            </Col>
-            <Col md={{span: 1, offset: 4}}>
-              <div style={{height: '70px', width: '70px', borderRadius: '35px', backgroundColor: 'white', margin: 'auto', marginTop: '70px'}}>
-                <div className='d-flex' style={{height: '70px', width: '70px', borderRadius: '35px', backgroundColor: 'white', margin: 'auto', marginTop: '70px', color: 'black', fontSize: '20px'}}>
-                  <div className='my-auto mx-auto'>
-                    1650
-                  </div>
-                </div>
-              </div>
-              <div style={{height: '50%', width: '20%', backgroundColor: 'white',margin: 'auto'}}></div>
-            </Col>
+            {extra_activ.map((extra, index) => {
+              if (index+1) {
+                return (
+                  <ExtraActivity title={extra.title}
+                                year={extra.start_year}
+                                span={1}
+                                offset={0}/>)
+              } else {
+                return (null)
+              }
+            })}
           </Row>
           <Row style={{height: '2vh', backgroundColor: 'white'}}>
             <Col xs={12}>
             </Col>
           </Row>
           <Row style={{height: '30vh'}}>
-            <Col md={{span: 1, offset: 4}}>
-              <div style={{height: '50%', width: '20%', backgroundColor: 'white',margin: 'auto'}}></div>
-              <div className='d-flex flex-column' style={{height: '70px', width: '70px', borderRadius: '35px', backgroundColor: 'white', margin: 'auto', color: 'black', fontSize: '20px'}}>
-                <div className='my-auto mx-auto'>
-                  1650
-                </div>
-              </div>
-            </Col>
-            <Col className='' md={{span: 1, offset: 5}}>
-              <div style={{height: '50%', width: '20%', backgroundColor: 'white',margin: 'auto'}}></div>
-              <div className='d-flex' style={{height: '70px', width: '70px', borderRadius: '35px', backgroundColor: 'white', margin: 'auto', color: 'black', fontSize: '20px'}}>
-                <div className='my-auto mx-auto'>
-                  1650
-                </div>
-              </div>
-            </Col>
+            {prof_educ.map((prof, index) => {
+              if (index+1) {
+              return (
+                <ProfEdu title={prof.title}
+                         year={prof.start_year}
+                         span={1}
+                         offset={0}/>
+              )} else {
+                return (null)
+              }
+            })}
           </Row>
           <Row style={{height: '15vh'}}>
             <Col md={3} className="my-auto">

@@ -38,7 +38,7 @@ const languages_field = {
 
 const ml_field = {
     title: "Machine Learning & Data Science Field",
-    skills: {
+    skills: { 
         gym: {
             title: "Gym",
             linkedin: "Unmeasured",

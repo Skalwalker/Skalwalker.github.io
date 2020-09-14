@@ -43,7 +43,7 @@ const achievs = [
         attc_content: "Foto da minha hortinha se pa"
     },
     {
-        title: "Make an Awesome Portfolio",
+        title: "Awesome Portfolio",
         desc: "You are looking at it! Enjoy! This was my first project using React and one of my firsts websites. Personally not a big fan of web development, but doing this portfolio taught me a lot.",
         earned: "Earned in 2020",
         img: "",

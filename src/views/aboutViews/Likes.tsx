@@ -14,9 +14,8 @@ class Likes extends React.Component<MyProps, MyState> {
   }
 
   setIsShown = (value: boolean) => {
-    this.setState({isShown:value})
+    this.setState({isShown: value})
   }
-
 
   render() {
     const squareRows = [];
