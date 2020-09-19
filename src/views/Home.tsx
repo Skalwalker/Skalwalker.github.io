@@ -7,7 +7,7 @@ import { slides } from '../content/Home'
 class Home extends React.Component {
   render() {
     return (
-      <Background>      
+      <Background>
         <Carousel>
         {slides.map((slide, index)=> {
           return (
@@ -18,7 +18,7 @@ class Home extends React.Component {
                 </div>
               </div>
               <Carousel.Caption className='mb-5'>
-                <p>
+                <p style={{color: '#CA3A78', fontSize: '36px'}}>
                   {slide.desc}
                 </p>
                 {slide.button && (<Button size='lg' variant="outline-light" className='mb-3'>
@@ -45,7 +45,7 @@ const style = {
   },
   nameStyle: {
     fontSize: '96px',
-    color: '#FFFFFF'
+    color: '#60D7F9'
   }
 }
 

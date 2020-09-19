@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import {Row, Col} from 'react-bootstrap';
-import PropTypes from 'prop-types';
 
 type MyProps = { title: string, date: string };
 type MyState = { };

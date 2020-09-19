@@ -1,13 +1,7 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Background from '../../components/Background';
-import { Nav, Container, Row, Col } from 'react-bootstrap';
-import { aboutRoutes } from '../../routes'
+import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image'
+import { Link } from 'react-router-dom'
 import image from "../../assets/images/300x300.png"
 
 class Core extends React.Component {
@@ -18,7 +12,7 @@ class Core extends React.Component {
           <Col md={12} className='my-auto'>
             <Row>
               <Col md={5} className='text-center'>
-                <img src={image} className='img-fluid' />
+                <Image src={image} className='img-fluid'/>
               </Col>
               <Col md={7} className='my-auto pr-5'>
                 <Row>
@@ -28,9 +22,15 @@ class Core extends React.Component {
                     </p>
                   </Col>
                   <Col md={12} className=''>
-                    <a><div className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px', background: 'gray'}}></div></a>
-                    <a><div className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px', background: 'gray'}}></div></a>
-                    <a><div className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px', background: 'gray'}}></div></a>
+                    <Link to="https://github.com/Skalwalker">
+                        <Image src="" className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px'}}/>
+                    </Link>
+                    <Link to="https://github.com/Skalwalker">
+                        <Image src="" className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px'}}/>
+                    </Link>
+                    <Link to="https://github.com/Skalwalker">
+                        <Image src="" className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px'}}/>
+                    </Link>
                   </Col>
                 </Row>
               </Col>

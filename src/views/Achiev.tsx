@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../assets/css/sidebar.css';
 import Background from '../components/Background'
 import AchievCard from '../components/AchievCard'
@@ -38,7 +38,7 @@ class Acheiv extends React.Component<MyProps, MyState>  {
               {this.state.isShown && (
                 <AchievDesc title={this.state.title} desc={this.state.desc} date={this.state.date}/>
               )}
-              {this.state.isShown == false && (
+              {this.state.isShown === false && (
                 <h2 style={{fontSize:'40px', color: '#FFFFFF'}}>Hover over an Achievement to show description</h2>
               )}
             </Col>

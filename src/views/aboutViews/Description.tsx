@@ -1,6 +1,5 @@
 import React from 'react';
-import { Nav, Container, Row, Col } from 'react-bootstrap';
-import image from "../../assets/images/300x300.png"
+import { Container, Row, Col } from 'react-bootstrap';
 
 class Description extends React.Component {
   render() {

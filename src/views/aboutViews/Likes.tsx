@@ -1,6 +1,5 @@
 import React from 'react';
-import { Nav, Container, Row, Col } from 'react-bootstrap';
-import Popover from 'react-tiny-popover'
+import { Container, Row, Col } from 'react-bootstrap';
 
 type MyProps = { };
 type MyState = { isShown: boolean };

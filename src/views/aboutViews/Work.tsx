@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Background from '../../components/Background';
-import { Nav, Container, Row, Col } from 'react-bootstrap';
-import { aboutRoutes } from '../../routes'
-import image from "../../assets/images/300x300.png"
+import { Container, Row, Col } from 'react-bootstrap';
 
 class Work extends React.Component {
   render() {
