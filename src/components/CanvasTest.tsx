@@ -52,13 +52,13 @@ const Canvas = (props: any) => {
         drawLinesTo: []
       }
     ];
-  
+
     let dragging = false;
     let position = [0, 0];
     let previous_position = [0, 0];
     let drag_position = [0, 0];
     let zoom = 1;
-  
+
     document.addEventListener('mousedown', e => {
       dragging = true;
       previous_position[0] = position[0];
@@ -66,22 +66,22 @@ const Canvas = (props: any) => {
       drag_position[0] = e.clientX;
       drag_position[1] = e.clientY;
     });
-  
+
     document.addEventListener('mousemove', e => {
       if (dragging) {
         position[0] = previous_position[0] - (drag_position[0] - e.clientX);
         position[1] = previous_position[1] - (drag_position[1] - e.clientY);
       }
     })
-  
+
     document.addEventListener('mouseup', e => {
       dragging = false;
     })
-    
+
     // document.addEventListener('wheel', e => {
     //   zoom = zoom * (1 + (-e.deltaY / 50));
     // });
-  
+
     const draw = (ctx: any) => {
       const w = ctx.canvas.width;
       const h = ctx.canvas.height;
@@ -191,7 +191,7 @@ const Canvas = (props: any) => {
     }
 
   useEffect(() => {
-    
+
     const canvas = canvasRef.current as HTMLCanvasElement;
     const context = canvas.getContext('2d')
 
@@ -205,12 +205,12 @@ const Canvas = (props: any) => {
         animationFrameId = window.requestAnimationFrame(render)
     }
     render()
-    
+
     return () => {
       window.cancelAnimationFrame(animationFrameId)
     }
   }, [draw])
-  
+
   return <canvas style={{overflow: 'hidden'}}ref={canvasRef} {...props}/>
 }
 

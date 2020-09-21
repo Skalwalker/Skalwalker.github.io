@@ -2,6 +2,9 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import image from "../../assets/images/raskalkhan.png"
 import { core } from "../../content/About"
+import Image from 'react-bootstrap/Image'
+import { Link } from 'react-router-dom'
+
 
 class Core extends React.Component {
   render() {
@@ -11,7 +14,7 @@ class Core extends React.Component {
           <Col md={12} className='my-auto'>
             <Row>
               <Col md={5} className='text-center'>
-                <img src={image} className='img-fluid' style={{width: '350px', height:' 350px'}} />
+                <Image src={image} className='img-fluid'/>
               </Col>
               <Col md={7} className='my-auto pr-5'>
                 <Row>
@@ -21,9 +24,15 @@ class Core extends React.Component {
                     </p>
                   </Col>
                   <Col md={12} className=''>
-                    <a><div className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px', background: 'gray'}}></div></a>
-                    <a><div className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px', background: 'gray'}}></div></a>
-                    <a><div className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px', background: 'gray'}}></div></a>
+                    <Link to="https://github.com/Skalwalker">
+                        <Image src="" className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px'}}/>
+                    </Link>
+                    <Link to="https://github.com/Skalwalker">
+                        <Image src="" className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px'}}/>
+                    </Link>
+                    <Link to="https://github.com/Skalwalker">
+                        <Image src="" className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px'}}/>
+                    </Link>
                   </Col>
                 </Row>
               </Col>

@@ -1,11 +1,11 @@
 import React from 'react';
-import Background from '../components/Background'
+import Background from '../components/Background';
 import { Col, Container, Row, Button, Table } from 'react-bootstrap';
 import { craft } from '../content/Craft';
 import CardRelease from '../components/CardRelease';
-import {
-  Link
-} from "react-router-dom";
+// import {
+//   Link
+// } from "react-router-dom";
 
 type myState = { activeTags: any }
 type myProps = { }
@@ -17,7 +17,7 @@ class Craft extends React.Component<myProps, myState> {
       activeTags: []
     };
   }
-  
+
   clickButton = (id: string) => {
     var aux = this.state.activeTags
     if (aux.includes(id, 0)) {
@@ -51,11 +51,12 @@ class Craft extends React.Component<myProps, myState> {
       return false;
     }
   }
-  
+
   render() {
     const tags = craft.tags;
+    const releases = craft.crafts;
     const papers = craft.papers;
-    
+
     return (
       <Background style={{height: '100%'}}>
         <Container>
@@ -67,10 +68,10 @@ class Craft extends React.Component<myProps, myState> {
             {tags.map((name, index) => {
               return (
                 <Col md={3}>
-                  <Button key={name} onClick={() => this.clickButton(name)} 
-                          className='mb-2' 
-                          variant={this.checkIfIsActive(name)} 
-                          size="lg" 
+                  <Button key={name} onClick={() => this.clickButton(name)}
+                          className='mb-2'
+                          variant={this.checkIfIsActive(name)}
+                          size="lg"
                           block>
                     {name}
                   </Button>
@@ -82,11 +83,17 @@ class Craft extends React.Component<myProps, myState> {
           </Row>
           <div className='w-100 mt-2 mb-4' style={{backgroundColor: 'white', height: '3px'}} />
           <Row>
-            {papers.map((paper, index) => {
-              if (paper.tags.some(this.checkInTags) || this.state.activeTags.length == 0) {
-                return(
-                  <CardRelease title={paper.title} />
-                )
+            {releases.map((release, index) => {
+              if (release.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
+                if (release.banner === "") {
+                  return(
+                    <CardRelease title={release.title}/>
+                  )
+                } else {
+                  return(
+                    <CardRelease title={release.title} img={release.banner}/>
+                  )
+                }
               } else {
                 return (null)
               }
@@ -100,7 +107,7 @@ class Craft extends React.Component<myProps, myState> {
             <Table style={{color: 'white'}}>
               <tbody>
                 {papers.map((paper, index) => {
-                  if (paper.tags.some(this.checkInTags) || this.state.activeTags.length == 0) {
+                  if (paper.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
                     return(
                       <tr>
                         <td>{index}</td>

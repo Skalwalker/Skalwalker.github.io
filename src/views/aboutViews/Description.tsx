@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { desc } from '../../content/About' 
 
 class Description extends React.Component {

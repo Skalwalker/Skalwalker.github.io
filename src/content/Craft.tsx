@@ -1,172 +1,166 @@
 const craft = {
-    tags: ["iOS APP", "Swift", "Data Structures", "Graphs", "Computer Vision", "Data Mining", "Machine Learning", "Databases", "Web", "Translators", "Data Science", "Python", "C/C++", "Javascript/TypeScript"],
+    tags: ["iOS App", "Swift", "Computer Vision", "Data Structures", "Data Mining", "Machine Learning", "Web", "Data Science", "Python", "C/C++", "Javascript/TypeScript", "Robotics"],
     crafts: [
         {
             banner: "",
             title: "My Zip Code",
-            tags: [""],
-            url: "zipcode" 
+            tags: ["iOS App", "Swift"],
+            url: "zipcode"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Quote's Book",
-            tags: [""],
+            tags: ["iOS App", "Swift"],
             url: "quotesbook"
         },
         {
             banner: "",
             title: "Haze Tasks",
-            tags: [""],
+            tags: ["iOS App", "Swift"],
             url: "hazetasks"
         },
         {
             banner: "",
             title: "MMiOS",
-            tags: [""],
+            tags: ["iOS App", "Swift"],
             url: "mmios"
         },
         {
             banner: "",
             title: "MediPreço",
-            tags: [""],
+            tags: ["iOS App", "Swift"],
             url: "medipreco"
         },
         {
             banner: "",
             title: "MWApp",
-            tags: [""],
+            tags: ["iOS App", "Swift"],
             url: "mwapp"
         },
         {
             banner: "",
             title: "Mancala",
-            tags: [""],
+            tags: ["C/C++", "Data Structures"],
             url: "mancala"
         },
         {
             banner: "",
             title: "College Path",
-            tags: [""],
+            tags: ["C/C++", "Data Structures"],
             url: "collegepath"
         },
         {
             banner: "",
             title: "SPA Problem",
-            tags: [""],
+            tags: ["C/C++", "Data Structures"],
             url: "spapromblem"
         },
         {
             banner: "",
             title: "Dirty Deputies",
-            tags: [""],
+            tags: ["C/C++", "Data Structures"],
             url: "dirtydeputies"
         },
         {
             banner: "",
             title: "Panoramic",
-            tags: [""],
+            tags: ["Computer Vision"],
             url: "panoramic"
         },
         {
             banner: "",
             title: "Photo Geometry",
-            tags: [""],
+            tags: ["Computer Vision"],
             url: "photogeometry"
         },
         {
             banner: "",
             title: "Metal Recognition",
-            tags: [""],
+            tags: ["Computer Vision", "Machine Learning"],
             url: "metalrecognition"
         },
         {
             banner: "",
             title: "Magnetic Disk Simulator",
-            tags: [""],
+            tags: ["C/C++", "Data Structures"],
             url: "magneticdisk"
         },
         {
             banner: "",
             title: "MWScraper",
-            tags: [""],
+            tags: ["Python",  "Data Mining"],
             url: "mwsacraper"
         },
         {
             banner: "",
             title: "DODFMiner",
-            tags: [""],
+            tags: ["Python",  "Data Mining"],
             url: "dodfminer"
         },
         {
             banner: "",
             title: "Number Recognition",
-            tags: [""],
+            tags: ["Machine Learning", "Data Science", "Python"],
             url: "numreco"
         },
         {
             banner: "",
             title: "Plants Recognition",
-            tags: [""],
+            tags: ["Machine Learning", "Data Science", "Python"],
             url: "plants"
         },
         {
             banner: "",
             title: "Breast Cancer Recognition",
-            tags: [""],
+            tags: ["Machine Learning", "Data Science", "Python"],
             url: "breast"
         },
         {
             banner: "",
             title: "Spam Recognition",
-            tags: [""],
+            tags: ["Machine Learning", "Data Science", "Python"],
             url: "span"
         },
         {
             banner: "",
             title: "Portfolio",
-            tags: [""],
+            tags: ["Web", "Javascript/TypeScript"],
             url: "portfolio"
         },
         {
             banner: "",
-            title: "Politics DB",
-            tags: [""],
-            url: "politicsdb"
-        },
-        {
-            banner: "",
             title: "JVM",
-            tags: [""],
+            tags: ["C/C++"],
             url: "jvm"
         },
         {
             banner: "",
             title: "Prolog C",
-            tags: [""],
+            tags: ["C/C++"],
             url: "prologc"
         },
         {
             banner: "",
             title: "Hare",
-            tags: [""],
+            tags: ["Machine Learning", "Data Science", "Python"],
             url: "hare"
         },
         {
             banner: "",
             title: "Multiple Agent Communication",
-            tags: [""],
+            tags: ["Machine Learning", "Python"],
             url: "multipleagent"
         },
         {
             banner: "",
             title: "TRUFES Competition",
-            tags: [""],
+            tags: ["Javascript/TypeScript", "Robotics"],
             url: "trufes"
         },
         {
             banner: "",
             title: "IEEE SEK Competition",
-            tags: [""],
+            tags: ["C/C++", "Robotics"],
             url: "ieeecomp"
         },
     ],
