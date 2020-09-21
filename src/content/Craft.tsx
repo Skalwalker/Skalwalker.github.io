@@ -1,5 +1,5 @@
 const craft = {
-    tags: ["iOS APP", "Swift", "Data Structures", "Graphs", "Computer Vision", " Data Structures", "Data Mining", "Machine Learning", "Databases", "Web", "Translators", "Data Science", "Python", "C/C++", "Javascript/TypeScript"],
+    tags: ["iOS APP", "Swift", "Data Structures", "Graphs", "Computer Vision", "Data Mining", "Machine Learning", "Databases", "Web", "Translators", "Data Science", "Python", "C/C++", "Javascript/TypeScript"],
     crafts: [
         {
             banner: "",
