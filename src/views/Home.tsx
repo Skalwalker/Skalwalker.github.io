@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import { Button } from 'react-bootstrap'
 import Background from '../components/Background'
 import { slides } from '../content/Home'
+import '../assets/css/font.css';
 
 class Home extends React.Component {
   render() {
@@ -14,7 +15,7 @@ class Home extends React.Component {
             <Carousel.Item>
               <div className="d-block w-100" style={{ height: '92vh' }} >
                 <div style={style.nameDiv}>
-                <h1 style={style.nameStyle}>{slide.text}</h1>
+                <h1 className="font_text" style={style.nameStyle}>{slide.text}</h1>
                 </div>
               </div>
               <Carousel.Caption className='mb-5'>
@@ -45,7 +46,7 @@ const style = {
   },
   nameStyle: {
     fontSize: '96px',
-    color: '#60D7F9'
+    color: '#60D7F9',
   }
 }
 
