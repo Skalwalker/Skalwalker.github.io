@@ -1,54 +1,43 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import ILikeDesc from '../../components/ILikeDesc';
+import { like } from '../../content/About'
 
 type MyProps = { };
-type MyState = { isShown: boolean };
+type MyState = { isShown: boolean, text: any };
 
 class Likes extends React.Component<MyProps, MyState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      isShown: false
+      isShown: false,
+      text: 'Hover some squares'
     };
   }
 
-  setIsShown = (value: boolean) => {
-    this.setState({isShown: value})
+  setIsShown = (value: any) => {
+    this.setState({text: value})
   }
 
   render() {
-    const squareRows = [];
-    const numbRows = 4;
-
-    for (var i = 0; i < numbRows; i++) {
-      squareRows.push(<Row className='mb-5'>
-        <Col md={1} className='mr-5'>
-          <div className='m-auto' style={{height: '70px', width: '70px', backgroundColor: 'gray'}}></div>
-        </Col>
-        <Col md={1} className='mr-5'>
-          <div className='m-auto' style={{height: '70px', width: '70px', backgroundColor: 'gray'}}></div>
-        </Col>
-        <Col md={1} className='mr-5'>
-          <div className='m-auto' style={{height: '70px', width: '70px', backgroundColor: 'gray'}}></div>
-        </Col>
-        <Col md={1} className='mr-5'>
-          <div className='m-auto' style={{height: '70px', width: '70px', backgroundColor: 'gray'}}></div>
-        </Col>
-        <Col md={1} className='mr-5'>
-          <div className='m-auto' style={{height: '70px', width: '70px', backgroundColor: 'gray'}}></div>
-        </Col>
-      </Row>)
-    }
-
     return (
       <Container className='h-100'>
         <Row className='h-100'>
-          <Col md={12} className='my-auto'>
+          <Col md={{span: 11, offset: 1}} className='my-auto'>
+            <Row>
+              {like.map((ilike) => {
+                return (
+                  <Col md={2} className='mr-3 mb-3'>
+                    <div onMouseEnter={() => this.setIsShown(ilike.title)}
+                         onMouseLeave={() => this.setIsShown('Hover some squares')} 
+                      className='m-auto' style={{height: '70px', width: '70px', backgroundColor: 'gray'}}>
+                    </div>
+                  </Col>
+                )
+              })}
+            </Row>
             <Row className=''>
-              <Col md={{span:11, offset:1}}>
-                {squareRows}
-              </Col>
-              <Col md={12} className='text-center'><h1 style={{color: 'white'}}>I Like ...</h1></Col>
+              <ILikeDesc text={this.state.text}/>
             </Row>
           </Col>
         </Row>

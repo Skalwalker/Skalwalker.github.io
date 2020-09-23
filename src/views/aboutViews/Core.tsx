@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import image from "../../assets/images/raskalkhan.png"
+import { core } from "../../content/About"
 import Image from 'react-bootstrap/Image'
 import { Link } from 'react-router-dom'
-import image from "../../assets/images/300x300.png"
+
 
 class Core extends React.Component {
   render() {
@@ -18,7 +20,7 @@ class Core extends React.Component {
                 <Row>
                   <Col md={12}>
                     <p style={{color: 'white', fontSize: '20px'}}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis, quam vitae dapibus commodo, nisl sapien ornare leo, vel finibus urna est eget ipsum. In hac habitasse platea dictumst. Quisque mauris elit, imperdiet a euismod non, faucibus consectetur est. Ut ac justo mauris. Aliquam erat volutpat.
+                      {core.text}
                     </p>
                   </Col>
                   <Col md={12} className=''>

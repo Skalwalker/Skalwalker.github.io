@@ -31,7 +31,7 @@ const desc = {
     ]
 }
 
-const work = {
+const works = {
     placeholder_text: "",
     orbs: [
         {
@@ -160,6 +160,6 @@ const like = [
 export {
     core,
     desc,
-    work,
+    works,
     like
 }
