@@ -4,7 +4,7 @@ import Canvas from '../components/CanvasTest';
 class Skill extends React.Component {
   render() {
     return (
-      <div style={{height: '100%', width: '100%'}}>
+      <div id="canvas" style={{height: '100%', width: '100%'}}>
         <Canvas />
       </div>
     )
