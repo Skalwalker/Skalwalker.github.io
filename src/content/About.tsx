@@ -4,7 +4,7 @@ const core = {
 }
 
 const desc = {
-    profile_img: "",
+    profile_img: require("../assets/images/profile.jpeg"),
     char_name: "Renato Avellar Nobre",
     alignment: "Neutral Good",
     birthday: "02/06/1997",
@@ -121,7 +121,7 @@ const like = [
     },
     {
         title: "Gardening",
-        img: "Jazz"
+        img: ""
     },
     {
         title: "Piano",
@@ -153,6 +153,14 @@ const like = [
     },
     {
         title: "Santa Barbara",
+        img: ""
+    },
+    {
+        title: "Jazz",
+        img: ""
+    },
+    {
+        title: "Data Science",
         img: ""
     }
 ]

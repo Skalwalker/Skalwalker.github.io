@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { desc } from '../../content/About' 
+import { Container, Row, Col, Image } from 'react-bootstrap';
+import { desc } from '../../content/About'
 
 class Description extends React.Component {
   render() {
@@ -10,22 +10,47 @@ class Description extends React.Component {
           <Col md={{span: 11, offset: 1}} className='my-auto'>
             <Row>
               <Col md={4} className='text-center'>
-                <div style={{height: '250px', width: '250px', backgroundColor: 'white', borderRadius:'125px'}}></div>
+                <Image src={desc.profile_img} style={{height: '200px', width: '200px', backgroundColor: 'white'}} roundedCircle />
               </Col>
               <Col md={8} className='my-auto pr-5'>
                 <Row>
-                  <Col md={12}>
-                    <p style={{color: 'white', fontSize: '20px'}}>
-                      <b>Char Name: </b>{desc.char_name}<br/>
-                      <b>Alignment: </b>{desc.alignment}<br/>
-                      <b>Birthday: </b>{desc.birthday}<br/>
-                      <b>Homeland: </b>{desc.homeland}<br/>
+                  <Col md={12} style={{color: 'white', fontSize: '20px'}}>
+                    <Row className='mb-2'>
+                      <Col>
+                        <b>Char Name:  </b>{desc.char_name}<br/>
+                      </Col>
+                    </Row>
+                    <Row className='mb-2'>
+                      <Col>
                       <b>Class: </b>{desc.class}<br/>
-                      <b>Race: </b>{desc.race}<br/>
-                      <b>Gender: </b>{desc.gender}<br/>
-                      <b>Hair: </b>{desc.hair}<br/>
-                      <b>Eyes: </b>{desc.eyes}<br/>
-                    </p>
+                      </Col>
+                      <Col>
+                        <b>Alignment:  </b>{desc.alignment}<br/>
+                      </Col>
+                    </Row>
+                    <Row className='mb-2'>
+                      <Col>
+                      <b>Birthday:  </b>{desc.birthday}<br/>
+                      </Col>
+                      <Col>
+                      <b>Homeland:  </b>{desc.homeland}<br/>
+                      </Col>
+
+                    </Row>
+                    <Row className='mb-2'>
+                      <Col>
+                        <b>Race: </b>{desc.race}<br/>
+                      </Col>
+                      <Col>
+                        <b>Gender: </b>{desc.gender}<br/>
+                      </Col>
+                      <Col>
+                        <b>Hair: </b>{desc.hair}<br/>
+                      </Col>
+                      <Col>
+                        <b>Eyes: </b>{desc.eyes}<br/>
+                      </Col>
+                    </Row>
                   </Col>
                 </Row>
               </Col>
