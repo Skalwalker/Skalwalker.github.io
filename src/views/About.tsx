@@ -20,22 +20,22 @@ class About extends React.Component {
               <Row>
                   <Col md={12} style={{ height: '5rem', borderRight: '3px solid white'}}/>
                   <Col md={12} className='nav-item-custom pb-3' style={{borderRight: '3px solid white'}}>
-                    <Link className='text-center ml-5' to="/about/core">
+                    <Link className='subtitle text-center ml-5' to="/about/core">
                       <FaVuejs className='mr-3' size={35} />Core
                     </Link>
                   </Col>
                   <Col md={12} className='nav-item-custom pb-3' style={{borderRight: '3px solid white'}}>
-                    <Link className='text-center ml-5' to="/about/work">
+                    <Link className='subtitle text-center ml-5' to="/about/work">
                       <FaVuejs className='mr-3' size={35} />Work
                     </Link>
                   </Col>
                   <Col md={12} className='nav-item-custom pb-3' style={{borderRight: '3px solid white'}}>
-                    <Link className='text-center ml-5' to="/about/likes">
+                    <Link className='subtitle text-center ml-5' to="/about/likes">
                       <FaVuejs className='mr-3' size={35} />Likes
                     </Link>
                   </Col>
                   <Col md={12} className='nav-item-custom pb-3' style={{borderRight: '3px solid white', width: '25%'}}>
-                    <Link className='text-center ml-5' to="/about/description">
+                    <Link className='subtitle text-center ml-5' to="/about/description">
                       <FaVuejs className='mr-3' size={35} />Description
                     </Link>
                   </Col>

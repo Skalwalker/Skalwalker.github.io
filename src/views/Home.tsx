@@ -26,7 +26,7 @@ class Home extends React.Component {
                 </Row>
               </div>
               <Carousel.Caption className='mb-5'>
-                <p style={{color: '#CA3A78', fontSize: '36px'}}>
+                <p className="subtitle" style={{fontSize: '28px'}}>
                   {slide.desc}
                 </p>
                 {slide.button && (<Button size='lg' href={slide.route} variant="outline-light" className='mb-3'>

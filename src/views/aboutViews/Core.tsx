@@ -19,7 +19,7 @@ class Core extends React.Component {
               <Col md={7} className='my-auto pr-5'>
                 <Row>
                   <Col md={12}>
-                    <p style={{color: 'white', fontSize: '20px'}}>
+                    <p className='paragraph' style={{color: 'white', fontSize: '20px'}}>
                       {core.text}
                     </p>
                   </Col>
