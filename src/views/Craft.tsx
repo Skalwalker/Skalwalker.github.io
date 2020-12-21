@@ -86,11 +86,11 @@ class Craft extends React.Component<myProps, myState> {
                   if (release.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
                     if (release.banner === "") {
                       return(
-                        <CardRelease title={release.title}/>
+                        <CardRelease title={release.title} url={release.url}/>
                       )
                     } else {
                       return(
-                        <CardRelease title={release.title} img={release.banner}/>
+                        <CardRelease title={release.title} img={release.banner} url={release.url}/>
                       )
                     }
                   } else {

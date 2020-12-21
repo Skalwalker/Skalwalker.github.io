@@ -23,121 +23,121 @@ const craft = {
             banner: "",
             title: "MMiOS",
             tags: ["iOS App", "Swift"],
-            url: "mmios"
+            url: "https://github.com/Skalwalker/MMiOS"
         },
         {
             banner: "",
             title: "MediPreço",
             tags: ["iOS App", "Swift"],
-            url: "medipreco"
+            url: "https://portal.medipreco.com.br/#/para-voce"
         },
         {
             banner: "",
             title: "MWApp",
             tags: ["iOS App", "Swift"],
-            url: "mwapp"
+            url: "https://github.com/Skalwalker/ihc-new-matweb"
         },
         {
             banner: "",
             title: "Mancala",
             tags: ["C/C++", "Data Structures"],
-            url: "mancala"
+            url: "https://github.com/Skalwalker/MancalaProject"
         },
         {
             banner: "",
             title: "College Path",
             tags: ["C/C++", "Data Structures"],
-            url: "collegepath"
+            url: "https://github.com/Skalwalker/college_path"
         },
         {
             banner: "",
             title: "SPA Problem",
             tags: ["C/C++", "Data Structures"],
-            url: "spapromblem"
+            url: "https://github.com/Skalwalker/spa-problem"
         },
         {
             banner: "",
             title: "Dirty Deputies",
             tags: ["C/C++", "Data Structures"],
-            url: "dirtydeputies"
+            url: "https://github.com/Skalwalker/dirty-deputies"
         },
         {
             banner: "",
             title: "Panoramic",
             tags: ["Computer Vision"],
-            url: "panoramic"
+            url: "https://github.com/Skalwalker/Union_images"
         },
         {
             banner: "",
             title: "Photo Geometry",
             tags: ["Computer Vision"],
-            url: "photogeometry"
+            url: "https://github.com/Skalwalker/photogamtery"
         },
         {
             banner: "",
             title: "Metal Recognition",
             tags: ["Computer Vision", "Machine Learning"],
-            url: "metalrecognition"
+            url: "https://github.com/Skalwalker/MetalRecognition"
         },
         {
             banner: "",
             title: "Magnetic Disk Simulator",
             tags: ["C/C++", "Data Structures"],
-            url: "magneticdisk"
+            url: "https://github.com/Skalwalker/MagneticDiskSimulator"
         },
         {
             banner: "",
             title: "MWScraper",
             tags: ["Python",  "Data Mining"],
-            url: "mwsacraper"
+            url: "https://github.com/Skalwalker/MWebScraper"
         },
         {
             banner: "",
             title: "DODFMiner",
             tags: ["Python",  "Data Mining"],
-            url: "dodfminer"
+            url: "https://github.com/UnB-KnEDLe"
         },
         {
             banner: "",
             title: "Number Recognition",
             tags: ["Machine Learning", "Data Science", "Python"],
-            url: "numreco"
+            url: "https://github.com/Skalwalker/NumberRecognition"
         },
         {
             banner: "",
             title: "Plants Recognition",
             tags: ["Machine Learning", "Data Science", "Python"],
-            url: "plants"
+            url: "https://github.com/Skalwalker/PlantsRecognition"
         },
         {
             banner: "",
             title: "Breast Cancer Recognition",
             tags: ["Machine Learning", "Data Science", "Python"],
-            url: "breast"
+            url: "https://github.com/Skalwalker/BreastCancerRecognition"
         },
         {
             banner: "",
             title: "Spam Recognition",
             tags: ["Machine Learning", "Data Science", "Python"],
-            url: "span"
+            url: "https://github.com/Skalwalker/SpamRecognition"
         },
         {
             banner: "",
             title: "Portfolio",
             tags: ["Web", "Javascript/TypeScript"],
-            url: "portfolio"
+            url: "https://github.com/Skalwalker/Skalwalker.github.io"
         },
         {
             banner: "",
             title: "JVM",
             tags: ["C/C++"],
-            url: "jvm"
+            url: "https://github.com/Skalwalker/JVM"
         },
         {
             banner: "",
             title: "Prolog C",
             tags: ["C/C++"],
-            url: "prologc"
+            url: "https://github.com/Skalwalker/CWAMProlog"
         },
         {
             banner: "",
@@ -149,19 +149,19 @@ const craft = {
             banner: "",
             title: "Multiple Agent Communication",
             tags: ["Machine Learning", "Python"],
-            url: "multipleagent"
+            url: "https://github.com/Skalwalker/MRLCommunication"
         },
         {
             banner: "",
             title: "TRUFES Competition",
             tags: ["Javascript/TypeScript", "Robotics"],
-            url: "trufes"
+            url: "https://github.com/UnbDroid/Trufes2019"
         },
         {
             banner: "",
             title: "IEEE SEK Competition",
             tags: ["C/C++", "Robotics"],
-            url: "ieeecomp"
+            url: "https://github.com/UnbDroid/SEKMANDA-2018"
         },
     ],
 

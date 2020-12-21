@@ -16,6 +16,7 @@ function App() {
         <Navbar style={{ height: '8vh', zIndex: 100 }} bg="light" expand="md">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Brand>Under Construction</Navbar.Brand>
             <Nav className="ml-auto">
               <Link className='nav-link' to="/">Home</Link>
               <Link className='nav-link' to="/about/core">About</Link>

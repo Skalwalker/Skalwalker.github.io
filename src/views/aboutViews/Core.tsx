@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import image from "../../assets/images/raskalkhan.png"
+// import image from "../../assets/images/raskalkhan.png"
 import { core } from "../../content/About"
 import Image from 'react-bootstrap/Image'
 import { Link } from 'react-router-dom'
@@ -14,7 +14,7 @@ class Core extends React.Component {
           <Col md={12} className='my-auto'>
             <Row>
               <Col md={5} className='text-center'>
-                <Image src={image} className='img-fluid'/>
+                {/* <Image src={} className='img-fluid'/> */}
               </Col>
               <Col md={7} className='my-auto pr-5'>
                 <Row>
