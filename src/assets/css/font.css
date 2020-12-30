@@ -4,6 +4,25 @@
   text-align: center
 }
 
+.test_font {
+  font-family: acier-bat-strokes, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.test_font:hover {
+  font-family: acier-bat-gris, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.subtitle_bold {
+  font-family: filson-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .subtitle {
   font-family: filson-pro, sans-serif;
   font-weight: 100;
@@ -15,6 +34,13 @@
   font-weight: 200;
   font-style: normal;
 }
+
+.paragraph_bold {
+  font-family: objektiv-mk1, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 .top_text {
   position: absolute;

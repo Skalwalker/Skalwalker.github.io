@@ -10,15 +10,15 @@ class AchievDesc extends React.Component<MyProps, MyState> {
       <Container fluid style={{color: '#FFFFFF'}}>
       <Row>
         <Col md={8}>
-          <h1 className="text-left">{this.props.title}</h1>
+          <h1 className="text-left subtitle_bold">{this.props.title}</h1>
         </Col>
         <Col md={4} className='my-auto'>
-          <h5 className="text-right">{this.props.date}</h5>
+          <h5 className="text-right paragraph">{this.props.date}</h5>
         </Col>
       </Row>
       <Row className="text-left">
         <Col md={12}>
-          <p>{this.props.desc}</p>
+          <p className="paragraph">{this.props.desc}</p>
         </Col>
       </Row>
       <Row>

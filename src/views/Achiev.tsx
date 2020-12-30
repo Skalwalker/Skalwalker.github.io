@@ -39,7 +39,7 @@ class Acheiv extends React.Component<MyProps, MyState>  {
                 <AchievDesc title={this.state.title} desc={this.state.desc} date={this.state.date}/>
               )}
               {this.state.isShown === false && (
-                <h2 style={{fontSize:'40px', color: '#FFFFFF'}}>Hover over an Achievement to show description</h2>
+                <h2 className="subtitle_bold" style={{fontSize:'40px', color: '#FFFFFF'}}>Hover over an Achievement to show description</h2>
               )}
             </Col>
             <Col md={9} className="my-auto">

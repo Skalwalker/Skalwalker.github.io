@@ -14,12 +14,12 @@ class CardRelease extends React.Component<myProps, myState> {
 
   render () {
     return (
-      <Col md={4} className='mb-3'>
+      <Col md={3} className='mb-3'>
         <a target="_blank" href={this.props.url}>
         <Card style={{ minHeight: '30vh' }}>
           <Card.Body style={{ padding: '0.8rem' }}>
             <Card.Img variant="top" src={this.props.img}/>
-            <Card.Text className='mt-2'>
+            <Card.Text className='mt-2 paragraph_bold' style={{color: "black"}}>
               {this.props.title}
             </Card.Text>
           </Card.Body>

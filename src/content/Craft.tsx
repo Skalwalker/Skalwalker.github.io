@@ -2,163 +2,160 @@ const craft = {
     tags: ["iOS App", "Swift", "Computer Vision", "Data Structures", "Data Mining", "Machine Learning", "Web", "Data Science", "Python", "C/C++", "Javascript/TypeScript", "Robotics"],
     crafts: [
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "My Zip Code",
-            tags: ["iOS App", "Swift"],
-            url: "zipcode"
+            tags: ["iOS App", "Swift"]
         },
         {
             banner: require("../assets/images/QuotesBook.svg"),
             title: "Quote's Book",
-            tags: ["iOS App", "Swift"],
-            url: "quotesbook"
+            tags: ["iOS App", "Swift"]
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Haze Tasks",
-            tags: ["iOS App", "Swift"],
-            url: "hazetasks"
+            tags: ["iOS App", "Swift"]
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "MMiOS",
             tags: ["iOS App", "Swift"],
             url: "https://github.com/Skalwalker/MMiOS"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "MediPreço",
             tags: ["iOS App", "Swift"],
             url: "https://portal.medipreco.com.br/#/para-voce"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "MWApp",
             tags: ["iOS App", "Swift"],
             url: "https://github.com/Skalwalker/ihc-new-matweb"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Mancala",
             tags: ["C/C++", "Data Structures"],
             url: "https://github.com/Skalwalker/MancalaProject"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "College Path",
             tags: ["C/C++", "Data Structures"],
             url: "https://github.com/Skalwalker/college_path"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "SPA Problem",
             tags: ["C/C++", "Data Structures"],
             url: "https://github.com/Skalwalker/spa-problem"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Dirty Deputies",
             tags: ["C/C++", "Data Structures"],
             url: "https://github.com/Skalwalker/dirty-deputies"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Panoramic",
             tags: ["Computer Vision"],
             url: "https://github.com/Skalwalker/Union_images"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Photo Geometry",
             tags: ["Computer Vision"],
             url: "https://github.com/Skalwalker/photogamtery"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Metal Recognition",
             tags: ["Computer Vision", "Machine Learning"],
             url: "https://github.com/Skalwalker/MetalRecognition"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Magnetic Disk Simulator",
             tags: ["C/C++", "Data Structures"],
             url: "https://github.com/Skalwalker/MagneticDiskSimulator"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "MWScraper",
             tags: ["Python",  "Data Mining"],
             url: "https://github.com/Skalwalker/MWebScraper"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "DODFMiner",
             tags: ["Python",  "Data Mining"],
             url: "https://github.com/UnB-KnEDLe"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Number Recognition",
             tags: ["Machine Learning", "Data Science", "Python"],
             url: "https://github.com/Skalwalker/NumberRecognition"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Plants Recognition",
             tags: ["Machine Learning", "Data Science", "Python"],
             url: "https://github.com/Skalwalker/PlantsRecognition"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Breast Cancer Recognition",
             tags: ["Machine Learning", "Data Science", "Python"],
             url: "https://github.com/Skalwalker/BreastCancerRecognition"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Spam Recognition",
             tags: ["Machine Learning", "Data Science", "Python"],
             url: "https://github.com/Skalwalker/SpamRecognition"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Portfolio",
             tags: ["Web", "Javascript/TypeScript"],
             url: "https://github.com/Skalwalker/Skalwalker.github.io"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "JVM",
             tags: ["C/C++"],
             url: "https://github.com/Skalwalker/JVM"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Prolog C",
             tags: ["C/C++"],
             url: "https://github.com/Skalwalker/CWAMProlog"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "Hare",
             tags: ["Machine Learning", "Data Science", "Python"],
             url: "hare"
         },
         {
-            banner: "",
-            title: "Multiple Agent Communication",
+            banner: require("../assets/images/QuotesBook.svg"),
+            title: "Multi-Agent Communication",
             tags: ["Machine Learning", "Python"],
             url: "https://github.com/Skalwalker/MRLCommunication"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "TRUFES Competition",
             tags: ["Javascript/TypeScript", "Robotics"],
             url: "https://github.com/UnbDroid/Trufes2019"
         },
         {
-            banner: "",
+            banner: require("../assets/images/QuotesBook.svg"),
             title: "IEEE SEK Competition",
             tags: ["C/C++", "Robotics"],
             url: "https://github.com/UnbDroid/SEKMANDA-2018"

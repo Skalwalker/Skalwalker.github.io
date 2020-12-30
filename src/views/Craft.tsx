@@ -3,6 +3,7 @@ import Background from '../components/Background';
 import { Col, Container, Row, Button, Table } from 'react-bootstrap';
 import { craft } from '../content/Craft';
 import CardRelease from '../components/CardRelease';
+import '../assets/css/font.css';
 // import {
 //   Link
 // } from "react-router-dom";
@@ -60,13 +61,13 @@ class Craft extends React.Component<myProps, myState> {
     return (
       <Background style={{height: '100%'}}>
         {/* <Container> */}
-        <Row>
+        <Row className="m-0 pt-5 pr-4 pb-5">
           <Col md={2}>
-            <Row>
+            <Row className="p-4">
               {tags.map((name, index) => {
                 return (
                     <Button key={name} onClick={() => this.clickButton(name)}
-                            className='mb-2'
+                            className='mb-2 paragraph'
                             variant={this.checkIfIsActive(name)}
                             size="sm"
                             block>
@@ -78,9 +79,9 @@ class Craft extends React.Component<myProps, myState> {
           </Col>
           <Col md={10}>
               <Row>
-                <h1 style={{color: 'white'}}>Releases</h1>
+                <h1 className="subtitle" style={{color: 'white'}}>Releases</h1>
+                <div className='w-100 mt-2 mb-4' style={{backgroundColor: 'white', height: '3px'}}/>
               </Row>
-              <div className='w-100 mt-2 mb-4' style={{backgroundColor: 'white', height: '3px'}} />
               <Row>
                 {releases.map((release, index) => {
                   if (release.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
@@ -99,17 +100,17 @@ class Craft extends React.Component<myProps, myState> {
                 })}
               </Row>
               <Row>
-                <h1 style={{color: 'white'}}>Papers</h1>
+                <h1 className="subtitle" style={{color: 'white'}}>Papers</h1>
+                <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
               </Row>
-              <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
               <Row >
                 <Table style={{color: 'white'}}>
                   <tbody>
                     {papers.map((paper, index) => {
                       if (paper.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
                         return(
-                          <tr>
-                            <td>{index}</td>
+                          <tr className="paragraph">
+                            <td>{index+1}</td>
                             <td>{paper.title}</td>
                             <td>{paper.year}</td>
                           </tr>
