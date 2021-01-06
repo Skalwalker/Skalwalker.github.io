@@ -13,7 +13,7 @@ class Background extends React.Component<myProps, myState> {
   static defaultProps = {style:{}}
   render () {
     return (
-      <div style={{height: '92vh', backgroundColor: '#070e20', ...this.props.style}}>
+      <div id='background' style={{height: '92vh', backgroundColor: '#070e20', ...this.props.style}}>
         <div style={{position: "relative", margin: "0 auto"}}>
           <Particles params={{
             particles: {
