@@ -21,7 +21,7 @@ class Experience extends React.Component {
     const height = document.getElementById('background')!.clientHeight;
     const width = document.getElementById('background')!.clientWidth;
 
-    var exp_range = d3.scaleLinear().range([45, width-45]).domain([2012, 2021])
+    var exp_range = d3.scalePow().range([45, width-45]).domain([2012, 2021]).exponent(93.2411)
     console.log(exp_range)
 
     svg.append('line')
@@ -47,20 +47,12 @@ class Experience extends React.Component {
     for (var key in extra_years) {
       g = svg.append('g')
       var r = 35;
-      var line_height = 50;
       g.attr('id', 'year' + key)
-        .append('line')
-        .attr('x1', exp_range(key))
-        .attr('y1', height/2)
-        .attr('x2', exp_range(key))
-        .attr('y2', height/2-line_height)
-        .style('stroke-width', 10)
-        .style('stroke', 'white')
     
       g.append('rect')
         .attr('class', 'year-holder')
         .attr('x', exp_range(key)-r)
-        .attr('y', height/2-line_height-r)
+        .attr('y', height/2-r)
         .attr('width', r*2)
         .attr('height', r*2)
         .attr('rx', r)
@@ -70,7 +62,7 @@ class Experience extends React.Component {
       
       g.append('text')
         .attr("x", exp_range(key))
-        .attr("y", height/2-line_height)
+        .attr("y", height/2)
         .attr("dy", ".35em")
         .style("text-anchor", "middle")
         .attr("font-size", "18px")
@@ -79,19 +71,18 @@ class Experience extends React.Component {
     // extra_years = Object.values(extra_years)
     // svg.selectAll('g').data(extra_years)
     var clicked = ""
-    svg.selectAll('rect, text')
+    svg.selectAll('g')
       .on('click', (e) => {
-        var g = d3.select('#' + e.path[1].id)
-        var rect = d3.select('#' + e.path[1].id + "> rect")
-        var line = d3.select('#' + e.path[1].id + "> line")
-        var text = d3.select('#' + e.path[1].id + "> text")
+        var g = d3.select("#" + e.currentTarget.id)
+        var rect = d3.select("#" + e.currentTarget.id).select("rect")
+        var text = d3.select("#" + e.currentTarget.id).select("text")
         g.raise()
         var list_exp = extra_years[e.path[1].id.match(/(\d+)/g)]
           for (var exp in list_exp) {
             g.append('rect')        
               .attr('class', 'aux-rec')
-              .attr('x', line.attr('x2')-5)
-              .attr('y', line.attr('y2')-5)
+              .attr('x', rect.attr('x'))
+              .attr('y', rect.attr('y'))
               .attr('width', 10)
               .attr('height', 10)
               .attr('rx', 0)
@@ -101,8 +92,8 @@ class Experience extends React.Component {
             
             g.append('text')
               .attr('class', 'aux-text')
-              .attr("x", line.attr('x2')-5)
-              .attr("y", line.attr('y2')-5)
+              .attr("x", rect.attr('x'))
+              .attr("y", rect.attr('y'))
               .attr("dy", ".35em")
               .style("text-anchor", "start")
               .attr("font-size", "14px")
@@ -116,14 +107,14 @@ class Experience extends React.Component {
             .duration(1300)
             .style('opacity', '100')
             .attr('class', 'aux-rec-last')
-            .attr('transform', (d, i) => {return "translate(0, " + -(((line.attr('y2')-60)/list_exp.length)*(i+1)) + ")" })
+            .attr('transform', (d, i) => {return `translate(${r+10}, ${-(((rect.attr('y')-60)/list_exp.length)*(i+1))})` })
             .attr('width', (d, i) => { 
               if (d.end_year === d.start_year) {
                 return 10
               } else if (d.end_year == "Present") {
-                return width-line.attr('x1')
+                return width-rect.attr('x')
               }
-              return exp_range(d.end_year)-line.attr('x1') 
+              return exp_range(d.end_year)-rect.attr('x')-10
             })
 
           d3.selectAll('.aux-text').transition()
@@ -132,14 +123,14 @@ class Experience extends React.Component {
             .style('opacity', '100')
             .style('fill', '#ffffff')
             .attr('class', 'aux-text-last')
-            .attr('transform', (d, i) => {return "translate(0, " + -(((line.attr('y2')-50)/list_exp.length)*(i+1)) + ")" })
+            .attr('transform', (d, i) => {return `translate(${r+10}, ${-(((rect.attr('y')-50)/list_exp.length)*(i+1))})` })
 
-          d3.selectAll('.year-holder').transition()
-            .delay((d, i) => {return (i+1)*400 })
-            .duration(1300)
-            .attr('transform', "translate(10, 10)")
-            .attr('height', 50)
-            .attr('width', 50)
+          // d3.selectAll('.year-holder').transition()
+          //   .delay((d, i) => {return (i+1)*400 })
+          //   .duration(1300)
+          //   .attr('transform', "translate(10, 10)")
+          //   .attr('height', 50)
+          //   .attr('width', 50)
 
           text.transition()
             .duration(1000)
@@ -150,15 +141,19 @@ class Experience extends React.Component {
           text.transition()
             .duration(400)
             .delay(600)
-            .attr("transform", "translate(0, " + -(((line.attr('y2')-15)/list_exp.length)*(list_exp.length)) + ")")
+            .attr("transform", `translate(${r}, ${-(((rect.attr('y'))/list_exp.length)*(list_exp.length))-18})`)
             .attr("class", "text-last")
 
           rect.transition('height')
             .delay(0)
             .duration(1300)
             .attr('class', 'rect-last')
-            .style('opacity', 0)
-          
+            .attr('rx', 0)
+            .attr('ry', 0)
+            .attr('height', height)
+            .attr('width', 5)
+            .attr('transform', `translate(${r},${-(height/2-r)})`)
+
           if (clicked != e.path[1].id || clicked != ""){
             d3.selectAll('.aux-rec-last').transition()
               .delay((d, i) => {return (i+1)*200 })
@@ -173,7 +168,7 @@ class Experience extends React.Component {
               .delay((d, i) => {return (i+1)*200 })
               .duration(400)
               .style('opacity', '0')
-              .attr('transform', (d, i) => {return "translate(0, 0)" })
+              .attr('transform', (d, i) => {return `translate(${r}, ${r})` })
 
             d3.selectAll('.text-last').transition()
               .duration(400)
@@ -186,7 +181,12 @@ class Experience extends React.Component {
             d3.selectAll('.rect-last').transition()
               .delay(300)
               .duration(400)
-              .style('opacity', 100)
+              .attr('class', '')
+              .attr('rx', r)
+              .attr('ry', r)
+              .attr('height', r*2)
+              .attr('width', r*2)
+              .attr('transform', `translate(0, 0)`)
           }
         clicked = e.path[1].id;
       })
