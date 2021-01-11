@@ -1,7 +1,7 @@
 import React from 'react';
 import Background from '../components/Background'
 import { Col, Container, Row } from 'react-bootstrap';
-import { extra_activ, prof_educ } from '../content/Experience'
+import { experience } from '../content/Experience'
 import ExtraActivity from '../components/ExtraActivity'
 import ProfEdu from '../components/ProfEdu'
 import * as d3 from 'd3';
@@ -21,8 +21,7 @@ class Experience extends React.Component {
     const height = document.getElementById('background')!.clientHeight;
     const width = document.getElementById('background')!.clientWidth;
 
-    var exp_range = d3.scalePow().range([45, width-45]).domain([2012, 2021]).exponent(93.2411)
-    console.log(exp_range)
+    var exp_range = d3.scaleSqrt().range([60, width-60]).domain([2012, 2022]).exponent(10)
 
     svg.append('line')
       .attr('x1', 0)
@@ -33,14 +32,53 @@ class Experience extends React.Component {
       .style('stroke-width', 10)
       .style('stroke', 'white')
     
-    for (var i = 0; i < extra_activ.length; i++) {
-      var current_year = extra_activ[i].start_year
-      console.log(current_year)
+    svg.append('text')
+      .text('Extra')        
+      .attr("x", 10)
+      .attr("y", height-80)
+      .attr("dy", ".35em")
+      .attr("class", "titles")
+      .style("text-anchor", "start")
+      .style("fill", "white")
+      .attr("font-size", "40px")
+    
+    svg.append('text')
+      .text('Activities')        
+      .attr("x", 10)
+      .attr("y", height-40)
+      .attr("dy", ".35em")
+      .style("text-anchor", "start")
+      .style("fill", "white")
+      .attr("font-size", "40px")
+      .attr("class", "titles")
+
+    svg.append('text')
+      .text('Professional')        
+      .attr("x", 10)
+      .attr("y", 40)
+      .attr("dy", ".35em")
+      .style("text-anchor", "start")
+      .style("fill", "white")
+      .attr("font-size", "40px")
+      .attr("class", "titles")
+    
+    svg.append('text')
+      .text('&Education')        
+      .attr("x", 10)
+      .attr("y", 80)
+      .attr("dy", ".35em")
+      .style("text-anchor", "start")
+      .style("fill", "white")
+      .attr("font-size", "40px")
+      .attr("class", "titles")
+
+    for (var i = 0; i < experience.length; i++) {
+      var current_year = experience[i].start_year
       if (!(current_year in extra_years)) {
         extra_years[current_year] = []
-        extra_years[current_year].push(extra_activ[i])
+        extra_years[current_year].push(experience[i])
       } else {
-        extra_years[current_year].push(extra_activ[i])
+        extra_years[current_year].push(experience[i])
       }
     }
 
@@ -62,14 +100,48 @@ class Experience extends React.Component {
       
       g.append('text')
         .attr("x", exp_range(key))
+        .attr('class', 'year')
         .attr("y", height/2)
         .attr("dy", ".35em")
         .style("text-anchor", "middle")
         .attr("font-size", "18px")
         .text(key)
+      
+      for (var exp in extra_years[key]) {
+        let i :number = Number(exp)
+        
+        if ("prof" in extra_years[key][exp]) {
+          var posY = -(((height/2)-60/extra_years[key].length)*(i+1))
+          posY = posY - (posY - (height/2) + 60) - (height/2)
+        } else {
+          var posY = (((height/2)/extra_years[key].length)*(i+1))
+        } 
+        if ("fix" in extra_years[key][exp]) {
+          g.append('rect')        
+            .attr('class', 'aux-rec-fix')
+            .attr('x', exp_range(key)+10)
+            .attr('y', (height/2) + posY)
+            .attr('width', exp_range(extra_years[key][exp].end_year)-exp_range(key)-10)
+            .attr('height', 10)
+            .style('fill', '#ff30d6')
+
+          g.append('text')
+            .attr('class', 'aux-text-fix')
+            .attr("x", exp_range(key)+10)
+            .attr("y", (height/2) + posY - 10)
+            .attr("dy", ".35em")
+            .style("text-anchor", "start")
+            .attr("font-size", "14px")
+            .style('opacity', '100')
+            .style('fill', 'white')
+            .text(extra_years[key][exp].title)
+
+        }
+      }
     }
     // extra_years = Object.values(extra_years)
     // svg.selectAll('g').data(extra_years)
+
     var clicked = ""
     svg.selectAll('g')
       .on('click', (e) => {
@@ -78,7 +150,8 @@ class Experience extends React.Component {
         var text = d3.select("#" + e.currentTarget.id).select("text")
         g.raise()
         var list_exp = extra_years[e.path[1].id.match(/(\d+)/g)]
-          for (var exp in list_exp) {
+        for (var exp in list_exp) {
+          if (!("fix" in list_exp[exp])) {
             g.append('rect')        
               .attr('class', 'aux-rec')
               .attr('x', rect.attr('x'))
@@ -101,58 +174,68 @@ class Experience extends React.Component {
               .style('fill', '#ff30d6')
               .text(list_exp[exp].title)
           }
+        }
 
-          d3.selectAll('.aux-rec').data(list_exp).transition()
-            .delay((d, i) => { return (i+1)*400 })
-            .duration(1300)
-            .style('opacity', '100')
-            .attr('class', 'aux-rec-last')
-            .attr('transform', (d, i) => {return `translate(${r+10}, ${-(((rect.attr('y')-60)/list_exp.length)*(i+1))})` })
-            .attr('width', (d, i) => { 
-              if (d.end_year === d.start_year) {
-                return 10
-              } else if (d.end_year == "Present") {
-                return width-rect.attr('x')
-              }
-              return exp_range(d.end_year)-rect.attr('x')-10
-            })
+        d3.selectAll('.aux-rec').data(list_exp).on('click', (e) => {
 
-          d3.selectAll('.aux-text').transition()
-            .delay((d, i) => {return (i+1)*400 })
-            .duration(1300)
-            .style('opacity', '100')
-            .style('fill', '#ffffff')
-            .attr('class', 'aux-text-last')
-            .attr('transform', (d, i) => {return `translate(${r+10}, ${-(((rect.attr('y')-50)/list_exp.length)*(i+1))})` })
+        })
 
-          // d3.selectAll('.year-holder').transition()
-          //   .delay((d, i) => {return (i+1)*400 })
-          //   .duration(1300)
-          //   .attr('transform', "translate(10, 10)")
-          //   .attr('height', 50)
-          //   .attr('width', 50)
+        d3.selectAll('.titles').transition().style('opacity', '0.2').duration(1300).delay(0)
 
-          text.transition()
-            .duration(1000)
-            .style("fill", "#ffffff")
-            .style("opacity", "100")
-            .attr("font-size", "25px")
+        d3.selectAll('.aux-rec').data(list_exp).transition()
+          .delay((d, i) => { return (i+1)*400})
+          .duration(1300)
+          .style('opacity', '100')
+          .attr('class', 'aux-rec-last')
+          .attr('transform', (d, i) => { 
+            if (!("prof" in d)) {
+              return `translate(${r+10}, ${((((rect.attr('y'))/list_exp.length))*(i+1)) + r})`
+            }
+            return `translate(${r+10}, ${-((((rect.attr('y')-60)/list_exp.length))*(i+1))})` 
+          })
+          .attr('width', (d, i) => { 
+            if (d.end_year === d.start_year) {
+              return 10
+            } else if (d.end_year == "Present") {
+              return width-rect.attr('x')
+            }
+            return exp_range(d.end_year)-rect.attr('x')-r-10
+          })
 
-          text.transition()
-            .duration(400)
-            .delay(600)
-            .attr("transform", `translate(${r}, ${-(((rect.attr('y'))/list_exp.length)*(list_exp.length))-18})`)
-            .attr("class", "text-last")
+        d3.selectAll('.aux-text').data(list_exp).transition()
+          .delay((d, i) => {return (i+1)*400 })
+          .duration(2000)
+          .style('opacity', '100')
+          .style('fill', '#ffffff')
+          .attr('class', 'aux-text-last')
+          .attr('transform', (d, i) => { 
+            if (!("prof" in d)) {
+              return `translate(${r+10}, ${((((rect.attr('y'))/list_exp.length))*(i+1)-10 + r)})`
+            }
+            return `translate(${r+10}, ${-((((rect.attr('y')-60)/list_exp.length))*(i+1)+10)})` 
+          })
 
-          rect.transition('height')
-            .delay(0)
-            .duration(1300)
-            .attr('class', 'rect-last')
-            .attr('rx', 0)
-            .attr('ry', 0)
-            .attr('height', height)
-            .attr('width', 5)
-            .attr('transform', `translate(${r},${-(height/2-r)})`)
+        text.transition()
+          .duration(1000)
+          .style("fill", "#ffffff")
+          .style("opacity", "100")
+          .attr("font-size", "25px")
+
+        text.transition()
+          .duration(400)
+          .delay(600)
+          .attr("transform", `translate(${r}, ${-(((rect.attr('y'))/list_exp.length)*(list_exp.length))-18})`)
+          .attr("class", "text-last")
+
+        rect.transition('height')
+          .delay(0)
+          .duration(1300)
+          .attr('class', 'rect-last')
+          .attr('rx', 0)
+          .attr('ry', 0)
+          .attr('height', height)
+          .attr('width', 5)
+          .attr('transform', `translate(${r},${-(height/2-r)})`)
 
           if (clicked != e.path[1].id || clicked != ""){
             d3.selectAll('.aux-rec-last').transition()
@@ -163,12 +246,14 @@ class Experience extends React.Component {
                 return "translate(0, 0)" 
               })
               .attr('width', '10')
+              .remove()
             
             d3.selectAll('.aux-text-last').transition()
               .delay((d, i) => {return (i+1)*200 })
               .duration(400)
               .style('opacity', '0')
               .attr('transform', (d, i) => {return `translate(${r}, ${r})` })
+              .remove()
 
             d3.selectAll('.text-last').transition()
               .duration(400)
@@ -176,7 +261,7 @@ class Experience extends React.Component {
               .attr("font-size", "18px")
               .style("fill", "#000000")
               .attr("transform", "translate(0, 0)")
-              .attr("class", "")
+              .attr("class", "year")
 
             d3.selectAll('.rect-last').transition()
               .delay(300)
@@ -187,6 +272,7 @@ class Experience extends React.Component {
               .attr('height', r*2)
               .attr('width', r*2)
               .attr('transform', `translate(0, 0)`)
+              .attr("class", "year-holder")
           }
         clicked = e.path[1].id;
       })
@@ -228,7 +314,7 @@ export default Experience;
 //             </Col>
 //           </Row>
 //           <Row style={{height: '30vh'}}>
-//             {extra_activ.map((extra, index) => {
+//             {experiences.map((extra, index) => {
 //               if (index+1) {
 //                 return (
 //                   <ExtraActivity title={extra.title}

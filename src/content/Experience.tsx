@@ -1,84 +1,4 @@
-const prof_educ = [
-    {
-        title: "Student Exchange",
-        start_year: "2013",
-        end_year: "2013",
-        display_year: 0,
-        company: "Santa Barbara High School",
-        country: "Santa Barbara, California, USA",
-        description: "",
-        button: false,
-        button_text: ""
-    },
-    {
-        title: "High School Graduation",
-        start_year: "2012",
-        end_year: "2014",
-        display_year: 1,
-        company: "Centro Educacional Sigma",
-        country: "Brasília, DF, Brazil",
-        description: "",
-        button: false,
-        button_text: ""
-    },
-    {
-        title: "B.S. in Computer Science",
-        start_year: "2015",
-        end_year: "2020",
-        display_year: 0,
-        company: "University of Brasília",
-        country: "Brasília, DF, Brazil",
-        description: "GPA: 3.8/5.0 \n Relevant Coursework: Introduction to Artificial Intelligence, Principles of Computational Vision, Fundamentals of Intelligent Systems, Linear Algebra, Probability & Statistics, Design & Analysis of Algorithms, Data Structures, Theory & Application of Graphs, Software Engineering, Automata & Computability, Databases.",
-        button: false,
-        button_text: ""
-    },
-    {
-        title: "Intern",
-        start_year: "2016",
-        end_year: "2017",
-        display_year: 0,
-        company: "Synergia Consultoria Socioambiental",
-        country: "São Paulo, SP, Brazil",
-        description: "Automation of spreadsheets in a project to survey the damages from the Bento Rodrigues Dam Disaster.",
-        button: false,
-        button_text: ""
-    },
-    {
-        title: "Freelancer",
-        start_year: "2017",
-        end_year: "2017",
-        display_year: 0,
-        company: "iLevel Tecnologia (Startup Company)",
-        country: "Brasília, DF, Brazil",
-        description: "Developed iOS App MediPreço.",
-        button: true,
-        button_text: "View App on Store"
-    },
-    {
-        title: "Researcher",
-        start_year: "2020",
-        end_year: "2021",
-        display_year: 0,
-        company: "Department of Computer Science, University of Brasilia",
-        country: "Brasília, DF, Brazil",
-        description: "Junior researcher and software architect in data mining and machine learning in natural language processing. Creating software to extract and process information from the Diário Oficial.",
-        button: true,
-        button_text: "View Project"
-    },
-    {
-        title: "Masters or PhD",
-        start_year: "2021",
-        end_year: "",
-        display_year: 0,
-        company: "Unknown",
-        country: "Unknown",
-        description: "Locked",
-        button: false,
-        button_text: ""
-    }
-]
-
-const extra_activ = [
+const experience = [
     {
         title: "Undergraduate Research Project",
         start_year: "2016",
@@ -190,6 +110,18 @@ const extra_activ = [
         button_text: "View her Project"
     },
     {
+        title: "Youtuber",
+        start_year: "2014",
+        end_year: "2014",
+        display_year: 0,
+        company: "Youtube",
+        country: "Brasília, DF, Brazil",
+        description: "",
+        button: false,
+        button_text: "",
+        prof: true
+    },
+    {
         title: "Student Exchange",
         start_year: "2013",
         end_year: "2013",
@@ -198,7 +130,8 @@ const extra_activ = [
         country: "Santa Barbara, California, USA",
         description: "",
         button: false,
-        button_text: ""
+        button_text: "",
+        prof: true,
     },
     {
         title: "High School Graduation",
@@ -209,7 +142,9 @@ const extra_activ = [
         country: "Brasília, DF, Brazil",
         description: "",
         button: false,
-        button_text: ""
+        button_text: "",
+        prof: true,
+        fix: true
     },
     {
         title: "B.S. in Computer Science",
@@ -220,7 +155,9 @@ const extra_activ = [
         country: "Brasília, DF, Brazil",
         description: "GPA: 3.8/5.0 \n Relevant Coursework: Introduction to Artificial Intelligence, Principles of Computational Vision, Fundamentals of Intelligent Systems, Linear Algebra, Probability & Statistics, Design & Analysis of Algorithms, Data Structures, Theory & Application of Graphs, Software Engineering, Automata & Computability, Databases.",
         button: false,
-        button_text: ""
+        button_text: "",
+        prof: true,
+        fix: true
     },
     {
         title: "Intern",
@@ -231,7 +168,8 @@ const extra_activ = [
         country: "São Paulo, SP, Brazil",
         description: "Automation of spreadsheets in a project to survey the damages from the Bento Rodrigues Dam Disaster.",
         button: false,
-        button_text: ""
+        button_text: "",
+        prof: true
     },
     {
         title: "Freelancer",
@@ -242,7 +180,8 @@ const extra_activ = [
         country: "Brasília, DF, Brazil",
         description: "Developed iOS App MediPreço.",
         button: true,
-        button_text: "View App on Store"
+        button_text: "View App on Store",
+        prof: true
     },
     {
         title: "Researcher",
@@ -253,22 +192,23 @@ const extra_activ = [
         country: "Brasília, DF, Brazil",
         description: "Junior researcher and software architect in data mining and machine learning in natural language processing. Creating software to extract and process information from the Diário Oficial.",
         button: true,
-        button_text: "View Project"
+        button_text: "View Project",
+        prof: true
     },
     {
         title: "Masters or PhD",
         start_year: "2021",
-        end_year: "",
+        end_year: "Present",
         display_year: 0,
         company: "Unknown",
         country: "Unknown",
         description: "Locked",
         button: false,
-        button_text: ""
+        button_text: "",
+        prof: true
     }
 ]
 
 export {
-    prof_educ,
-    extra_activ
+    experience
 }
