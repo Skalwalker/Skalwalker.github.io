@@ -149,7 +149,7 @@ class Experience extends React.Component {
         var rect = d3.select("#" + e.currentTarget.id).select("rect")
         var text = d3.select("#" + e.currentTarget.id).select("text")
         g.raise()
-        var list_exp = extra_years[g.id.match(/(\d+)/g)]
+        var list_exp = extra_years[g.attr('id').match(/(\d+)/g)]
         for (var exp in list_exp) {
           if (!("fix" in list_exp[exp])) {
             g.append('rect')        
