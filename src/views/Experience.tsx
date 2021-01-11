@@ -237,7 +237,7 @@ class Experience extends React.Component {
           .attr('width', 5)
           .attr('transform', `translate(${r},${-(height/2-r)})`)
 
-          if (clicked != e.path[1].id || clicked != ""){
+          if (clicked != g.attr('id') || clicked != ""){
             d3.selectAll('.aux-rec-last').transition()
               .delay((d, i) => {return (i+1)*200 })
               .duration(300)
@@ -274,7 +274,7 @@ class Experience extends React.Component {
               .attr('transform', `translate(0, 0)`)
               .attr("class", "year-holder")
           }
-        clicked = e.path[1].id;
+        clicked = g.attr('id');
       })
   }
 
