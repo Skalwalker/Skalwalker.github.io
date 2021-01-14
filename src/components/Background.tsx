@@ -12,10 +12,9 @@ class Background extends React.Component<myProps, myState> {
   static defaultProps = {style:{}}
   render () {
     return (
-      // <div  style={{backgroundColor: '#070e20'}}>
-        <div id='background' style={{minHeight: "100vh", backgroundColor: '#070e20', position: "relative", margin: "0 auto", ...this.props.style}}>
-
-          <Particles params={{
+      <div id='background' style={{height: '92vh', backgroundColor: '#070e20', ...this.props.style}}>
+        <div style={{ height: 'inherit', position: "relative", margin: "0 auto"}}>
+          <Particles height={window.outerHeight as any as string} params={{
             particles: {
               color: {
                 value: "#ff30d6"
