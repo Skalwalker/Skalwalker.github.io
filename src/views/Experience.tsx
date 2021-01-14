@@ -1,11 +1,7 @@
 import React from 'react';
 import Background from '../components/Background'
-import { Col, Container, Row } from 'react-bootstrap';
 import { experience } from '../content/Experience'
-import ExtraActivity from '../components/ExtraActivity'
-import ProfEdu from '../components/ProfEdu'
 import * as d3 from 'd3';
-import * as d3_ease from 'd3-ease';
 
 class Experience extends React.Component {
   private myRef: React.RefObject<HTMLInputElement>;
@@ -196,7 +192,7 @@ class Experience extends React.Component {
           .attr('width', (d, i) => { 
             if (d.end_year === d.start_year) {
               return 10
-            } else if (d.end_year == "Present") {
+            } else if (d.end_year === "Present") {
               return width-rect.attr('x')
             }
             return exp_range(d.end_year)-rect.attr('x')-r-10
@@ -237,7 +233,7 @@ class Experience extends React.Component {
           .attr('width', 5)
           .attr('transform', `translate(${r},${-(height/2-r)})`)
 
-          if (clicked != g.attr('id') || clicked != ""){
+          if (clicked !== g.attr('id') || clicked !== ""){
             d3.selectAll('.aux-rec-last').transition()
               .delay((d, i) => {return (i+1)*200 })
               .duration(300)

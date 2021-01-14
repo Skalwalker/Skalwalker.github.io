@@ -1,6 +1,6 @@
 import React from 'react';
 import Background from '../components/Background';
-import { Col, Container, Row, Button, Table } from 'react-bootstrap';
+import { Col, Row, Button, Table } from 'react-bootstrap';
 import { craft } from '../content/Craft';
 import CardRelease from '../components/CardRelease';
 import '../assets/css/font.css';
@@ -8,14 +8,16 @@ import '../assets/css/font.css';
 //   Link
 // } from "react-router-dom";
 
-type myState = { activeTags: any }
+type myState = { activeTags: any, bgHeight: any, imagesCounter: any }
 type myProps = { }
 
 class Craft extends React.Component<myProps, myState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      activeTags: []
+      activeTags: [],
+      bgHeight: "92vh",
+      imagesCounter: 0
     };
   }
 
@@ -53,13 +55,23 @@ class Craft extends React.Component<myProps, myState> {
     }
   }
 
+  onLoad = () => {
+    const releases = craft.crafts;
+    if (this.state.imagesCounter === releases.length-1) {
+      this.setState({
+        bgHeight: document.getElementById('page-size')!.clientHeight + document.getElementsByClassName('card-body')![0].clientHeight})
+    } else {
+      this.setState({imagesCounter: this.state.imagesCounter+1})
+    }
+  }
+
   render() {
     const tags = craft.tags;
     const releases = craft.crafts;
     const papers = craft.papers;
 
     return (
-      <Background style={{height: '100%'}}>
+      <Background style={{ minHeight: this.state.bgHeight }}>
         {/* <Container> */}
         <Row className="m-0 pt-5 pr-4 pb-5">
           <Col md={2}>
@@ -77,7 +89,7 @@ class Craft extends React.Component<myProps, myState> {
               })}
             </Row>
           </Col>
-          <Col md={10}>
+          <Col id="page-size" md={10}>
               <Row>
                 <h1 className="subtitle" style={{color: 'white'}}>Releases</h1>
                 <div className='w-100 mt-2 mb-4' style={{backgroundColor: 'white', height: '3px'}}/>
@@ -87,11 +99,11 @@ class Craft extends React.Component<myProps, myState> {
                   if (release.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
                     if (release.banner === "") {
                       return(
-                        <CardRelease title={release.title} url={release.url}/>
+                        <CardRelease title={release.title} url={release.url} onLoad={this.onLoad}/>
                       )
                     } else {
                       return(
-                        <CardRelease title={release.title} img={release.banner} url={release.url}/>
+                        <CardRelease title={release.title} img={release.banner} url={release.url} onLoad={this.onLoad}/>
                       )
                     }
                   } else {
