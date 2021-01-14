@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { works } from '../../content/About'
 
 type myProps = { }
-type myState = { title: any, text: any }
+type myState = { title: any, text: any, img:any}
 
 class Work extends React.Component<myProps, myState> {
   constructor(props: any) {
@@ -13,6 +13,7 @@ class Work extends React.Component<myProps, myState> {
     this.state = {
       title: works.orbs[0].title,
       text: works.orbs[0].text,
+      img: works.orbs[0].img
     };
   }
 
@@ -33,7 +34,7 @@ class Work extends React.Component<myProps, myState> {
                 <Row>
                   {works.orbs.map((work, index) => {
                     return(
-                      <Orb onClick={() => {this.setIsShown(work.title, work.text)}} />
+                      <Orb img={work.img} onClick={() => {this.setIsShown(work.title, work.text)}} />
                     )
                   })}
                 </Row>

@@ -1,6 +1,5 @@
 import React, { CSSProperties } from 'react';
 import Particles from 'react-particles-js';
-import particles_cfg from '../assets/particles.json';
 import '../assets/css/font.css';
 
 
@@ -32,11 +31,11 @@ class Background extends React.Component<myProps, myState> {
               }
             }
           }}></Particles>
-          <div style={{position: "absolute", top: "0", width: "100%", height: '92vh'}}>
+          <div style={{position: "absolute", top: "0", width: "100%", minHeight: '100vh'}}>
             {this.props.children}
           </div>
         </div>
-      </div>
+      // </div>
     )
   }
 }
