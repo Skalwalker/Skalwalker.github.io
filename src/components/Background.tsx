@@ -14,8 +14,8 @@ class Background extends React.Component<myProps, myState> {
   render () {
     return (
       <div id='background' style={{height: '92vh', backgroundColor: '#070e20', ...this.props.style}}>
-        <div style={{position: "relative", margin: "0 auto"}}>
-          <Particles params={{
+        <div style={{ height: 'inherit', position: "relative", margin: "0 auto"}}>
+          <Particles height={window.outerHeight as any as string} params={{
             particles: {
               color: {
                 value: "#ff30d6"
