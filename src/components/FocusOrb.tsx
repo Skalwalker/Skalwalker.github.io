@@ -5,9 +5,6 @@ type myState = { }
 type myProps = { title: any, text: any }
 
 class Orb extends React.Component<myProps, myState> {
-  constructor(props: any) {
-    super(props);
-  }
 
   render () {
     return (

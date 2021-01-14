@@ -1,6 +1,6 @@
 import React from 'react';
 import Background from '../components/Background';
-import { Col, Container, Row, Button, Table } from 'react-bootstrap';
+import { Col, Row, Button, Table } from 'react-bootstrap';
 import { craft } from '../content/Craft';
 import CardRelease from '../components/CardRelease';
 import '../assets/css/font.css';

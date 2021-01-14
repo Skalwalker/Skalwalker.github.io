@@ -1,6 +1,5 @@
 import React, { CSSProperties } from 'react';
 import Particles from 'react-particles-js';
-import particles_cfg from '../assets/particles.json';
 import '../assets/css/font.css';
 
 
@@ -13,8 +12,9 @@ class Background extends React.Component<myProps, myState> {
   static defaultProps = {style:{}}
   render () {
     return (
-      <div id='background' style={{height: '92vh', backgroundColor: '#070e20', ...this.props.style}}>
-        <div style={{position: "relative", margin: "0 auto"}}>
+      // <div  style={{backgroundColor: '#070e20'}}>
+        <div id='background' style={{minHeight: "100vh", backgroundColor: '#070e20', position: "relative", margin: "0 auto", ...this.props.style}}>
+
           <Particles params={{
             particles: {
               color: {
@@ -32,11 +32,11 @@ class Background extends React.Component<myProps, myState> {
               }
             }
           }}></Particles>
-          <div style={{position: "absolute", top: "0", width: "100%", height: '92vh'}}>
+          <div style={{position: "absolute", top: "0", width: "100%", minHeight: '100vh'}}>
             {this.props.children}
           </div>
         </div>
-      </div>
+      // </div>
     )
   }
 }

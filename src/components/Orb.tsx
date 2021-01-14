@@ -1,8 +1,8 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
+import { Col, Image } from 'react-bootstrap';
 
 type myState = { border: boolean }
-type myProps = { onClick: any }
+type myProps = { img: any, onClick: any }
 
 class Orb extends React.Component<myProps, myState> {
   constructor(props: any) {
@@ -15,8 +15,8 @@ class Orb extends React.Component<myProps, myState> {
   render () {
     return (
       <Col md={12} {... this.props} className='p-2'>
-        <div className='m-auto' 
-             style={{width:'60px', height:'60px', backgroundColor: 'gray', borderRadius: '60px'}}>
+        <div className='m-auto' style={{width:'60px', height:'60px'}}>
+            <Image roundedCircle src={this.props.img} fluid/>
         </div>
       </Col>
     )

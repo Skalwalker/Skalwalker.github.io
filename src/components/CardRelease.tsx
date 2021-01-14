@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Card, Button } from 'react-bootstrap';
+import { Col, Card } from 'react-bootstrap';
 
 type myState = { }
 type myProps = { title: any, img: any, url: any }

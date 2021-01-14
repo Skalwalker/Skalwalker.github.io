@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import { Button, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import Background from '../components/Background'
 import { slides } from '../content/Home'
 import '../assets/css/font.css';
@@ -29,9 +30,13 @@ class Home extends React.Component {
                 <p className="subtitle" style={{fontSize: '28px'}}>
                   {slide.desc}
                 </p>
-                {slide.button && (<Button size='lg' href={slide.route} variant="outline-light" className='mb-3'>
+                {slide.button && (
+                <Link to={slide.route}>
+                  <Button size='lg' variant="outline-light" className='mb-3'>
                   Learn More
-                </Button>)}
+                  </Button>
+                </Link>
+                )}
               </Carousel.Caption>
             </Carousel.Item>
           )
