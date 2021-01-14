@@ -59,7 +59,8 @@ class Craft extends React.Component<myProps, myState> {
     const releases = craft.crafts;
     if (this.state.imagesCounter === releases.length-1) {
       this.setState({
-        bgHeight: document.getElementById('page-size')!.clientHeight + document.getElementsByClassName('card-body')![0].clientHeight})
+        bgHeight: document.getElementById('page-size')!.clientHeight + 
+        document.getElementsByClassName('card-body')![0].clientHeight})
     } else {
       this.setState({imagesCounter: this.state.imagesCounter+1})
     }
