@@ -14,7 +14,7 @@ class Home extends React.Component {
         {slides.map((slide, index)=> {
           return (
             <Carousel.Item>
-              <div className="d-block w-100" style={{ height: '92vh' }} >
+              <div className="d-block w-100" style={{ height: '100vh' }} >
                 <Row className="h-100">
                   <Col md={12} className="my-auto">
                     <div className="bottom_text">

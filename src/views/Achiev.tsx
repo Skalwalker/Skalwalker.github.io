@@ -32,7 +32,7 @@ class Acheiv extends React.Component<MyProps, MyState>  {
   render() {
     return (
       <Background>
-        <Container fluid style={{height: '92vh'}}>
+        <Container fluid style={{height: '100vh'}}>
           <Row className='h-100'>
             <Col md={3} className="text-center my-auto">
               {this.state.isShown && (

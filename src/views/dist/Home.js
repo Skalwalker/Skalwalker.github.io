@@ -26,7 +26,7 @@ var Home = /** @class */ (function (_super) {
         return (react_1["default"].createElement(Background_1["default"], null,
             react_1["default"].createElement(Carousel_1["default"], { prevIcon: (react_1["default"].createElement("div", null)), nextIcon: (react_1["default"].createElement("div", null)) },
                 react_1["default"].createElement(Carousel_1["default"].Item, null,
-                    react_1["default"].createElement("div", { className: "d-block w-100", style: { height: '92vh' } },
+                    react_1["default"].createElement("div", { className: "d-block w-100", style: { height: '100vh' } },
                         react_1["default"].createElement("div", { style: style.nameDiv },
                             react_1["default"].createElement("h1", { style: style.nameStyle }, "RENATO NOBRE"))),
                     react_1["default"].createElement(Carousel_1["default"].Caption, { className: 'mb-5' },

@@ -16,7 +16,7 @@ class Craft extends React.Component<myProps, myState> {
     super(props);
     this.state = {
       activeTags: [],
-      bgHeight: "92vh",
+      bgHeight: "100vh",
       imagesCounter: 0
     };
   }
@@ -72,7 +72,7 @@ class Craft extends React.Component<myProps, myState> {
     const papers = craft.papers;
 
     return (
-      <Background style={{ minHeight: this.state.bgHeight }}>
+      <Background pageHeight={this.state.bgHeight}>
         {/* <Container> */}
         <Row className="m-0 pt-5 pr-4 pb-5">
           <Col md={2}>

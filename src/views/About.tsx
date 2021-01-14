@@ -14,7 +14,7 @@ class About extends React.Component {
   render() {
     return (
       <Background>
-        <Container fluid className='h-100'>
+        <Container style={{height: "92vh"}} fluid>
           <Row className='h-100'>
             <Col md={3} className='my-auto'>
               <Row>

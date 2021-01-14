@@ -14,9 +14,6 @@ function App() {
     <div>
       <Router>
         <div>
-        <NavBar></NavBar>
-        </div>
-        <div>
           <Switch>
             {routes.map((route, index) => (
               <Route
