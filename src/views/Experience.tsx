@@ -14,7 +14,7 @@ class Experience extends React.Component {
   draw(svg: any) {
     var g;
     var extra_years = {}
-    const height = document.getElementById('background')!.clientHeight;
+    const height = document.getElementById('background')!.clientHeight*0.92;
     const width = document.getElementById('background')!.clientWidth;
 
     var exp_range = d3.scaleSqrt().range([60, width-60]).domain([2012, 2022]).exponent(10)
@@ -275,7 +275,7 @@ class Experience extends React.Component {
   }
 
   componentDidMount(){
-    const height = document.getElementById('background')!.clientHeight;
+    const height = document.getElementById('background')!.clientHeight*0.92;
     const width = document.getElementById('background')!.clientWidth;
 
     let svg = d3.select(this.myRef.current)
