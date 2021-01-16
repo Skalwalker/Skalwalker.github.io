@@ -4,9 +4,6 @@ import { Col, Row, Button, Table } from 'react-bootstrap';
 import { craft } from '../content/Craft';
 import CardRelease from '../components/CardRelease';
 import '../assets/css/font.css';
-// import {
-//   Link
-// } from "react-router-dom";
 
 type myState = { activeTags: any, bgHeight: any, imagesCounter: any }
 type myProps = { }
@@ -59,7 +56,7 @@ class Craft extends React.Component<myProps, myState> {
     const releases = craft.crafts;
     if (this.state.imagesCounter === releases.length-1) {
       this.setState({
-        bgHeight: document.getElementById('page-size')!.clientHeight + 
+        bgHeight: document.getElementById('page-size')!.clientHeight +
         document.getElementsByClassName('card-body')![0].clientHeight})
     } else {
       this.setState({imagesCounter: this.state.imagesCounter+1})

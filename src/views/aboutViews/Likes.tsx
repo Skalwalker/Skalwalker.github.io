@@ -29,7 +29,7 @@ class Likes extends React.Component<MyProps, MyState> {
                 return (
                   <Col md={2} className='mr-3 mb-3'>
                     <div onMouseEnter={() => this.setIsShown(ilike.title)}
-                         onMouseLeave={() => this.setIsShown('Hover some squares')} 
+                         onMouseLeave={() => this.setIsShown('Hover some squares')}
                       className='m-auto' style={{height: '70px', width: '70px', backgroundColor: 'gray'}}>
                     </div>
                   </Col>

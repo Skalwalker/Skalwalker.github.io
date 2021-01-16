@@ -5,9 +5,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Navbar, Nav } from 'react-bootstrap';
 import { routes } from './routes'
-import NavBar from './components/NavBar'
+
 
 function App() {
   return (
