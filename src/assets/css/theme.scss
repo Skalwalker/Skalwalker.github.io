@@ -88,5 +88,17 @@ $body-bg: $indigo;
 // $list-inline-padding: 5px;
 // $mark-bg: #fcf8e3;
 
+// Cards
+$card-border-color: theme-color('primary');
+$card-bg: rgba(theme-color('primary'), 0.30);
+$card-border-radius: 0.0;
+$card-border-width: 1.5px;
+
+// Forms
+$input-bg: rgba(theme-color('primary'), 0.30);
+$input-border-color: theme-color('primary');
+$input-focus-bg: $input-bg;
+$input-placeholder-color: $white;
+$input-color: $pink;
 
 @import "bootstrap";
