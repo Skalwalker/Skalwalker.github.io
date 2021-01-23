@@ -13,7 +13,7 @@ const languages_field = {
         years: 6,
         projects: 6,
         self_ass: 8,
-        desc: "Swift was my first language.\nI learned it through Treehouse in\nhighschool, and started my development\nskills withiOS Apps."
+        desc: "Swift was my first language.\nI learned it through Treehouse in\nhighschool, and started my development\nskills with iOS Apps."
     },
     'numpy': {
 
@@ -186,5 +186,138 @@ const languages_field = {
     }
 }
 
-export {languages_field}
+const languages_field_test = {
+    name: "C/C++",
+    linkedin: 5,
+    years: 5,
+    projects: 10,
+    self_ass: 9,
+    desc: "C and C++ were my first,\nand most used, language in my\nbachelors degree. C is the main language\nthat helped me develop programming skills,\nit taught me to understand every aspect\nof core logic programming.",
+    children: [
+        {
+            name: "Swift",
+            linkedin: 2,
+            years: 6,
+            projects: 6,
+            self_ass: 8,
+            desc: "Swift was my first language.\nI learned it through Treehouse in\nhighschool, and started my development\nskills with iOS Apps.",
+            children: [
+                {        
+                    name: "XCode",
+                    linkedin: 2,
+                    years: 6,
+                    projects: 6,
+                    self_ass: 9,
+                    desc: "XCode is an iOS App development platform.\nI started using it before I enrolled in\nthe university and made several apps\nwith it."
+                }
+            ]
+        },
+        {
+            name: "JavaScript/TypeScript",
+            linkedin: 0,
+            years: 1,
+            projects: 3,
+            self_ass: 4,
+            desc: "Javascript and TypeScript is the language\nI use for web development.\nI am not a big fan, neither a big adept\nfor windows",
+            children: [
+                {
+                    name: "Vue",
+                    linkedin: 0,
+                    years: 1,
+                    projects: 1,
+                    self_ass: 5,
+                    desc: "When I started playing with\nWeb Development I started with vue.\nI made a project for a database\ninterface with it."
+                },
+                {
+                    name: "React",
+                    linkedin: 0,
+                    years: 1,
+                    projects: 1,
+                    self_ass: 3,
+                    desc: "This portfólio is made\nwith React and love!\nIsn't it awesome?!"
+                },
+                {
+                    name: "Bootstrap",
+                    linkedin: 0,
+                    years: 2,
+                    projects: 2,
+                    self_ass: 4,
+                    desc: "I used Bootstrap,\nBootstrap-Vue and Bootstrap-React\nin my web development."
+                }
+
+            ]
+        },
+        {
+            name: "Python 3",
+            linkedin: 7,
+            years: 4,
+            projects: 10,
+            self_ass: 10,
+            desc: "Python is my main programming language.\nMost of my programs were developed\nin Python and its libraries.\nI also give Python classes for newcomers.",
+            children: [
+                {
+                    name: "Dash",
+                    linkedin: 0,
+                    years: 1,
+                    projects: 1,
+                    self_ass: 5,
+                    desc: "I used Dash to deploy a\nfront-end view of a machine learning model\nI was using in my graduation thesis."
+                },
+                {
+                    name: "Sci-kit Learn",
+                    linkedin: 0,
+                    years: 2,
+                    projects: 4,
+                    self_ass: 6,
+                    desc: "Sci-kit Learn was used\nin my starting projects on\nthe machine learning field."
+                },
+                {
+                    name: "Spinning-Up",
+                    linkedin: "Unmeasured",
+                    years: 1,
+                    projects: 1,
+                    self_ass: 8,
+                    desc: "Spinning-Up is a library that\nimplements deep reinforcement\nlearning algorithms. This library uses the\nTensorFlow backend and was\nused in my graduation thesis."
+                },
+                {
+                    name: "Keras",
+                    linkedin: 0,
+                    years: 1,
+                    projects: 1,
+                    self_ass: 8,
+                    desc: "Keras is a neural-network\nlibrary running on top of TensorFlow.\nI used this library to create\nLSTM models for market prediction\nin my graduation thesis.",
+                    children: [
+                        {
+                            name: "TensorFlow",
+                            linkedin: 0,
+                            years: 1,
+                            projects: 0,
+                            self_ass: 1,
+                            desc: "I never actually\nused pure TensorFlow.\nInstead I used libraries with its\nbackend in my project.\nBut by the end of 2020 I intend to\nbe a certified TensorFlow programmer."
+                        }
+                    ]
+                },
+                {
+                    name: "Numpy",
+                    linkedin: 2,
+                    years: 6,
+                    projects: 6,
+                    self_ass: 8,
+                    desc: "Numpy "
+                },
+                {
+                    name: "Matplotlib",
+                    linkedin: 0,
+                    years: 3,
+                    projects: 6,
+                    self_ass: 7,
+                    desc: "Matplotlib is the main plot\nlibrary I used to create figures\nfor my data science reports."
+                }
+            ]
+        }
+
+    ]
+}
+
+export {languages_field, languages_field_test}
 
