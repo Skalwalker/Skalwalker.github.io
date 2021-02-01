@@ -98,7 +98,7 @@ const Canvas = (props: any) => {
     const draw = (ctx: any, navWidth: any) => {
       const w = ctx.canvas.width;
       const h = ctx.canvas.height;
-      
+
       let skillsPositions = [
         {name: 'python', x: w/2, y: h/2+120},
         {name: 'c', x: w/2, y: h/2+240},
@@ -141,7 +141,7 @@ const Canvas = (props: any) => {
       drawDiamond(ctx, (w/2)-250, h/3+220, 180, 180, "Others");
       drawDiamond(ctx, (w/2)-140, h/3+110, 180, 180, "App Dev");
       drawDiamond(ctx, (w/2)-360, h/3+110, 180, 180, "Project Manage");
-      
+
       ctx.shadowOffsetX = 0;
       ctx.shadowBlur = 0;
 
@@ -149,7 +149,7 @@ const Canvas = (props: any) => {
       drawStroke(ctx, w/2+30,  h/2+120, w/2+80, h/2+120);
       drawStroke(ctx, w/2+80,  h/2+120,  w/2+130-30, h/2+100);
       drawStroke(ctx, w/2,     h/2+120+30, w/2, h/2+210);
-      
+
       circle(    ctx, w/2,     h/2+240, 30, "C/C++")
       drawStroke(ctx, w/2+30,  h/2+240, w/2+70, h/2+220);
       drawStroke(ctx, w/2+70,  h/2+220, w/2+70, h/2+180+30);
@@ -161,23 +161,23 @@ const Canvas = (props: any) => {
       circle(    ctx, w/2+70, h/2+180, 30, "JS")
       drawStroke(ctx, w/2+70+30, h/2+180, w/2+230, h/2+305)
       drawStroke(ctx, w/2+230, h/2+305, w/2+370, h/2+160)
-      
-      
+
+
       circle(    ctx, w/2+250, h/2+220, 30, "Vue")
       drawStroke(ctx, w/2+250, h/2+284, w/2+250, h/2+220+30)
-      
+
       circle(    ctx, w/2+310, h/2+160, 30, "React")
       drawStroke(ctx, w/2+310, h/2+160+30, w/2+310, h/2+222)
 
       circle(    ctx, w/2+370, h/2+100, 30, "BStrap")
       drawStroke(ctx, w/2+370, h/2+100+30, w/2+370, h/2+160)
-      
+
       circle(    ctx, w/2+130, h/2+100, 30, "Dash")
-      
+
       circle(    ctx, w/2+210, h/2+50,  30, "HTML")
-      
+
       circle(    ctx, w/2+290, h/2+50,  30, "CSS")
-      
+
       // Upper Side
       drawStroke(ctx, w/2,     h/2+90, w/2, h/2+30);
 
@@ -209,13 +209,13 @@ const Canvas = (props: any) => {
       drawStroke(ctx, w/2-90, h/2+159, w/2-120, h/3+231);
 
       circle(    ctx, (w/2)-140, h/3+210, 30, "Xcode")
-      
+
       circle(    ctx, (w/2)-330, h/3+210, 30, "GitHub")
       circle(    ctx, (w/2)-400, h/3+200, 30, "Docker")
 
       circle(    ctx, (w/2)-280, h/3+90, 30, "MongoDb")
       circle(    ctx, (w/2)-210, h/3+90, 30, "Mysql")
-      
+
       circle(    ctx, (w/2)-250, h/3+300, 30, "Latex")
 
       // Draw Windows Info
@@ -232,7 +232,7 @@ const Canvas = (props: any) => {
           }
           drawRectInfo(ctx, skill.x, skill.y, size, width, skill.name, changeDir)
           changeDir = false;
-        } 
+        }
       }
     }
 

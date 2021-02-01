@@ -27,45 +27,49 @@ class Experience extends React.Component {
       .attr('id', 'axis')
       .style('stroke-width', 10)
       .style('stroke', 'white')
-    
+
     svg.append('text')
-      .text('Extra')        
+      .text('Extra')
       .attr("x", 10)
       .attr("y", height-80)
       .attr("dy", ".35em")
       .attr("class", "titles")
       .style("text-anchor", "start")
       .style("fill", "white")
+      .attr("font-family", "filson-pro")
       .attr("font-size", "40px")
-    
+
     svg.append('text')
-      .text('Activities')        
+      .text('Activities')
       .attr("x", 10)
       .attr("y", height-40)
       .attr("dy", ".35em")
       .style("text-anchor", "start")
       .style("fill", "white")
       .attr("font-size", "40px")
+      .attr("font-family", "filson-pro")
       .attr("class", "titles")
 
     svg.append('text')
-      .text('Professional')        
+      .text('Professional')
       .attr("x", 10)
       .attr("y", 40)
       .attr("dy", ".35em")
       .style("text-anchor", "start")
       .style("fill", "white")
       .attr("font-size", "40px")
+      .attr("font-family", "filson-pro")
       .attr("class", "titles")
-    
+
     svg.append('text')
-      .text('&Education')        
+      .text('& Education')
       .attr("x", 10)
       .attr("y", 80)
       .attr("dy", ".35em")
       .style("text-anchor", "start")
       .style("fill", "white")
       .attr("font-size", "40px")
+      .attr("font-family", "filson-pro")
       .attr("class", "titles")
 
     for (var i = 0; i < experience.length; i++) {
@@ -78,11 +82,13 @@ class Experience extends React.Component {
       }
     }
 
+    var prev_end_point = 0;
+    var overlap_mult = 1;
     for (var key in extra_years) {
       g = svg.append('g')
       var r = 35;
       g.attr('id', 'year' + key)
-    
+
       g.append('rect')
         .attr('class', 'year-holder')
         .attr('x', exp_range(key)-r)
@@ -93,7 +99,7 @@ class Experience extends React.Component {
         .attr('ry', r)
         .style('fill', 'white')
         .style('transform-origin', 'middle center')
-      
+
       g.append('text')
         .attr("x", exp_range(key))
         .attr('class', 'year')
@@ -102,32 +108,50 @@ class Experience extends React.Component {
         .style("text-anchor", "middle")
         .attr("font-size", "18px")
         .text(key)
-      
+
+
       for (var exp in extra_years[key]) {
         let i :number = Number(exp)
-        
+
         if ("prof" in extra_years[key][exp]) {
           var posY = -(((height/2)-60/extra_years[key].length)*(i+1))
           posY = posY - (posY - (height/2) + 60) - (height/2)
         } else {
           var posY = (((height/2)/extra_years[key].length)*(i+1))
-        } 
+        }
         if ("fix" in extra_years[key][exp]) {
-          g.append('rect')        
+          let start_point = exp_range(key)+10;
+          let width = exp_range(extra_years[key][exp].end_year)-exp_range(key)-10;
+          let end_point = start_point+width;
+          let y_pos = (height/2) + posY;
+
+          console.log(start_point);
+          console.log(prev_end_point);
+          console.log(width);
+          if (start_point <= prev_end_point) {
+            overlap_mult += 1;
+            y_pos = (height/2) + posY*overlap_mult;
+          } else {
+            overlap_mult = 1;
+            prev_end_point = end_point;
+          }
+
+          g.append('rect')
             .attr('class', 'aux-rec-fix')
-            .attr('x', exp_range(key)+10)
-            .attr('y', (height/2) + posY)
-            .attr('width', exp_range(extra_years[key][exp].end_year)-exp_range(key)-10)
+            .attr('x', start_point)
+            .attr('y', y_pos)
+            .attr('width', width)
             .attr('height', 10)
             .style('fill', '#ff30d6')
 
           g.append('text')
             .attr('class', 'aux-text-fix')
-            .attr("x", exp_range(key)+10)
-            .attr("y", (height/2) + posY - 10)
+            .attr("x", start_point)
+            .attr("y", y_pos - 10)
             .attr("dy", ".35em")
             .style("text-anchor", "start")
             .attr("font-size", "14px")
+            .attr("font-family", "objektiv-mk1")
             .style('opacity', '100')
             .style('fill', 'white')
             .text(extra_years[key][exp].title)
@@ -148,7 +172,7 @@ class Experience extends React.Component {
         var list_exp = extra_years[g.attr('id').match(/(\d+)/g)]
         for (var exp in list_exp) {
           if (!("fix" in list_exp[exp])) {
-            g.append('rect')        
+            g.append('rect')
               .attr('class', 'aux-rec')
               .attr('x', rect.attr('x'))
               .attr('y', rect.attr('y'))
@@ -158,7 +182,7 @@ class Experience extends React.Component {
               .attr('ry', 0)
               .style('fill', 'white')
               .style('opacity', '0')
-            
+
             g.append('text')
               .attr('class', 'aux-text')
               .attr("x", rect.attr('x'))
@@ -166,8 +190,9 @@ class Experience extends React.Component {
               .attr("dy", ".35em")
               .style("text-anchor", "start")
               .attr("font-size", "14px")
+              .attr("font-family", "objektiv-mk1")
               .style('opacity', '0')
-              .style('fill', '#ff30d6')
+              .style('fill', '#ffffff')
               .text(list_exp[exp].title)
           }
         }
@@ -183,13 +208,13 @@ class Experience extends React.Component {
           .duration(1300)
           .style('opacity', '100')
           .attr('class', 'aux-rec-last')
-          .attr('transform', (d, i) => { 
+          .attr('transform', (d, i) => {
             if (!("prof" in d)) {
               return `translate(${r+10}, ${((((rect.attr('y'))/list_exp.length))*(i+1)) + r})`
             }
-            return `translate(${r+10}, ${-((((rect.attr('y')-60)/list_exp.length))*(i+1))})` 
+            return `translate(${r+10}, ${-((((rect.attr('y')-60)/list_exp.length))*(i+1))})`
           })
-          .attr('width', (d, i) => { 
+          .attr('width', (d, i) => {
             if (d.end_year === d.start_year) {
               return 10
             } else if (d.end_year === "Present") {
@@ -202,18 +227,18 @@ class Experience extends React.Component {
           .delay((d, i) => {return (i+1)*400 })
           .duration(2000)
           .style('opacity', '100')
-          .style('fill', '#ffffff')
+          .style('fill', '#ff30d6')
           .attr('class', 'aux-text-last')
-          .attr('transform', (d, i) => { 
+          .attr('transform', (d, i) => {
             if (!("prof" in d)) {
               return `translate(${r+10}, ${((((rect.attr('y'))/list_exp.length))*(i+1)-10 + r)})`
             }
-            return `translate(${r+10}, ${-((((rect.attr('y')-60)/list_exp.length))*(i+1)+10)})` 
+            return `translate(${r+10}, ${-((((rect.attr('y')-60)/list_exp.length))*(i+1)+10)})`
           })
 
         text.transition()
           .duration(1000)
-          .style("fill", "#ffffff")
+          .style("fill", "#ff30d6")
           .style("opacity", "100")
           .attr("font-size", "25px")
 
@@ -239,11 +264,11 @@ class Experience extends React.Component {
               .duration(300)
               .style('opacity', '0')
               .attr('transform', (d, i) => {
-                return "translate(0, 0)" 
+                return "translate(0, 0)"
               })
               .attr('width', '10')
               .remove()
-            
+
             d3.selectAll('.aux-text-last').transition()
               .delay((d, i) => {return (i+1)*200 })
               .duration(400)

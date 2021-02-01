@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-// import image from "../../assets/images/raskalkhan.png"
 import { core } from "../../content/About"
 import Image from 'react-bootstrap/Image'
 import { Link } from 'react-router-dom'
+import { FaLinkedin } from 'react-icons/fa';
+import { FaGithub } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 
 class Core extends React.Component {
@@ -24,15 +26,16 @@ class Core extends React.Component {
                     </p>
                   </Col>
                   <Col md={12} className=''>
-                    <Link to="https://github.com/Skalwalker">
-                        <Image src="" className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px'}}/>
-                    </Link>
-                    <Link to="https://github.com/Skalwalker">
-                        <Image src="" className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px'}}/>
-                    </Link>
-                    <Link to="https://github.com/Skalwalker">
-                        <Image src="" className='d-inline-block float-right ml-2' style={{height: '40px', width: '40px'}}/>
-                    </Link>
+                    <a target="_blank" href="https://www.instagram.com/rk_nobre/">
+                      <FaInstagram color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaInstagram>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/rk-nobre/">
+                      <FaLinkedin color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaLinkedin>
+                    </a>
+                    <a target="_blank" href="https://github.com/Skalwalker">
+                        <FaGithub color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaGithub>
+                    </a>
+
                   </Col>
                 </Row>
               </Col>

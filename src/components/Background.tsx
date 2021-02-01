@@ -22,15 +22,19 @@ class Background extends React.Component<myProps, myState> {
               },
               links: {
                 color: {
-                  value: "#ff30d6" //ff00cc
+                  value: "#ff30d6"
                 },
                 blink: true,
                 opacity: 0.7
               },
               number: {
-                value: 100
+                value: 100,
+                density: {
+                  enable: true
+                }
               }
-            }
+            },
+            fpsLimit: 30
           }}></Particles>
           <div style={{position: "absolute", top: "0", width: "100%", minHeight: '100vh'}}>
             <NavBar></NavBar>

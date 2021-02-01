@@ -10,7 +10,7 @@ type myProps = { }
 class NavBar extends React.Component<myProps, myState> {
     render(){
         return (
-            <Navbar style={{backgroundColor: "transparent", height: '8vh', zIndex: 100 }} expand="md">
+            <Navbar id="navbar" style={{backgroundColor: "transparent", height: '8vh', zIndex: 100 }} expand="md">
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Navbar.Brand style={{color: 'white'}}>Under Construction</Navbar.Brand>

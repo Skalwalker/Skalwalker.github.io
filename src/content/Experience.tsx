@@ -124,7 +124,7 @@ const experience = [
     {
         title: "Student Exchange",
         start_year: "2013",
-        end_year: "2013",
+        end_year: "2014",
         display_year: 0,
         company: "Santa Barbara High School",
         country: "Santa Barbara, California, USA",
@@ -132,11 +132,12 @@ const experience = [
         button: false,
         button_text: "",
         prof: true,
+        fix: true
     },
     {
         title: "High School Graduation",
         start_year: "2012",
-        end_year: "2014",
+        end_year: "2015",
         display_year: 1,
         company: "Centro Educacional Sigma",
         country: "Brasília, DF, Brazil",
@@ -169,19 +170,21 @@ const experience = [
         description: "Automation of spreadsheets in a project to survey the damages from the Bento Rodrigues Dam Disaster.",
         button: false,
         button_text: "",
-        prof: true
+        prof: true,
+        fix: true
     },
     {
         title: "Freelancer",
         start_year: "2017",
-        end_year: "2017",
+        end_year: "2018",
         display_year: 0,
         company: "iLevel Tecnologia (Startup Company)",
         country: "Brasília, DF, Brazil",
         description: "Developed iOS App MediPreço.",
         button: true,
         button_text: "View App on Store",
-        prof: true
+        prof: true,
+        fix: true
     },
     {
         title: "Researcher",
@@ -193,7 +196,8 @@ const experience = [
         description: "Junior researcher and software architect in data mining and machine learning in natural language processing. Creating software to extract and process information from the Diário Oficial.",
         button: true,
         button_text: "View Project",
-        prof: true
+        prof: true,
+        fix: true
     },
     {
         title: "Masters or PhD",
@@ -205,7 +209,8 @@ const experience = [
         description: "Locked",
         button: false,
         button_text: "",
-        prof: true
+        prof: true,
+        fix: true
     }
 ]
 
