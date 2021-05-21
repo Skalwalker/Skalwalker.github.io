@@ -17,7 +17,7 @@ class Experience extends React.Component {
     const height = document.getElementById('background')!.clientHeight*0.92;
     const width = document.getElementById('background')!.clientWidth;
 
-    var exp_range = d3.scaleSqrt().range([60, width-60]).domain([2012, 2022]).exponent(10)
+    var exp_range = d3.scaleSqrt().range([60, width-60]).domain([2012, 2023]).exponent(10)
 
     svg.append('line')
       .attr('x1', 0)

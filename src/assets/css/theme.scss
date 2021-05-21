@@ -42,6 +42,23 @@ $theme-color-interval: 8%;
 $body-bg: $indigo;
 // $body-color: $indigo;
 
+// Carousel
+// $carousel-control-color: $white;
+// $carousel-control-width: 15%;
+// $carousel-control-opacity: 0.5;
+
+// $carousel-indicator-width: 30px;
+// $carousel-indicator-height: 3px;
+// $carousel-indicator-spacer: 3px;
+$carousel-indicator-active-bg: $cyan;
+
+// $carousel-caption-width: 70%;
+// $carousel-caption-color: $white;
+
+// $carousel-control-icon-width: 20px;
+// $carousel-transition: transform 0.6s ease;
+
+
 // Fonts
 // $font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 // $font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -100,5 +117,31 @@ $input-border-color: theme-color('primary');
 $input-focus-bg: $input-bg;
 $input-placeholder-color: $white;
 $input-color: $pink;
+
+// Navbar
+// $navbar-collapse: border-style solid;
+// $navbar-collapse-border-width: 10px;
+// $navbar-collapse-border-color: theme-color('primary');
+// $navbar-collapse: bg rgba(theme-color('primary'), 0.30);
+// $navbar-padding-y: ($spacer / 2);
+// $navbar-padding-x: $spacer;
+// $navbar-brand-font-size: $font-size-lg;
+// $nav-link-height: $navbar-brand-font-size * $line-height-base;
+// $navbar-brand-height: ($font-size-base * $line-height-base + $nav-link-padding-y * 2);
+// $navbar-brand-padding-y: ($navbar-brand-height - $nav-link-height) / 2;
+// $navbar-toggler-padding-y: 0.25rem;
+// $navbar-toggler-padding-x: 0.75rem;
+// $navbar-toggler-font-size: $font-size-lg;
+// $navbar-toggler-border-radius: $btn-border-radius;
+// $navbar-dark-color: rgba($white, 0.5);
+// $navbar-dark-hover-color: rgba($white, 0.75);
+// $navbar-dark-active-color: rgba($white, 1);
+// $navbar-dark-disabled-color: rgba($white, 0.25);
+// $navbar-dark-toggler-border-color: rgba($white, 0.1);
+// $navbar-light-color: rgba($black, 0.5);
+// $navbar-light-hover-color: rgba($black, 0.7);
+// $navbar-light-active-color: rgba($white, 0.9);
+// $navbar-light-disabled-color: rgba($white, 0.3);
+// $navbar-light-toggler-border-color: rgba($white, 0.1);
 
 @import "bootstrap";

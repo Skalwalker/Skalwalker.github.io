@@ -19,7 +19,7 @@ class CardRelease extends React.Component<myProps, myState> {
         <Card style={{ minHeight: '30vh' }}>
           <Card.Body style={{ padding: '0.8rem' }}>
             <Card.Img variant="top" src={this.props.img} onLoad={this.props.onLoad}/>
-            <Card.Text className='mt-2 paragraph_bold' style={{color: "black"}}>
+            <Card.Text className='mt-2 paragraph_bold' style={{color: "white"}}>
               {this.props.title}
             </Card.Text>
           </Card.Body>

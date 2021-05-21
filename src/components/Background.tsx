@@ -32,6 +32,9 @@ class Background extends React.Component<myProps, myState> {
                 density: {
                   enable: true
                 }
+              },
+              move: {
+                speed: 1
               }
             },
             fpsLimit: 30
