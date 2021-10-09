@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './views/Home';
 import About from './views/About';
 import Contact from './views/Contact';
-import Skills from './views/Skills';
+import Skills from './views/NewSkills';
 import Experience from './views/Experience';
 import Achiev from './views/Achiev';
 import Craft from './views/Craft';

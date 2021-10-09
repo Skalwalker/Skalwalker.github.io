@@ -72,7 +72,7 @@ const achievs = [
     },
     {
         title: "Writer",
-        desc: "Publish a machine learning paper in one renowned computer science journal. This achievement is almost done, the paper is under review in the Expert Systems with Applications journal. You can request a preprint to me if you want to know more, just send me an email.",
+        desc: "Publish a machine learning paper in one renowned computer science journal. The paper was published in 2021 at Neural Networks and Application. You can request a preprint to me if you want to know more, just send me an email.",
         earned: "Earned in 2021",
         img: "paper",
         locked: false,
@@ -110,8 +110,8 @@ const achievs = [
         title: "Get a Masters",
         desc: "I am doing my best to unlock this achievement, but for doing so I need first to be accepted at a university. I aim high, I am looking to enroll in one of the bests universities in the world. You can help me unlock this by accepting me at your university, feel free to send me that acceptance letter.",
         img: "jedi",
-        locked: true,
-        earned: "Achievement Locked",
+        locked: false,
+        earned: "Earned in 2021",
         attachment: false,
         attc_content: ""
     },

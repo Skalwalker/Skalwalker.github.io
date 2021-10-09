@@ -88,6 +88,17 @@ const experience = [
         button_text: ""
     },
     {
+        title: "Tree-Nation Volunteer",
+        start_year: "2021",
+        end_year: "2022",
+        display_year: 0,
+        company: "Tree-Nation",
+        country: "",
+        description: "",
+        button: false,
+        button_text: ""
+    },
+    {
         title: "Automata and Computability Tutor",
         start_year: "2019",
         end_year: "2020",
@@ -108,18 +119,6 @@ const experience = [
         description: "I started contributing to a Community Orchid project. Helping in maintenance, disclosures, and other multiple tasks. The project was developed by the amazing designer Giovanna Mundstock",
         button: true,
         button_text: "View her Project"
-    },
-    {
-        title: "Youtuber",
-        start_year: "2014",
-        end_year: "2014",
-        display_year: 0,
-        company: "Youtube",
-        country: "Brasília, DF, Brazil",
-        description: "",
-        button: false,
-        button_text: "",
-        prof: true
     },
     {
         title: "Student Exchange",
@@ -206,7 +205,7 @@ const experience = [
         display_year: 0,
         company: "Università degli Studi di Milano",
         country: "Milan, Italy",
-        description: "Locked",
+        description: "Just started my masters! Hopefully I will update with my thesis idea.",
         button: false,
         button_text: "",
         prof: true,
@@ -215,11 +214,11 @@ const experience = [
     {
         title: "Data Scientist",
         start_year: "2021",
-        end_year: "2023",
+        end_year: "2022",
         display_year: 0,
         company: "Stefanini Brasil",
         country: "Brasília, Brazil",
-        description: "Locked",
+        description: "Developer of Machine Learning solutions for the customer Banco do Brasil, the 2nd biggest bank of the country. We use Deep Learning, Clustering and Natural Language Processing techniques to improve services and efficiency.",
         button: false,
         button_text: "",
         prof: true,

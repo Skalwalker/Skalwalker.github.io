@@ -4,6 +4,7 @@ import Background from '../components/Background'
 import SkillModal from '../components/SkillModal'
 import { skills } from '../content/Skills'
 
+
 type myState = { show: any, skill: any }
 type myProps = {}
 
@@ -71,7 +72,7 @@ class Skill extends React.Component<myProps, myState> {
       })
     })
   }
-  
+
   setModalShow(val) {
     this.setState({
       show: false
@@ -85,8 +86,8 @@ class Skill extends React.Component<myProps, myState> {
   render() {
     return (
       <Background>
-        <SkillModal show={this.state.show} 
-                    onHide={() => this.setModalShow(false)} 
+        <SkillModal show={this.state.show}
+                    onHide={() => this.setModalShow(false)}
                     skill={this.state.skill}
         />
         <div ref={this.myRef}>
@@ -97,3 +98,5 @@ class Skill extends React.Component<myProps, myState> {
 }
 
 export default Skill;
+
+
