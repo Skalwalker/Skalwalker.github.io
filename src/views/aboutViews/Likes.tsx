@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ILikeDesc from '../../components/ILikeDesc';
+import ILike from '../../components/ILike'
 import { like } from '../../content/About'
 
 type MyProps = { };
@@ -30,7 +31,8 @@ class Likes extends React.Component<MyProps, MyState> {
                   <Col md={2} className='mr-3 mb-3'>
                     <div onMouseEnter={() => this.setIsShown(ilike.title)}
                          onMouseLeave={() => this.setIsShown('Hover some squares')}
-                      className='m-auto' style={{height: '70px', width: '70px', backgroundColor: 'gray'}}>
+                      className='m-auto' style={{height: '70px', width: '70px'}}>
+                       <ILike img={ilike.img}></ILike>
                     </div>
                   </Col>
                 )
