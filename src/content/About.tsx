@@ -65,103 +65,103 @@ const works = {
 const like = [
     {
         title: "To Cook",
-        img: ""
+        img: "cook"
     },
     {
         title: "World of Warcraft",
-        img: ""
+        img: "wow"
     },
     {
         title: "Westworld",
-        img: ""
+        img: "westworld"
     },
     {
         title: "Game of Thrones",
-        img: ""
+        img: "got"
     },
     {
         title: "FPS",
-        img: ""
+        img: "fps"
     },
     {
         title: "Saints",
-        img: ""
+        img: "saints"
     },
     {
         title: "Board Games",
-        img: ""
+        img: "board"
     },
     {
         title: "Sandman",
-        img: ""
+        img: "sandman"
     },
     {
         title: "Artificial Intelligence",
-        img: ""
+        img: "ai"
     },
     {
         title: "Dogs",
-        img: ""
+        img: "dogs"
     },
     {
         title: "Coffee",
-        img: ""
+        img: "coffee"
     },
     {
-        title: "Innovation",
-        img: ""
+        title: "Apple",
+        img: "apple"
     },
     {
         title: "Marvel",
-        img: ""
+        img: "marvel"
     },
     {
         title: "Python",
-        img: ""
+        img: "python"
     },
     {
         title: "Gardening",
-        img: ""
+        img: "garden"
     },
     {
         title: "Piano",
-        img: ""
+        img: "piano"
     },
     {
         title: "Red Hot Chilli Peppers",
-        img: ""
+        img: "rhcp"
     },
     {
         title: "Robotics",
-        img: ""
+        img: "robot"
     },
     {
         title: "Stock Markets",
-        img: ""
+        img: "stock"
     },
     {
         title: "Star Wars",
-        img: ""
+        img: "jedi"
     },
     {
         title: "Sushi",
-        img: ""
+        img: "sushi"
     },
     {
         title: "Pizza",
-        img: ""
+        img: "pizza"
     },
     {
         title: "Santa Barbara",
-        img: ""
+        img: "santa"
     },
     {
         title: "Jazz",
-        img: ""
+        img: "jazz"
     },
     {
         title: "Data Science",
-        img: ""
+        img: "ds"
     }
 ]
 

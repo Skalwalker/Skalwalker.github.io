@@ -1,4 +1,6 @@
 import React from 'react';
+
+import '../assets/css/font.css'
 import { Col, Row } from 'react-bootstrap';
 
 type myState = { }
@@ -10,13 +12,13 @@ class Orb extends React.Component<myProps, myState> {
     return (
       <Row className='h-100'>
       <Col md={12} className='text-center'>
-        <h1 style={{color: 'white'}}>
+        <h1 className='subtitle_bold' style={{color: 'white'}}>
           {this.props.title}
         </h1>
       </Col>
         <Row  className='my-auto'>
           <Col md={12}>
-            <p style={{color: 'white', fontSize: '20px'}}>
+            <p className='paragraph' style={{color: 'white', fontSize: '20px'}}>
               {this.props.text}
             </p>
           </Col>
