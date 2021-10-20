@@ -113,11 +113,12 @@ class Experience extends React.Component {
       for (var exp in extra_years[key]) {
         let i :number = Number(exp)
 
+        var posY = 0
         if ("prof" in extra_years[key][exp]) {
-          var posY = -(((height/2)-60/extra_years[key].length)*(i+1))
+          posY = -(((height/2)-60/extra_years[key].length)*(i+1))
           posY = posY - (posY - (height/2) + 60) - (height/2)
         } else {
-          var posY = (((height/2)/extra_years[key].length)*(i+1))
+          posY = (((height/2)/extra_years[key].length)*(i+1))
         }
         if ("fix" in extra_years[key][exp]) {
           let start_point = exp_range(key)+10;
