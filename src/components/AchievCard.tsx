@@ -12,7 +12,7 @@ import {GiMaterialsScience, GiPlagueDoctorProfile, GiCarnivorousPlant,
 import { FaVuejs, FaGraduationCap, FaKaggle,
          FaJedi, FaMoneyBillAlt} from 'react-icons/fa';
 
-type MyProps = { title: string, date: string, img: string };
+type MyProps = {title: string, date: string, img: string};
 type MyState = { };
 
 class AchievCard extends React.Component<MyProps, MyState> {
