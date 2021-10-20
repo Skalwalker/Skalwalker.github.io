@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { core } from "../../content/About"
-import Image from 'react-bootstrap/Image'
-import { Link } from 'react-router-dom'
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -16,7 +14,6 @@ class Core extends React.Component {
           <Col md={12} className='my-auto'>
             <Row>
               <Col md={5} className='text-center'>
-                {/* <Image src={} className='img-fluid'/> */}
               </Col>
               <Col md={7} className='my-auto pr-5'>
                 <Row>
@@ -26,13 +23,13 @@ class Core extends React.Component {
                     </p>
                   </Col>
                   <Col md={12} className=''>
-                    <a target="_blank" href="https://www.instagram.com/rk_nobre/">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/rk_nobre/">
                       <FaInstagram color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaInstagram>
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/rk-nobre/">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/rk-nobre/">
                       <FaLinkedin color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaLinkedin>
                     </a>
-                    <a target="_blank" href="https://github.com/Skalwalker">
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Skalwalker">
                         <FaGithub color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaGithub>
                     </a>
 

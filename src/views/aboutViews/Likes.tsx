@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import ILikeDesc from '../../components/ILikeDesc';
-import ILike from '../../components/ILike'
+import LikeDesc from '../../components/LikeDesc';
+import LikeIcon from '../../components/LikeIcon'
 import { like } from '../../content/About'
 
 type MyProps = { };
@@ -26,20 +26,20 @@ class Likes extends React.Component<MyProps, MyState> {
         <Row className='h-100'>
           <Col md={{span: 11, offset: 1}} className='my-auto'>
             <Row>
-              {like.map((ilike) => {
+              {like.map((like_icon) => {
                 return (
                   <Col md={2} className='mr-3 mb-3'>
-                    <div onMouseEnter={() => this.setIsShown(ilike.title)}
+                    <div onMouseEnter={() => this.setIsShown(like_icon.title)}
                          onMouseLeave={() => this.setIsShown('Hover some squares')}
                       className='m-auto' style={{height: '70px', width: '70px'}}>
-                       <ILike img={ilike.img}></ILike>
+                       <LikeIcon img={like_icon.img}></LikeIcon>
                     </div>
                   </Col>
                 )
               })}
             </Row>
             <Row className=''>
-              <ILikeDesc text={this.state.text}/>
+              <LikeDesc text={this.state.text}/>
             </Row>
           </Col>
         </Row>

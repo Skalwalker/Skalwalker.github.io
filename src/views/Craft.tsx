@@ -2,7 +2,7 @@ import React from 'react';
 import Background from '../components/Background';
 import { Col, Row, Button, Table } from 'react-bootstrap';
 import { craft } from '../content/Craft';
-import CardRelease from '../components/CardRelease';
+import CardRelease from '../components/ProjectCard';
 import '../assets/css/font.css';
 
 type myState = { activeTags: any, bgHeight: any, imagesCounter: any }

@@ -5,7 +5,6 @@ import {Row, Col} from 'react-bootstrap';
 import {CgWebsite} from 'react-icons/cg'
 import {BiCoffeeTogo} from 'react-icons/bi'
 import {RiMedalLine, RiStockFill, RiSlideshowLine} from 'react-icons/ri'
-import {GrWorkshop} from 'react-icons/gr'
 import {IoIosPaper} from 'react-icons/io'
 import {SiIos, SiSwift} from 'react-icons/si'
 import {GiMaterialsScience, GiPlagueDoctorProfile, GiCarnivorousPlant,
@@ -13,9 +12,7 @@ import {GiMaterialsScience, GiPlagueDoctorProfile, GiCarnivorousPlant,
 import { FaVuejs, FaGraduationCap, FaKaggle,
          FaJedi, FaMoneyBillAlt} from 'react-icons/fa';
 
-
-
-type MyProps = { title: string, date: string, img: string };
+type MyProps = {title: string, date: string, img: string};
 type MyState = { };
 
 class AchievCard extends React.Component<MyProps, MyState> {
@@ -80,7 +77,6 @@ class AchievCard extends React.Component<MyProps, MyState> {
           <Row className="m-0">
             <Col md={3}>
               {this.get_icon(this.props.img)}
-              {/* <FaVuejs className="m-auto d-block my-auto" color="white" size={65}/> */}
             </Col>
             <Col>
               <Card.Body style={{padding: '0.5rem'}}>
@@ -93,20 +89,5 @@ class AchievCard extends React.Component<MyProps, MyState> {
     )
   }
 }
-
-// AchievCard.
-
-const style = {
-  cardImgLeft: {
-    float: "left",
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: 0
-  }
-}
-
-
-
 
 export default AchievCard;

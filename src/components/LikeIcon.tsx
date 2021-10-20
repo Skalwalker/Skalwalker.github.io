@@ -1,5 +1,4 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
 
 import {GiSushis, GiCookingPot, GiDiceTwentyFacesTwenty, GiBookmark,
         GiMusicalNotes, GiArtificialHive} from 'react-icons/gi'
@@ -9,17 +8,17 @@ import {MdPiano, MdLocationCity} from 'react-icons/md'
 import {BiCoffeeTogo} from 'react-icons/bi'
 import {RiStockFill, RiPlantFill} from 'react-icons/ri'
 
-import { ReactComponent as RkSaints } from '../assets/images/saints.svg';
-import { ReactComponent as RkRHCP } from '../assets/images/rhcp.svg';
-import { ReactComponent as RkWestworld } from '../assets/images/westworld.svg';
-import { ReactComponent as RkWOW } from '../assets/images/horde.svg';
-import { ReactComponent as RkGoT } from '../assets/images/got.svg';
-import { ReactComponent as RkMarvel } from '../assets/images/avangers.svg';
+import { ReactComponent as RkSaints } from '../assets/images/icons/saints.svg';
+import { ReactComponent as RkRHCP } from '../assets/images/icons/rhcp.svg';
+import { ReactComponent as RkWestworld } from '../assets/images/icons/westworld.svg';
+import { ReactComponent as RkWOW } from '../assets/images/icons/horde.svg';
+import { ReactComponent as RkGoT } from '../assets/images/icons/got.svg';
+import { ReactComponent as RkMarvel } from '../assets/images/icons/avangers.svg';
 
 type myState = { }
 type myProps = { img: string }
 
-class ILike extends React.Component<myProps, myState> {
+class LikeDesc extends React.Component<myProps, myState> {
 
   static defaultProps = {
     img: 'default'
@@ -95,4 +94,4 @@ class ILike extends React.Component<myProps, myState> {
     )
   }
 }
-export default ILike;
+export default LikeDesc;

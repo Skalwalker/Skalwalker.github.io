@@ -164,14 +164,24 @@ const craft = {
 
     papers: [
         {
-            title: "Implementation of Communication between Autonomous Agents for Learning Collaborative Behaviors ",
-            year: "2020",
-            tags: ["Machine Learning"]
+            title: "AURORA: An Autonomous Agent-Orientated Hybrid Trading Service",
+            year: "2021",
+            tags: ["Machine Learning", "Data Science"]
         },
         {
-            title: "AURORA: An Autonomous Agent-Orientated Hybrid Trading Service - Data Science, Machine Learning",
+            title: "Uma solução em névoa via objetos inteligentes para lidar com a heterogeneidade dos dados em um ambiente residencial",
+            year: "2021",
+            tags: ["Machine Learning", "Data Science"]
+        },
+        {
+            title: "Hare: serviço de investimento baseado em agentes autônomos para operar na B3",
             year: "2020",
             tags: ["Machine Learning", "Data Science"]
+        },
+        {
+            title: "Implementation of Communication between Autonomous Agents for Learning Collaborative Behaviors ",
+            year: "2017",
+            tags: ["Machine Learning"]
         },
         {
             title: "Report on Prolog C Translator",

@@ -37,27 +37,27 @@ const works = {
         {
             title: "Machine Learning Orb",
             text: "My work is mainly focused on implementing machine learning solutions. I enjoy understanding and preparing a data set, selecting a machine learning algorithm, and training it.  When the model is ready, I enjoy making a great software out of it, where people can use to facilitate their lives.",
-            img: require("../assets/images/sun1.svg")
+            img: require("../assets/images/buttons/sun1.svg")
         },
         {
             title: "Research Orb",
             text: "Research is highly motivating for me. I enjoy reading new approaches to a problem in the field, as well as writing and proposing my own solutions to a journal. However, when a research is made just for the purpose of publishing and gaining renown, it loses the shine in my eyes. Research should be applied to create solutions to existing problems, not only to write a paper about it.",
-            img: require("../assets/images/sun2.svg")
+            img: require("../assets/images/buttons/sun2.svg")
         },
         {
             title: "Innovative Orb",
             text: "Innovation is what a look for while approaching a problem. I like to solve challenges in ways that have not yet been tried, or in ways that possibly will improve the solution outcome. This feat can be both a curse or a blessing, sometimes it might lead me to an overkill approach, or a not usable one, but sometimes it can lead to glory.",
-            img: require("../assets/images/sun5.svg")
+            img: require("../assets/images/buttons/sun5.svg")
         },
         {
             title: "Side Projects Orb",
             text: "I really enjoy a side project, and it doesn't have to be programming related. From gardening and cooking to guild management at online games. Most of my hobbies are side projects, I usually spend my free time on things that give me the feeling of reward. That being eating a great food I cooked, winning a competitive match on a game,  or writing my own algorithms to earn more money on the stock market.",
-            img: require("../assets/images/sun4.2.svg")
+            img: require("../assets/images/buttons/sun4.2.svg")
         },
         {
             title: "Multidisciplinary Orb",
             text: "Working solutions for problems from different fields is what keeps my gears spinning. I get motivated learning new fields, such as: agriculture, medicine, economy, and enjoying proposing new solutions to these existing fields, where most of the time technology is barely used. On the down side, spending too much time on a single field might make me unmotivated over time.",
-            img: require("../assets/images/sun6.svg")
+            img: require("../assets/images/buttons/sun6.svg")
         },
     ]
 }
