@@ -8,7 +8,7 @@ class CardRelease extends React.Component<myProps, myState> {
 
   static defaultProps = {
     title: 'Stranger',
-    img: require("../assets/images/200x200.png"),
+    img: require("../assets/images/glitch/glitch_ios.jpg"),
     url: "https://github.com/Skalwalker"
   };
 
@@ -31,5 +31,3 @@ class CardRelease extends React.Component<myProps, myState> {
 }
 
 export default CardRelease;
-
-// require("../assets/images/200x200.png")

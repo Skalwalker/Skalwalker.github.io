@@ -87,7 +87,6 @@ class MailForm extends React.Component<myProps, myState> {
 const style = {
     nameDiv: {
       height: '90%',
-      // width: '100%',
       display: 'block',
       alignItems: 'center',
       justifyContent: 'center',
