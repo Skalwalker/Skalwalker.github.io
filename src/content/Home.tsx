@@ -1,7 +1,7 @@
 const slides = [
     {
         text: "Hi, I am Renato Nobre",
-        desc: "I am a Computer Scientist looking to become a Masters or PhD. Read my character sheet!",
+        desc: "I am a Computer Scientist pursuing my M.Sc. at Università degli Studi di Milano. Read my character sheet!",
         button: true,
         route: "/about/description"
     },
