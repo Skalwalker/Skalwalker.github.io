@@ -108,7 +108,7 @@ const achievs = [
     },
     {
         title: "Get a Masters",
-        desc: "I am doing my best to unlock this achievement, but for doing so I need first to be accepted at a university. I aim high, I am looking to enroll in one of the bests universities in the world. You can help me unlock this by accepting me at your university, feel free to send me that acceptance letter.",
+        desc: "I am currently a M.Sc. student at Università degli Studi di Milano, in Italy!",
         img: "jedi",
         locked: false,
         earned: "Earned in 2021",
