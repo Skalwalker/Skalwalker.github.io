@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { core } from "../../content/About"
+import { core } from "../../content/About";
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-
+import { ShowTesseract } from "../../components/Tesseract";
 
 class Core extends React.Component {
   render() {
@@ -14,6 +14,7 @@ class Core extends React.Component {
           <Col md={12} className='my-auto'>
             <Row>
               <Col md={5} className='text-center'>
+                <ShowTesseract/>
               </Col>
               <Col md={7} className='my-auto pr-5'>
                 <Row>
