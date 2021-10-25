@@ -1,14 +1,13 @@
 import React from 'react';
 import Background from '../components/Background';
-import { Col, Row, Button } from 'react-bootstrap';
+import { Col, Row, Button, Table } from 'react-bootstrap';
 import { craft } from '../content/Craft';
-import CardRelease from '../components/ProjectCard';
 import '../assets/css/font.css';
 
 type myState = { activeTags: any, bgHeight: any, imagesCounter: any }
 type myProps = { }
 
-class Craft extends React.Component<myProps, myState> {
+class Papers extends React.Component<myProps, myState> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -65,7 +64,7 @@ class Craft extends React.Component<myProps, myState> {
 
   render() {
     const tags = craft.tags;
-    const releases = craft.crafts;
+    const papers = craft.papers;
 
     return (
       <Background showParticles={false} pageHeight={this.state.bgHeight}>
@@ -87,25 +86,27 @@ class Craft extends React.Component<myProps, myState> {
           </Col>
           <Col id="page-size" md={10}>
               <Row>
-                <h1 className="subtitle" style={{color: 'white'}}>Releases</h1>
-                <div className='w-100 mt-2 mb-4' style={{backgroundColor: 'white', height: '3px'}}/>
+                <h1 className="subtitle" style={{color: 'white'}}>Papers</h1>
+                <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
               </Row>
-              <Row>
-                {releases.map((release, index) => {
-                  if (release.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
-                    if (release.banner === "") {
-                      return(
-                        <CardRelease title={release.title} url={release.url} onLoad={this.onLoad}/>
-                      )
-                    } else {
-                      return(
-                        <CardRelease title={release.title} img={release.banner} url={release.url} onLoad={this.onLoad}/>
-                      )
-                    }
-                  } else {
-                    return (null)
-                  }
-                })}
+              <Row >
+                <Table style={{color: 'white'}}>
+                  <tbody>
+                    {papers.map((paper, index) => {
+                      if (paper.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
+                        return(
+                          <tr className="paragraph">
+                            <td>{index+1}</td>
+                            <td>{paper.title}</td>
+                            <td>{paper.year}</td>
+                          </tr>
+                        )
+                      } else {
+                        return (null)
+                      }
+                    })}
+                  </tbody>
+                </Table>
               </Row>
           </Col>
           </Row>
@@ -114,4 +115,4 @@ class Craft extends React.Component<myProps, myState> {
   }
 }
 
-export default Craft;
+export default Papers;

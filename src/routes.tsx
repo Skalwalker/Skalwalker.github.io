@@ -10,6 +10,7 @@ import Core from './views/aboutViews/Core'
 import Work from './views/aboutViews/Work'
 import Likes from './views/aboutViews/Likes'
 import Description from './views/aboutViews/Description'
+import Papers from './views/Papers'
 // import { craft } from './content/Craft'
 // import Background from './components/Background'
 
@@ -64,6 +65,10 @@ const routes = [
   {
     path: "/crafts",
     main: () => <Craft/>
+  },
+  {
+    path: "/papers",
+    main: () => <Papers/>
   },
   {
     path: "/contact",
