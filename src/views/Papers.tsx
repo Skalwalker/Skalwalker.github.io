@@ -2,20 +2,24 @@ import React from 'react';
 import Background from '../components/Background';
 import { Col, Row, Button, Table } from 'react-bootstrap';
 import { craft } from '../content/Craft';
+// import { Document } from 'react-pdf'
 import '../assets/css/font.css';
 
-type myState = { activeTags: any, bgHeight: any, imagesCounter: any }
+type myState = { activeTags: any, bgHeight: any, imagesCounter: any}
 type myProps = { }
 
 class Papers extends React.Component<myProps, myState> {
+
   constructor(props: any) {
     super(props);
     this.state = {
       activeTags: [],
       bgHeight: "100vh",
-      imagesCounter: 0
+      imagesCounter: 0,
     };
   }
+
+
 
   clickButton = (id: string) => {
     var aux = this.state.activeTags
@@ -80,6 +84,7 @@ class Papers extends React.Component<myProps, myState> {
                             block>
                       {name}
                     </Button>
+
                 )
               })}
             </Row>
@@ -95,9 +100,11 @@ class Papers extends React.Component<myProps, myState> {
                     {papers.map((paper, index) => {
                       if (paper.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
                         return(
-                          <tr className="paragraph">
+                          <tr className="paragraph_bold">
                             <td>{index+1}</td>
-                            <td>{paper.title}</td>
+                            <td className='paragraph_bold'><a style={{color: "white"}} target="_blank" rel="noopener noreferrer" href={paper.document}>
+                             {paper.title}</a>
+                            </td>
                             <td>{paper.year}</td>
                           </tr>
                         )
@@ -109,7 +116,7 @@ class Papers extends React.Component<myProps, myState> {
                 </Table>
               </Row>
           </Col>
-          </Row>
+        </Row>
       </Background>
     )
   }

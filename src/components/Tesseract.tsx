@@ -2,9 +2,9 @@ import React, {Suspense} from 'react';
 import { useGLTF, OrbitControls} from "@react-three/drei";
 import { Canvas } from "@react-three/fiber"
 
-function Model() {
+function Model(props) {
   const { scene } = useGLTF("/tesseract.gltf")
-  return <primitive object={scene} />;
+  return <primitive object={scene} {...props} />;
 }
 
 export function ShowTesseract(props) {

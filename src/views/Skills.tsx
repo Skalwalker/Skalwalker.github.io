@@ -14,6 +14,12 @@ class Skill extends React.Component<MyProps, MyState>  {
   constructor(props){
     super(props);
     this.myRef = React.createRef();
+    this.state = {
+      isShown: false,
+      desc: 'Hover over an Achievement to show description',
+      title: '',
+      date: '',
+    };
   }
 
   draw(){
@@ -121,6 +127,15 @@ class Skill extends React.Component<MyProps, MyState>  {
 
   componentDidMount(){
     this.draw()
+  }
+
+  setIsShown = (value: boolean, title:string, date: string, desc: string) => {
+    this.setState({
+      isShown: value,
+      title: title,
+      date: date,
+      desc: desc
+    })
   }
 
   render() {

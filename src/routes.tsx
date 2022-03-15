@@ -14,10 +14,10 @@ import Papers from './views/Papers'
 // import { craft } from './content/Craft'
 // import Background from './components/Background'
 
-// const craftRoutes = () => {
+// const paperRoutes = () => {
 //   let routes = []
-//   for (let i = 0; i < craft.crafts.length; i++) {
-//     routes.push({path: "/crafts/" + craft.crafts[i].url, main: () => <Background />})
+//   for (let i = 0; i < craft.papers.length; i++) {
+//     routes.push({path: "/papers/" + craft.crafts[i].url, main: () => <Background />})
 //   }
 // }
 

@@ -166,62 +166,86 @@ const craft = {
         {
             title: "AURORA: An Autonomous Agent-Orientated Hybrid Trading Service",
             year: "2021",
-            tags: ["Machine Learning", "Data Science"]
+            tags: ["Machine Learning", "Data Science"],
+            document: "https://rdcu.be/cysdA"
         },
         {
             title: "Uma solução em névoa via objetos inteligentes para lidar com a heterogeneidade dos dados em um ambiente residencial",
             year: "2021",
-            tags: ["Machine Learning", "Data Science"]
+            tags: ["Machine Learning", "Data Science"],
+            document: "https://sol.sbc.org.br/index.php/sbrc_estendido/article/view/17179"
         },
         {
             title: "Hare: serviço de investimento baseado em agentes autônomos para operar na B3",
             year: "2020",
-            tags: ["Machine Learning", "Data Science"]
+            tags: ["Machine Learning", "Data Science"],
+            document: "https://drive.google.com/file/d/1ut0lxRRPk-eeShe3UArbFUJF_8nH8nic/view?usp=sharing"
         },
         {
             title: "Implementation of Communication between Autonomous Agents for Learning Collaborative Behaviors ",
             year: "2017",
-            tags: ["Machine Learning"]
+            tags: ["Machine Learning"],
+            document: "https://drive.google.com/file/d/1Ms01uQN4HshG3UMca5WwqtaDDiPAgcA1/view?usp=sharing"
         },
         {
             title: "Report on Prolog C Translator",
             year: "2020",
-            tags: ["Translator"]
+            tags: ["Translator"],
+            document: "https://drive.google.com/file/d/1YTS3sZbWnOYWL5uP9zwDGTzF2mBREQG_/view?usp=sharing"
         },
         {
             title: "Report on Analysis and Proof of Graham Scam Algorithm",
             year: "2019",
-            tags: ["Algorithms"]
+            tags: ["Algorithms"],
+            document:"https://drive.google.com/file/d/1t55YPaR9SPiOMl7gKQqF_82wQGVX7gac/view?usp=sharing"
+        },
+        {
+            title: "Report on Application of Steganography Techniques in Audio Files",
+            year: "2019",
+            tags: [],
+            document: "https://drive.google.com/file/d/1h5v3s_TGlYl7JdKm7gunfmx3xX3PrV8D/view?usp=sharing"
+        },
+        {
+            title: "Summary on Theory of Computation: Theorems, Lemmas and Definitions",
+            year: "2018",
+            tags: [],
+            document: "https://drive.google.com/file/d/1r6lMORJfTJvQ_Nyqplo4pBDcf9aQV6Yc/view?usp=sharing"
         },
         {
             title: "Report on Number Recognition",
             year: "2018",
-            tags: ["Machine Learning", "Data Science"]
+            tags: ["Machine Learning", "Data Science"],
+            document: "https://drive.google.com/file/d/1AAck7y1Bys6wZUku_AUyiqV13zzrIZ1r/view?usp=sharing"
         },
         {
             title: "Report on Plants Recognition",
             year: "2018",
-            tags: ["Machine Learning", "Data Science"]
+            tags: ["Machine Learning", "Data Science"],
+            document: "https://drive.google.com/file/d/1P6aPykZP39DikApOt-BYAVKHnzvrW9Od/view?usp=sharing"
         },
         {
             title: "Report on Breast Cancer Recognition",
             year: "2018",
-            tags: ["Machine Learning", "Data Science"]
+            tags: ["Machine Learning", "Data Science"],
+            document: "https://drive.google.com/file/d/1-Y0ORsbcU8dx5NpbQxA-1ks_DWHjBSvm/view?usp=sharing"
         },
         {
             title: "Report on Spam Recognition",
             year: "2018",
-            tags: ["Machine Learning", "Data Science"]
+            tags: ["Machine Learning", "Data Science"],
+            document: "https://drive.google.com/file/d/1eupeAmFqYmg08wPWbRnTYC8pMIgteRZe/view?usp=sharing"
         },
         {
             title: "Report on Metal Recognition",
             year: "2017",
-            tags: ["Computer Vision", "Machine Learning"]
+            tags: ["Computer Vision", "Machine Learning"],
+            document: "https://drive.google.com/file/d/1eupeAmFqYmg08wPWbRnTYC8pMIgteRZe/view?usp=sharing"
         },
         {
             title: "Active Learning as a Substitute for Traditional Methodology, Under the Field of Computer Science",
             year: "2017",
-            tags: ["Education"]
+            tags: ["Education"],
+            document: "https://drive.google.com/file/d/1c183Y8kTfOkfTg42-UNAuX6IelkzdaA1/view?usp=sharing"
         }
     ]
 }
