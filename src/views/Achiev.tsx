@@ -51,7 +51,7 @@ class Acheiv extends React.Component<MyProps, MyState>  {
                         onMouseEnter={() => this.setIsShown(true,
                           achiev.title, achiev.earned, achiev.desc)}
                         onMouseLeave={() => this.setIsShown(false, '', '', '')}>
-                        <AchievCard title={achiev.title} date={achiev.earned} img={achiev.img}/>
+                        <AchievCard title={achiev.title} date={achiev.earned} img={achiev.img} locked={achiev.locked}/>
                       </Col>
                     )
                   })}

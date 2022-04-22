@@ -37,7 +37,7 @@ const skills = {
         desc: "C and C++ were my first,\nand most used, language in my\nbachelors degree. C is the main language\nthat helped me develop programming skills,\nit taught me to understand every aspect\nof core logic programming."
     },
     'js': {
-        title: "JS",
+        title: "TypeScript",
         linkedin: 0,
         years: 1,
         projects: 3,
@@ -55,11 +55,11 @@ const skills = {
         desc: "Gym is a Python Library for\ndeveloping environments\nfor reinforcement learning algorithms.\nI used it in my graduation thesis to\ncreate a stock market environment."
     },
     'spin': {
-        title: "Spinning-Up",
+        title: "SpinningUp",
         linkedin: "Unmeasured",
         years: 1,
         projects: 1,
-        self_ass: 8,
+        self_ass: 9,
         group: 2,
         desc: "Spinning-Up is a library that\nimplements deep reinforcement\nlearning algorithms. This library uses the\nTensorFlow backend and was\nused in my graduation thesis."
     },
@@ -93,11 +93,11 @@ const skills = {
     'tf': {
         title: "TensorFlow",
         linkedin: 0,
-        years: 1,
-        projects: 0,
-        self_ass: 1,
+        years: 2,
+        projects: 2,
+        self_ass: 8,
         group: 2,
-        desc: "I never actually\nused pure TensorFlow.\nInstead I used libraries with its\nbackend in my project.\nBut by the end of 2020 I intend to\nbe a certified TensorFlow programmer."
+        desc: ""
     },
     'vue': {
         title: "Vue",
@@ -199,7 +199,7 @@ const skills = {
         desc: "XCode is an iOS App development platform.\nI started using it before I enrolled in\nthe university and made several apps\nwith it."
     },
     'latex': {
-        title: "Latex",
+        title: "LaTeX",
         linkedin: 3,
         years: 4,
         projects: 10,

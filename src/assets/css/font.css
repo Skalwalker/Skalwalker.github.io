@@ -4,6 +4,18 @@
   text-align: center
 }
 
+.bottom_project_text {
+  position: relative;
+  /* margin: 0 auto; */
+  text-align: left
+}
+
+.top_project_text {
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
 .test_font {
   font-family: acier-bat-strokes, sans-serif;
   font-weight: 400;

@@ -80,7 +80,7 @@ class Skill extends React.Component<MyProps, MyState>  {
 
     // Skills Circles
     node.append("circle")
-        .attr("r", function(d){ return d.size*3 > 30 ? d.size*3 : 30 })
+        .attr("r", function(d){ return d.size*3 > 40 ? d.size*3 : 40 })
         .attr("cx", 0)
         .attr("cy", 0)
         .style("fill", function(d){ return color(d.group)})
@@ -93,9 +93,17 @@ class Skill extends React.Component<MyProps, MyState>  {
       .text(function(d){ return d.name; })
       .style("text-anchor", "middle")
 		  .attr("x", function(d){return d.x})
-		  .attr("y", function(d){return d.y})
-      .style("font-size", 19)
+		  .attr("y", function(d){
+        let radius: number = d.size*3 > 40 ? d.size*3 : 40
+        return (radius/8.5)
+      })
+      .style("font-size", function(d){
+        let radius: number = d.size*3 > 40 ? d.size*3 : 40
+        return radius/3.5
+       })
       .style("fill", 'white')
+      .style('font-family', '"filson-pro", sans-serif')
+      .style('font-weight', '400')
 
     // Call specific function when circle is dragged
     var drag_handler = d3.drag()
@@ -111,7 +119,7 @@ class Skill extends React.Component<MyProps, MyState>  {
       .force("y", d3.forceY().strength(0.04).y( height/2 ))
       .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
       .force("charge", d3.forceManyBody().strength(1)) // Nodes are attracted one each other of value is > 0
-      .force("collide", d3.forceCollide().strength(.2).radius(function(d){return d.size*3 > 30 ? d.size*3 + 4 : 34}).iterations(1)) // Force that avoids circle overlapping
+      .force("collide", d3.forceCollide().strength(.2).radius(function(d){return d.size*3 > 40 ? d.size*3 + 4 : 44}).iterations(1)) // Force that avoids circle overlapping
 
     // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.

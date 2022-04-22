@@ -140,7 +140,7 @@ const craft = {
             banner: require("../assets/images/glitch/glitch_bull.jpg").default,
             title: "Hare",
             tags: ["Machine Learning", "Data Science", "Python"],
-            url: "hare"
+            url: "/crafts/my-project"
         },
         {
             banner: require("../assets/images/glitch/glitch_pacman.jpg").default,

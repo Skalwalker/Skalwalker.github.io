@@ -22,8 +22,8 @@ class Likes extends React.Component<MyProps, MyState> {
 
   render() {
     return (
-      <Container className='h-100'>
-        <Row className='h-100'>
+      <Container  style={{height: "90vh"}}>
+        <Row style={{height: "90vh"}}>
           <Col md={{span: 11, offset: 1}} className='my-auto'>
             <Row>
               {like.map((like_icon) => {
@@ -38,10 +38,10 @@ class Likes extends React.Component<MyProps, MyState> {
                 )
               })}
             </Row>
-            <Row className=''>
-              <LikeDesc text={this.state.text}/>
-            </Row>
           </Col>
+        </Row>
+        <Row style={{marginTop: "-80px"}}>
+          <LikeDesc text={this.state.text}/>
         </Row>
       </Container>
     )

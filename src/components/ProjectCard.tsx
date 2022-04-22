@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom/Link';
 
 type myState = { }
 type myProps = { title: any, img: any, url: any, onLoad: any }
@@ -15,7 +16,7 @@ class CardRelease extends React.Component<myProps, myState> {
   render () {
     return (
       <Col md={3} className='mb-3'>
-        <a target="_blank" rel="noopener noreferrer" href={this.props.url}>
+        <a href={this.props.url}>
         <Card style={{ minHeight: '30vh' }}>
           <Card.Body style={{ padding: '0.8rem' }}>
             <Card.Img variant="top" src={this.props.img} onLoad={this.props.onLoad}/>

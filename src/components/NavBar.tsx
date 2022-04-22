@@ -19,7 +19,7 @@ class NavBar extends React.Component<myProps, myState> {
                 <Nav className="ml-auto">
                     <Link className='nav-link subtitle' to="/" style={{color: 'white'}}>Home</Link>
                     <Link className='nav-link subtitle' to="/about/core" style={{color: 'white'}}>About</Link>
-                    <Link className='nav-link subtitle' to="/crafts" style={{color: 'white'}}>Crafts</Link>
+                    <Link className='nav-link subtitle' to="/projects" style={{color: 'white'}}>Projects</Link>
                     <Link className='nav-link subtitle' to="/papers" style={{color: 'white'}}>Papers</Link>
                     <Link className='nav-link subtitle' to="/experience" style={{color: 'white'}}>Experience</Link>
                     <Link className='nav-link subtitle' to="/skills" style={{color: 'white'}}>Skills</Link>

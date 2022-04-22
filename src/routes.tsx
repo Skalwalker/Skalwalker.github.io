@@ -11,6 +11,7 @@ import Work from './views/aboutViews/Work'
 import Likes from './views/aboutViews/Likes'
 import Description from './views/aboutViews/Description'
 import Papers from './views/Papers'
+import ProjectPage from './views/ProjectPage'
 // import { craft } from './content/Craft'
 // import Background from './components/Background'
 
@@ -62,8 +63,12 @@ const routes = [
     path: "/achivements",
     main: () => <Achiev/>
   },
+  // {
+  //   path: "/crafts/my-project",
+  //   main: () => <ProjectPage/>
+  // },
   {
-    path: "/crafts",
+    path: "/projects",
     main: () => <Craft/>
   },
   {

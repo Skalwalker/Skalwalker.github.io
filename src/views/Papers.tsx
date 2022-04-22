@@ -2,7 +2,7 @@ import React from 'react';
 import Background from '../components/Background';
 import { Col, Row, Button, Table } from 'react-bootstrap';
 import { craft } from '../content/Craft';
-// import { Document } from 'react-pdf'
+
 import '../assets/css/font.css';
 
 type myState = { activeTags: any, bgHeight: any, imagesCounter: any}

@@ -12,7 +12,7 @@ import {GiMaterialsScience, GiPlagueDoctorProfile, GiCarnivorousPlant,
 import { FaVuejs, FaGraduationCap, FaKaggle,
          FaJedi, FaMoneyBillAlt} from 'react-icons/fa';
 
-type MyProps = {title: string, date: string, img: string};
+type MyProps = {title: string, date: string, img: string, locked: boolean};
 type MyState = { };
 
 class AchievCard extends React.Component<MyProps, MyState> {
@@ -20,7 +20,8 @@ class AchievCard extends React.Component<MyProps, MyState> {
   static defaultProps = {
     title: 'Stranger',
     date: 'Stranger',
-    img: 'default'
+    img: 'default',
+    locked: false
   };
 
   get_icon(name: string){
@@ -70,16 +71,24 @@ class AchievCard extends React.Component<MyProps, MyState> {
 
   };
 
-
   render () {
+
+    const locked = this.props.locked;
+    let opcValue: string;
+    if (locked) {
+      opcValue = "0.5";
+    } else {
+      opcValue = "1.0";
+    }
+
     return (
-      <Card border="#60D7F9" className="mt-1 mb-1">
+      <Card border="#60D7F9" className="mt-1 mb-1" style={{opacity: opcValue}}>
           <Row className="m-0">
-            <Col md={3}>
+            <Col md={3} className="my-auto">
               {this.get_icon(this.props.img)}
             </Col>
-            <Col>
-              <Card.Body style={{padding: '0.5rem'}}>
+            <Col style={{paddingLeft: "0"}}>
+              <Card.Body style={{padding: '0.5rem', paddingLeft: "0"}}>
                 <Card.Title className='subtitle_bold pt-2' style={{fontSize: '18px', color: 'white'}}>{this.props.title}</Card.Title>
                 <Card.Text className='paragraph' style={{fontSize: '12px', color: 'white'}}>{this.props.date}</Card.Text>
               </Card.Body>
