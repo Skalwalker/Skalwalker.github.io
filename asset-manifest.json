@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.f56d1075.chunk.css",
-    "main.js": "/static/js/main.642c4ec8.chunk.js",
-    "main.js.map": "/static/js/main.642c4ec8.chunk.js.map",
+    "main.css": "/static/css/main.ed0c2786.chunk.css",
+    "main.js": "/static/js/main.9563e1fe.chunk.js",
+    "main.js.map": "/static/js/main.9563e1fe.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f027f2bf.js",
     "runtime-main.js.map": "/static/js/runtime-main.f027f2bf.js.map",
     "static/js/2.05f62b89.chunk.js": "/static/js/2.05f62b89.chunk.js",
     "static/js/2.05f62b89.chunk.js.map": "/static/js/2.05f62b89.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.f56d1075.chunk.css.map": "/static/css/main.f56d1075.chunk.css.map",
+    "static/css/main.ed0c2786.chunk.css.map": "/static/css/main.ed0c2786.chunk.css.map",
     "static/js/2.05f62b89.chunk.js.LICENSE.txt": "/static/js/2.05f62b89.chunk.js.LICENSE.txt",
     "static/media/avangers.081c72fb.svg": "/static/media/avangers.081c72fb.svg",
     "static/media/glitch_building.jpg": "/static/media/glitch_building.7dcd8521.jpg",
@@ -53,7 +53,7 @@
   "entrypoints": [
     "static/js/runtime-main.f027f2bf.js",
     "static/js/2.05f62b89.chunk.js",
-    "static/css/main.f56d1075.chunk.css",
-    "static/js/main.642c4ec8.chunk.js"
+    "static/css/main.ed0c2786.chunk.css",
+    "static/js/main.9563e1fe.chunk.js"
   ]
 }
