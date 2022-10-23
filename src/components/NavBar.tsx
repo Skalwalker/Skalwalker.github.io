@@ -22,9 +22,7 @@ class NavBar extends React.Component<myProps, myState> {
                     <Link className='nav-link subtitle' to="/projects" style={{color: 'white'}}>Projects</Link>
                     <Link className='nav-link subtitle' to="/papers" style={{color: 'white'}}>Papers</Link>
                     <Link className='nav-link subtitle' to="/experience" style={{color: 'white'}}>Experience</Link>
-                    <Link className='nav-link subtitle' to="/skills" style={{color: 'white'}}>Skills</Link>
                     <Link className='nav-link subtitle' to="/achivements" style={{color: 'white'}}>Achivements</Link>
-                    <Link className='nav-link subtitle' to="/contact" style={{color: 'white'}}>Contact Me</Link>
                 </Nav>
                 </Navbar.Collapse>
             </Navbar>

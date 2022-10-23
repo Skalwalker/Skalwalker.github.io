@@ -19,8 +19,6 @@ class Papers extends React.Component<myProps, myState> {
     };
   }
 
-
-
   clickButton = (id: string) => {
     var aux = this.state.activeTags
     if (aux.includes(id, 0)) {

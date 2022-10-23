@@ -1,5 +1,5 @@
 import Modal from 'react-bootstrap/Modal'
-// import Button from 'react-bootstrap/Button'
+
 
 function MyVerticallyCenteredModal(props) {
     return (
@@ -14,14 +14,11 @@ function MyVerticallyCenteredModal(props) {
           <Modal.Title id="contained-modal-title-vcenter">
             {props.title}
           </Modal.Title>
-          {/* <Button onClick={props.onHide}>Close</Button> */}
+
         </Modal.Header>
         <Modal.Body style={{height:"80vh"}}>
             <embed src={props.document} type="application/pdf" width="100%" height="100%" />
         </Modal.Body>
-        {/* <Modal.Footer>
-
-        </Modal.Footer> */}
       </Modal>
     );
 }

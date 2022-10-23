@@ -1,26 +1,15 @@
-import React from 'react';
 import Home from './views/Home';
 import About from './views/About';
-import Contact from './views/Contact';
-import Skills from './views/Skills';
 import Experience from './views/Experience';
 import Achiev from './views/Achiev';
 import Craft from './views/Craft';
-import Core from './views/aboutViews/Core'
-import Work from './views/aboutViews/Work'
-import Likes from './views/aboutViews/Likes'
-import Description from './views/aboutViews/Description'
-import Papers from './views/Papers'
-import ProjectPage from './views/ProjectPage'
-// import { craft } from './content/Craft'
-// import Background from './components/Background'
+import Papers from './views/Papers';
 
-// const paperRoutes = () => {
-//   let routes = []
-//   for (let i = 0; i < craft.papers.length; i++) {
-//     routes.push({path: "/papers/" + craft.crafts[i].url, main: () => <Background />})
-//   }
-// }
+import Core from './views/aboutViews/Core'
+import Likes from './views/aboutViews/Likes'
+import Skills from './views/aboutViews/Skills'
+
+// import ProjectPage from './views/ProjectPage'
 
 const aboutRoutes = [
     {
@@ -28,16 +17,12 @@ const aboutRoutes = [
         main: () => <Core />
     },
     {
-        path: "/about/work",
-        main: () => <Work />
-    },
-    {
         path: "/about/likes",
         main: () => <Likes />
     },
     {
-        path: "/about/description",
-        main: () => <Description />
+        path: "/about/skills",
+        main: () => <Skills/>
     },
 ]
 
@@ -50,10 +35,6 @@ const routes = [
   {
     path: "/about",
     main: () => <About/>
-  },
-  {
-    path: "/skills",
-    main: () => <Skills/>
   },
   {
     path: "/experience",
@@ -75,10 +56,6 @@ const routes = [
     path: "/papers",
     main: () => <Papers/>
   },
-  {
-    path: "/contact",
-    main: () => <Contact/>
-  }
 ];
 
 export {
