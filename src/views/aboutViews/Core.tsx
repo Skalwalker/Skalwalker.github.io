@@ -4,7 +4,7 @@ import { core } from "../../content/About";
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { ShowTesseract } from "../../components/Tesseract";
+import { GrMail } from "react-icons/gr";
 
 class Core extends React.Component {
   render() {
@@ -13,10 +13,7 @@ class Core extends React.Component {
         <Row className='h-100'>
           <Col md={12} className='my-auto'>
             <Row>
-              <Col md={5} className='text-center'>
-                <ShowTesseract/>
-              </Col>
-              <Col md={7} className='my-auto pr-5'>
+              <Col className='my-auto pr-5'>
                 <Row>
                   <Col md={12}>
                     <p className='paragraph' style={{color: 'white', fontSize: '20px'}}>
@@ -33,7 +30,9 @@ class Core extends React.Component {
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/Skalwalker">
                         <FaGithub color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaGithub>
                     </a>
-
+                    <a target="_blank" rel="noopener noreferrer" href = "mailto: rekanobre@gmail.com">
+                        <GrMail color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></GrMail>
+                    </a>
                   </Col>
                 </Row>
               </Col>

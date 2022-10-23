@@ -165,7 +165,7 @@ const craft = {
     papers: [
         {
             title: "AURORA: An Autonomous Agent-Orientated Hybrid Trading Service",
-            year: "2021",
+            year: "2022",
             tags: ["Machine Learning", "Data Science"],
             document: "https://rdcu.be/cysdA"
         },

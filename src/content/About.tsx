@@ -1,10 +1,10 @@
 const core = {
     img: "",
-    text: "I believe my core attributes are defined by my personality. I am passionate about the idea of machines learning to facilitate human tasks, as long as it is developed in a humanitarian and egalitarian way. My greatest strength is my way of approaching a problem, thinking outside the box, trying to solve a problem in innovative ways, rather than brute-forcing through code. Finally, but most importantly, I consider it crucial to stay with who I am, do my hobbies, be connected to nature, and enjoy my free time. This is what keeps my gears running, helping me to be extremely productive when needed."
+    text: "I am a data scientist with a personal focus on Reinforcement Learning and Deep Learning methods applied to solving social-environmental problems. Since beginning my undergraduate in computer science, I have been interested in research. Over time, I developed my skills in the field and decided that I wanted to work in research-oriented companies. Since then, I have constantly been looking for opportunities and preparing my curriculum for applying to these companies. I have already participated in publishing five papers while also having multiple practical projects with a plethora of technical skills"
 }
 
 const desc = {
-    profile_img: require("../assets/images/profile.jpeg").default,
+    profile_img: require("../assets/images/profile.jpg").default,
     char_name: "Renato Avellar Nobre",
     alignment: "Neutral Good",
     birthday: "02/06/1997",

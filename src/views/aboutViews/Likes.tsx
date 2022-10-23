@@ -22,7 +22,7 @@ class Likes extends React.Component<MyProps, MyState> {
 
   render() {
     return (
-      <Container  style={{height: "90vh"}}>
+      <Container style={{height: "90vh"}}>
         <Row style={{height: "90vh"}}>
           <Col md={{span: 11, offset: 1}} className='my-auto'>
             <Row>
