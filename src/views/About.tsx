@@ -38,7 +38,7 @@ class About extends React.Component {
                     </Link>
                   </Row>
                   <Row md={12} className='nav-item-custom pb-3' >
-                    <Link className='subtitle text-center ml-5' to="/about/description">
+                    <Link className='subtitle text-center ml-5' to="/about/skills">
                       <GiBookmark className='mr-3 mb-2' size={40}/>Skills
                     </Link>
                   </Row>

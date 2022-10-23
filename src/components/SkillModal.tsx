@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Modal, Button } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 
 type myState = { }
 type myProps = { onHide: any, show: any, skill: any }
