@@ -149,8 +149,8 @@ class SkillsChart extends React.Component<MyProps, MyState>  {
 
   render() {
     return (
-      <Col id='d3_container' className="my-auto">
-        <div style={{ height: '100vh', width: '100vh' }} ref={this.myRef}></div>
+      <Col id='d3_container'>
+        <div style={{ height: '90vh', width: '100vw'}} ref={this.myRef}></div>
       </Col>
     )
   }

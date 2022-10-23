@@ -11,30 +11,26 @@ class Core extends React.Component {
     return (
       <Container className='h-100'>
         <Row className='h-100'>
-          <Col md={12} className='my-auto'>
+          <Col className='my-auto' style={{paddingLeft: '200px', paddingRight: '200px'}}>
             <Row>
-              <Col className='my-auto pr-5'>
-                <Row>
-                  <Col md={12}>
-                    <p className='paragraph' style={{color: 'white', fontSize: '20px'}}>
-                      {core.text}
-                    </p>
-                  </Col>
-                  <Col md={12} className=''>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/rk_nobre/">
-                      <FaInstagram color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaInstagram>
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/rk-nobre/">
-                      <FaLinkedin color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaLinkedin>
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Skalwalker">
-                        <FaGithub color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaGithub>
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href = "mailto: rekanobre@gmail.com">
-                        <GrMail color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></GrMail>
-                    </a>
-                  </Col>
-                </Row>
+              <Col md={12}>
+                <p className='paragraph' style={{ color: 'white', fontSize: '20px'}}>
+                  {core.text}
+                </p>
+              </Col>
+              <Col md={12} className=''>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/rk_nobre/">
+                  <FaInstagram color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaInstagram>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/rk-nobre/">
+                  <FaLinkedin color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaLinkedin>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Skalwalker">
+                  <FaGithub color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></FaGithub>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="mailto: rekanobre@gmail.com">
+                  <GrMail color="#60D7F9" className='d-inline-block float-right ml-2' size="40"></GrMail>
+                </a>
               </Col>
             </Row>
           </Col>
