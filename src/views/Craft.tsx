@@ -78,7 +78,7 @@ class Craft extends React.Component<myProps, myState> {
           {projects.map((project, index) => {
             if (project.highlight) {
               return(
-                <Col lg={3} style={{padding: '10px'}}>
+                <Col xl={3} lg={6} style={{padding: '10px'}}>
                   <ProjectCard
                       title={project.title}
                       url={project.url}
@@ -96,12 +96,12 @@ class Craft extends React.Component<myProps, myState> {
         <Row className="pt-5">
           <Col>
             <Row>
-              <Col lg={4}>
+              <Col xl={4}>
                 <h1 className="subtitle" style={{color: 'white'}}>Newest</h1>
               </Col>
               {tags.map((name, index) => {
                 return (
-                    <Col lg={2} style={{paddingTop: '12px'}}>
+                    <Col xl={2} style={{paddingTop: '12px'}}>
                       <Button key={name} onClick={() => this.clickButton(name)}
                               className='paragraph'
                               variant={this.checkIfIsActive(name)}
@@ -118,7 +118,7 @@ class Craft extends React.Component<myProps, myState> {
             {projects.map((project, index) => {
               if ((project.tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!project.highlight)) {
                 return(
-                  <Col lg={3} style={{paddingTop: '15px', paddingBottom: '15px'}}>
+                  <Col xl={3} lg={6} style={{paddingTop: '15px', paddingBottom: '15px'}}>
                     <ProjectCard
                       title={project.title}
                       url={project.url}

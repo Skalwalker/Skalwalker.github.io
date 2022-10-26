@@ -22,7 +22,7 @@ class ProjectCard extends React.Component<myProps, myState> {
     render() {
         return (
             <a href={this.props.url}>
-            <Card className="ml-auto mr-auto" style={{ width: '18rem', color: 'white', borderRadius: '15px'}}>
+            <Card className="ml-auto mr-auto" style={{minWidth:'15rem', maxWidth: '18rem', color: 'white', borderRadius: '15px'}}>
                 <Card.Img variant="top" src={this.props.banner} style={{ borderRadius: '15px 15px 0 0' }} />
                 <Card.Body>
                     <Card.Title className="subtitle-bold mb-1">{this.props.title}</Card.Title>
