@@ -1,11 +1,13 @@
 import React from 'react';
 import Background from '../components/Background';
-import { Col, Row, Button, Table } from 'react-bootstrap';
-import { craft } from '../content/Craft';
+import { Col, Row, Button, Table, Container } from 'react-bootstrap';
+import { papers_content } from '../content/Papers';
+import PaperCard from '../components/PaperCard';
+import PaperCardShort from '../components/PaperCardShort';
 
 import '../assets/css/font.css';
 
-type myState = { activeTags: any, bgHeight: any, imagesCounter: any}
+type myState = { activeTags: any, bgHeight: any, papers_count: any}
 type myProps = { }
 
 class Papers extends React.Component<myProps, myState> {
@@ -15,7 +17,7 @@ class Papers extends React.Component<myProps, myState> {
     this.state = {
       activeTags: [],
       bgHeight: "100vh",
-      imagesCounter: 0,
+      papers_count: 0,
     };
   }
 
@@ -53,68 +55,78 @@ class Papers extends React.Component<myProps, myState> {
     }
   }
 
+
   onLoad = () => {
-    const releases = craft.crafts;
-    if (this.state.imagesCounter === releases.length-1) {
+    const papers = papers_content.papers;
+    if (this.state.papers_count === papers.length-1) {
       this.setState({
         bgHeight: document.getElementById('page-size')!.clientHeight +
         document.getElementsByClassName('card-body')![0].clientHeight/2})
     } else {
-      this.setState({imagesCounter: this.state.imagesCounter+1})
+      this.setState({papers_count: this.state.papers_count+1})
     }
   }
 
+
   render() {
-    const tags = craft.tags;
-    const papers = craft.papers;
+    const tags = papers_content.tags;
+    const papers = papers_content.papers;
 
     return (
-      <Background showParticles={false} pageHeight={this.state.bgHeight}>
-        <Row className="m-0 pt-5 pr-4 pb-5">
-          <Col md={2}>
-            <Row className="p-4">
+      <Background showParticles={true} pageHeight={this.state.bgHeight}>
+        <Container style={{padding: '90px', paddingTop: '50px'}} fluid>
+          <Row>
+            <h1 className="subtitle" style={{color: 'white'}}>Highlight <b>Papers</b></h1>
+            <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
+          </Row>
+          <Row>
+          {papers.map((paper, index) => {
+            if (paper.highlight) {
+              return(
+                <Col lg={6} style={{padding: '10px'}}>
+                  <PaperCard title={paper.title} url={paper.url} publisher={paper.publisher} year={paper.year}/>
+                </Col>
+              )
+            } else {
+              return(null)
+            }
+          })}
+          </Row>
+        <Row className="pt-5">
+          <Col>
+            <Row>
+              <Col lg={6}>
+                <h1 className="subtitle" style={{color: 'white'}}>Newest</h1>
+              </Col>
               {tags.map((name, index) => {
                 return (
-                    <Button key={name} onClick={() => this.clickButton(name)}
-                            className='mb-2 paragraph'
-                            variant={this.checkIfIsActive(name)}
-                            size="sm"
-                            block>
-                      {name}
-                    </Button>
-
+                    <Col lg={2} style={{paddingTop: '12px'}}>
+                      <Button key={name} onClick={() => this.clickButton(name)}
+                              className='paragraph'
+                              variant={this.checkIfIsActive(name)}
+                              size="sm"
+                              block>
+                        {name}
+                      </Button>
+                    </Col>
                 )
               })}
+              <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
             </Row>
-          </Col>
-          <Col id="page-size" md={10}>
-              <Row>
-                <h1 className="subtitle" style={{color: 'white'}}>Papers</h1>
-                <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
-              </Row>
-              <Row >
-                <Table style={{color: 'white'}}>
-                  <tbody>
-                    {papers.map((paper, index) => {
-                      if (paper.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
-                        return(
-                          <tr className="paragraph_bold">
-                            <td>{index+1}</td>
-                            <td className='paragraph_bold'><a style={{color: "white"}} target="_blank" rel="noopener noreferrer" href={paper.document}>
-                             {paper.title}</a>
-                            </td>
-                            <td>{paper.year}</td>
-                          </tr>
-                        )
-                      } else {
-                        return (null)
-                      }
-                    })}
-                  </tbody>
-                </Table>
-              </Row>
+            {papers.map((paper, index) => {
+              if ((paper.tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!paper.highlight)) {
+                return(
+                  <Row style={{paddingTop: '5px', paddingBottom: '5px'}}>
+                    <PaperCardShort title={paper.title} url={paper.url} publisher={paper.publisher} year={paper.year}/>
+                  </Row>
+                )
+              } else {
+                return (null)
+              }
+            })}
           </Col>
         </Row>
+        </Container>
       </Background>
     )
   }

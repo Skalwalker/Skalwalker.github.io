@@ -1,251 +1,166 @@
 const craft = {
-    tags: ["iOS App", "Swift", "Computer Vision", "Data Structures", "Data Mining", "Machine Learning", "Web", "Data Science", "Python", "C/C++", "Javascript/TypeScript", "Robotics"],
+    tags: ["Machine Learning", "Robotics", "App/Web Dev", "Others"],
     crafts: [
         {
-            banner: require("../assets/images/glitch/glitch_mail.jpg").default,
-            title: "My Zip Code",
-            tags: ["iOS App", "Swift"]
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_quote.jpg").default,
-            title: "Quote's Book",
-            tags: ["iOS App", "Swift"]
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_tasks.jpg").default,
-            title: "Haze Tasks",
-            tags: ["iOS App", "Swift"]
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_mixtape.jpg").default,
-            title: "MMiOS",
-            tags: ["iOS App", "Swift"],
-            url: "https://github.com/Skalwalker/MMiOS"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_meds.jpg").default,
-            title: "MediPreço",
-            tags: ["iOS App", "Swift"],
-            url: "https://portal.medipreco.com.br/#/para-voce"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_ios.jpg").default,
-            title: "MWApp",
-            tags: ["iOS App", "Swift"],
-            url: "https://github.com/Skalwalker/ihc-new-matweb"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_mancala.jpg").default,
-            title: "Mancala",
-            tags: ["C/C++", "Data Structures"],
-            url: "https://github.com/Skalwalker/MancalaProject"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_college.jpg").default,
-            title: "College Path",
-            tags: ["C/C++", "Data Structures"],
-            url: "https://github.com/Skalwalker/college_path"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_zebra.jpg").default,
-            title: "SPA Problem",
-            tags: ["C/C++", "Data Structures"],
-            url: "https://github.com/Skalwalker/spa-problem"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_deputies.jpg").default,
-            title: "Dirty Deputies",
-            tags: ["C/C++", "Data Structures"],
-            url: "https://github.com/Skalwalker/dirty-deputies"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_panoramic.jpg").default,
-            title: "Panoramic",
-            tags: ["Computer Vision"],
-            url: "https://github.com/Skalwalker/Union_images"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_building.jpg").default,
-            title: "Photo Geometry",
-            tags: ["Computer Vision"],
-            url: "https://github.com/Skalwalker/photogamtery"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_spray.jpg").default,
-            title: "Metal Recognition",
-            tags: ["Computer Vision", "Machine Learning"],
-            url: "https://github.com/Skalwalker/MetalRecognition"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_hd.jpg").default,
-            title: "Magnetic Disk Simulator",
-            tags: ["C/C++", "Data Structures"],
-            url: "https://github.com/Skalwalker/MagneticDiskSimulator"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_web.jpg").default,
-            title: "MWScraper",
-            tags: ["Python",  "Data Mining"],
-            url: "https://github.com/Skalwalker/MWebScraper"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_paper.jpg").default,
-            title: "DODFMiner",
-            tags: ["Python",  "Data Mining"],
-            url: "https://github.com/UnB-KnEDLe"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_numbers.jpg").default,
-            title: "Number Recognition",
-            tags: ["Machine Learning", "Data Science", "Python"],
-            url: "https://github.com/Skalwalker/NumberRecognition"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_tree.jpg").default,
-            title: "Plants Recognition",
-            tags: ["Machine Learning", "Data Science", "Python"],
-            url: "https://github.com/Skalwalker/PlantsRecognition"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_cancer.jpg").default,
-            title: "Breast Cancer Recognition",
-            tags: ["Machine Learning", "Data Science", "Python"],
-            url: "https://github.com/Skalwalker/BreastCancerRecognition"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_spam.jpg").default,
-            title: "Spam Recognition",
-            tags: ["Machine Learning", "Data Science", "Python"],
-            url: "https://github.com/Skalwalker/SpamRecognition"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_computer.jpg").default,
-            title: "Portfolio",
-            tags: ["Web", "Javascript/TypeScript"],
-            url: "https://github.com/Skalwalker/Skalwalker.github.io"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_coffee.jpg").default,
-            title: "JVM",
-            tags: ["C/C++"],
-            url: "https://github.com/Skalwalker/JVM"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_owl.jpg").default,
-            title: "Prolog C",
-            tags: ["C/C++"],
-            url: "https://github.com/Skalwalker/CWAMProlog"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_bull.jpg").default,
-            title: "Hare",
-            tags: ["Machine Learning", "Data Science", "Python"],
-            url: "/crafts/my-project"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_pacman.jpg").default,
-            title: "Multi-Agent Communication",
-            tags: ["Machine Learning", "Python"],
-            url: "https://github.com/Skalwalker/MRLCommunication"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_trufes.jpg").default,
-            title: "TRUFES Competition",
-            tags: ["Javascript/TypeScript", "Robotics"],
-            url: "https://github.com/UnbDroid/Trufes2019"
-        },
-        {
-            banner: require("../assets/images/glitch/glitch_larc.jpg").default,
-            title: "IEEE SEK Competition",
-            tags: ["C/C++", "Robotics"],
-            url: "https://github.com/UnbDroid/SEKMANDA-2018"
-        },
-    ],
-
-    papers: [
-        {
-            title: "AURORA: An Autonomous Agent-Orientated Hybrid Trading Service",
-            year: "2022",
-            tags: ["Machine Learning", "Data Science"],
-            document: "https://rdcu.be/cysdA"
-        },
-        {
-            title: "Uma solução em névoa via objetos inteligentes para lidar com a heterogeneidade dos dados em um ambiente residencial",
-            year: "2021",
-            tags: ["Machine Learning", "Data Science"],
-            document: "https://sol.sbc.org.br/index.php/sbrc_estendido/article/view/17179"
-        },
-        {
-            title: "Hare: serviço de investimento baseado em agentes autônomos para operar na B3",
-            year: "2020",
-            tags: ["Machine Learning", "Data Science"],
-            document: "https://drive.google.com/file/d/1ut0lxRRPk-eeShe3UArbFUJF_8nH8nic/view?usp=sharing"
-        },
-        {
-            title: "Implementation of Communication between Autonomous Agents for Learning Collaborative Behaviors ",
-            year: "2017",
+            banner: require("../assets/images/projects/covid19.png").default,
+            title: "COVID-19 Detection",
             tags: ["Machine Learning"],
-            document: "https://drive.google.com/file/d/1Ms01uQN4HshG3UMca5WwqtaDDiPAgcA1/view?usp=sharing"
+            language: "Python",
+            year: "2022",
+            url: "https://github.com/Skalwalker/C19-Audit",
+            highlight: true,
+            headline: "Detecting COVID-19 in audio tracks from patients' coughs with CNNs."
         },
         {
-            title: "Report on Prolog C Translator",
+            banner: require("../assets/images/projects/globalwarming2.png").default,
+            title: "Global Warming Simulation",
+            tags: ["Machine Learning"],
+            language: "Anylogic",
+            year: "2022",
+            url: "https://github.com/Skalwalker",
+            highlight: true,
+            headline: "Simulating global temperature with respect to CO2 emissions and deforestation."
+        },
+        {
+            banner: require("../assets/images/projects/ecosampling.png").default,
+            title: "Gaze Shifts Sampling",
+            tags: ["Machine Learning"],
+            language: "Python",
+            year: "2022",
+            url: "https://github.com/Skalwalker",
+            highlight: false,
+            headline: "A Python implementation of the ecological sampling of gaze shifts."
+        },
+        {
+            banner: require("../assets/images/projects/zipcode.png").default,
+            title: "My Zip Code",
+            tags: ["App/Web Dev"],
+            language: "Swift",
+            year: "",
+            highlight: false,
+            headline: "A simple iOS App to discover your zip code based on your location."
+        },
+        {
+            banner: require("../assets/images/projects/quotesbook.png").default,
+            title: "Quote's Book",
+            tags: ["App/Web Dev"],
+            language: "Swift",
+            year: "",
+            highlight: false,
+            headline: "An iOS App to keep your personal favorite quotes from movies or friends."
+        },
+        {
+            banner: require("../assets/images/projects/medipreco.png").default,
+            title: "MediPreço",
+            tags: ["App/Web Dev"],
+            language: "Swift",
+            year: "",
+            url: "https://portal.medipreco.com.br/#/para-voce",
+            highlight: false,
+            headline: "Developed the first iOS version of the collaborative medicine app Medipreço."
+        },
+        {
+            banner: require("../assets/images/projects/portfolio.png").default,
+            title: "Portfolio",
+            tags: ["App/Web Dev"],
+            language: "Javascript",
+            year: "2022",
+            url: "https://github.com/Skalwalker/Skalwalker.github.io",
+            highlight: false,
+            headline: "This amazing website developed with React, Bootsrap, and Typescript."
+        },
+        {
+            banner: require("../assets/images/projects/hare.png").default,
+            title: "Aurora",
+            tags: ["Machine Learning"],
+            language: "Python",
+            year: "2021",
+            url: "https://github.com/Skalwalker",
+            highlight: true,
+            headline: "Predicting the stock market with LSTMs and Reinforcement Learning."
+        },
+        {
+            banner: require("../assets/images/projects/dodfminer.png").default,
+            title: "DODFMiner",
+            tags: ["Machine Learning"],
+            language: "Python",
             year: "2020",
-            tags: ["Translator"],
-            document: "https://drive.google.com/file/d/1YTS3sZbWnOYWL5uP9zwDGTzF2mBREQG_/view?usp=sharing"
+            url: "https://github.com/UnB-KnEDLe",
+            highlight: false,
+            headline: "Extraction of data from documents in PDF format to structured CSV."
         },
         {
-            title: "Report on Analysis and Proof of Graham Scam Algorithm",
+            banner: require("../assets/images/projects/trufes.png").default,
+            title: "TRUFES Competition",
+            tags: ["Robotics"],
+            language: "Beaglebone Blue",
             year: "2019",
-            tags: ["Algorithms"],
-            document:"https://drive.google.com/file/d/1t55YPaR9SPiOMl7gKQqF_82wQGVX7gac/view?usp=sharing"
+            url: "https://github.com/UnbDroid/Trufes2019",
+            highlight: false,
+            headline: "Omniwheel robot with LIDAR sensor for a package delivery simulation."
         },
+        // Number Recognition, Plants Recognition, Breast Cancer Recognition, Spam Recognition
         {
-            title: "Report on Application of Steganography Techniques in Audio Files",
-            year: "2019",
-            tags: [],
-            document: "https://drive.google.com/file/d/1h5v3s_TGlYl7JdKm7gunfmx3xX3PrV8D/view?usp=sharing"
-        },
-        {
-            title: "Summary on Theory of Computation: Theorems, Lemmas and Definitions",
+            banner: require("../assets/images/projects/datascience.png").default,
+            title: "Data Science Projects",
+            tags: ["Machine Learning"],
+            language: "Python",
             year: "2018",
-            tags: [],
-            document: "https://drive.google.com/file/d/1r6lMORJfTJvQ_Nyqplo4pBDcf9aQV6Yc/view?usp=sharing"
+            url: "https://github.com/Skalwalker/NumberRecognition",
+            highlight: false,
+            headline: "A collection of data science mini-projects from an introductory class."
         },
         {
-            title: "Report on Number Recognition",
+            banner: require("../assets/images/projects/sek.png").default,
+            title: "IEEE SEK Competition",
+            tags: ["Robotics"],
+            language: "Lego Kit",
             year: "2018",
-            tags: ["Machine Learning", "Data Science"],
-            document: "https://drive.google.com/file/d/1AAck7y1Bys6wZUku_AUyiqV13zzrIZ1r/view?usp=sharing"
+            url: "https://github.com/UnbDroid/SEKMANDA-2018",
+            highlight: false,
+            headline: "Autonomous car simulation competition using Lego robotic kits."
         },
         {
-            title: "Report on Plants Recognition",
-            year: "2018",
-            tags: ["Machine Learning", "Data Science"],
-            document: "https://drive.google.com/file/d/1P6aPykZP39DikApOt-BYAVKHnzvrW9Od/view?usp=sharing"
-        },
-        {
-            title: "Report on Breast Cancer Recognition",
-            year: "2018",
-            tags: ["Machine Learning", "Data Science"],
-            document: "https://drive.google.com/file/d/1-Y0ORsbcU8dx5NpbQxA-1ks_DWHjBSvm/view?usp=sharing"
-        },
-        {
-            title: "Report on Spam Recognition",
-            year: "2018",
-            tags: ["Machine Learning", "Data Science"],
-            document: "https://drive.google.com/file/d/1eupeAmFqYmg08wPWbRnTYC8pMIgteRZe/view?usp=sharing"
-        },
-        {
-            title: "Report on Metal Recognition",
+            banner: require("../assets/images/projects/arcade.png").default,
+            title: "Multi-Agent Pacman",
+            tags: ["Machine Learning"],
+            language: "Python",
             year: "2017",
-            tags: ["Computer Vision", "Machine Learning"],
-            document: "https://drive.google.com/file/d/1eupeAmFqYmg08wPWbRnTYC8pMIgteRZe/view?usp=sharing"
+            url: "https://github.com/Skalwalker/MRLCommunication",
+            highlight: true,
+            headline: "Reinforcement Learning communication on Pac-man's ghosts."
+        },
+        // College Path, SPA Problem
+        {
+            banner: require("../assets/images/projects/graphtheory.png").default,
+            title: "Graph Theory Projects",
+            tags: ["Others"],
+            language: "C/C++",
+            year: "2017",
+            url: "https://github.com/Skalwalker/ihc-new-matweb",
+            highlight: false,
+            headline: "A collection of graph theory mini-projects from an introductory class."
+        },
+        // Panoramic, Photo Geometry, Metal Recognition
+        {
+            banner: require("../assets/images/projects/computervision.png").default,
+            title: "Computer Vision Projects",
+            tags: ["Others"],
+            language: "Matlab",
+            year: "2017",
+            url: "https://github.com/Skalwalker/Union_images",
+            highlight: false,
+            headline: "A collection of computer vision mini-projects from an introductory class."
         },
         {
-            title: "Active Learning as a Substitute for Traditional Methodology, Under the Field of Computer Science",
-            year: "2017",
-            tags: ["Education"],
-            document: "https://drive.google.com/file/d/1c183Y8kTfOkfTg42-UNAuX6IelkzdaA1/view?usp=sharing"
+            banner: require("../assets/images/projects/questionmark.png").default,
+            title: "Coming Soon",
+            tags: ["Machine Learning"],
+            language: "?",
+            year: "0000",
+            url: "https://github.com/Skalwalker",
+            highlight: false,
+            headline: "Always working on new amazing projects. Hope you enjoy what is coming next."
         }
     ]
 }

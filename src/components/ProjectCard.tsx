@@ -1,33 +1,49 @@
-import React from 'react';
-import { Col, Card } from 'react-bootstrap';
+import React from 'react'
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
 
 type myState = { }
-type myProps = { title: any, img: any, url: any, onLoad: any }
+type myProps = {title: any, url: any, headline: any, year: any, banner: any, highlight: any, language: any}
 
-class CardRelease extends React.Component<myProps, myState> {
+class ProjectCard extends React.Component<myProps, myState> {
 
-  static defaultProps = {
-    title: 'Stranger',
-    img: require("../assets/images/glitch/glitch_ios.jpg").default,
-    url: "https://github.com/Skalwalker"
-  };
+    static defaultProps = {
+        title: 'An incredible paper on placeholders',
+        url: "https://github.com/Skalwalker",
+        headline: "Predicting the stock market with LSTMs and Reinforcement Learning.",
+        year: "2022",
+        banner: require("../assets/images/projects/questionmark.png").default,
+        highlight: false,
+        language: "Swift",
+    };
 
-  render () {
-    return (
-      <Col md={3} className='mb-3'>
-        <a href={this.props.url}>
-        <Card style={{ minHeight: '30vh' }}>
-          <Card.Body style={{ padding: '0.8rem' }}>
-            <Card.Img variant="top" src={this.props.img} onLoad={this.props.onLoad}/>
-            <Card.Text className='mt-2 paragraph_bold' style={{color: "white"}}>
-              {this.props.title}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        </a>
-      </Col>
-    )
-  }
+    render() {
+        return (
+            <a href={this.props.url}>
+            <Card className="ml-auto mr-auto" style={{ width: '18rem', color: 'white', borderRadius: '15px'}}>
+                <Card.Img variant="top" src={this.props.banner} style={{ borderRadius: '15px 15px 0 0' }} />
+                <Card.Body>
+                    <Card.Title className="subtitle-bold mb-1">{this.props.title}</Card.Title>
+                    <Card.Text className="paragraph" style={{ color: 'white' }}>
+                        {this.props.headline}
+                    </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                    <Row>
+                        <Col lg={8}>
+                            <p className="subtitle" style={{ textAlign: 'left', margin: '0' }}>{this.props.language}</p>
+                        </Col>
+                        <Col lg={4}>
+                            <p className="subtitle" style={{ textAlign: 'right', margin: '0', }}>{this.props.year}</p>
+                        </Col>
+                    </Row>
+                </Card.Footer>
+            </Card>
+            </a>
+        )
+    }
 }
 
-export default CardRelease;
+export default ProjectCard;
