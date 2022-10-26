@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
 
 import CSS from 'csstype';
-import { desc } from '../content/About';
+import { core } from '../content/About';
 import { HiCubeTransparent, HiOfficeBuilding } from 'react-icons/hi';
 import { GiBookmark, GiCutDiamond } from 'react-icons/gi';
 import { IoMdSchool } from 'react-icons/io';
@@ -15,7 +15,7 @@ class AboutMenu extends React.Component {
       <Row>
         <Col lg={11} style={{ marginTop: '20px', marginBottom: '20px' }}>
           <Row>
-            <Image src={desc.profile_img} className="ml-auto mr-auto block" style={{ height: '150px', width: '150px', backgroundColor: 'white' }} roundedCircle />
+            <Image src={core.profile_img} className="ml-auto mr-auto block" style={{ height: '150px', width: '150px', backgroundColor: 'white' }} roundedCircle />
           </Row>
           <Row className="paragraph mt-3" style={{color: 'white', marginLeft: '10px'}}>
             <p >
@@ -63,26 +63,11 @@ const selectedTabStyle: CSS.Properties = {
     color: 'black',
     mixBlendMode: 'screen',
     paddingRight: '15px',
-    paddingLeft: '60px',
+    paddingLeft: '45px',
     marginRight: '-1px',
     borderRadius: '15px 0px 0px 15px'
 }
 
-// const stylesObject: CSS.Properties = {
-//   normalTab: {
-//     paddingRight: '15px',
-//     paddingLeft: '5px',
-//     borderRadius: '15px 0px 0px 15px'
-//   },
-//   selectedTab: {
-//     backgroundColor: 'white',
-//     color: 'black',
-//     fontWeight: '400',
-//     mixBlendMode: 'screen',
-//     paddingRight: '15px',
-//     paddingLeft: '5px',
-//     borderRadius: '15px 0px 0px 15px'
-//   }
-// }
+
 
 export default AboutMenu;

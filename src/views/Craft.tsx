@@ -1,8 +1,8 @@
 import React from 'react';
 import Background from '../components/Background';
-import { Col, Row, Button } from 'react-bootstrap';
+import { Col, Row, Button, Container } from 'react-bootstrap';
 import { craft } from '../content/Craft';
-import CardRelease from '../components/ProjectCard';
+import ProjectCard from '../components/ProjectCard';
 import '../assets/css/font.css';
 
 type myState = { activeTags: any, bgHeight: any, imagesCounter: any }
@@ -65,50 +65,77 @@ class Craft extends React.Component<myProps, myState> {
 
   render() {
     const tags = craft.tags;
-    const releases = craft.crafts;
+    const projects = craft.crafts;
 
     return (
-      <Background showParticles={false} pageHeight={this.state.bgHeight}>
-        <Row className="m-0 pt-5 pr-4 pb-5">
-          <Col md={2}>
-            <Row className="p-4">
+      <Background showParticles={true} pageHeight={this.state.bgHeight}>
+        <Container style={{padding: '90px', paddingTop: '50px'}} fluid>
+          <Row>
+            <h1 className="subtitle" style={{color: 'white'}}>Highlight <b>Projects</b></h1>
+            <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
+          </Row>
+          <Row>
+          {projects.map((project, index) => {
+            if (project.highlight) {
+              return(
+                <Col lg={3} style={{padding: '10px'}}>
+                  <ProjectCard
+                      title={project.title}
+                      url={project.url}
+                      headline={project.headline}
+                      year={project.year}
+                      banner={project.banner}
+                      language={project.language}/>
+                </Col>
+              )
+            } else {
+              return(null)
+            }
+          })}
+          </Row>
+        <Row className="pt-5">
+          <Col>
+            <Row>
+              <Col lg={4}>
+                <h1 className="subtitle" style={{color: 'white'}}>Newest</h1>
+              </Col>
               {tags.map((name, index) => {
                 return (
-                    <Button key={name} onClick={() => this.clickButton(name)}
-                            className='mb-2 paragraph'
-                            variant={this.checkIfIsActive(name)}
-                            size="sm"
-                            block>
-                      {name}
-                    </Button>
+                    <Col lg={2} style={{paddingTop: '12px'}}>
+                      <Button key={name} onClick={() => this.clickButton(name)}
+                              className='paragraph'
+                              variant={this.checkIfIsActive(name)}
+                              size="sm"
+                              block>
+                        {name}
+                      </Button>
+                    </Col>
                 )
               })}
+              <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
+            </Row>
+            <Row>
+            {projects.map((project, index) => {
+              if ((project.tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!project.highlight)) {
+                return(
+                  <Col lg={3} style={{paddingTop: '15px', paddingBottom: '15px'}}>
+                    <ProjectCard
+                      title={project.title}
+                      url={project.url}
+                      headline={project.headline}
+                      year={project.year}
+                      banner={project.banner}
+                      language={project.language}/>
+                  </Col>
+                )
+              } else {
+                return (null)
+              }
+            })}
             </Row>
           </Col>
-          <Col id="page-size" md={10}>
-              <Row>
-                <h1 className="subtitle" style={{color: 'white'}}>Releases</h1>
-                <div className='w-100 mt-2 mb-4' style={{backgroundColor: 'white', height: '3px'}}/>
-              </Row>
-              <Row>
-                {releases.map((release, index) => {
-                  if (release.tags.some(this.checkInTags) || this.state.activeTags.length === 0) {
-                    if (release.banner === "") {
-                      return(
-                        <CardRelease title={release.title} url={release.url} onLoad={this.onLoad}/>
-                      )
-                    } else {
-                      return(
-                        <CardRelease title={release.title} img={release.banner} url={release.url} onLoad={this.onLoad}/>
-                      )
-                    }
-                  } else {
-                    return (null)
-                  }
-                })}
-              </Row>
-          </Col>
-          </Row>
+        </Row>
+        </Container>
       </Background>
     )
   }

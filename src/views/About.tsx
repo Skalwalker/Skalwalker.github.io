@@ -15,9 +15,9 @@ class About extends React.Component {
   render() {
     return (
       <Background>
-        <Container style={{height: "92vh"}} fluid>
+        <Container style={{height: "92vh", paddingLeft: '80px'}} fluid>
           <Row className='h-100'>
-            <Col lg={2}  className='my-auto'>
+            <Col lg={2} className='my-auto'>
               <AboutMenu/>
             </Col>
             <Col lg={10} >
