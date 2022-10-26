@@ -65,7 +65,7 @@ const craft = {
             banner: require("../assets/images/projects/trufes.png").default,
             title: "TRUFES Competition",
             tags: ["Robotics"],
-            language: "Beaglebone Blue",
+            language: "Beaglebone",
             year: "2019",
             url: "https://github.com/UnbDroid/Trufes2019",
             highlight: false,

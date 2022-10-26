@@ -22,7 +22,7 @@ class ProjectCard extends React.Component<myProps, myState> {
     render() {
         return (
             <a href={this.props.url}>
-            <Card className="ml-auto mr-auto" style={{minWidth:'15rem', maxWidth: '18rem', color: 'white', borderRadius: '15px'}}>
+            <Card className="ml-auto mr-auto" style={{minWidth:'15rem', maxWidth: '18rem', color: 'white', borderRadius: '15px', height: '100%'}}>
                 <Card.Img variant="top" src={this.props.banner} style={{ borderRadius: '15px 15px 0 0' }} />
                 <Card.Body>
                     <Card.Title className="subtitle-bold mb-1">{this.props.title}</Card.Title>
@@ -32,10 +32,10 @@ class ProjectCard extends React.Component<myProps, myState> {
                 </Card.Body>
                 <Card.Footer>
                     <Row>
-                        <Col lg={8}>
+                        <Col>
                             <p className="subtitle" style={{ textAlign: 'left', margin: '0' }}>{this.props.language}</p>
                         </Col>
-                        <Col lg={4}>
+                        <Col>
                             <p className="subtitle" style={{ textAlign: 'right', margin: '0', }}>{this.props.year}</p>
                         </Col>
                     </Row>
