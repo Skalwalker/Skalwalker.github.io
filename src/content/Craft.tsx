@@ -32,34 +32,6 @@ const craft = {
             headline: "A Python implementation of the ecological sampling of gaze shifts."
         },
         {
-            banner: require("../assets/images/projects/zipcode.png").default,
-            title: "My Zip Code",
-            tags: ["App/Web Dev"],
-            language: "Swift",
-            year: "",
-            highlight: false,
-            headline: "A simple iOS App to discover your zip code based on your location."
-        },
-        {
-            banner: require("../assets/images/projects/quotesbook.png").default,
-            title: "Quote's Book",
-            tags: ["App/Web Dev"],
-            language: "Swift",
-            year: "",
-            highlight: false,
-            headline: "An iOS App to keep your personal favorite quotes from movies or friends."
-        },
-        {
-            banner: require("../assets/images/projects/medipreco.png").default,
-            title: "MediPreço",
-            tags: ["App/Web Dev"],
-            language: "Swift",
-            year: "",
-            url: "https://portal.medipreco.com.br/#/para-voce",
-            highlight: false,
-            headline: "Developed the first iOS version of the collaborative medicine app Medipreço."
-        },
-        {
             banner: require("../assets/images/projects/portfolio.png").default,
             title: "Portfolio",
             tags: ["App/Web Dev"],
@@ -130,16 +102,15 @@ const craft = {
             highlight: true,
             headline: "Reinforcement Learning communication on Pac-man's ghosts."
         },
-        // College Path, SPA Problem
         {
-            banner: require("../assets/images/projects/graphtheory.png").default,
-            title: "Graph Theory Projects",
-            tags: ["Others"],
-            language: "C/C++",
+            banner: require("../assets/images/projects/medipreco.png").default,
+            title: "MediPreço",
+            tags: ["App/Web Dev"],
+            language: "Swift",
             year: "2017",
-            url: "https://github.com/Skalwalker/ihc-new-matweb",
+            url: "https://portal.medipreco.com.br/#/para-voce",
             highlight: false,
-            headline: "A collection of graph theory mini-projects from an introductory class."
+            headline: "Developed the first iOS version of the collaborative medicine app Medipreço."
         },
         // Panoramic, Photo Geometry, Metal Recognition
         {
@@ -151,6 +122,35 @@ const craft = {
             url: "https://github.com/Skalwalker/Union_images",
             highlight: false,
             headline: "A collection of computer vision mini-projects from an introductory class."
+        },
+        // College Path, SPA Problem
+        {
+            banner: require("../assets/images/projects/graphtheory.png").default,
+            title: "Graph Theory Projects",
+            tags: ["Others"],
+            language: "C/C++",
+            year: "2017",
+            url: "https://github.com/Skalwalker/ihc-new-matweb",
+            highlight: false,
+            headline: "A collection of graph theory mini-projects from an introductory class."
+        },
+        {
+            banner: require("../assets/images/projects/zipcode.png").default,
+            title: "My Zip Code",
+            tags: ["App/Web Dev"],
+            language: "Swift",
+            year: "2015",
+            highlight: false,
+            headline: "A simple iOS App to discover your zip code based on your location."
+        },
+        {
+            banner: require("../assets/images/projects/quotesbook.png").default,
+            title: "Quote's Book",
+            tags: ["App/Web Dev"],
+            language: "Swift",
+            year: "2015",
+            highlight: false,
+            headline: "An iOS App to keep your personal favorite quotes from movies or friends."
         },
         {
             banner: require("../assets/images/projects/questionmark.png").default,
