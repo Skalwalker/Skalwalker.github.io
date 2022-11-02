@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import '../assets/css/stickytable.css';
+import '../../assets/css/stickytable.css';
 
 
 const Headings = ({ headings, activeId }) => (

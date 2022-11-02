@@ -7,13 +7,10 @@ type MyState = { };
 class AchievDesc extends React.Component<MyProps, MyState> {
   render () {
     return (
-      <Container fluid style={{color: '#FFFFFF'}}>
+      <Container>
       <Row>
-        <Col md={8}>
-          <h1 className="text-left subtitle_bold">{this.props.title}</h1>
-        </Col>
-        <Col md={4} className='my-auto'>
-          <h5 className="text-right paragraph">{this.props.date}</h5>
+        <Col>
+          <h1 className="text-left subtitle_bold mb-3" style={{fontSize: '32px'}}>{this.props.title}</h1>
         </Col>
       </Row>
       <Row className="text-left">

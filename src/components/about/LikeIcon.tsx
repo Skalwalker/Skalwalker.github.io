@@ -8,12 +8,12 @@ import {MdPiano, MdLocationCity} from 'react-icons/md'
 import {BiCoffeeTogo} from 'react-icons/bi'
 import {RiStockFill, RiPlantFill} from 'react-icons/ri'
 
-import { ReactComponent as RkSaints } from '../assets/images/icons/saints.svg';
-import { ReactComponent as RkRHCP } from '../assets/images/icons/rhcp.svg';
-import { ReactComponent as RkWestworld } from '../assets/images/icons/westworld.svg';
-import { ReactComponent as RkWOW } from '../assets/images/icons/horde.svg';
-import { ReactComponent as RkGoT } from '../assets/images/icons/got.svg';
-import { ReactComponent as RkMarvel } from '../assets/images/icons/avangers.svg';
+import { ReactComponent as RkSaints } from '../../assets/images/icons/saints.svg';
+import { ReactComponent as RkRHCP } from '../../assets/images/icons/rhcp.svg';
+import { ReactComponent as RkWestworld } from '../../assets/images/icons/westworld.svg';
+import { ReactComponent as RkWOW } from '../../assets/images/icons/horde.svg';
+import { ReactComponent as RkGoT } from '../../assets/images/icons/got.svg';
+import { ReactComponent as RkMarvel } from '../../assets/images/icons/avangers.svg';
 
 type myState = { }
 type myProps = { img: string }
@@ -51,7 +51,7 @@ class LikeDesc extends React.Component<myProps, myState> {
       case 'stock':
         return <RiStockFill className="m-auto d-block my-auto" color={selected_color} size={size}/>
       case 'jedi':
-        return <FaJedi className="m-auto d-block my-auto" color={selected_color} size={size}/>
+        return <FaJedi className="m-auto d-none d-lg-block my-auto" color={selected_color} size={size}/>
       case 'jazz':
         return <GiMusicalNotes className="m-auto d-block my-auto" color={selected_color} size={size}/>
       case 'garden':

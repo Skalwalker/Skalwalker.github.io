@@ -3,6 +3,7 @@ import React from 'react'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import "../../assets/css/card.css"
 
 type myState = { }
 type myProps = {title: any, url: any, headline: any, year: any, banner: any, highlight: any, language: any}
@@ -14,7 +15,7 @@ class ProjectCard extends React.Component<myProps, myState> {
         url: "https://github.com/Skalwalker",
         headline: "Predicting the stock market with LSTMs and Reinforcement Learning.",
         year: "2022",
-        banner: require("../assets/images/projects/questionmark.png").default,
+        banner: require("../../assets/images/projects/questionmark.png").default,
         highlight: false,
         language: "Swift",
     };
@@ -22,11 +23,11 @@ class ProjectCard extends React.Component<myProps, myState> {
     render() {
         return (
             <a href={this.props.url}>
-            <Card className="ml-auto mr-auto" style={{minWidth:'15rem', maxWidth: '18rem', color: 'white', borderRadius: '15px', height: '100%'}}>
+            <Card className="ml-auto mr-auto click_cards" style={{minWidth:'15rem', maxWidth: '18rem', height: '100%'}}>
                 <Card.Img variant="top" src={this.props.banner} style={{ borderRadius: '15px 15px 0 0' }} />
                 <Card.Body>
                     <Card.Title className="subtitle-bold mb-1">{this.props.title}</Card.Title>
-                    <Card.Text className="paragraph" style={{ color: 'white' }}>
+                    <Card.Text className="paragraph">
                         {this.props.headline}
                     </Card.Text>
                 </Card.Body>

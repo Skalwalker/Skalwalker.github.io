@@ -11,10 +11,10 @@ class Core extends React.Component {
     return (
       <Container className='h-100'>
         <Row className='h-100'>
-          <Col className='my-auto' style={{paddingLeft: '200px', paddingRight: '200px'}}>
+          <Col className='my-auto' style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
             <Row>
               <Col md={12}>
-                <p className='paragraph' style={{ color: 'white', fontSize: '20px'}}>
+                <p className='paragraph' style={{fontSize: '20px'}}>
                   {core.text}
                 </p>
               </Col>

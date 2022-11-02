@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import { Button, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Background from '../components/Background'
+import Background from '../components/shared/Background'
 import { slides } from '../content/Home'
 import '../assets/css/font.css';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Background from '../components/Background'
+import Background from '../components/shared/Background'
 import { experience } from '../content/Experience'
 import * as d3 from 'd3';
 

@@ -41,7 +41,7 @@ $theme-color-interval: 8%;
 
 // Body
 $body-bg: $indigo;
-// $body-color: $indigo;
+$body-color: $white;
 
 // Carousel
 // $carousel-control-color: $white;
@@ -109,8 +109,9 @@ $carousel-indicator-active-bg: $cyan;
 // Cards
 $card-border-color: theme-color('primary');
 $card-bg: rgba(theme-color('primary'), 0.30);
-$card-border-radius: 0.0;
+$card-border-radius: 15.0px;
 $card-border-width: 1.5px;
+
 
 // Forms
 $input-bg: rgba(theme-color('primary'), 0.30);
@@ -119,10 +120,21 @@ $input-focus-bg: $input-bg;
 $input-placeholder-color: $white;
 $input-color: $pink;
 
+// Link
+$link-color: $white;
+$link-decoration: none;
+$link-hover-color: $white;
+$link-hover-decoration: none;
+
 // Navbar
-// $navbar-collapse: border-style solid;
-// $navbar-collapse-border-width: 10px;
-// $navbar-collapse-border-color: theme-color('primary');
+$navbar-light-hover-color: theme-color('secondary');
+$navbar-light-active-color: $white;
+$navbar-light-color: $white;
+$navbar-light-brand-color: $white;
+
+// $navbar-light-collapse: border-style solid;
+// $navbar-light-collapse-border-width: 10px;
+// $navbar-light-collapse-border-color: theme-color('primary');
 // $navbar-collapse: bg rgba(theme-color('primary'), 0.30);
 // $navbar-padding-y: ($spacer / 2);
 // $navbar-padding-x: $spacer;
@@ -133,23 +145,29 @@ $input-color: $pink;
 // $navbar-toggler-padding-y: 0.25rem;
 // $navbar-toggler-padding-x: 0.75rem;
 // $navbar-toggler-font-size: $font-size-lg;
-// $navbar-toggler-border-radius: $btn-border-radius;
 // $navbar-dark-color: rgba($white, 0.5);
-// $navbar-dark-hover-color: rgba($white, 0.75);
 // $navbar-dark-active-color: rgba($white, 1);
 // $navbar-dark-disabled-color: rgba($white, 0.25);
 // $navbar-dark-toggler-border-color: rgba($white, 0.1);
-// $navbar-light-color: rgba($black, 0.5);
 // $navbar-light-hover-color: rgba($black, 0.7);
-// $navbar-light-active-color: rgba($white, 0.9);
 // $navbar-light-disabled-color: rgba($white, 0.3);
-// $navbar-light-toggler-border-color: rgba($white, 0.1);
+// $navbar-light-toggler-border-color: rgba($white, 0.0);
 
 $modal-lg: 900px;
 
 // $modal-content-bg: $cyan;
 // $modal-title-line-color: rgba($white, 0.2);
 // $modal-content-border-color: rgba($white, 0.2);
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      // Common values
+      @each $position in $positions {
+        .position#{$infix}-#{$position} { position: $position !important; }
+      }
+    }
+  }
 
 @import "bootstrap";
 

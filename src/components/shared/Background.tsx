@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
 import Particles from 'react-particles-js';
-import '../assets/css/font.css';
+import '../../assets/css/font.css';
 import NavBar from './NavBar'
 
 type myState = { showParticles: boolean}

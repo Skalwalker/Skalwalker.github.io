@@ -1,6 +1,6 @@
-const craft = {
+const project = {
     tags: ["Machine Learning", "Robotics", "App/Web Dev", "Others"],
-    crafts: [
+    projects: [
         {
             banner: require("../assets/images/projects/covid19.png").default,
             title: "COVID-19 Detection",
@@ -17,7 +17,7 @@ const craft = {
             tags: ["Machine Learning"],
             language: "Anylogic",
             year: "2022",
-            url: "https://github.com/Skalwalker",
+            url: "/projects/my-project",
             highlight: true,
             headline: "Simulating global temperature with respect to CO2 emissions and deforestation."
         },
@@ -165,4 +165,4 @@ const craft = {
     ]
 }
 
-export {craft}
+export {project}

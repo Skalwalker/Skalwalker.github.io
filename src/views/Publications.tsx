@@ -1,20 +1,24 @@
 import React from 'react';
-import Background from '../components/Background';
+import Background from '../components/shared/Background';
 import { Col, Row, Button, Container } from 'react-bootstrap';
-import { craft } from '../content/Craft';
-import ProjectCard from '../components/ProjectCard';
+import { publications_content } from '../content/Publications';
+import PaperCard from '../components/papers/PaperCard';
+import PaperCardShort from '../components/papers/PaperCardShort';
+import ScrollButton from '../components/shared/ScrollButton';
+
 import '../assets/css/font.css';
 
-type myState = { activeTags: any, bgHeight: any, imagesCounter: any }
+type myState = { activeTags: any, bgHeight: any, papers_count: any}
 type myProps = { }
 
-class Craft extends React.Component<myProps, myState> {
+class Publications extends React.Component<myProps, myState> {
+
   constructor(props: any) {
     super(props);
     this.state = {
       activeTags: [],
       bgHeight: "100vh",
-      imagesCounter: 0
+      papers_count: 0,
     };
   }
 
@@ -52,40 +56,36 @@ class Craft extends React.Component<myProps, myState> {
     }
   }
 
+
   onLoad = () => {
-    const releases = craft.crafts;
-    if (this.state.imagesCounter === releases.length-1) {
+    const papers = publications_content.publications;
+    if (this.state.papers_count === papers.length-1) {
       this.setState({
         bgHeight: document.getElementById('page-size')!.clientHeight +
         document.getElementsByClassName('card-body')![0].clientHeight/2})
     } else {
-      this.setState({imagesCounter: this.state.imagesCounter+1})
+      this.setState({papers_count: this.state.papers_count+1})
     }
   }
 
+
   render() {
-    const tags = craft.tags;
-    const projects = craft.crafts;
+    const tags = publications_content.tags;
+    const papers = publications_content.publications;
 
     return (
       <Background showParticles={true} pageHeight={this.state.bgHeight}>
-        <Container style={{padding: '90px', paddingTop: '50px'}} fluid>
+        <Container className="p-5" style={{padding: '90px', paddingTop: '50px'}} fluid>
           <Row>
-            <h1 className="subtitle" style={{color: 'white'}}>Highlight <b>Projects</b></h1>
+            <h1 className="subtitle">Featured <b>Publications</b></h1>
             <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
           </Row>
           <Row>
-          {projects.map((project, index) => {
-            if (project.highlight) {
+          {papers.map((paper, index) => {
+            if (paper.highlight) {
               return(
-                <Col xl={3} lg={6} style={{padding: '10px'}}>
-                  <ProjectCard
-                      title={project.title}
-                      url={project.url}
-                      headline={project.headline}
-                      year={project.year}
-                      banner={project.banner}
-                      language={project.language}/>
+                <Col lg={6} style={{padding: '10px'}}>
+                  <PaperCard title={paper.title} url={paper.url} publisher={paper.publisher} year={paper.year}/>
                 </Col>
               )
             } else {
@@ -96,12 +96,12 @@ class Craft extends React.Component<myProps, myState> {
         <Row className="pt-5">
           <Col>
             <Row>
-              <Col xl={4}>
-                <h1 className="subtitle" style={{color: 'white'}}>Newest</h1>
+              <Col lg={6}>
+                <h1 className="subtitle">Newest</h1>
               </Col>
               {tags.map((name, index) => {
                 return (
-                    <Col xl={2} style={{paddingTop: '12px'}}>
+                    <Col lg={2} style={{paddingTop: '12px'}}>
                       <Button key={name} onClick={() => this.clickButton(name)}
                               className='paragraph'
                               variant={this.checkIfIsActive(name)}
@@ -114,31 +114,24 @@ class Craft extends React.Component<myProps, myState> {
               })}
               <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
             </Row>
-            <Row>
-            {projects.map((project, index) => {
-              if ((project.tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!project.highlight)) {
+            {papers.map((paper, index) => {
+              if ((paper.tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!paper.highlight)) {
                 return(
-                  <Col xl={3} lg={6} style={{paddingTop: '15px', paddingBottom: '15px'}}>
-                    <ProjectCard
-                      title={project.title}
-                      url={project.url}
-                      headline={project.headline}
-                      year={project.year}
-                      banner={project.banner}
-                      language={project.language}/>
-                  </Col>
+                  <Row style={{padding: '10px', paddingTop: '10px'}}>
+                    <PaperCardShort title={paper.title} url={paper.url} publisher={paper.publisher} year={paper.year}/>
+                  </Row>
                 )
               } else {
                 return (null)
               }
             })}
-            </Row>
           </Col>
         </Row>
         </Container>
+        <ScrollButton/>
       </Background>
     )
   }
 }
 
-export default Craft;
+export default Publications;

@@ -2,12 +2,13 @@ import Home from './views/Home';
 import About from './views/About';
 import Experience from './views/Experience';
 import Achiev from './views/Achiev';
-import Craft from './views/Craft';
-import Papers from './views/Papers';
+import Projects from './views/Projects';
+import Publications from './views/Publications';
+import ProjectPage from './views/ProjectPage';
 
-import Core from './views/aboutViews/Core'
-import Likes from './views/aboutViews/Likes'
-import Skills from './views/aboutViews/Skills'
+import Core from './components/about/Core'
+import Likes from './components/about/Likes'
+import Skills from './components/about/Skills'
 
 // import ProjectPage from './views/ProjectPage'
 
@@ -44,17 +45,17 @@ const routes = [
     path: "/achivements",
     main: () => <Achiev/>
   },
-  // {
-  //   path: "/crafts/my-project",
-  //   main: () => <ProjectPage/>
-  // },
   {
-    path: "/projects",
-    main: () => <Craft/>
+    path: "/projects/my-project",
+    main: () => <ProjectPage/>
   },
   {
-    path: "/papers",
-    main: () => <Papers/>
+    path: "/projects",
+    main: () => <Projects/>
+  },
+  {
+    path: "/publications",
+    main: () => <Publications/>
   },
 ];
 

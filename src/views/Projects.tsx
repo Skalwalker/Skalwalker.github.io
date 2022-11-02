@@ -1,23 +1,21 @@
 import React from 'react';
-import Background from '../components/Background';
-import { Col, Row, Button, Table, Container } from 'react-bootstrap';
-import { papers_content } from '../content/Papers';
-import PaperCard from '../components/PaperCard';
-import PaperCardShort from '../components/PaperCardShort';
-
+import Background from '../components/shared/Background';
+import { Col, Row, Button, Container } from 'react-bootstrap';
+import { project } from '../content/Projects';
+import ProjectCard from '../components/projects/ProjectCard';
+import ScrollButton from '../components/shared/ScrollButton';
 import '../assets/css/font.css';
 
-type myState = { activeTags: any, bgHeight: any, papers_count: any}
+type myState = { activeTags: any, bgHeight: any, imagesCounter: any }
 type myProps = { }
 
-class Papers extends React.Component<myProps, myState> {
-
+class Projects extends React.Component<myProps, myState> {
   constructor(props: any) {
     super(props);
     this.state = {
       activeTags: [],
       bgHeight: "100vh",
-      papers_count: 0,
+      imagesCounter: 0
     };
   }
 
@@ -55,36 +53,40 @@ class Papers extends React.Component<myProps, myState> {
     }
   }
 
-
   onLoad = () => {
-    const papers = papers_content.papers;
-    if (this.state.papers_count === papers.length-1) {
+    const releases = project.projects;
+    if (this.state.imagesCounter === releases.length-1) {
       this.setState({
         bgHeight: document.getElementById('page-size')!.clientHeight +
         document.getElementsByClassName('card-body')![0].clientHeight/2})
     } else {
-      this.setState({papers_count: this.state.papers_count+1})
+      this.setState({imagesCounter: this.state.imagesCounter+1})
     }
   }
 
-
   render() {
-    const tags = papers_content.tags;
-    const papers = papers_content.papers;
+    const tags = project.tags;
+    const projects = project.projects;
 
     return (
       <Background showParticles={true} pageHeight={this.state.bgHeight}>
-        <Container style={{padding: '90px', paddingTop: '50px'}} fluid>
+        <Container className="p-5" style={{padding: '90px', paddingTop: '50px'}} fluid>
           <Row>
-            <h1 className="subtitle" style={{color: 'white'}}>Highlight <b>Papers</b></h1>
+            <h1 className="subtitle">Featured <b>Projects</b></h1>
             <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
           </Row>
           <Row>
-          {papers.map((paper, index) => {
-            if (paper.highlight) {
+          {projects.map((project, index) => {
+            if (project.highlight) {
               return(
-                <Col lg={6} style={{padding: '10px'}}>
-                  <PaperCard title={paper.title} url={paper.url} publisher={paper.publisher} year={paper.year}/>
+                <Col xl={3} lg={6} sm={6} style={{padding: '10px'}}>
+                  <ProjectCard
+                      title={project.title}
+                      url={project.url}
+                      headline={project.headline}
+                      year={project.year}
+                      banner={project.banner}
+                      language={project.language}/>
                 </Col>
               )
             } else {
@@ -95,12 +97,12 @@ class Papers extends React.Component<myProps, myState> {
         <Row className="pt-5">
           <Col>
             <Row>
-              <Col lg={6}>
-                <h1 className="subtitle" style={{color: 'white'}}>Newest</h1>
+              <Col xl={4}>
+                <h1 className="subtitle">Newest</h1>
               </Col>
               {tags.map((name, index) => {
                 return (
-                    <Col lg={2} style={{paddingTop: '12px'}}>
+                    <Col xl={2} style={{paddingTop: '12px'}}>
                       <Button key={name} onClick={() => this.clickButton(name)}
                               className='paragraph'
                               variant={this.checkIfIsActive(name)}
@@ -113,23 +115,33 @@ class Papers extends React.Component<myProps, myState> {
               })}
               <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
             </Row>
-            {papers.map((paper, index) => {
-              if ((paper.tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!paper.highlight)) {
+            <Row>
+            {projects.map((project, index) => {
+              if ((project.tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!project.highlight)) {
                 return(
-                  <Row style={{paddingTop: '5px', paddingBottom: '5px'}}>
-                    <PaperCardShort title={paper.title} url={paper.url} publisher={paper.publisher} year={paper.year}/>
-                  </Row>
+                  <Col xl={3} lg={6} sm={6} style={{paddingTop: '15px', paddingBottom: '15px'}}>
+                    <ProjectCard
+                      title={project.title}
+                      url={project.url}
+                      headline={project.headline}
+                      year={project.year}
+                      banner={project.banner}
+                      language={project.language}/>
+                  </Col>
                 )
               } else {
                 return (null)
               }
             })}
+            </Row>
           </Col>
         </Row>
+
         </Container>
+        <ScrollButton/>
       </Background>
     )
   }
 }
 
-export default Papers;
+export default Projects;

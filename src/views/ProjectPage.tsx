@@ -1,8 +1,8 @@
 import React from 'react';
-import Background from '../components/Background';
-import ProjectBanner from '../components/ProjectBanner';
+import Background from '../components/shared/Background';
+import ProjectBanner from '../components/projects/ProjectBanner';
 import { Col, Row, Container } from 'react-bootstrap';
-import TableofContents from '../components/TableofContents';
+import TableofContents from '../components/projects/TableofContents';
 import '../assets/css/stickytable.css';
 
 type myState = { bgHeight: any }

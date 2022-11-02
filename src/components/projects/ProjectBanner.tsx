@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Col, Row, Button, Container } from 'react-bootstrap';
-import { craft } from '../content/Craft';
+import { project } from '../../content/Projects';
 import { FaGithub } from "react-icons/fa";
 import { IoIosPaper } from 'react-icons/io';
-import '../assets/css/font.css';
+import '../../assets/css/font.css';
 
 type myState = { }
 type myProps = { }
@@ -20,9 +20,9 @@ class ProjectBanner extends React.Component<myProps, myState> {
                         <div style={{marginTop: "-20px", maxWidth: "85%"}}>
                             <Row className="ml-0">
                                 <div className="bottom_project_text">
-                                    <h1 className="font_text" style={style.nameStyle}>{craft.crafts[0].title}</h1>
+                                    <h1 className="font_text" style={style.nameStyle}>{project.projects[0].title}</h1>
                                         <div className="top_project_text">
-                                            <h1 className="font_text_2" style={style.nameStyle}>{craft.crafts[0].title}</h1>
+                                            <h1 className="font_text_2" style={style.nameStyle}>{project.projects[0].title}</h1>
                                         </div>
                                 </div>
                             </Row>
@@ -47,7 +47,7 @@ class ProjectBanner extends React.Component<myProps, myState> {
                     </Col>
                     <Col className='pl-0 my-auto' md={4}>
                         <Card style={{height: "70vh", marginLeft: "70px"}}>
-                            <Card.Img style={{maxWidth: "90%", maxHeight: "93%", display: "block", margin: "auto"}} src={craft.crafts[0].banner}/>
+                            <Card.Img style={{maxWidth: "90%", maxHeight: "93%", display: "block", margin: "auto"}} src={project.projects[0].banner}/>
                         </Card>
                     </Col>
                 </Row>

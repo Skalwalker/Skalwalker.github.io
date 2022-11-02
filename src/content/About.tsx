@@ -97,8 +97,8 @@ const like = [
         img: "stock"
     },
     {
-        title: "Star Wars",
-        img: "jedi"
+        title: "Data Science",
+        img: "ds"
     },
     {
         title: "Sushi",
@@ -117,9 +117,9 @@ const like = [
         img: "jazz"
     },
     {
-        title: "Data Science",
-        img: "ds"
-    }
+        title: "Star Wars",
+        img: "jedi"
+    },
 ]
 
 export {

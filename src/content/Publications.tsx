@@ -1,6 +1,6 @@
-const papers_content = {
+const publications_content = {
     tags: ["Article", "Dissertation", "Report"],
-    papers: [
+    publications: [
         {
             title: "AURORA: An Autonomous Agent-Orientated Hybrid Trading Service",
             year: "2022",
@@ -28,7 +28,7 @@ const papers_content = {
         {
             title: "Simulating global warming in respect to CO2 emissions and forest area net changes.",
             year: "2022",
-            publisher: "M.Sc. Course",
+            publisher: "M.Sc. Course Report",
             highlight: true,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1ZRBn_5ddMIygHjv697twuZtW5BbO9Cr5/view?usp=sharing"
@@ -36,7 +36,7 @@ const papers_content = {
         {
             title: "PyEcosampling Whitepaper: Ecological Sampling of Gaze Shift in Python",
             year: "2022",
-            publisher: "M.Sc. Course",
+            publisher: "M.Sc. Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1zypysCialnEkX04R1ExY0FmDJ9Jg6HyD/view?usp=sharing"
@@ -44,7 +44,7 @@ const papers_content = {
         {
             title: "C19-Audit: Detecting COVID-19 Cases from Coughs Recordings with SVM and CNNs",
             year: "2022",
-            publisher: "M.Sc. Course",
+            publisher: "M.Sc. Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1pq3GrozIeHavHbMS2vEDlmYOwQbJ91an/view?usp=sharing"
@@ -84,7 +84,7 @@ const papers_content = {
         {
             title: "Report on Prolog C Translator",
             year: "2020",
-            publisher: "Undergraduate Course",
+            publisher: "Undergraduate Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1YTS3sZbWnOYWL5uP9zwDGTzF2mBREQG_/view?usp=sharing"
@@ -92,7 +92,7 @@ const papers_content = {
          {
             title: "Report on Analysis and Proof of Graham Scam Algorithm",
             year: "2019",
-            publisher: "Undergraduate Course",
+            publisher: "Undergraduate Course Report",
             highlight: false,
             tags: ["Report"],
             url:"https://drive.google.com/file/d/1t55YPaR9SPiOMl7gKQqF_82wQGVX7gac/view?usp=sharing"
@@ -100,7 +100,7 @@ const papers_content = {
         {
             title: "Report on Application of Steganography Techniques in Audio Files",
             year: "2019",
-            publisher: "Undergraduate Course",
+            publisher: "Undergraduate Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1h5v3s_TGlYl7JdKm7gunfmx3xX3PrV8D/view?usp=sharing"
@@ -108,7 +108,7 @@ const papers_content = {
         {
             title: "Summary on Theory of Computation: Theorems, Lemmas and Definitions",
             year: "2018",
-            publisher: "Undergraduate Course",
+            publisher: "Undergraduate Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1r6lMORJfTJvQ_Nyqplo4pBDcf9aQV6Yc/view?usp=sharing"
@@ -116,7 +116,7 @@ const papers_content = {
         {
             title: "Report on Number Recognition",
             year: "2018",
-            publisher: "Undergraduate Course",
+            publisher: "Undergraduate Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1AAck7y1Bys6wZUku_AUyiqV13zzrIZ1r/view?usp=sharing"
@@ -124,7 +124,7 @@ const papers_content = {
         {
             title: "Report on Plants Recognition",
             year: "2018",
-            publisher: "Undergraduate Course",
+            publisher: "Undergraduate Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1P6aPykZP39DikApOt-BYAVKHnzvrW9Od/view?usp=sharing"
@@ -132,7 +132,7 @@ const papers_content = {
         {
             title: "Report on Breast Cancer Recognition",
             year: "2018",
-            publisher: "Undergraduate Course",
+            publisher: "Undergraduate Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1-Y0ORsbcU8dx5NpbQxA-1ks_DWHjBSvm/view?usp=sharing"
@@ -140,7 +140,7 @@ const papers_content = {
         {
             title: "Report on Spam Recognition",
             year: "2018",
-            publisher: "Undergraduate Course",
+            publisher: "Undergraduate Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1eupeAmFqYmg08wPWbRnTYC8pMIgteRZe/view?usp=sharing"
@@ -156,7 +156,7 @@ const papers_content = {
         {
             title: "Report on Metal Recognition",
             year: "2017",
-            publisher: "Undergraduate Course",
+            publisher: "Undergraduate Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1eupeAmFqYmg08wPWbRnTYC8pMIgteRZe/view?usp=sharing"
@@ -164,7 +164,7 @@ const papers_content = {
         {
             title: "Active Learning as a Substitute for Traditional Methodology, Under the Field of Computer Science",
             year: "2017",
-            publisher: "Undergraduate Course",
+            publisher: "Undergraduate Course Report",
             highlight: false,
             tags: ["Report"],
             url: "https://drive.google.com/file/d/1c183Y8kTfOkfTg42-UNAuX6IelkzdaA1/view?usp=sharing"
@@ -172,4 +172,4 @@ const papers_content = {
     ]
 }
 
-export {papers_content}
+export {publications_content}

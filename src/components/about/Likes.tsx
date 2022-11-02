@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import LikeDesc from '../../components/LikeDesc';
-import LikeIcon from '../../components/LikeIcon'
+import LikeDesc from './LikeDesc';
+import LikeIcon from './LikeIcon'
 import { like } from '../../content/About'
+import '../../assets/css/temp.css'
 
 type MyProps = { };
 type MyState = { isShown: boolean, text: any };
@@ -12,7 +13,7 @@ class Likes extends React.Component<MyProps, MyState> {
     super(props);
     this.state = {
       isShown: false,
-      text: 'Hover some squares'
+      text: ''
     };
   }
 
@@ -22,16 +23,16 @@ class Likes extends React.Component<MyProps, MyState> {
 
   render() {
     return (
-      <Container style={{height: "90vh"}}>
-        <Row style={{height: "90vh"}}>
-          <Col md={{span: 11, offset: 1}} className='my-auto'>
+      <Container className='h-100'>
+        <Row className='h-100'>
+          <Col lg={{span: 11, offset: 1}} md={{span: 11, offset: 0.5}} sm={{span: 11, offset: 0}} className='my-auto'>
             <Row>
               {like.map((like_icon) => {
                 return (
-                  <Col md={2} className='mr-3 mb-3'>
-                    <div onMouseEnter={() => this.setIsShown(like_icon.title)}
-                         onMouseLeave={() => this.setIsShown('Hover some squares')}
-                      className='m-auto' style={{height: '70px', width: '70px'}}>
+                  <Col xl={2} lg={2} md={3} sm={3} xs={4} className='mr-0 mb-3 mr-xl-2 mr-lg-1'>
+                    <div className="icon_selected m-auto" onMouseEnter={() => this.setIsShown(like_icon.title)}
+                         onMouseLeave={() => this.setIsShown('')}
+                         style={{height: '70px', width: '70px'}}>
                        <LikeIcon img={like_icon.img}></LikeIcon>
                     </div>
                   </Col>
@@ -40,7 +41,7 @@ class Likes extends React.Component<MyProps, MyState> {
             </Row>
           </Col>
         </Row>
-        <Row style={{marginTop: "-80px"}}>
+        <Row style={{marginTop: "-50px"}}>
           <LikeDesc text={this.state.text}/>
         </Row>
       </Container>

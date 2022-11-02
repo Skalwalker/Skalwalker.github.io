@@ -1,8 +1,8 @@
 import React from 'react';
 import '../assets/css/sidebar.css';
-import Background from '../components/Background'
-import AchievCard from '../components/AchievCard'
-import AchievDesc from '../components/AchievDesc'
+import Background from '../components/shared/Background'
+import AchievCard from '../components/achievements/AchievCard'
+import AchievDesc from '../components/achievements/AchievDesc'
 import { Col, Row, Container } from 'react-bootstrap';
 import { achievs } from '../content/Achiev'
 
@@ -34,20 +34,19 @@ class Acheiv extends React.Component<MyProps, MyState>  {
       <Background>
         <Container fluid style={{height: '92vh'}}>
           <Row className='h-100'>
-            <Col md={3} className="text-center my-auto">
+            <Col lg={3} md={12} sm={12} className="text-center my-auto pt-4 pb-4 position-lg-static" style={{position: 'fixed', zIndex: 1}}>
               {this.state.isShown && (
                 <AchievDesc title={this.state.title} desc={this.state.desc} date={this.state.date}/>
               )}
               {this.state.isShown === false && (
-                <h2 className="subtitle_bold" style={{fontSize:'40px', color: '#FFFFFF'}}>Hover over an Achievement to show description</h2>
+                <h2 className="subtitle_bold" style={{fontSize:'32px', color: '#FFFFFF'}}>Hover over an Achievement <br/>to show description</h2>
               )}
             </Col>
-            <Col md={9} className="my-auto">
-              <Container style={{}}>
+            <Col lg={9} md={12} sm={12} className="my-auto">
                 <Row>
                   {achievs.map((achiev, index) => {
                     return (
-                      <Col xl={4}
+                      <Col
                         onMouseEnter={() => this.setIsShown(true,
                           achiev.title, achiev.earned, achiev.desc)}
                         onMouseLeave={() => this.setIsShown(false, '', '', '')}>
@@ -56,7 +55,6 @@ class Acheiv extends React.Component<MyProps, MyState>  {
                     )
                   })}
                 </Row>
-              </Container>
             </Col>
           </Row>
         </Container>

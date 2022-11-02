@@ -3,13 +3,13 @@ import Col from 'react-bootstrap/Col';
 
 import * as d3 from 'd3';
 
-import '../assets/css/sidebar.css';
-import { skills } from '../content/Skills';
+import '../../assets/css/sidebar.css';
+import { skills } from '../../content/Skills';
 
 type MyProps = {};
 type MyState = {};
 
-class SkillsChart extends React.Component<MyProps, MyState>  {
+class Skills extends React.Component<MyProps, MyState>  {
 
   private myRef: React.RefObject<HTMLInputElement>;
   constructor(props) {
@@ -150,10 +150,10 @@ class SkillsChart extends React.Component<MyProps, MyState>  {
   render() {
     return (
       <Col id='d3_container'>
-        <div style={{ height: '90vh', width: '100vw'}} ref={this.myRef}></div>
+        <div style={{height: '77vh', width: '100%'}} ref={this.myRef}></div>
       </Col>
     )
   }
 }
 
-export default SkillsChart;
+export default Skills;
