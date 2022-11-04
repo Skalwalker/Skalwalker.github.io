@@ -9,7 +9,7 @@ import { HiCubeTransparent, HiOfficeBuilding } from 'react-icons/hi';
 import { GiBookmark, GiCutDiamond } from 'react-icons/gi';
 import { IoMdSchool } from 'react-icons/io';
 
-import '../../assets/css/about_menu.css'
+import '../../assets/css/about.css'
 
 
 class AboutMenu extends React.Component{

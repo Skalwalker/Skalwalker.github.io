@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import * as d3 from 'd3';
 
 import '../../assets/css/sidebar.css';
-import '../../assets/css/about_skills.css'
+import '../../assets/css/about.css'
 import { skills } from '../../content/Skills';
 
 type MyProps = {};

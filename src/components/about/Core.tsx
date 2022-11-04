@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 
-import '../../assets/css/about_core.css'
+import '../../assets/css/about.css'
 
 class Core extends React.Component {
   render() {

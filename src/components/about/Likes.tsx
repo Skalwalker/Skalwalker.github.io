@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import LikeDesc from './LikeDesc';
 import LikeIcon from './LikeIcon'
 import { like } from '../../content/About'
-import '../../assets/css/temp.css'
+import "../../assets/css/about.css"
 
 type MyProps = { };
 type MyState = { isShown: boolean, text: any };
@@ -30,7 +30,7 @@ class Likes extends React.Component<MyProps, MyState> {
               {like.map((like_icon) => {
                 return (
                   <Col xl={2} lg={2} md={3} sm={3} xs={4} className='mr-0 mb-3 mr-xl-2 mr-lg-1'>
-                    <div className="icon_selected m-auto" onMouseEnter={() => this.setIsShown(like_icon.title)}
+                    <div className="m-auto" onMouseEnter={() => this.setIsShown(like_icon.title)}
                          onMouseLeave={() => this.setIsShown('')}
                          style={{height: '70px', width: '70px'}}>
                        <LikeIcon img={like_icon.img}></LikeIcon>
@@ -41,7 +41,7 @@ class Likes extends React.Component<MyProps, MyState> {
             </Row>
           </Col>
         </Row>
-        <Row style={{marginBottom: "20px"}}>
+        <Row className="pt-1 pb-1 pt-lg-3 about_like_style" style={{height: '20px'}}>
           <LikeDesc text={this.state.text}/>
         </Row>
       </Container>

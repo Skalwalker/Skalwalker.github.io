@@ -1,0 +1,50 @@
+.about_menu_button {}
+
+.about_skills_style {
+    padding: 0;
+    margin: -48px;
+}
+
+.about_like_style {
+    margin-top: -40px
+}
+
+.about_core_style {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (min-width: 768px) {
+    .about_core_style {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
+@media (min-width: 992px){
+    .about_like_style {
+        margin-top: 0;
+
+    }
+
+    .about_skills_style {
+        margin: 0;
+        margin-left: -16px;
+        margin-right: -48px;
+    }
+}
+
+@media (max-width: 991.98px){
+    .about_menu_button {
+        border-radius: 15px 15px 0px 0px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about_menu_button {
+        font-size: 15px !important;
+    }
+}
+
+
+
