@@ -26,7 +26,7 @@ class About extends React.Component {
                   <Route
                     key={index}
                     path={route.path}
-                    children={<route.main />}
+                    children={<route.main/>}
                   />
                 ))}
               </Switch>

@@ -1,5 +1,5 @@
-import React, { CSSProperties } from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import React from 'react';
+import {NavLink} from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {GiHamburgerMenu} from 'react-icons/gi';
@@ -16,7 +16,11 @@ class NavBar extends React.Component<myProps, myState> {
             <Navbar id="navbar" style={{backgroundColor: "transparent", height: '8vh', zIndex: 100 }} expand="md">
                 <Navbar.Toggle aria-controls="basic-navbar-nav"> <GiHamburgerMenu color="white"/> </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
-                <Navbar.Brand>Under Development</Navbar.Brand>
+                <Navbar.Brand>
+                    <div className="bottom_text">
+                        <h1 className="font_text" style={nameStyle}>RenatoNobre</h1>
+                    </div>
+                </Navbar.Brand>
                 <Nav className="ml-auto">
                     <NavLink className='nav-link subtitle' to="/about/core" activeStyle={button_active}>About</NavLink>
                     <NavLink className='nav-link subtitle' to="/projects" activeStyle={button_active}>Projects</NavLink>
@@ -35,5 +39,9 @@ const button_active: CSS.Properties = {
 }
 
 
+const nameStyle: CSS.Properties = {
+      fontSize: '34px',
+      color: '#60D7F9'
+}
 
 export default NavBar;

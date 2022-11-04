@@ -88,7 +88,7 @@ class LikeDesc extends React.Component<myProps, myState> {
 
   render () {
     return (
-      <div>
+      <div key={this.props.img} >
         {this.get_icon(this.props.img)}
       </div>
     )

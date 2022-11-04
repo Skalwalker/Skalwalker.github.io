@@ -11,7 +11,8 @@ import { IoMdSchool } from 'react-icons/io';
 
 import '../../assets/css/about_menu.css'
 
-class AboutMenu extends React.Component {
+
+class AboutMenu extends React.Component{
   render() {
     return (
       <Row>
@@ -33,17 +34,17 @@ class AboutMenu extends React.Component {
           </Row>
           <Row className='about_menu_row float-left float-lg-right nav-item-custom pb-0 pb-lg-3'>
             <NavLink className='about_menu_button subtitle pl-2 pb-1 pt-1 ml-2 ml-lg-1 pl-lg-5' to="/about/core" style={normalTabStyle} activeStyle={selectedTabStyle}>
-              Core<HiCubeTransparent className='ml-2 mb-1' size={28} />
+              Core<HiCubeTransparent className='ml-2 mb-1' size={20} />
             </NavLink>
           </Row>
           <Row className='about_menu_row float-left float-lg-right nav-item-custom pb-0 pb-lg-3'>
             <NavLink className='about_menu_button subtitle pl-2 pb-1 pt-1 ml-5 ml-lg-1 pl-lg-5' to="/about/skills" style={normalTabStyle} activeStyle={selectedTabStyle}>
-              Skills<GiBookmark className='ml-2 mb-1' size={28} />
+              Skills<GiBookmark className='ml-2 mb-1' size={20} />
             </NavLink>
           </Row>
           <Row className='about_menu_row float-left float-lg-right nav-item-custom pb-0 pb-lg-3'>
             <NavLink className='about_menu_button subtitle pl-2 ml-5 pb-1 pt-1 ml-lg-1 pl-lg-5' to="/about/likes" style={normalTabStyle} activeStyle={selectedTabStyle}>
-              Likes<GiCutDiamond className='ml-2 mb-1' size={28} />
+              Likes<GiCutDiamond className='ml-2 mb-1' size={20} />
             </NavLink>
           </Row>
         </Col>

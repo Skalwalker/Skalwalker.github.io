@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" xmlnsCc="http://creativecommons.org/ns#" xmlnsDc="http://purl.org/dc/elements/1.1/" xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<svg version="1.1" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" xmlnsdc="http://purl.org/dc/elements/1.1/" xmlnsrdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <metadata>
 <rdfRDF>
-<ccWork rdfAbout="">
+<ccWork rdfabout="">
 <dcFormat>image/svg+xml</dcFormat>
-<dcType rdfResource="http://purl.org/dc/dcmitype/StillImage"/>
+<dcType rdfresource="http://purl.org/dc/dcmitype/StillImage"/>
 <dcTitle/>
 </ccWork>
 </rdfRDF>

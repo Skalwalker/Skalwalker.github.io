@@ -1,4 +1,3 @@
-import Home from './views/Home';
 import About from './views/About';
 import Experience from './views/Experience';
 import Achiev from './views/Achiev';
@@ -9,6 +8,8 @@ import ProjectPage from './views/ProjectPage';
 import Core from './components/about/Core'
 import Likes from './components/about/Likes'
 import Skills from './components/about/Skills'
+import Splashscreen from './views/Splashscreen';
+
 
 // import ProjectPage from './views/ProjectPage'
 
@@ -31,7 +32,7 @@ const routes = [
   {
     path: "/",
     exact: true,
-    main: () => <Home/>
+    main: () => <Splashscreen/>
   },
   {
     path: "/about",

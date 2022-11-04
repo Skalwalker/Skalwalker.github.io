@@ -4,12 +4,13 @@ import '../../assets/css/font.css';
 import NavBar from './NavBar'
 
 type myState = { showParticles: boolean}
-type myProps = { showParticles: boolean, style: CSSProperties, pageHeight: any }
+type myProps = { showParticles: boolean, style: CSSProperties, pageHeight: any, navbar: boolean }
 
 class Background extends React.Component<myProps, myState> {
   static defaultProps = {
     style:{},
     showParticles: true,
+    navbar: true,
     pageHeight: "100vh"
   }
 
@@ -49,7 +50,7 @@ class Background extends React.Component<myProps, myState> {
         <div style={{height: this.props.pageHeight, position: "relative", margin: "0 auto"}}>
           {handleParticles()}
           <div style={{position: "absolute", top: "0", width: "100%", minHeight: '100vh'}}>
-            <NavBar></NavBar>
+            {this.props.navbar && (<NavBar></NavBar>)}
             {this.props.children}
           </div>
         </div>
