@@ -20,7 +20,7 @@ class About extends React.Component {
             <Col xl={2} lg={3} md={12} className='my-auto'>
               <AboutMenu/>
             </Col>
-            <Col xl={10} lg={9} md={12} className='mt-5 pl-0 pr-0 pb-5'>
+            <Col xl={10} lg={9} md={12} className='mt-5 mt-lg-0 pb-5 pb-lg-0 my-lg-auto pl-0 pr-0 '>
               <Switch>
                 {aboutRoutes.map((route, index) => (
                   <Route

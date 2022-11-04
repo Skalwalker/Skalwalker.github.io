@@ -4,10 +4,11 @@ import Col from 'react-bootstrap/Col';
 import * as d3 from 'd3';
 
 import '../../assets/css/sidebar.css';
+import '../../assets/css/about_skills.css'
 import { skills } from '../../content/Skills';
 
 type MyProps = {};
-type MyState = {};
+type MyState = {mobile: boolean};
 
 class Skills extends React.Component<MyProps, MyState>  {
 
@@ -16,15 +17,15 @@ class Skills extends React.Component<MyProps, MyState>  {
     super(props);
     this.myRef = React.createRef();
     this.state = {
-      isShown: false,
-      desc: 'Hover over an Achievement to show description',
-      title: '',
-      date: '',
+      mobile: window.innerWidth < 768
     };
   }
 
+
+
   draw() {
-    var width = document.getElementById('d3_container')!.clientWidth * 0.98;
+    let mobile = this.state.mobile
+    var width = document.getElementById('d3_container')!.clientWidth + (mobile ? (46*2) : 46) ;
     var height = document.getElementById('d3_container')!.clientHeight * 0.92;
 
     // What happens when a circle is dragged?
@@ -60,7 +61,7 @@ class Skills extends React.Component<MyProps, MyState>  {
     // A scale that gives a X target position for each group
     var x = d3.scaleOrdinal()
       .domain([1, 2, 4, 3])
-      .range([0.20 * width, 0.40 * width, 0.60 * width, 0.80 * width])
+      .range([0.30 * width, 0.50 * width, 0.70 * width, 0.90 * width])
 
     // A color scale
     var color = d3.scaleOrdinal()
@@ -81,13 +82,13 @@ class Skills extends React.Component<MyProps, MyState>  {
 
     // Skills Circles
     node.append("circle")
-      .attr("r", function (d) { return d.size * 3 > 40 ? d.size * 3 : 40 })
+      .attr("r", function (d) { return (d.size * 3 > 40 ? d.size * 3 : 40) / (mobile ? 1.3  : 1) })
       .attr("cx", 0)
       .attr("cy", 0)
       .style("fill", function (d) { return color(d.group) })
       .style("fill-opacity", 0.7)
       .attr("stroke", function (d) { return color(d.group) })
-      .style("stroke-width", 4)
+      .style("stroke-width", (mobile ? 3 : 4))
 
     // Skills Text
     node.append('text')
@@ -96,11 +97,11 @@ class Skills extends React.Component<MyProps, MyState>  {
       .attr("x", function (d) { return d.x })
       .attr("y", function (d) {
         let radius: number = d.size * 3 > 40 ? d.size * 3 : 40
-        return (radius / 8.5)
+        return (radius / 8.5)  / (mobile ? 1.3 : 1)
       })
       .style("font-size", function (d) {
         let radius: number = d.size * 3 > 40 ? d.size * 3 : 40
-        return radius / 3.5
+        return (radius / 3.5)  / (mobile ? 1.3 : 1)
       })
       .style("fill", 'white')
       .style('font-family', '"filson-pro", sans-serif')
@@ -116,11 +117,11 @@ class Skills extends React.Component<MyProps, MyState>  {
 
     // Features of the forces applied to the nodes:
     var simulation = d3.forceSimulation()
-      .force("x", d3.forceX().strength(0.05).x(function (d) { return x(d.group) }))
-      .force("y", d3.forceY().strength(0.04).y(height / 2))
+      .force("x", d3.forceX().strength(0.05).x(function (d) { return (mobile ? (height / 2) : x(d.group)) }))
+      .force("y", d3.forceY().strength(0.04).y(function (d) { return (mobile ? x(d.group):(height / 2)) }))
       .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
       .force("charge", d3.forceManyBody().strength(1)) // Nodes are attracted one each other of value is > 0
-      .force("collide", d3.forceCollide().strength(.2).radius(function (d) { return d.size * 3 > 40 ? d.size * 3 + 4 : 44 }).iterations(1)) // Force that avoids circle overlapping
+      .force("collide", d3.forceCollide().strength(.2).radius(function (d) { return (d.size * 3 > 40 ? d.size * 3 + 4 : 44) / (mobile ? 1.3 : 1) }).iterations(1)) // Force that avoids circle overlapping
 
     // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
@@ -134,23 +135,16 @@ class Skills extends React.Component<MyProps, MyState>  {
 
   }
 
-  componentDidMount() {
-    this.draw()
-  }
 
-  setIsShown = (value: boolean, title: string, date: string, desc: string) => {
-    this.setState({
-      isShown: value,
-      title: title,
-      date: date,
-      desc: desc
-    })
+  componentDidMount() {
+    // this.setState({mobile: window.innerWidth < 768})
+    this.draw()
   }
 
   render() {
     return (
-      <Col id='d3_container'>
-        <div style={{height: '77vh', width: '100%'}} ref={this.myRef}></div>
+      <Col className="about_skills_style" id='d3_container'>
+        <div style={{height: '92vh', width: '100%'}} ref={this.myRef}></div>
       </Col>
     )
   }

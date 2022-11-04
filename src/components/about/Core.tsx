@@ -6,12 +6,14 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 
+import '../../assets/css/about_core.css'
+
 class Core extends React.Component {
   render() {
     return (
       <Container className='h-100'>
         <Row className='h-100'>
-          <Col className='my-auto' style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
+          <Col className='my-auto about_core_style'>
             <Row>
               <Col md={12}>
                 <p className='paragraph' style={{fontSize: '20px'}}>

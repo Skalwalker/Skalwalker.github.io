@@ -28,10 +28,10 @@ class PaperCard extends React.Component<myProps, myState> {
           </Card.Body>
           <Card.Footer className="subtitle">
             <Row>
-                <Col xl={10} md={8} sm={6} style={{alignSelf: 'left'}}>
+                <Col xl={10} md={8} sm={6} xs={6} style={{alignSelf: 'left'}}>
                     {this.props.publisher}
                 </Col>
-                <Col xl={2} md={4} sm={6} style={{textAlign: 'right'}}>
+                <Col xl={2} md={4} sm={6} xs={6} style={{textAlign: 'right'}}>
                     {this.props.year}
                 </Col>
             </Row>

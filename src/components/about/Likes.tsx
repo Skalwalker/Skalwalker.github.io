@@ -41,7 +41,7 @@ class Likes extends React.Component<MyProps, MyState> {
             </Row>
           </Col>
         </Row>
-        <Row style={{marginTop: "-50px"}}>
+        <Row style={{marginBottom: "20px"}}>
           <LikeDesc text={this.state.text}/>
         </Row>
       </Container>

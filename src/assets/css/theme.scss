@@ -155,9 +155,13 @@ $navbar-light-brand-color: $white;
 
 $modal-lg: 900px;
 
-// $modal-content-bg: $cyan;
-// $modal-title-line-color: rgba($white, 0.2);
-// $modal-content-border-color: rgba($white, 0.2);
+$close-color: $white;
+
+$modal-content-bg: rgba(theme-color('primary'), 0.3);
+$modal-title-line-color: theme-color('primary');
+$modal-content-border-color: theme-color('primary');
+$modal-backdrop-opacity: 0.85;
+$modal-header-border-color: theme-color('primary');
 
 @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {

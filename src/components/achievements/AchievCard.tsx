@@ -12,6 +12,8 @@ import {GiMaterialsScience, GiPlagueDoctorProfile, GiCarnivorousPlant,
 import { FaVuejs, FaGraduationCap, FaKaggle,
          FaJedi, FaMoneyBillAlt} from 'react-icons/fa';
 
+import '../../assets/css/card.css'
+
 type MyProps = {title: string, date: string, img: string, locked: boolean};
 type MyState = { };
 
@@ -84,7 +86,7 @@ class AchievCard extends React.Component<MyProps, MyState> {
     }
 
     return (
-      <Card className="mt-1 mb-1" style={{height: '4.65rem', minWidth: '270px', opacity: opcValue}}>
+      <Card className="mt-1 mb-1 click_cards" style={{height: '4.65rem', minWidth: '270px', opacity: opcValue}}>
         <Col>
           <Row>
             <Col xl={3} md={3} sm={3} xs={3} className="my-auto mx-auto" style={{padding: '5px'}}>
