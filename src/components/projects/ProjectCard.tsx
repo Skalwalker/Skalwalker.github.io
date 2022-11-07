@@ -15,7 +15,7 @@ class ProjectCard extends React.Component<myProps, myState> {
         url: "https://github.com/Skalwalker",
         headline: "Predicting the stock market with LSTMs and Reinforcement Learning.",
         year: "2022",
-        banner: require("../../assets/images/projects/questionmark.png").default,
+        banner: "/projects/questionmark.png",
         highlight: false,
         language: "Swift",
     };

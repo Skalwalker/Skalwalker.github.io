@@ -2,7 +2,7 @@ const project = {
     tags: ["Machine Learning", "Robotics", "App/Web Dev", "Others"],
     projects: [
         {
-            banner: require("../assets/images/projects/covid19.png").default,
+            banner: "/projects/covid19.png",
             title: "COVID-19 Detection",
             tags: ["Machine Learning"],
             language: "Python",
@@ -12,7 +12,7 @@ const project = {
             headline: "Detecting COVID-19 in audio tracks from patients' coughs with CNNs."
         },
         {
-            banner: require("../assets/images/projects/globalwarming2.png").default,
+            banner: "/projects/globalwarming2.png",
             title: "Global Warming Simulation",
             tags: ["Machine Learning"],
             language: "Anylogic",
@@ -22,7 +22,7 @@ const project = {
             headline: "Simulating global temperature with respect to CO2 emissions and deforestation."
         },
         {
-            banner: require("../assets/images/projects/ecosampling.png").default,
+            banner: "/projects/ecosampling.png",
             title: "Gaze Shifts Sampling",
             tags: ["Machine Learning"],
             language: "Python",
@@ -32,7 +32,7 @@ const project = {
             headline: "A Python implementation of the ecological sampling of gaze shifts."
         },
         {
-            banner: require("../assets/images/projects/portfolio.png").default,
+            banner: "/projects/portfolio.png",
             title: "Portfolio",
             tags: ["App/Web Dev"],
             language: "Javascript",
@@ -42,7 +42,7 @@ const project = {
             headline: "This amazing website developed with React, Bootsrap, and Typescript."
         },
         {
-            banner: require("../assets/images/projects/hare.png").default,
+            banner: "/projects/hare.png",
             title: "Aurora",
             tags: ["Machine Learning"],
             language: "Python",
@@ -52,7 +52,7 @@ const project = {
             headline: "Predicting the stock market with LSTMs and Reinforcement Learning."
         },
         {
-            banner: require("../assets/images/projects/dodfminer.png").default,
+            banner: "/projects/dodfminer.png",
             title: "DODFMiner",
             tags: ["Machine Learning"],
             language: "Python",
@@ -62,7 +62,7 @@ const project = {
             headline: "Extraction of data from documents in PDF format to structured CSV."
         },
         {
-            banner: require("../assets/images/projects/trufes.png").default,
+            banner: "/projects/trufes.png",
             title: "TRUFES Competition",
             tags: ["Robotics"],
             language: "Beaglebone",
@@ -73,7 +73,7 @@ const project = {
         },
         // Number Recognition, Plants Recognition, Breast Cancer Recognition, Spam Recognition
         {
-            banner: require("../assets/images/projects/datascience.png").default,
+            banner: "/projects/datascience.png",
             title: "Data Science Projects",
             tags: ["Machine Learning"],
             language: "Python",
@@ -83,7 +83,7 @@ const project = {
             headline: "A collection of data science mini-projects from an introductory class."
         },
         {
-            banner: require("../assets/images/projects/sek.png").default,
+            banner: "/projects/sek.png",
             title: "IEEE SEK Competition",
             tags: ["Robotics"],
             language: "Lego Kit",
@@ -93,7 +93,7 @@ const project = {
             headline: "Autonomous car simulation competition using Lego robotic kits."
         },
         {
-            banner: require("../assets/images/projects/arcade.png").default,
+            banner: "/projects/arcade.png",
             title: "Multi-Agent Pacman",
             tags: ["Machine Learning"],
             language: "Python",
@@ -103,7 +103,7 @@ const project = {
             headline: "Reinforcement Learning communication on Pac-man's ghosts."
         },
         {
-            banner: require("../assets/images/projects/medipreco.png").default,
+            banner: "/projects/medipreco.png",
             title: "MediPreço",
             tags: ["App/Web Dev"],
             language: "Swift",
@@ -114,7 +114,7 @@ const project = {
         },
         // Panoramic, Photo Geometry, Metal Recognition
         {
-            banner: require("../assets/images/projects/computervision.png").default,
+            banner: "/projects/computervision.png",
             title: "Computer Vision Projects",
             tags: ["Others"],
             language: "Matlab",
@@ -125,7 +125,7 @@ const project = {
         },
         // College Path, SPA Problem
         {
-            banner: require("../assets/images/projects/graphtheory.png").default,
+            banner: "/projects/graphtheory.png",
             title: "Graph Theory Projects",
             tags: ["Others"],
             language: "C/C++",
@@ -135,25 +135,27 @@ const project = {
             headline: "A collection of graph theory mini-projects from an introductory class."
         },
         {
-            banner: require("../assets/images/projects/zipcode.png").default,
+            banner: "/projects/zipcode.png",
             title: "My Zip Code",
             tags: ["App/Web Dev"],
             language: "Swift",
             year: "2015",
+            url: "https://github.com/Skalwalker",
             highlight: false,
             headline: "A simple iOS App to discover your zip code based on your location."
         },
         {
-            banner: require("../assets/images/projects/quotesbook.png").default,
+            banner: "/projects/quotesbook.png",
             title: "Quote's Book",
             tags: ["App/Web Dev"],
             language: "Swift",
             year: "2015",
+            url: "https://github.com/Skalwalker",
             highlight: false,
             headline: "An iOS App to keep your personal favorite quotes from movies or friends."
         },
         {
-            banner: require("../assets/images/projects/questionmark.png").default,
+            banner: "/projects/questionmark.png",
             title: "Coming Soon",
             tags: ["Machine Learning"],
             language: "?",

@@ -6,7 +6,7 @@ import ProjectCard from '../components/projects/ProjectCard';
 import ScrollButton from '../components/shared/ScrollButton';
 import '../assets/css/font.css';
 
-type myState = { activeTags: any, bgHeight: any, imagesCounter: any }
+type myState = { activeTags: any}
 type myProps = { }
 
 class Projects extends React.Component<myProps, myState> {
@@ -14,8 +14,6 @@ class Projects extends React.Component<myProps, myState> {
     super(props);
     this.state = {
       activeTags: [],
-      bgHeight: "100vh",
-      imagesCounter: 0
     };
   }
 
@@ -53,23 +51,12 @@ class Projects extends React.Component<myProps, myState> {
     }
   }
 
-  onLoad = () => {
-    const releases = project.projects;
-    if (this.state.imagesCounter === releases.length-1) {
-      this.setState({
-        bgHeight: document.getElementById('page-size')!.clientHeight +
-        document.getElementsByClassName('card-body')![0].clientHeight/2})
-    } else {
-      this.setState({imagesCounter: this.state.imagesCounter+1})
-    }
-  }
-
   render() {
     const tags = project.tags;
     const projects = project.projects;
 
     return (
-      <Background showParticles={true} pageHeight={this.state.bgHeight}>
+      <Background showParticles={true}>
         <Container className="p-5" style={{padding: '90px', paddingTop: '50px'}} fluid>
           <Row>
             <h1 className="subtitle">Featured <b>Projects</b></h1>
@@ -79,7 +66,7 @@ class Projects extends React.Component<myProps, myState> {
           {projects.map((project, index) => {
             if (project.highlight) {
               return(
-                <Col xl={3} lg={6} sm={6} style={{padding: '10px'}}>
+                <Col key={project.title} xl={3} lg={6} sm={6} style={{padding: '10px'}}>
                   <ProjectCard
                       title={project.title}
                       url={project.url}
@@ -102,7 +89,7 @@ class Projects extends React.Component<myProps, myState> {
               </Col>
               {tags.map((name, index) => {
                 return (
-                    <Col xl={2} style={{paddingTop: '12px'}}>
+                    <Col xl={2} key={name} style={{paddingTop: '12px'}}>
                       <Button key={name} onClick={() => this.clickButton(name)}
                               className='paragraph'
                               variant={this.checkIfIsActive(name)}
@@ -119,7 +106,7 @@ class Projects extends React.Component<myProps, myState> {
             {projects.map((project, index) => {
               if ((project.tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!project.highlight)) {
                 return(
-                  <Col xl={3} lg={6} sm={6} style={{paddingTop: '15px', paddingBottom: '15px'}}>
+                  <Col key={project.title} xl={3} lg={6} sm={6} style={{paddingTop: '15px', paddingBottom: '15px'}}>
                     <ProjectCard
                       title={project.title}
                       url={project.url}

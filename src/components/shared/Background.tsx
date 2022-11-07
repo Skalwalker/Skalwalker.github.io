@@ -3,10 +3,12 @@ import Particles from 'react-particles-js';
 import '../../assets/css/font.css';
 import NavBar from './NavBar'
 
-type myState = { showParticles: boolean}
+type myState = { height: any }
 type myProps = { showParticles: boolean, style: CSSProperties, pageHeight: any, navbar: boolean }
 
 class Background extends React.Component<myProps, myState> {
+
+
   static defaultProps = {
     style:{},
     showParticles: true,
@@ -14,24 +16,50 @@ class Background extends React.Component<myProps, myState> {
     pageHeight: "100vh"
   }
 
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      height: 0
+    };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({height: document.documentElement.scrollHeight});
+  }
+
   render () {
 
     const handleParticles = () => {
+
       if (this.props.showParticles) {
-        return <Particles height={this.props.pageHeight} params={{
+        let particle_amt = 90
+        if (this.state.height > 1500) {
+          particle_amt = 60
+        }
+        return <Particles height={this.state.height} params={{
           particles: {
             color: {
               value: "#ff30d6"
             },
             links: {
               color: {
-                value: "#ff30d6"
+                value: "#ff30d6",
               },
-              blink: true,
-              opacity: 0.7
+              distance: 150
             },
             number: {
-              value: 100,
+              value: particle_amt,
               density: {
                 enable: true
               }
@@ -58,4 +86,5 @@ class Background extends React.Component<myProps, myState> {
     )
   }
 }
+
 export default Background;

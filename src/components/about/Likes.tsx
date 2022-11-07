@@ -29,7 +29,7 @@ class Likes extends React.Component<MyProps, MyState> {
             <Row>
               {like.map((like_icon) => {
                 return (
-                  <Col xl={2} lg={2} md={3} sm={3} xs={4} className='mr-0 mb-3 mr-xl-2 mr-lg-1'>
+                  <Col key={like_icon.title} xl={2} lg={2} md={3} sm={3} xs={4} className='mr-0 mb-3 mr-xl-2 mr-lg-1'>
                     <div className="m-auto" onMouseEnter={() => this.setIsShown(like_icon.title)}
                          onMouseLeave={() => this.setIsShown('')}
                          style={{height: '70px', width: '70px'}}>

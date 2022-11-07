@@ -74,7 +74,7 @@ class Acheiv extends React.Component<MyProps, MyState>  {
                 <Row>
                   {achievs.map((achiev, index) => {
                     return (
-                      <Col
+                      <Col key={achiev.title}
                         onMouseEnter={() => this.setIsShown(true,
                         achiev.title, achiev.earned, achiev.desc)}
                         onMouseLeave={() => this.setIsShown(false, '', '', '')}

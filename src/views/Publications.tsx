@@ -8,7 +8,7 @@ import ScrollButton from '../components/shared/ScrollButton';
 
 import '../assets/css/font.css';
 
-type myState = { activeTags: any, bgHeight: any, papers_count: any}
+type myState = { activeTags: any, child: any }
 type myProps = { }
 
 class Publications extends React.Component<myProps, myState> {
@@ -17,8 +17,7 @@ class Publications extends React.Component<myProps, myState> {
     super(props);
     this.state = {
       activeTags: [],
-      bgHeight: "100vh",
-      papers_count: 0,
+      child: null
     };
   }
 
@@ -56,25 +55,12 @@ class Publications extends React.Component<myProps, myState> {
     }
   }
 
-
-  onLoad = () => {
-    const papers = publications_content.publications;
-    if (this.state.papers_count === papers.length-1) {
-      this.setState({
-        bgHeight: document.getElementById('page-size')!.clientHeight +
-        document.getElementsByClassName('card-body')![0].clientHeight/2})
-    } else {
-      this.setState({papers_count: this.state.papers_count+1})
-    }
-  }
-
-
   render() {
     const tags = publications_content.tags;
     const papers = publications_content.publications;
 
     return (
-      <Background showParticles={true} pageHeight={this.state.bgHeight}>
+      <Background showParticles={true}>
         <Container className="p-5" style={{padding: '90px', paddingTop: '50px'}} fluid>
           <Row>
             <h1 className="subtitle">Featured <b>Publications</b></h1>
@@ -84,7 +70,7 @@ class Publications extends React.Component<myProps, myState> {
           {papers.map((paper, index) => {
             if (paper.highlight) {
               return(
-                <Col lg={6} style={{padding: '10px'}}>
+                <Col key={paper.title} lg={6} style={{padding: '10px'}}>
                   <PaperCard title={paper.title} url={paper.url} publisher={paper.publisher} year={paper.year}/>
                 </Col>
               )
@@ -101,7 +87,7 @@ class Publications extends React.Component<myProps, myState> {
               </Col>
               {tags.map((name, index) => {
                 return (
-                    <Col lg={2} style={{paddingTop: '12px'}}>
+                    <Col key={name} lg={2} style={{paddingTop: '12px'}}>
                       <Button key={name} onClick={() => this.clickButton(name)}
                               className='paragraph'
                               variant={this.checkIfIsActive(name)}
@@ -117,7 +103,7 @@ class Publications extends React.Component<myProps, myState> {
             {papers.map((paper, index) => {
               if ((paper.tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!paper.highlight)) {
                 return(
-                  <Row style={{padding: '10px', paddingTop: '10px'}}>
+                  <Row key={paper.title} style={{padding: '10px', paddingTop: '10px'}}>
                     <PaperCardShort title={paper.title} url={paper.url} publisher={paper.publisher} year={paper.year}/>
                   </Row>
                 )
