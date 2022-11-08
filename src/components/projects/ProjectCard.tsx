@@ -24,7 +24,7 @@ class ProjectCard extends React.Component<myProps, myState> {
         return (
             <a href={this.props.url}>
             <Card className="ml-auto mr-auto click_cards" style={{minWidth:'15rem', maxWidth: '18rem', height: '100%'}}>
-                <Card.Img variant="top" src={this.props.banner} style={{ borderRadius: '15px 15px 0 0' }} />
+                <Card.Img variant="top" src={process.env.PUBLIC_URL + this.props.banner} style={{ borderRadius: '15px 15px 0 0' }} />
                 <Card.Body>
                     <Card.Title className="subtitle-bold mb-1">{this.props.title}</Card.Title>
                     <Card.Text className="paragraph">

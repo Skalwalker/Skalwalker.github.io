@@ -35,7 +35,9 @@ class Background extends React.Component<myProps, myState> {
   }
 
   updateWindowDimensions() {
-    this.setState({height: document.documentElement.scrollHeight});
+    if (document.documentElement.scrollHeight > this.state.height + 20) {
+      this.setState({height: document.documentElement.scrollHeight});
+    }
   }
 
   render () {
@@ -43,9 +45,9 @@ class Background extends React.Component<myProps, myState> {
     const handleParticles = () => {
 
       if (this.props.showParticles) {
-        let particle_amt = 90
+        let particle_amt = 80
         if (this.state.height > 1500) {
-          particle_amt = 60
+          particle_amt = 50
         }
         return <Particles height={this.state.height} params={{
           particles: {
@@ -55,8 +57,7 @@ class Background extends React.Component<myProps, myState> {
             links: {
               color: {
                 value: "#ff30d6",
-              },
-              distance: 150
+              }
             },
             number: {
               value: particle_amt,
