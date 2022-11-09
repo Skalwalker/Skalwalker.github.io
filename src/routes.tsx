@@ -3,12 +3,16 @@ import Experience from './views/Experience';
 import Achiev from './views/Achiev';
 import Projects from './views/Projects';
 import Publications from './views/Publications';
-import ProjectPage from './views/ProjectPage';
 
 import Core from './components/about/Core'
 import Likes from './components/about/Likes'
 import Skills from './components/about/Skills'
 import Splashscreen from './views/Splashscreen';
+
+import Covid19 from './views/projects/Covid19';
+import GlobalWarming from './views/projects/GlobalWarming';
+import Hare from './views/projects/Hare';
+import Pacman from './views/projects/Pacman';
 
 
 // import ProjectPage from './views/ProjectPage'
@@ -47,18 +51,30 @@ const routes = [
     main: () => <Achiev/>
   },
   {
-    path: "/projects/my-project",
-    main: () => <ProjectPage/>
+    path: "/publications",
+    main: () => <Publications/>
+  },
+  {
+    path: "/projects/covid_19",
+    main: () => <Covid19/>
+  },
+  {
+    path: "/projects/global_warming",
+    main: () => <GlobalWarming/>
+  },
+  {
+    path: "/projects/hare",
+    main: () => <Hare/>
+  },
+  {
+    path: "/projects/multiagent_pacman",
+    main: () => <Pacman/>
   },
   {
     path: "/projects",
     main: () => <Projects/>
   },
-  {
-    path: "/publications",
-    main: () => <Publications/>
-  },
-];
+]
 
 export {
     routes,

@@ -63,23 +63,19 @@ class Projects extends React.Component<myProps, myState> {
             <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
           </Row>
           <Row>
-          {projects.map((project, index) => {
-            if (project.highlight) {
-              return(
-                <Col key={project.title} xl={3} lg={6} sm={6} style={{padding: '10px'}}>
-                  <ProjectCard
-                      title={project.title}
-                      url={project.url}
-                      headline={project.headline}
-                      year={project.year}
-                      banner={project.banner}
-                      language={project.language}/>
-                </Col>
-              )
-            } else {
-              return(null)
+            {
+              Object.keys(projects).map((key, index) => {
+                if (projects[key].highlight) {
+                  return (
+                    <Col key={projects[key].title} xl={3} lg={6} sm={6} style={{padding: '10px'}}>
+                      <ProjectCard project={projects[key]}/>
+                    </Col>
+                  )
+                } else {
+                  return(null)
+                }
+              })
             }
-          })}
           </Row>
         <Row className="pt-5">
           <Col>
@@ -103,23 +99,19 @@ class Projects extends React.Component<myProps, myState> {
               <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
             </Row>
             <Row>
-            {projects.map((project, index) => {
-              if ((project.tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!project.highlight)) {
+            {
+            Object.keys(projects).map((key, index) => {
+              if ((projects[key].tags.some(this.checkInTags) || this.state.activeTags.length === 0) && (!projects[key].highlight)) {
                 return(
-                  <Col key={project.title} xl={3} lg={6} sm={6} style={{paddingTop: '15px', paddingBottom: '15px'}}>
-                    <ProjectCard
-                      title={project.title}
-                      url={project.url}
-                      headline={project.headline}
-                      year={project.year}
-                      banner={project.banner}
-                      language={project.language}/>
+                  <Col key={projects[key].title} xl={3} lg={6} sm={6} style={{paddingTop: '15px', paddingBottom: '15px'}}>
+                    <ProjectCard project={projects[key]}/>
                   </Col>
                 )
               } else {
                 return (null)
               }
-            })}
+            })
+            }
             </Row>
           </Col>
         </Row>

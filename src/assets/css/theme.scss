@@ -132,6 +132,8 @@ $navbar-light-active-color: $white;
 $navbar-light-color: $white;
 $navbar-light-brand-color: $white;
 
+//
+
 // $navbar-light-collapse: border-style solid;
 // $navbar-light-collapse-border-width: 10px;
 // $navbar-light-collapse-border-color: theme-color('primary');
@@ -152,6 +154,59 @@ $navbar-toggler-font-size: $font-size-lg;
 // $navbar-light-hover-color: rgba($black, 0.7);
 // $navbar-light-disabled-color: rgba($white, 0.3);
 // $navbar-light-toggler-border-color: rgba($white, 0.0);
+
+//Table
+$table-color: $white;
+$table-cell-padding: 0.75rem;
+$table-cell-padding-sm: 0.3rem;
+$table-bg: transparent;
+$table-accent-bg: rgba(theme-color('primary'), 0.3);
+$table-hover-bg: rgba($white, 0.075);
+$table-active-bg: $table-hover-bg;
+$table-border-width: $border-width;
+$table-border-color: theme-color('primary');
+$table-head-bg: rgba(theme-color('primary'), 0.3);
+$table-head-color: $white;
+// $table-inverse-bg: rgba(theme-color('primary'), 0.3);
+// $table-inverse-accent-bg: rgba($white, 0.05);
+// $table-inverse-hover-bg: rgba($white, 0.075);
+// $table-inverse-border-color: lighten($gray-900, 7.5%);
+// $table-inverse-color: $white;
+
+//Tabs
+$nav-tabs-border-color: theme-color('primary');
+$nav-tabs-border-width: $border-width;
+$nav-tabs-border-radius: $border-radius;
+$nav-tabs-link-hover-border-color: theme-color('secondary');
+$nav-tabs-link-hover-bg: rgba(theme-color('secondary'), 0.3);
+$nav-tabs-link-active-color: $white;
+$nav-tabs-link-active-bg: rgba(theme-color('primary'), 0.3);
+$nav-tabs-link-active-border-color: theme-color('primary');
+$nav-link-hover-color: theme-color('secondary');
+
+//Figure
+$figure-caption-font-size: 90%;
+$figure-caption-color: $white;
+
+//List Group
+$list-group-bg: rgba(theme-color('primary'), 0.3);
+$list-group-border-color: theme-color('primary');
+$list-group-border-width: $border-width;
+$list-group-border-radius: $border-radius;
+$list-group-item-padding-y: 0.75rem;
+$list-group-item-padding-x: 1.25rem;
+// $list-group-hover-bg: $gray-100;
+// $list-group-active-color: $component-active-color;
+// $list-group-active-bg: $component-active-bg;
+// $list-group-active-border-color: $list-group-active-bg;
+// $list-group-disabled-color: $gray-600;
+// $list-group-disabled-bg: $list-group-bg;
+// $list-group-action-color: $gray-700;
+// $list-group-action-hover-color: $list-group-action-color;
+// $list-group-action-active-color: $body-color;
+// $list-group-action-active-bg: $gray-200;
+
+
 
 $modal-lg: 900px;
 

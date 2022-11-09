@@ -36,6 +36,7 @@ class Background extends React.Component<myProps, myState> {
 
   updateWindowDimensions() {
     if (document.documentElement.scrollHeight > this.state.height + 20) {
+      console.log("Particles Updated");
       this.setState({height: document.documentElement.scrollHeight});
     }
   }

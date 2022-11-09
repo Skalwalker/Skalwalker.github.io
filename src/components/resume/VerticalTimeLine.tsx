@@ -17,6 +17,10 @@ type myProps = { }
 
 class ExperienceTimeline extends React.Component<myProps, myState> {
 
+    openInNewTab = (url) => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+
     render() {
         return (
             <VerticalTimeline className="temp" lineColor="var(--white)">
@@ -35,10 +39,19 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
                             xp.btn_info?.map((btn, index) => {
                                 return (
                                     xp.type === 'work' ?
-                                    <Button key={btn.button_text} className="float-right" href={btn.button_link} size="sm" variant="outline-primary ml-2 mt-3">{btn.button_text}</Button>
+                                    <Button key={btn.button_text} className="float-right"
+                                        onClick={() => this.openInNewTab(btn.button_link)}
+                                        size="sm"
+                                        variant="outline-primary ml-2 mt-3">{btn.button_text}</Button>
                                     : xp.type === 'edu' ?
-                                    <Button key={btn.button_text} className="float-right" href={btn.button_link} size="sm" variant="outline-secondary ml-2 mt-3">{btn.button_text}</Button>
-                                    : <Button key={btn.button_text} className="float-right" href={btn.button_link} size="sm" variant="outline-warning ml-2 mt-3">{btn.button_text}</Button>
+                                    <Button key={btn.button_text} className="float-right"
+                                        onClick={() => this.openInNewTab(btn.button_link)}
+                                        size="sm"
+                                        variant="outline-secondary ml-2 mt-3">{btn.button_text}</Button>
+                                    : <Button key={btn.button_text} className="float-right"
+                                        onClick={() => this.openInNewTab(btn.button_link)}
+                                        size="sm"
+                                        variant="outline-warning ml-2 mt-3">{btn.button_text}</Button>
                                 )
                             })
                         }

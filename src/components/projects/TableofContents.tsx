@@ -3,7 +3,7 @@ import '../../assets/css/stickytable.css';
 
 
 const Headings = ({ headings, activeId }) => (
-    <ul className="subtitle" style={{paddingLeft: "0px", fontSize: '18px'}}>
+    <ul className="subtitle" style={{paddingLeft: "0px", fontSize: '17px'}}>
       {headings.map((heading) => (
         <li key={heading.id} className={heading.id === activeId ? "active" : ""}>
           <a href={`#${heading.id}`}

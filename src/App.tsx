@@ -11,6 +11,7 @@ import './assets/css/splashscreen.css';
 type MyProps = {}
 type MyState = {loading: boolean}
 
+
 class App extends React.Component<MyProps, MyState> {
   constructor(props) {
     super(props);

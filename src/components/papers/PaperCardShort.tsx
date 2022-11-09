@@ -19,7 +19,7 @@ class PaperCardShort extends React.Component<myProps, myState> {
 
   render () {
     return (
-        <a href={this.props.url} style={{width: '100%'}}>
+        <a href={this.props.url} style={{width: '100%'}}  target="_blank" rel="noopener noreferrer">
         <Card className="click_cards">
           <Card.Body style={{ padding: '0.8rem' }}>
             <Card.Text className='mb-0 mt-0 paragraph_bold' style={{color: "white"}}>
