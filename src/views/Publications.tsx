@@ -87,12 +87,11 @@ class Publications extends React.Component<myProps, myState> {
               </Col>
               {tags.map((name, index) => {
                 return (
-                    <Col key={name} lg={2} style={{paddingTop: '12px'}}>
+                    <Col key={name} lg={2} style={{paddingTop: '12px'}} className="d-grid mb-2">
                       <Button key={name} onClick={() => this.clickButton(name)}
                               className='paragraph'
                               variant={this.checkIfIsActive(name)}
-                              size="sm"
-                              block>
+                              size="sm">
                         {name}
                       </Button>
                     </Col>

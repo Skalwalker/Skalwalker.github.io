@@ -13,10 +13,9 @@ import '../../assets/css/font.css';
 import '../../assets/css/stickytable.css';
 import ScrollButton from '../shared/ScrollButton';
 
-import ListGroup from 'react-bootstrap/ListGroup'
 
 type myState = { }
-type myProps = { project: any, abstract: string }
+type myProps = { project: any, abstract: string, children: React.ReactNode }
 
 class ProjectPageContainer extends React.Component<myProps, myState> {
 
@@ -25,7 +24,7 @@ class ProjectPageContainer extends React.Component<myProps, myState> {
         <Background showParticles={false}>
             <Container fluid style={{height: "90vh", paddingLeft: "70px", paddingRight: "70px"}}>
                 <ProjectHeader project={this.props.project} abstract={this.props.abstract}/>
-                <Row className="ml-0 mr-0">
+                <Row className="ms-0 me-0">
                     <Col md={3}>
                         <TableofContents/>
                     </Col>

@@ -44,7 +44,7 @@ class ScrollButton extends React.Component<myProps, myState> {
     render() {
         return (
             <div>
-                <Button variant="outline-secondary"  className="float-right" onClick={this.scrollToTop} style={{
+                <Button variant="outline-secondary"  className="float-end" onClick={this.scrollToTop} style={{
                     display: this.state.visible ? 'inline' : 'none',
                     position: 'fixed',
                     zIndex: 1,

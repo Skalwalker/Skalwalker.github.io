@@ -107,15 +107,15 @@ $carousel-indicator-active-bg: $cyan;
 // $mark-bg: #fcf8e3;
 
 // Cards
-$card-border-color: theme-color('primary');
-$card-bg: rgba(theme-color('primary'), 0.30);
+$card-border-color: map-get($theme-colors,"primary");
+$card-bg: rgba(map-get($theme-colors,"primary"), 0.30);
 $card-border-radius: 15.0px;
 $card-border-width: 1.5px;
 
 
 // Forms
-$input-bg: rgba(theme-color('primary'), 0.30);
-$input-border-color: theme-color('primary');
+$input-bg: rgba(map-get($theme-colors,"primary"), 0.30);
+$input-border-color: map-get($theme-colors,"primary");
 $input-focus-bg: $input-bg;
 $input-placeholder-color: $white;
 $input-color: $pink;
@@ -127,7 +127,7 @@ $link-hover-color: $white;
 $link-hover-decoration: none;
 
 // Navbar
-$navbar-light-hover-color: theme-color('secondary');
+$navbar-light-hover-color: map-get($theme-colors,"secondary");
 $navbar-light-active-color: $white;
 $navbar-light-color: $white;
 $navbar-light-brand-color: $white;
@@ -136,8 +136,8 @@ $navbar-light-brand-color: $white;
 
 // $navbar-light-collapse: border-style solid;
 // $navbar-light-collapse-border-width: 10px;
-// $navbar-light-collapse-border-color: theme-color('primary');
-// $navbar-collapse: bg rgba(theme-color('primary'), 0.30);
+// $navbar-light-collapse-border-color: map-get($theme-colors,"primary");
+// $navbar-collapse: bg rgba(map-get($theme-colors,"primary"), 0.30);
 // $navbar-padding-y: ($spacer / 2);
 // $navbar-padding-x: $spacer;
 // $navbar-brand-font-size: $font-size-lg;
@@ -160,37 +160,37 @@ $table-color: $white;
 $table-cell-padding: 0.75rem;
 $table-cell-padding-sm: 0.3rem;
 $table-bg: transparent;
-$table-accent-bg: rgba(theme-color('primary'), 0.3);
+$table-accent-bg: rgba(map-get($theme-colors,"primary"), 0.3);
 $table-hover-bg: rgba($white, 0.075);
 $table-active-bg: $table-hover-bg;
 $table-border-width: $border-width;
-$table-border-color: theme-color('primary');
-$table-head-bg: rgba(theme-color('primary'), 0.3);
+$table-border-color: map-get($theme-colors,"primary");
+$table-head-bg: rgba(map-get($theme-colors,"primary"), 0.3);
 $table-head-color: $white;
-// $table-inverse-bg: rgba(theme-color('primary'), 0.3);
+// $table-inverse-bg: rgba(map-get($theme-colors,"primary"), 0.3);
 // $table-inverse-accent-bg: rgba($white, 0.05);
 // $table-inverse-hover-bg: rgba($white, 0.075);
 // $table-inverse-border-color: lighten($gray-900, 7.5%);
 // $table-inverse-color: $white;
 
 //Tabs
-$nav-tabs-border-color: theme-color('primary');
+$nav-tabs-border-color: map-get($theme-colors,"primary");
 $nav-tabs-border-width: $border-width;
 $nav-tabs-border-radius: $border-radius;
-$nav-tabs-link-hover-border-color: theme-color('secondary');
-$nav-tabs-link-hover-bg: rgba(theme-color('secondary'), 0.3);
+$nav-tabs-link-hover-border-color:  map-get($theme-colors,"secondary");
+$nav-tabs-link-hover-bg: rgba( map-get($theme-colors,"secondary"), 0.3);
 $nav-tabs-link-active-color: $white;
-$nav-tabs-link-active-bg: rgba(theme-color('primary'), 0.3);
-$nav-tabs-link-active-border-color: theme-color('primary');
-$nav-link-hover-color: theme-color('secondary');
+$nav-tabs-link-active-bg: rgba(map-get($theme-colors,"primary"), 0.3);
+$nav-tabs-link-active-border-color: map-get($theme-colors,"primary");
+$nav-link-hover-color:  map-get($theme-colors,"secondary");
 
 //Figure
 $figure-caption-font-size: 90%;
 $figure-caption-color: $white;
 
 //List Group
-$list-group-bg: rgba(theme-color('primary'), 0.3);
-$list-group-border-color: theme-color('primary');
+$list-group-bg: rgba(map-get($theme-colors,"primary"), 0.3);
+$list-group-border-color: map-get($theme-colors,"primary");
 $list-group-border-width: $border-width;
 $list-group-border-radius: $border-radius;
 $list-group-item-padding-y: 0.75rem;
@@ -212,21 +212,21 @@ $modal-lg: 900px;
 
 $close-color: $white;
 
-$modal-content-bg: rgba(theme-color('primary'), 0.3);
-$modal-title-line-color: theme-color('primary');
-$modal-content-border-color: theme-color('primary');
+$modal-content-bg: rgba(map-get($theme-colors,"primary"), 0.3);
+$modal-title-line-color: map-get($theme-colors,"primary");
+$modal-content-border-color: map-get($theme-colors,"primary");
 $modal-backdrop-opacity: 0.85;
-$modal-header-border-color: theme-color('primary');
+$modal-header-border-color: map-get($theme-colors,"primary");
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-    @include media-breakpoint-up($breakpoint) {
-      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-      // Common values
-      @each $position in $positions {
-        .position#{$infix}-#{$position} { position: $position !important; }
-      }
-    }
-  }
+// @each $breakpoint in map-keys($grid-breakpoints) {
+//     @include media-breakpoint-up($breakpoint) {
+//       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+//       // Common values
+//       @each $position in $position-values {
+//         .position#{$infix}-#{$position} { position: $position !important; }
+//       }
+//     }
+//   }
 
 @import "bootstrap";
 

@@ -14,69 +14,44 @@ import GlobalWarming from './views/projects/GlobalWarming';
 import Hare from './views/projects/Hare';
 import Pacman from './views/projects/Pacman';
 
+import {
+  Routes,
+  Route, Navigate
+} from "react-router-dom";
 
-// import ProjectPage from './views/ProjectPage'
 
-const aboutRoutes = [
-    {
-        path: "/about/core",
-        main: () => <Core />
-    },
-    {
-        path: "/about/likes",
-        main: () => <Likes />
-    },
-    {
-        path: "/about/skills",
-        main: () => <Skills/>
-    },
-]
+export function NavRouter() {
+  return(
+    <Routes>
+        <Route path="/">
+          <Route index element={<Navigate to="/about"/>}/>
+        </Route>
+        <Route path="/about" element={<About/>}>
+          <Route index element={<Core/>}/>
+          <Route path="likes" element={<Likes/>}/>
+          <Route path="skills" element={<Skills/>}/>
+        </Route>
+        <Route path="/experience" element={<Experience/>}/>
+        <Route path="/achivements" element={<Achiev/>} />
+        <Route path="/publications" element={<Publications/>}/>
+        <Route path="/projects">
+          <Route index element={<Projects/>}/>
+          <Route path="covid_19" element={<Covid19/>}/>
+          <Route path="hare" element={<Hare/>}/>
+          <Route path="global_warming" element={<GlobalWarming/>}/>
+          <Route path="multiagent_pacman" element={<Pacman/>}/>
+        </Route>
+        <Route path="*" element={<Splashscreen/>}/>
+    </Routes>
+  )
+}
 
-const routes = [
-  {
-    path: "/",
-    exact: true,
-    main: () => <Splashscreen/>
-  },
-  {
-    path: "/about",
-    main: () => <About/>
-  },
-  {
-    path: "/experience",
-    main: () => <Experience/>
-  },
-  {
-    path: "/achivements",
-    main: () => <Achiev/>
-  },
-  {
-    path: "/publications",
-    main: () => <Publications/>
-  },
-  {
-    path: "/projects/covid_19",
-    main: () => <Covid19/>
-  },
-  {
-    path: "/projects/global_warming",
-    main: () => <GlobalWarming/>
-  },
-  {
-    path: "/projects/hare",
-    main: () => <Hare/>
-  },
-  {
-    path: "/projects/multiagent_pacman",
-    main: () => <Pacman/>
-  },
-  {
-    path: "/projects",
-    main: () => <Projects/>
-  },
-]
-
-export {
-    routes,
-    aboutRoutes
+export function AboutRouter() {
+  return (
+    <Routes>
+        <Route index element={<Core/>}/>
+        <Route path="likes" element={<Likes/>}/>
+        <Route path="Skills" element={<Skills/>}/>
+    </Routes>
+  )
 }
