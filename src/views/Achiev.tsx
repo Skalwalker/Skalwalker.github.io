@@ -60,17 +60,17 @@ class Acheiv extends React.Component<MyProps, MyState>  {
   render() {
     return (
       <Background>
-        <Container fluid style={{height: '92vh'}}>
-          <Row className='h-100'>
-            <Col lg={3} md={12} sm={12} className="text-center my-auto pt-4 pb-4 position-lg-static d-none d-lg-flex" style={{position: 'fixed', zIndex: 1}}>
+        <Container className="p-4" fluid style={{height: '92vh'}}>
+          <Row className="h-100">
+            <Col xl={3} lg={3} md={12} sm={12} className="pr-2 text-center pt-4 pb-4 position-lg-static d-none d-lg-flex h-100" style={{zIndex: 1}}>
               {this.state.isShown && (
                 <AchievDesc title={this.state.title} desc={this.state.desc} date={this.state.date}/>
               )}
               {this.state.isShown === false && (
-                <h2 className="subtitle_bold" style={{fontSize:'32px', color: '#FFFFFF'}}>Hover over an Achievement <br/>to show description</h2>
+                <h2 className="subtitle_bold my-auto" style={{fontSize:'32px', color: '#FFFFFF'}}>Hover over an Achievement <br/>to show description</h2>
               )}
             </Col>
-            <Col lg={9} md={12} sm={12} className="my-auto">
+            <Col xl={9} lg={9} md={12} sm={12} className="my-auto">
                 <Row>
                   {achievs.map((achiev, index) => {
                     return (

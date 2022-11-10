@@ -23,7 +23,7 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
 
     render() {
         return (
-            <VerticalTimeline className="temp" lineColor="var(--white)">
+            <VerticalTimeline className="temp" lineColor="var(--bs-white)">
             {experience.map((xp, index) => {
                 return(
                     <VerticalTimelineElement key={xp.title}
@@ -39,19 +39,19 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
                             xp.btn_info?.map((btn, index) => {
                                 return (
                                     xp.type === 'work' ?
-                                    <Button key={btn.button_text} className="float-right"
+                                    <Button key={btn.button_text} className="float-end"
                                         onClick={() => this.openInNewTab(btn.button_link)}
                                         size="sm"
-                                        variant="outline-primary ml-2 mt-3">{btn.button_text}</Button>
+                                        variant="outline-primary ms-2 mt-3">{btn.button_text}</Button>
                                     : xp.type === 'edu' ?
-                                    <Button key={btn.button_text} className="float-right"
+                                    <Button key={btn.button_text} className="float-end"
                                         onClick={() => this.openInNewTab(btn.button_link)}
                                         size="sm"
-                                        variant="outline-secondary ml-2 mt-3">{btn.button_text}</Button>
-                                    : <Button key={btn.button_text} className="float-right"
+                                        variant="outline-secondary ms-2 mt-3">{btn.button_text}</Button>
+                                    : <Button key={btn.button_text} className="float-end"
                                         onClick={() => this.openInNewTab(btn.button_link)}
                                         size="sm"
-                                        variant="outline-warning ml-2 mt-3">{btn.button_text}</Button>
+                                        variant="outline-warning ms-2 mt-3">{btn.button_text}</Button>
                                 )
                             })
                         }
@@ -59,7 +59,7 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
                 )
             })}
             <VerticalTimelineElement
-                iconStyle={{ background: 'var(--indigo)', color: '#fff' }}
+                iconStyle={{ background: 'var(--bs-indigo)', color: '#fff' }}
                 icon={<MdDoNotDisturbOnTotalSilence/>}
                 contentStyle={{borderColor: 'rgba(0, 0, 0, 0)'}}
             />
@@ -69,52 +69,52 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
 }
 
 const orange_icon = {
-    background: 'var(--indigo)',
-    color: 'var(--orange)',
-    boxShadow: '0 0 0 4px var(--orange),inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)',
-    WebkitBoxShadow: ' 0 0 0 4px var(--orange), inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)'
+    background: 'var(--bs-indigo)',
+    color: 'var(--bs-orange)',
+    boxShadow: '0 0 0 4px var(--bs-orange),inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)',
+    WebkitBoxShadow: ' 0 0 0 4px var(--bs-orange), inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)'
 }
 
 const orange_arrow = {
-    borderRight: '8px solid rgba(255, 110, 39)'
+    borderRight: '8px solid rgba(var(--bs-warning-rgb))'
 }
 
 const orange_element = {
-    background: 'rgba(255, 110, 39, 0.3)',
-    borderColor: 'var(--orange)'
+    background: 'rgba(var(--bs-warning-rgb), 0.3)',
+    borderColor: 'var(--bs-orange)'
 }
 
 const cyan_icon = {
-    background: 'var(--indigo)',
-    color: 'var(--primary)',
-    boxShadow: '0 0 0 4px var(--primary),inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)',
-    WebkitBoxShadow: ' 0 0 0 4px var(--primary), inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)'
+    background: 'var(--bs-indigo)',
+    color: 'var(--bs-primary)',
+    boxShadow: '0 0 0 4px var(--bs-primary),inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)',
+    WebkitBoxShadow: ' 0 0 0 4px var(--bs-primary), inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)'
 }
 
 const cyan_arrow = {
-    borderRight: '8px solid rgba(96, 215, 249)'
+    borderRight: '8px solid rgba(var(--bs-primary-rgb))'
 }
 
 const cyan_element = {
-    background: 'rgba(96, 215, 249, 0.3)',
+    background: 'rgba(var(--bs-primary-rgb), 0.3)',
     borderStyle: 'solid 10px',
-    borderColor: 'var(--primary)'
+    borderColor: 'var(--bs-primary)'
 }
 
 const pink_icon = {
-    background: 'var(--indigo)',
-    color: 'var(--secondary)',
-    boxShadow: '0 0 0 4px var(--secondary),inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)',
-    WebkitBoxShadow: ' 0 0 0 4px var(--secondary), inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)'
+    background: 'var(--bs-indigo)',
+    color: 'var(--bs-secondary)',
+    boxShadow: '0 0 0 4px var(--bs-secondary),inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)',
+    WebkitBoxShadow: ' 0 0 0 4px var(--bs-secondary), inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)'
 }
 
 const pink_arrow = {
-    borderRight: '8px solid rgba(255, 48, 214)'
+    borderRight: '8px solid rgba(var(--bs-secondary-rgb))'
 }
 
 const pink_element = {
-    background: 'rgba(255, 48, 214, 0.3)',
-    borderColor: 'var(--secondary)'
+    background: 'rgba(var(--bs-secondary-rgb), 0.3)',
+    borderColor: 'var(--bs-secondary)'
 }
 
 

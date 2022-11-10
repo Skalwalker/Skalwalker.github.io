@@ -7,7 +7,7 @@ const project = {
             tags: ["Machine Learning"],
             language: "Python",
             year: "2022",
-            url: "/projects/covid_19",
+            url: "covid_19",
             highlight: true,
             headline: "Detecting COVID-19 in audio tracks from patients' coughs with CNNs.",
             target: ""
@@ -118,7 +118,7 @@ const project = {
             tags: ["App/Web Dev"],
             language: "Swift",
             year: "2017",
-            url: "https://portal.medipreco.com.br/#/para-voce",
+            url: "https://portal.medipreco.com.br",
             highlight: false,
             headline: "Developed the first iOS version of the collaborative medicine app Medipreço.",
             target: "_blank"

@@ -4,14 +4,14 @@ import '../../assets/css/font.css';
 import NavBar from './NavBar'
 
 type myState = { height: any }
-type myProps = { showParticles: boolean, style: CSSProperties, pageHeight: any, navbar: boolean }
+type myProps = { showParticles: boolean, style: CSSProperties, pageHeight: any, navbar: boolean, children: React.ReactNode}
 
 class Background extends React.Component<myProps, myState> {
 
 
   static defaultProps = {
     style:{},
-    showParticles: true,
+    showParticles: false,
     navbar: true,
     pageHeight: "100vh"
   }

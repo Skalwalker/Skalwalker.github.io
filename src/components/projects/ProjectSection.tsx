@@ -1,11 +1,10 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row'
-import { GiThunderSkull } from 'react-icons/gi';
 
 import '../../assets/css/font.css'
 
 
-type myProps = {title: string, id: string, first: boolean}
+type myProps = {title: string, id: string, first: boolean, children: React.ReactNode}
 type myState = {}
 
 

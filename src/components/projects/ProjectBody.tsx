@@ -11,30 +11,28 @@ import ProjectFooter from '../../components/projects/ProjectFooter'
 
 import '../../assets/css/font.css';
 import '../../assets/css/stickytable.css';
-import ScrollButton from '../shared/ScrollButton';
-
 
 type myState = { }
-type myProps = { project: any, abstract: string, children: React.ReactNode }
+type myProps = { }
 
-class ProjectPageContainer extends React.Component<myProps, myState> {
+class ProjectBody extends React.Component<myProps, myState> {
 
   render () {
     return (
-        <Background showParticles={false}>
+        <Background showParticles={true}>
             <Container fluid style={{height: "90vh", paddingLeft: "70px", paddingRight: "70px"}}>
-                <ProjectHeader project={this.props.project} abstract={this.props.abstract}/>
-                <Row className="ms-0 me-0">
+                <Row>
+                    <ProjectHeader/>
+                </Row>
+                <Row className="ml-0 mr-0">
                     <Col md={3}>
                         <TableofContents/>
                     </Col>
                     <Col md={7} style={{paddingLeft: "0px"}}>
                         {this.props.children}
                     </Col>
-                    <Col md={2}></Col>
                 </Row>
                 <ProjectFooter/>
-                <ScrollButton/>
             </Container>
         </Background>
 
@@ -44,4 +42,4 @@ class ProjectPageContainer extends React.Component<myProps, myState> {
 
 
 
-export default ProjectPageContainer;
+export default ProjectBody;

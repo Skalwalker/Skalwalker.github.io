@@ -7,7 +7,7 @@ class BackButton extends React.Component {
     render() {
         return (
             <div>
-                <Button variant="outline-light"  className="float-left"
+                <Button variant="outline-light"  className="float-start"
                     style={{
                     // display: this.state.visible ? 'inline' : 'none',
                     // position: 'fixed',
