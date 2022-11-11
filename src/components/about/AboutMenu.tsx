@@ -20,15 +20,15 @@ class AboutMenu extends React.Component{
           <Row>
             <Image src={core.profile_img} className="ms-auto me-auto block" style={{ height: '150px', width: '150px', backgroundColor: 'white', padding: '0' }} roundedCircle />
           </Row>
-          <Row className="paragraph mt-3" style={{ marginLeft: '10px' }}>
-            <p className='pe-2'>
+          <Row className="paragraph mt-3 ps-0 pe-0 " style={{ marginLeft: '10px' }}>
+            <p className='pe-0 pe-sm-2 ps-0'>
               <IoMdSchool className='me-1 mb-1' size={18} />
               M.Sc. Student at Università degli Studi di Milano
             </p>
           </Row>
           <Row className="paragraph mb-4" style={{ marginLeft: '10px' }}>
-            <p className='pe-2'>
-              <HiOfficeBuilding className='me-1 mb-1' size={18} />
+            <p className='pe-0 pe-sm-2 ps-0'>
+              <HiOfficeBuilding className='me-1 mb-1 ps-0 pe-0' size={18} />
               Volunteer at Tree-Nation
             </p>
           </Row>

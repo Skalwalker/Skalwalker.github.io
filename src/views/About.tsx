@@ -4,13 +4,14 @@ import AboutMenu from '../components/about/AboutMenu'
 import Background from '../components/shared/Background';
 import { Container, Row, Col } from 'react-bootstrap';
 import { AboutRouter } from '../routes'
+import '../assets/css/about.css'
 
 
 class About extends React.Component {
   render() {
     return (
       <Background>
-        <Container className="ps-5 pe-5 h-100" style={{height: "92vh", paddingLeft: '70px', paddingRight:'70px'}} fluid>
+        <Container className="h-100 about_view" style={{height: "92vh"}} fluid>
           <Row className='h-100'>
             <Col xl={2} lg={3} md={12} className='my-auto h-100'>
               <AboutMenu/>

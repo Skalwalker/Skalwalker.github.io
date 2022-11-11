@@ -10,9 +10,23 @@
 }
 
 .about_core_style {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+
+.about_view {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (min-width: 576px) {
+    .about_view {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+
 
 @media (min-width: 768px) {
     .about_core_style {
