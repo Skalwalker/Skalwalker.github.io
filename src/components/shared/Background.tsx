@@ -16,11 +16,7 @@ const BackgroundParticles = () => {
 
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
-    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadLinksPreset(engine);
-    // await loadFull(engine);
   }, []);
 
   const particlesLoaded = useCallback(async (container: Container | undefined) => {
@@ -81,24 +77,7 @@ class Background extends React.Component<myProps, myState> {
     this.state = {
       height: 0
     };
-    // this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
-
-  // componentDidMount() {
-  //   this.updateWindowDimensions();
-  //   window.addEventListener('resize', this.updateWindowDimensions);
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener('resize', this.updateWindowDimensions);
-  // }
-
-  // updateWindowDimensions() {
-  //   if (document.documentElement.scrollHeight > this.state.height + 20) {
-  //     console.log("Particles Updated");
-  //     this.setState({height: document.documentElement.scrollHeight});
-  //   }
-  // }
 
   render () {
 

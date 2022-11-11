@@ -99,15 +99,6 @@ const skills = {
         group: 2,
         desc: ""
     },
-    'vue': {
-        title: "Vue",
-        linkedin: 0,
-        years: 1,
-        projects: 1,
-        self_ass: 5,
-        group: 3,
-        desc: "When I started playing with\nWeb Development I started with vue.\nI made a project for a database\ninterface with it."
-    },
     'bstrap': {
         title: "Bootstrap",
         linkedin: 0,
@@ -126,49 +117,13 @@ const skills = {
         group: 3,
         desc: "This portfólio is made\nwith React and love!\nIsn't it awesome?!"
     },
-    'dash': {
-        title: "Dash",
-        linkedin: 0,
-        years: 1,
-        projects: 1,
-        self_ass: 5,
-        group: 3,
-        desc: "I used Dash to deploy a\nfront-end view of a machine learning model\nI was using in my graduation thesis."
-    },
-    'html': {
-        title: "HTML",
-        linkedin: 0,
-        years: 3,
-        projects: 2,
-        self_ass: 5,
-        group: 3,
-        desc: "Well web dev uses HTML,\nI learned the basics."
-    },
-    'css': {
-        title: "CSS",
-        linkedin: 0,
-        years: 2,
-        projects: 2,
-        self_ass: 3,
-        group: 3,
-        desc: "I'm gonna be real frank here,\nI don't like CSS, I don't\nunderstand it's core concepts,\nbut I strive to be able to develop my sites."
-    },
-    'mongodb': {
-        title: "MongoDB",
-        linkedin: 1,
-        years: 1,
-        projects: 3,
-        self_ass: 5,
-        group: 4,
-        desc: "I learned MongoDB while I was\nlearning the MEAN stack for\nweb development. I used it in\none project for non relational storage."
-    },
     'mysql': {
         title: "MySQL",
         linkedin: 1,
         years: 1,
         projects: 4,
         self_ass: 6,
-        group: 4,
+        group: 3,
         desc: "I used MySQL once in a\nDatabase class, in which\nI learned not only the\nlanguage, but how to properly create a database."
     },
     'github': {
@@ -195,7 +150,7 @@ const skills = {
         years: 6,
         projects: 6,
         self_ass: 9,
-        group: 4,
+        group: 3,
         desc: "XCode is an iOS App development platform.\nI started using it before I enrolled in\nthe university and made several apps\nwith it."
     },
     'latex': {

@@ -3,8 +3,13 @@ import { NavRouter } from './routes'
 import Splashscreen from './views/Splashscreen'
 import './assets/css/splashscreen.css';
 
+
+
+
 type MyProps = {}
 type MyState = {loading: boolean}
+
+
 
 
 class App extends React.Component<MyProps, MyState> {

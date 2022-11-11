@@ -17,47 +17,54 @@ import '../../assets/css/font.css'
 import '../../assets/css/tabs.css'
 
 
-// function FeaturesAccordion() {
-//   return (
-//     <Accordion defaultActiveKey="0" flush>
-//       <Accordion.Item eventKey="0">
-//         <Accordion.Header>RMS Power</Accordion.Header>
-//         <Accordion.Body>
-//         </Accordion.Body>
-//       </Accordion.Item>
-//       <Accordion.Item eventKey="1">
-//         <Accordion.Header>Zero Crossing Rate (ZCR)</Accordion.Header>
-//         <Accordion.Body>
-//         </Accordion.Body>
-//       </Accordion.Item>
-//       <Accordion.Item eventKey="2">
-//         <Accordion.Header>Spectral Centroid & Spread</Accordion.Header>
-//         <Accordion.Body>
-//         </Accordion.Body>
-//       </Accordion.Item>
-//       <Accordion.Item eventKey="3">
-//         <Accordion.Header>Spectral Entropy</Accordion.Header>
-//         <Accordion.Body>
-//         </Accordion.Body>
-//       </Accordion.Item>
-//       <Accordion.Item eventKey="4">
-//         <Accordion.Header>Spectral Flatness</Accordion.Header>
-//         <Accordion.Body>
-//         </Accordion.Body>
-//       </Accordion.Item>
-//       <Accordion.Item eventKey="5">
-//         <Accordion.Header>Spectral Rolloff</Accordion.Header>
-//         <Accordion.Body>
-//         </Accordion.Body>
-//       </Accordion.Item>
-//       <Accordion.Item eventKey="6">
-//         <Accordion.Header>Mel Frequency Cepstral Coefficients (MFCCs)</Accordion.Header>
-//         <Accordion.Body>
-//         </Accordion.Body>
-//       </Accordion.Item>
-//     </Accordion>
-//   )
-// }
+function FeaturesAccordion() {
+  return (
+    <Accordion defaultActiveKey="0" flush style={{color: 'var(--bs-white)'}}>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header as='h3'>RMS Power</Accordion.Header>
+        <Accordion.Body>
+        Compute root-mean-square (RMS) value for each frame
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header as='h3'>Zero Crossing Rate (ZCR)</Accordion.Header>
+        <Accordion.Body>
+        Rate of sign-changes of the signal during the frame. It is the number of times the signal changes value, from positive to negative and vice versa, divided by the length of the frame.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="2">
+        <Accordion.Header as='h3'>Spectral Centroid & Spread</Accordion.Header>
+        <Accordion.Body>
+        The spectral centroid and the spectral spread are two simple measures of spectral position and shape. The spectral centroid is the center of "gravity" of the spectrum, while the spread is the second central moment of the spectrum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="3">
+        <Accordion.Header as='h3'>Spectral Entropy</Accordion.Header>
+        <Accordion.Body>
+        This feature is computed similarly to the entropy of energy, although, this time, the computation takes place in the frequency domain.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="4">
+        <Accordion.Header as='h3'>Spectral Flatness</Accordion.Header>
+        <Accordion.Body>
+        The Spectral Flatness is a measure to quantify how much noise-like a sound is, as opposed to being tone-like. A high spectral flatness (closer to 1.0) indicates the spectrum is similar to white noise.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="5">
+        <Accordion.Header as='h3'>Spectral Rolloff</Accordion.Header>
+        <Accordion.Body>
+        The frequency below which a certain percentage (usually around 90\%) of the magnitude distribution of the spectrum is concentrated.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="6">
+        <Accordion.Header as='h3'>Mel Frequency Cepstral Coefficients (MFCCs)</Accordion.Header>
+        <Accordion.Body>
+        The MFCC use the MEL scale to divide the frequency band into sub-bands and then extract the Cepstral Coefficients using Discrete Cosine Transform (DCT)
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+  )
+}
 
 
 function ResultSVMTabs() {
@@ -276,7 +283,7 @@ class Covid19 extends React.Component {
                 </ProjectParagraph>
             </ProjectSection>
             <ProjectSection key="feature-header" id="features-header" title="Features">
-
+                <FeaturesAccordion/>
             </ProjectSection>
             <ProjectSection key="ds-header" id="datasets-header" title="Datasets">
                 <ProjectParagraph>

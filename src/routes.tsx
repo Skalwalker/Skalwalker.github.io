@@ -7,7 +7,7 @@ import Publications from './views/Publications';
 import Core from './components/about/Core'
 import Likes from './components/about/Likes'
 import Skills from './components/about/Skills'
-import Splashscreen from './views/Splashscreen';
+import Errorscreen from './views/ErrorScreen';
 
 import Covid19 from './views/projects/Covid19';
 import GlobalWarming from './views/projects/GlobalWarming';
@@ -41,7 +41,7 @@ export function NavRouter() {
           <Route path="global_warming" element={<GlobalWarming/>}/>
           <Route path="multiagent_pacman" element={<Pacman/>}/>
         </Route>
-        <Route path="*" element={<Splashscreen/>}/>
+        <Route path="*" element={<Errorscreen/>}/>
     </Routes>
   )
 }
@@ -51,7 +51,7 @@ export function AboutRouter() {
     <Routes>
         <Route index element={<Core/>}/>
         <Route path="likes" element={<Likes/>}/>
-        <Route path="Skills" element={<Skills/>}/>
+        <Route path="skills" element={<Skills/>}/>
     </Routes>
   )
 }

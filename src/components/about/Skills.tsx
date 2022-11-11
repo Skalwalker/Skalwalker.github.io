@@ -1,5 +1,6 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 import * as d3 from 'd3';
 
@@ -12,20 +13,20 @@ type MyState = {mobile: boolean};
 
 class Skills extends React.Component<MyProps, MyState>  {
 
-  private myRef: React.RefObject<HTMLInputElement>;
+  // private myRef: React.RefObject<HTMLInputElement>;
   constructor(props) {
     super(props);
-    this.myRef = React.createRef();
     this.state = {
-      mobile: window.innerWidth < 768
+      mobile: window.innerWidth < 768,
     };
   }
 
 
 
   draw() {
+
     let mobile = this.state.mobile
-    var width = document.getElementById('d3_container')!.clientWidth + (mobile ? (46*2) : 46) ;
+    var width = document.getElementById('d3_container')!.clientWidth;
     var height = document.getElementById('d3_container')!.clientHeight * 0.92;
 
     // What happens when a circle is dragged?
@@ -46,8 +47,9 @@ class Skills extends React.Component<MyProps, MyState>  {
       d.fy = null;
     }
     // append the svg object to the body of the page
-    var svg = d3.select(this.myRef.current)
-      .append("svg")
+    // d3.select("#d3_container_div").remove()
+    var svg = d3.select("#d3_container_div")
+      .insert("svg")
       .attr("width", width)
       .attr("height", height)
 
@@ -137,15 +139,16 @@ class Skills extends React.Component<MyProps, MyState>  {
 
 
   componentDidMount() {
-    // this.setState({mobile: window.innerWidth < 768})
-    this.draw()
+    this.draw();
   }
 
   render() {
     return (
+      <Container>
       <Col className="about_skills_style" id='d3_container'>
-        <div style={{height: '92vh', width: '100%'}} ref={this.myRef}></div>
+        <div id="d3_container_div" style={{height: '92vh', width: '100%'}}></div>
       </Col>
+      </Container>
     )
   }
 }

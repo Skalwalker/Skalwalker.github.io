@@ -32,22 +32,22 @@ class AboutMenu extends React.Component{
               Volunteer at Tree-Nation
             </p>
           </Row>
-          <Row className='about_menu_row float-start float-lg-end nav-item-custom pb-0 pb-lg-3'>
-            <NavLink className='about_menu_button subtitle ps-2 pb-1 pt-1 ms-2 ms-lg-1 ps-lg-5'
+          <Row className='about_menu_row float-start float-lg-end nav-item-custom pb-0 pb-lg-3 ms-2'>
+            <NavLink className='about_menu_button subtitle ps-3 pb-1 pt-1 pe-3 ms-lg-0 ps-lg-4'
               to="/about" end
               style={({ isActive }) => isActive ? selectedTabStyle : normalTabStyle}>
               Core<HiCubeTransparent className='ms-2 mb-1' size={20} />
             </NavLink>
           </Row>
-          <Row className='about_menu_row float-start float-lg-end nav-item-custom pb-0 pb-lg-3'>
-            <NavLink className='about_menu_button subtitle ps-2 pb-1 pt-1 ms-5 ms-lg-1 ps-lg-5'
+          <Row className='about_menu_row float-start float-lg-end nav-item-custom pb-0 pb-lg-3 ms-4'>
+            <NavLink className='about_menu_button subtitle ps-3 pb-1 pt-1 pe-3 ms-lg-0 ps-lg-4'
               to="/about/skills"
               style={({ isActive }) => isActive ? selectedTabStyle : normalTabStyle}>
               Skills<GiBookmark className='ms-2 mb-1' size={20} />
             </NavLink>
           </Row>
-          <Row className='about_menu_row float-start float-lg-end nav-item-custom pb-0 pb-lg-3'>
-            <NavLink className='about_menu_button subtitle ps-2 ms-5 pb-1 pt-1 ms-lg-1 ps-lg-5'
+          <Row className='about_menu_row float-start float-lg-end nav-item-custom pb-0 pb-lg-3 ms-4'>
+            <NavLink className='about_menu_button subtitle ps-3 pb-1 pt-1 pe-3 ms-lg-0 ps-lg-4'
               to="/about/likes"
               style={({ isActive }) => isActive ? selectedTabStyle : normalTabStyle}>
               Likes<GiCutDiamond className='ms-2 mb-1' size={20} />
@@ -63,7 +63,7 @@ class AboutMenu extends React.Component{
 
 const normalTabStyle: CSS.Properties = {
   paddingRight: '15px',
-  paddingLeft: '5px',
+  paddingLeft: '45px',
   borderRadius: '15px 0px 0px 15px'
 }
 
@@ -71,7 +71,7 @@ const selectedTabStyle: CSS.Properties = {
   backgroundColor: 'white',
   color: 'black',
   mixBlendMode: 'screen',
-  paddingRight: '15px',
+  paddingRight: '14px',
   paddingLeft: '45px',
   borderRadius: '15px 0px 0px 15px'
 }

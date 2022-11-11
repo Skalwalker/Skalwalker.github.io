@@ -21,23 +21,24 @@ class ProjectPageContainer extends React.Component<myProps, myState> {
 
   render () {
     return (
-        <Background showParticles={false}>
-            <Container fluid style={{height: "90vh", paddingLeft: "70px", paddingRight: "70px"}}>
-                <ProjectHeader project={this.props.project} abstract={this.props.abstract}/>
+        <Background>
+            <Container fluid style={{paddingLeft: "70px", paddingRight: "70px"}}>
+                <Row className="ms-0 me-0" style={{marginTop: "80px", marginBottom: '80px'}}>
+                    <ProjectHeader project={this.props.project} abstract={this.props.abstract}/>
+                </Row>
                 <Row className="ms-0 me-0">
-                    <Col md={3}>
+                    <Col lg={3} md={3} className="d-none d-md-flex">
                         <TableofContents/>
                     </Col>
-                    <Col md={7} style={{paddingLeft: "0px"}}>
+                    <Col lg={7} md={9} style={{paddingLeft: "0px"}}>
                         {this.props.children}
                     </Col>
-                    <Col md={2}></Col>
+                    <Col lg={2} md={0} className="d-none d-lg-flex"></Col>
                 </Row>
                 <ProjectFooter/>
                 <ScrollButton/>
             </Container>
         </Background>
-
     )
   }
 }

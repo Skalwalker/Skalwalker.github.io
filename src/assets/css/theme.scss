@@ -189,6 +189,7 @@ $figure-caption-font-size: 90%;
 $figure-caption-color: $white;
 
 //List Group
+$list-group-color: $white;
 $list-group-bg: rgba(map-get($theme-colors,"primary"), 0.3);
 $list-group-border-color: map-get($theme-colors,"primary");
 $list-group-border-width: $border-width;
@@ -206,7 +207,18 @@ $list-group-item-padding-x: 1.25rem;
 // $list-group-action-active-color: $body-color;
 // $list-group-action-active-bg: $gray-200;
 
-
+//Accordion
+$accordion-padding-y:  1rem;
+$accordion-padding-x: 1.25rem;
+// $accordion-color: $white !important;
+$accordion-bg: rgba(map-get($theme-colors,"primary"), 0.3);
+$accordion-border-width: $border-width;
+$accordion-border-radius: '20px';
+$accordion-border-color: map-get($theme-colors,"primary");
+$accordion-button-focus-border-color: $white;
+$accordion-button-active-bg: rgba(map-get($theme-colors,"secondary"), 0.3);
+$accordion-button-active-color: $white;
+$accordion-button-color: $white;
 
 $modal-lg: 900px;
 

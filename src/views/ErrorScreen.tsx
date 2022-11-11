@@ -7,6 +7,8 @@ import Particles from 'react-tsparticles';
 import { loadLinksPreset } from "tsparticles-preset-links";
 import type { Container, Engine } from "tsparticles-engine";
 
+
+
 const BackgroundParticles = () => {
 
     let particle_amt = 80
@@ -22,7 +24,7 @@ const BackgroundParticles = () => {
 
     return (
       <Particles
-        id="tsparticles2"
+        id="tsparticles3"
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
@@ -58,7 +60,8 @@ const BackgroundParticles = () => {
   }
 
 
-class Splashscreen extends React.Component {
+class Errorscreen extends React.Component {
+
     render() {
         return (
             <div className="w-100" style={{ height: '100vh', backgroundColor: '#070e20'}} >
@@ -66,9 +69,9 @@ class Splashscreen extends React.Component {
                 <Row className="h-100">
                     <Col md={12} className="my-auto">
                         <div className="bottom_text">
-                        <h1 className="font_text" style={style.nameStyle}>Hi, I am Renato Nobre</h1>
+                        <h1 className="font_text" style={style.nameStyle}>404<br/>Doesn't look like<br/> anything to me</h1>
                         <div className="top_text">
-                            <h1 className="font_text_2" style={style.nameStyle}>Hi, I am Renato Nobre</h1>
+                            <h1 className="font_text_2" style={style.nameStyle}>404<br/>Doesn't look like<br/> anything to me</h1>
                         </div>
                         </div>
                     </Col>
@@ -86,4 +89,4 @@ const style = {
     }
 }
 
-export default Splashscreen;
+export default Errorscreen;

@@ -66,7 +66,7 @@ class Publications extends React.Component<myProps, myState> {
             <h1 className="subtitle">Featured <b>Publications</b></h1>
             <div className='w-100 mt-2 mb-2' style={{backgroundColor: 'white', height: '3px'}} />
           </Row>
-          <Row>
+          <Row style={{padding: '8px'}}>
           {papers.map((paper, index) => {
             if (paper.highlight) {
               return(
