@@ -1,0 +1,21 @@
+.proper_img_size {
+    width: 75%;
+    margin-top: 40px;
+}
+
+.proper_img_size_2 {
+    width: 74%;
+    margin-top: 40px;
+}
+
+@media (min-width: 992px){
+    .proper_img_size {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .proper_img_size_2 {
+        width: 99%;
+        margin-top: 0px;
+    }
+}

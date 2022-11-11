@@ -15,7 +15,7 @@ import ScrollButton from '../shared/ScrollButton';
 
 
 type myState = { }
-type myProps = { project: any, abstract: string, children: React.ReactNode }
+type myProps = { project: any, children: React.ReactNode, footer: any }
 
 class ProjectPageContainer extends React.Component<myProps, myState> {
 
@@ -24,7 +24,7 @@ class ProjectPageContainer extends React.Component<myProps, myState> {
         <Background>
             <Container fluid style={{paddingLeft: "70px", paddingRight: "70px"}}>
                 <Row className="ms-0 me-0" style={{marginTop: "80px", marginBottom: '80px'}}>
-                    <ProjectHeader project={this.props.project} abstract={this.props.abstract}/>
+                    <ProjectHeader project={this.props.project}/>
                 </Row>
                 <Row className="ms-0 me-0">
                     <Col lg={3} md={3} className="d-none d-md-flex">
@@ -35,7 +35,7 @@ class ProjectPageContainer extends React.Component<myProps, myState> {
                     </Col>
                     <Col lg={2} md={0} className="d-none d-lg-flex"></Col>
                 </Row>
-                <ProjectFooter/>
+                <ProjectFooter footer={this.props.footer}/>
                 <ScrollButton/>
             </Container>
         </Background>

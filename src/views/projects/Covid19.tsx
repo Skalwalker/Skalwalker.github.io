@@ -2,96 +2,150 @@ import React from 'react';
 import ProjectPageContainer from '../../components/projects/ProjectPageContainer';
 import ProjectSection from '../../components/projects/ProjectSection';
 import ProjectParagraph from '../../components/projects/ProjectParagraph';
-import Table from 'react-bootstrap/Table'
-import Tabs from 'react-bootstrap/Tabs'
+import Table from 'react-bootstrap/Table';
+import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Figure from 'react-bootstrap/Figure';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Accordion } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card'
+import Container from 'react-bootstrap/Container'
 
 import {project} from '../../content/Projects'
 
 import '../../assets/css/font.css'
 import '../../assets/css/tabs.css'
-
+import '../../assets/css/projects.css'
 
 function FeaturesAccordion() {
   return (
-    <Accordion defaultActiveKey="0" flush style={{color: 'var(--bs-white)'}}>
+    <Container>
+    <Accordion defaultActiveKey="0" style={{color: 'var(--bs-white)'}}>
       <Accordion.Item eventKey="0">
         <Accordion.Header as='h3'>RMS Power</Accordion.Header>
-        <Accordion.Body>
-        Compute root-mean-square (RMS) value for each frame
+        <Accordion.Body className= "text-center">
+            <ProjectParagraph>
+                Compute root-mean-square (RMS) value for each frame [4].
+            </ProjectParagraph>
+            <Figure className="mx-auto">
+                <Figure.Image
+                className='w-80'
+                    style={{width: '80%', backgroundColor: 'white'}}
+                    src={require('../../assets/images/projects/covid19/features/rms_power.png').default}
+                />
+            </Figure>
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
         <Accordion.Header as='h3'>Zero Crossing Rate (ZCR)</Accordion.Header>
-        <Accordion.Body>
-        Rate of sign-changes of the signal during the frame. It is the number of times the signal changes value, from positive to negative and vice versa, divided by the length of the frame.
+        <Accordion.Body className= "text-center">
+            <ProjectParagraph>
+                Rate of sign-changes of the signal during the frame. It is the number of times the signal changes value, from positive to negative and vice versa, divided by the length of the frame [4].
+            </ProjectParagraph>
+            <Figure className="mx-auto">
+                    <Figure.Image
+                    className='w-80'
+                        style={{width: '80%', backgroundColor: 'white'}}
+                        src={require('../../assets/images/projects/covid19/features/zero_crossing_rate.png').default}
+                    />
+                </Figure>
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2">
         <Accordion.Header as='h3'>Spectral Centroid & Spread</Accordion.Header>
-        <Accordion.Body>
-        The spectral centroid and the spectral spread are two simple measures of spectral position and shape. The spectral centroid is the center of "gravity" of the spectrum, while the spread is the second central moment of the spectrum.
+        <Accordion.Body className= "text-center">
+            <ProjectParagraph>
+                The spectral centroid and the spectral spread are two simple measures of spectral position and shape. The spectral centroid is the center of "gravity" of the spectrum, while the spread is the second central moment of the spectrum [4].
+            </ProjectParagraph>
+            <Figure className="mx-auto">
+                <Figure.Image
+                className='w-90'
+                    style={{width: '90%', backgroundColor: 'white'}}
+                    src={require('../../assets/images/projects/covid19/features/spectral_bandwith.png').default}
+                />
+            </Figure>
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="3">
-        <Accordion.Header as='h3'>Spectral Entropy</Accordion.Header>
-        <Accordion.Body>
-        This feature is computed similarly to the entropy of energy, although, this time, the computation takes place in the frequency domain.
+        <Accordion.Header as='h3'>Spectral Flatness</Accordion.Header>
+        <Accordion.Body className= "text-center">
+            <ProjectParagraph>
+                The Spectral Flatness is a measure to quantify how much noise-like a sound is, as opposed to being tone-like. A high spectral flatness (closer to 1.0) indicates the spectrum is similar to white noise [4].
+            </ProjectParagraph>
+            <Figure className="mx-auto">
+                <Figure.Image
+                className='w-80'
+                    style={{width: '80%', backgroundColor: 'white'}}
+                    src={require('../../assets/images/projects/covid19/features/spectral_flatness.png').default}
+                />
+            </Figure>
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="4">
-        <Accordion.Header as='h3'>Spectral Flatness</Accordion.Header>
-        <Accordion.Body>
-        The Spectral Flatness is a measure to quantify how much noise-like a sound is, as opposed to being tone-like. A high spectral flatness (closer to 1.0) indicates the spectrum is similar to white noise.
+        <Accordion.Header as='h3'>Spectral Rolloff</Accordion.Header>
+        <Accordion.Body className= "text-center">
+            <ProjectParagraph>
+                The frequency below which a certain percentage (usually around 90%) of the magnitude distribution of the spectrum is concentrated [4].
+            </ProjectParagraph>
+            <Figure className="mx-auto">
+                <Figure.Image
+                className='w-90'
+                    style={{width: '90%', backgroundColor: 'white'}}
+                    src={require('../../assets/images/projects/covid19/features/spectral_rolloff.png').default}
+                />
+            </Figure>
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="5">
-        <Accordion.Header as='h3'>Spectral Rolloff</Accordion.Header>
-        <Accordion.Body>
-        The frequency below which a certain percentage (usually around 90\%) of the magnitude distribution of the spectrum is concentrated.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="6">
         <Accordion.Header as='h3'>Mel Frequency Cepstral Coefficients (MFCCs)</Accordion.Header>
-        <Accordion.Body>
-        The MFCC use the MEL scale to divide the frequency band into sub-bands and then extract the Cepstral Coefficients using Discrete Cosine Transform (DCT)
+        <Accordion.Body className= "text-center">
+            <ProjectParagraph>
+                The MFCC use the MEL scale to divide the frequency band into sub-bands and then extract the Cepstral Coefficients using Discrete Cosine Transform (DCT) [4].
+            </ProjectParagraph>
+            <Figure className="mx-auto">
+                <Figure.Image
+                className='w-90'
+                    style={{width: '90%', backgroundColor: 'white'}}
+                    src={require('../../assets/images/projects/covid19/features/mfccs.png').default}
+                />
+            </Figure>
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
+    </Container>
   )
 }
 
-
 function ResultSVMTabs() {
     return (
+    <Container>
       <Tabs
         defaultActiveKey="coswara"
         id="uncontrolled-tab-example"
-        className="mt-1 mb-3 w-100"
+        className="mt-1 mb-3 w-100 subtitle"
         fill
       >
         <Tab eventKey="coswara" title="Coswara SVM" className="w-100 text-center">
                 <Figure className="mx-auto">
                     <Row className="mx-auto">
-                    <Col xl={6}>
+                    <Col md={6} sm={12}>
                         <Figure.Image
-                            style={{width: '99%', backgroundColor: 'white'}}
-                            alt="Overview of C19-Audit framework"
+                            className='proper_img_size_2'
+                            style={{backgroundColor: 'white'}}
+                            alt="Validation Set Confusion Matrix"
                             src={require('../../assets/images/projects/covid19/svm_coswara_cm.png').default}
                         />
                         <Figure.Caption className="paragraph">
                             Validation Set Confusion Matrix
                         </Figure.Caption>
                     </Col>
-                    <Col xl={6}>
+                    <Col md={6} sm={12}>
                         <Figure.Image
-                            style={{width: '100%', backgroundColor: 'white'}}
-                            alt="Overview of C19-Audit framework"
+                            className='proper_img_size'
+                            style={{backgroundColor: 'white'}}
+                            alt="Receiver Operating Characteristic Curve"
                             src={require('../../assets/images/projects/covid19/svm_coswara_roc.png').default}
                         />
                         <Figure.Caption className="paragraph">
@@ -104,20 +158,22 @@ function ResultSVMTabs() {
         <Tab eventKey="coughvid" title="Coughvid SVM" className="w-100 text-center">
             <Figure className="mx-auto">
                 <Row className="mx-auto">
-                    <Col xl={6}>
+                    <Col md={6} sm={12}>
                         <Figure.Image
-                            style={{width: '99%', backgroundColor: 'white'}}
-                            alt="Overview of C19-Audit framework"
+                            className='proper_img_size_2'
+                            style={{backgroundColor: 'white'}}
+                            alt="Validation Set Confusion Matrix"
                             src={require('../../assets/images/projects/covid19/svm_coughvid_cm.png').default}
                         />
                         <Figure.Caption className="paragraph">
                             Validation Set Confusion Matrix
                         </Figure.Caption>
                     </Col>
-                    <Col xl={6}>
+                    <Col md={6} sm={12}>
                         <Figure.Image
-                            style={{width: '100%', backgroundColor: 'white'}}
-                            alt="Overview of C19-Audit framework"
+                            className='proper_img_size'
+                            style={{backgroundColor: 'white'}}
+                            alt="Receiver Operating Characteristic Curve"
                             src={require('../../assets/images/projects/covid19/svm_coughvid_roc.png').default}
                         />
                         <Figure.Caption className="paragraph">
@@ -128,34 +184,38 @@ function ResultSVMTabs() {
             </Figure>
         </Tab>
       </Tabs>
+      </Container>
     );
 }
 
 function ResultCNNTabs() {
 return (
+    <Container>
     <Tabs
     defaultActiveKey="coswara"
     id="uncontrolled-tab-example"
-    className="mt-1 mb-3 w-100"
+    className="mt-1 mb-3 w-100 subtitle"
     fill
     >
         <Tab eventKey="coswara" title="Coswara CNN" className="w-100 text-center">
                 <Figure className="mx-auto">
                     <Row className="mx-auto" style={{width: '100%'}}>
-                        <Col xl={6}>
+                        <Col md={6} sm={12}>
                             <Figure.Image
-                                style={{width: '99%', backgroundColor: 'white'}}
-                                alt="Overview of C19-Audit framework"
+                                className='proper_img_size_2'
+                                style={{backgroundColor: 'white'}}
+                                alt="Validation Set Confusion Matrix"
                                 src={require('../../assets/images/projects/covid19/cnn_coswara_cm.png').default}
                             />
                             <Figure.Caption className="paragraph">
                                 Validation Set Confusion Matrix
                             </Figure.Caption>
                         </Col>
-                        <Col xl={6}>
+                        <Col md={6} sm={12}>
                             <Figure.Image
-                                style={{width: '100%', backgroundColor: 'white'}}
-                                alt="Overview of C19-Audit framework"
+                                className='proper_img_size'
+                                style={{backgroundColor: 'white'}}
+                                alt="Receiver Operating Characteristic Curve"
                                 src={require('../../assets/images/projects/covid19/cnn_coswara_roc.png').default}
                             />
                             <Figure.Caption className="paragraph">
@@ -168,20 +228,22 @@ return (
         <Tab eventKey="coughvid" title="Coughvid CNN" className="w-100 text-center">
             <Figure className="mx-auto">
                 <Row className="mx-auto w-100">
-                    <Col xl={6}>
+                    <Col md={6} sm={12}>
                         <Figure.Image
-                            style={{width: '99%', backgroundColor: 'white'}}
-                            alt="Overview of C19-Audit framework"
+                            className='proper_img_size_2'
+                            style={{backgroundColor: 'white'}}
+                            alt="Validation Set Confusion Matrix"
                             src={require('../../assets/images/projects/covid19/cnn_coughvid_cm.png').default}
                         />
                         <Figure.Caption className="paragraph">
                             Validation Set Confusion Matrix
                         </Figure.Caption>
                     </Col>
-                    <Col xl={6}>
+                    <Col md={6} sm={12}>
                         <Figure.Image
-                            style={{width: '100%', backgroundColor: 'white'}}
-                            alt="Overview of C19-Audit framework"
+                            className='proper_img_size'
+                            style={{backgroundColor: 'white'}}
+                            alt="Receiver Operating Characteristic Curve"
                             src={require('../../assets/images/projects/covid19/cnn_coughvid_roc.png').default}
                         />
                         <Figure.Caption className="paragraph">
@@ -192,13 +254,15 @@ return (
             </Figure>
         </Tab>
     </Tabs>
+    </Container>
 );
 }
 
 function ResultsTable() {
     return (
-      <Table striped bordered className="mt-1 mb-3">
-        <thead>
+    <Container>
+      <Table striped bordered className="mt-1 mb-3 subtitle" responsive>
+        <thead className="subtitle_bold">
             <tr>
                 <th rowSpan={2} className="text-center">Datasets</th>
                 <th colSpan={5} className="text-center">Training and Validation Metrics</th>
@@ -213,7 +277,7 @@ function ResultsTable() {
         </thead>
         <tbody>
           <tr>
-            <td>Coswara SVM</td>
+            <td className="subtitle_bold">Coswara SVM</td>
             <td>0.83/0.71</td>
             <td>0.86/<b>0.77</b></td>
             <td>0.83/<b>0.72</b></td>
@@ -221,7 +285,7 @@ function ResultsTable() {
             <td>0.85/0.70</td>
           </tr>
           <tr>
-            <td>Coughvid SVM</td>
+            <td className="subtitle_bold">Coughvid SVM</td>
             <td>0.78/0.61</td>
             <td>0.78/0.62</td>
             <td>0.78/0.61</td>
@@ -229,7 +293,7 @@ function ResultsTable() {
             <td>0.78/0.62</td>
           </tr>
           <tr>
-            <td>Coswara CNN</td>
+            <td className="subtitle_bold">Coswara CNN</td>
             <td>0.83/<b>0.76</b></td>
             <td>0.72/0.52</td>
             <td>0.68/0.50</td>
@@ -237,7 +301,7 @@ function ResultsTable() {
             <td>0.91/<b>0.73</b></td>
           </tr>
           <tr>
-            <td>Coughvid CNN</td>
+            <td className="subtitle_bold">Coughvid CNN</td>
             <td>0.57/0.47</td>
             <td>0.56/0.45</td>
             <td>0.78/0.69</td>
@@ -246,27 +310,56 @@ function ResultsTable() {
           </tr>
         </tbody>
       </Table>
+    </Container>
     );
 }
+
+
 
 class Covid19 extends React.Component {
     render() {
         const page_project = project.projects['covid'];
-        const abstract = "I've trained CNN and SVM models to produce prescreening COVID-19 detection using only the patient's cough. During the pandemic, the availability of testing methods was one of the main challenges in containing the virus. Therefore, I designed C19-Audit, a framework to evaluate  if cough audio is sufficient to detect COVID and analyze whether the CNN approach can overcome the SVM.";
+        const footer_info = [
+                {
+                    heading: "Project Info",
+                    desc: "Developed in Master's Degree Course - Audio Pattern Recognition - 2022"
+                },
+                {
+                    heading: "References",
+                    desc: "[1]\tY. E. Erdogan and A. Narin, “Covid-19 detection with traditional and deep features on cough acoustic signals,” Computers in Biology and Medicine, vol. 136, p. 104765, 2021.\n\n[2]\tL. Orlandic, T. Teijeiro, and D. Atienza, “The coughvid crowdsourcing dataset, a corpus for the study of large-scale cough analysis algorithms,” Scientific Data, vol. 8, no. 1, pp. 1-10, 2021\n\n[3]\tA. Imran, I. Posokhova, H. N. Qureshi, U. Masood, M. S. Riaz, K. Ali, C. N. John, M. I. Hussain, and M. Nabeel, “Ai4covid-19: Ai enabled preliminary diagnosis for covid-19 from cough samples via an app,” Informatics in Medicine Unlocked, vol. 20, p. 100378, 2020.\n\n[4]\tT. Giannakopoulos and A. Pikrakis, “Introduction to audio analysis: a MATLAB® approach.” Academic Press, 2014.\n\n[5]\tS. S. Stevens and J. Volkmann, “The relation of pitch to frequency: A revised scale,” The American Journal of Psychology, vol. 53, no. 3, pp. 329-353, 1940.\n\n[6]\tN. Sharma, P. Krishnan, R. Kumar, S. Ramoji, S. R. Chetupalli, P. K. Ghosh, S. Ganapathy et al., “Coswara a database of breathing, cough, and voice sounds for covid-19 diagnosis,” arXiv preprint arXiv:2005.10548, 2020."
+                }
+            ]
+
 
      return(
-        <ProjectPageContainer project={page_project} abstract={abstract}>
+        <ProjectPageContainer project={page_project} footer={footer_info}>
             <ProjectSection key="intro-header" id="intro-header" title="Introduction" first={true}>
                 <ProjectParagraph>
-                    Keeping in mind the necessity for fast and widely accessible COVID-19 pre-screening methods, I propose C19-Audit, a framework for detecting covid in cough data. C19-Audit, binary classifies a cough between COVID-infected or non-infected using two approaches: a Support Vector Machine (SVM) and a Convolutional Neural Network (CNN) model. While the SVMs have been widely used and achieved outstanding results in traditional audio classification tasks, the Convolutions Neural Networks have gained space approaching the problem as an image to be classified. This simple approach would provide a pre-screening method where every person with a microphone could be able to test for the disease.
+                    Keeping in mind the necessity for fast and widely accessible COVID-19 pre-screening methods [1], I propose C19-Audit, a framework for detecting covid in cough data. C19-Audit, binary classifies a cough between COVID-infected or non-infected using two approaches: a Support Vector Machine (SVM) and a Convolutional Neural Network (CNN) model. While the SVMs have been widely used and achieved outstanding results in traditional audio classification tasks, the Convolutions Neural Networks have gained space approaching the problem as an image to be classified [3]. This simple approach would provide a pre-screening method where every person with a microphone could be able to test for the disease.
                 </ProjectParagraph>
             </ProjectSection>
             <ProjectSection key="dev-header" id="dev-header" title="Approach">
                 <ProjectParagraph>
-                    C19-Audit takes advantage of two approaches: an SVM and a CNN model. On the one hand, SVMs have been widely used and achieved outstanding results in traditional audio classification tasks using standard audio features. On the other hand, the Convolutions Neural Networks have gained space in audio classification tasks, using time-frequency representations such as the spectrograms and the Mel-spectrograms as an image to be classified.
+                    C19-Audit takes advantage of two approaches: an SVM and a CNN model. On the one hand, SVMs have been widely used and achieved outstanding results in traditional audio classification tasks using standard audio features [4]. On the other hand, the Convolutions Neural Networks have gained space in audio classification tasks, using time-frequency representations such as the spectrograms and the Mel-spectrograms as an image to be classified [3]. Therefore, C19-Audit was designed to evaluate two different <b>research questions</b>:
+                </ProjectParagraph>
+                <Container>
+                <Card className="subtitle_bold my-3">
+                    <Card.Body>
+                Can we detect COVID-19 only from cough audio of an infected person, using either traditional or deep learning methods?
+                </Card.Body>
+                </Card>
+                <Card className="subtitle_bold my-3">
+                <Card.Body>
+                Is the CNN architecture feed with log-Mel spectrograms capable of overcoming the results of a traditional SVM classification with traditional feature extraction?
+                </Card.Body>
+                </Card>
+                </Container>
+                <ProjectParagraph>
+                    The figure below shows an overview of the C19-Audit framework. C19-Audit receives as input 16-bit audio files, normalize them, and fixes their minimum length to a predetermined value. If the audio is smaller than the minimum length, zero padding is applied to the end. Hence, we have a fixed-length waveform. This waveform can be used to compute the audio spectrogram and the audio's time-domain features [4].
                 </ProjectParagraph>
                 <Figure className="mx-auto text-center">
                     <Figure.Image
+                    className='w-70'
                         style={{width: '70%'}}
                         alt="Overview of C19-Audit framework"
                         src={require('../../assets/images/projects/covid19/process_diagram.png').default}
@@ -276,18 +369,18 @@ class Covid19 extends React.Component {
                     </Figure.Caption>
                 </Figure>
                 <ProjectParagraph>
-                    The figure below shows an overview of the C19-Audit framework. C19-Audit receives as input 16-bit audio files, normalize them, and fixes their minimum length to a predetermined value. If the audio is smaller than the minimum length, zero padding is applied to the end. Hence, we have a fixed-length waveform. This waveform can be used to compute the audio spectrogram and the audio's time-domain features.
-                </ProjectParagraph>
-                <ProjectParagraph>
-                    After the spectrogram generation, I generated the log Mel spectrogram, representing the spectrum where the frequencies have been set in the Mel Scale. A Mel scale is a unit of pitch proposed based on how humans distinguish between frequencies, making it very convenient to process sounds. The Mel spectrogram, the magnitude spectrogram, and the waveforms were used to calculate multiple audio features.
+                    After the spectrogram generation, I generated the log Mel spectrogram, representing the spectrum where the frequencies have been set in the Mel Scale. A Mel scale is a unit of pitch proposed based on how humans distinguish between frequencies, making it very convenient to process sounds [5]. The Mel spectrogram, the magnitude spectrogram, and the waveforms were used to calculate multiple audio features.
                 </ProjectParagraph>
             </ProjectSection>
             <ProjectSection key="feature-header" id="features-header" title="Features">
+                <ProjectParagraph>
+                    Using the signal representations, I generated a set of time, frequency, and Mel frequency features. I used all generated features' statistics for the SVM to train the model, while for the CNN, the log Mel Spectrogram is set as an input feature. Therefore, the CNN analyze the spectrogram considering it as an image. Below you can inspect some of the features used:
+                </ProjectParagraph>
                 <FeaturesAccordion/>
             </ProjectSection>
             <ProjectSection key="ds-header" id="datasets-header" title="Datasets">
                 <ProjectParagraph>
-                    I selected two different datasets to evaluate the proposed methodology. The <b>Coswara dataset</b> contained sound samples collected via worldwide crowdsourcing using a web application. The dataset has audio samples from more than 941 participants recorded at a sampling frequency of 48 kHz. Additionally, the <b>Coughvid dataset</b> provides over 25,000 crowdsourced cough recordings representing various participants' demographics and COVID-19 statuses, with a subset of 2,800 recordings labeled by experienced physicians.
+                    I selected two different datasets to evaluate the proposed methodology. The <a href="https://github.com/iiscleap/Coswara-Data" target="_blank" rel="noreferrer" style={{color: 'var(--bs-primary)'}}>Coswara dataset</a> contained sound samples collected via worldwide crowdsourcing using a web application. The dataset has audio samples from more than 941 participants recorded at a sampling frequency of 48 kHz [6]. Additionally, the <a href="https://www.kaggle.com/andrewmvd/covid19-cough-audio-classification" target="_blank" rel="noreferrer" style={{color: 'var(--bs-primary)'}}>Coughvid dataset</a> provides over 25,000 crowdsourced cough recordings representing various participants' demographics and COVID-19 statuses, with a subset of 2,800 recordings labeled by experienced physicians [2].
                 </ProjectParagraph>
                 <ProjectParagraph>
                     A set of preprocessing and cleaning techniques were used for the datasets to be used adequately. On the Coughvid data set, I selected only the subset of 2.800 specially curated files for the classification task. This choice was motivated both by performance and data trustworthy issues. Additionally, the bitrate of the files was reduced from 32 to 16, optimizing the time to train on the available hardware.
@@ -297,12 +390,12 @@ class Covid19 extends React.Component {
                 <ProjectParagraph>
                     Each database was divided into 70/30 training and validation. The experiments evaluated each dataset (Coswara and Coughvid) with each model (SVM and CNN). The dataset features were calculated in short-term using a window size of 1024, a 256 hop, and a "hann" window. For details on the SVM and CNN configuration, please refer to the full paper. The experiments were evaluated with the following metrics:
                 </ProjectParagraph>
-                <ListGroup className="w-100 mt-1 mb-3">
+                <ListGroup className="w-100 mt-1 mb-3 subtitle" style={{padding: '12px'}}>
                     <ListGroup.Item><b>Accuracy:</b> How close the models are to the correct value</ListGroup.Item>
                     <ListGroup.Item><b>Precision:</b> How correct the positive predictions of the models were classified as correct, excluding false negatives</ListGroup.Item>
                     <ListGroup.Item><b>Recall:</b> How correct the positive predictions of the models were rated correct, excluding false positives.</ListGroup.Item>
-                    <ListGroup.Item><b>F1-Score:</b></ListGroup.Item>
-                    <ListGroup.Item><b>AUC-ROC:</b></ListGroup.Item>
+                    <ListGroup.Item><b>F1-Score:</b> The harmonic mean of precision and recall</ListGroup.Item>
+                    <ListGroup.Item><b>AUC-ROC:</b> Aggregate measure of performance across all possible classification thresholds</ListGroup.Item>
                 </ListGroup>
                 <ProjectParagraph>
                     F1-Score and the AUC-ROC were specially chosen due to the nature of the problem. Both datasets are unbalanced, with a higher amount of healthy patients. Therefore accuracy alone is not a good metric to be used.

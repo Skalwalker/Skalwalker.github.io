@@ -10,7 +10,11 @@ const project = {
             url: "covid_19",
             highlight: true,
             headline: "Detecting COVID-19 in audio tracks from patients' coughs with CNNs.",
-            target: ""
+            target: "",
+            skills: "Audio Processing, Machine Learning, MFCCs, Python, Sklearn, Signal Processing, Tensorflow",
+            abstract: "I've trained CNN and SVM models to produce prescreening COVID-19 detection using only the patient's cough. During the pandemic, the availability of testing methods was one of the main challenges in containing the virus. Therefore, I designed C19-Audit, a framework to evaluate if cough audio is sufficient to detect COVID and analyze whether the CNN approach can overcome the SVM.",
+            code_link: "https://github.com/Skalwalker/C19-Audit/blob/master/notebooks/main.ipynb",
+            paper_link: "https://drive.google.com/file/d/1pq3GrozIeHavHbMS2vEDlmYOwQbJ91an/view?usp=sharing"
         },
         "globalwarming": {
             banner: "/img/globalwarming2.png",
@@ -21,7 +25,11 @@ const project = {
             url: "/projects/global_warming",
             highlight: true,
             headline: "Simulating global temperature with respect to CO2 emissions and deforestation.",
-            target: ""
+            target: "",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "ecosampling": {
             banner: "/img/ecosampling.png",
@@ -32,7 +40,11 @@ const project = {
             url: "https://github.com/Skalwalker",
             highlight: false,
             headline: "A Python implementation of the ecological sampling of gaze shifts.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "portfolio": {
             banner: "/img/portfolio.png",
@@ -43,7 +55,11 @@ const project = {
             url: "https://github.com/Skalwalker/Skalwalker.github.io",
             highlight: false,
             headline: "This amazing website developed with React, Bootsrap, and Typescript.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "hare": {
             banner: "/img/hare.png",
@@ -54,7 +70,11 @@ const project = {
             url: "/projects/hare",
             highlight: true,
             headline: "Predicting the stock market with LSTMs and Reinforcement Learning.",
-            target: ""
+            target: "",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "dodfminer": {
             banner: "/img/dodfminer.png",
@@ -65,7 +85,11 @@ const project = {
             url: "https://github.com/UnB-KnEDLe",
             highlight: false,
             headline: "Extraction of data from documents in PDF format to structured CSV.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "trufes": {
             banner: "/img/trufes.png",
@@ -76,7 +100,11 @@ const project = {
             url: "https://github.com/UnbDroid/Trufes2019",
             highlight: false,
             headline: "Omniwheel robot with LIDAR sensor for a package delivery simulation.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         // Number Recognition, Plants Recognition, Breast Cancer Recognition, Spam Recognition
         "datascience": {
@@ -88,7 +116,11 @@ const project = {
             url: "https://github.com/Skalwalker/NumberRecognition",
             highlight: false,
             headline: "A collection of data science mini-projects from an introductory class.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "sek": {
             banner: "/img/sek.png",
@@ -99,7 +131,11 @@ const project = {
             url: "https://github.com/UnbDroid/SEKMANDA-2018",
             highlight: false,
             headline: "Autonomous car simulation competition using Lego robotic kits.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "pacman": {
             banner: "/img/arcade.png",
@@ -110,7 +146,11 @@ const project = {
             url: "/projects/multiagent_pacman",
             highlight: true,
             headline: "Reinforcement Learning communication on Pac-man's ghosts.",
-            target: ""
+            target: "",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "medipreco": {
             banner: "/img/medipreco.png",
@@ -121,7 +161,11 @@ const project = {
             url: "https://portal.medipreco.com.br",
             highlight: false,
             headline: "Developed the first iOS version of the collaborative medicine app Medipreço.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         // Panoramic, Photo Geometry, Metal Recognition
         "computervision": {
@@ -133,7 +177,11 @@ const project = {
             url: "https://github.com/Skalwalker/Union_images",
             highlight: false,
             headline: "A collection of computer vision mini-projects from an introductory class.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         // College Path, SPA Problem
         "graphtheory": {
@@ -145,7 +193,11 @@ const project = {
             url: "https://github.com/Skalwalker/ihc-new-matweb",
             highlight: false,
             headline: "A collection of graph theory mini-projects from an introductory class.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "zipcode": {
             banner: "/img/zipcode.png",
@@ -156,7 +208,11 @@ const project = {
             url: "https://github.com/Skalwalker",
             highlight: false,
             headline: "A simple iOS App to discover your zip code based on your location.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "quotesbook": {
             banner: "/img/quotesbook.png",
@@ -167,7 +223,11 @@ const project = {
             url: "https://github.com/Skalwalker",
             highlight: false,
             headline: "An iOS App to keep your personal favorite quotes from movies or friends.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         },
         "questionmark": {
             banner: "/img/questionmark.png",
@@ -178,7 +238,11 @@ const project = {
             url: "https://github.com/Skalwalker",
             highlight: false,
             headline: "Always working on new amazing projects. Hope you enjoy what is coming next.",
-            target: "_blank"
+            target: "_blank",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
         }
     }
 }

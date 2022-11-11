@@ -7,7 +7,7 @@ import { IoIosPaper } from 'react-icons/io';
 import '../../assets/css/font.css';
 
 type myState = { }
-type myProps = { project: any, abstract: string }
+type myProps = { project: any }
 
 class ProjectHeader extends React.Component<myProps, myState> {
 
@@ -15,8 +15,8 @@ class ProjectHeader extends React.Component<myProps, myState> {
     return (
         // <Row >
         <>
-            <Col xl={8} md={7} className="my-auto">
-                <Row className="ms-0">
+            <Col xl={8} md={7} className="my-auto ps-0">
+                <Row className="ms-0 ps-0">
                     <div className="bottom_project_text">
                         <h1 className="font_text" style={style.nameStyle}>{this.props.project?.title}</h1>
                             <div className="top_project_text">
@@ -24,26 +24,30 @@ class ProjectHeader extends React.Component<myProps, myState> {
                             </div>
                     </div>
                 </Row>
-                <Row className="ms-0 my-auto">
+                <Row className="ms-0 ps-0 my-auto">
                     <p className='paragraph' style={{fontSize: "16px", color: "white", height: "100%", lineHeight: 1.6}}>
-                    {this.props.abstract}
+                    {this.props.project?.abstract}
                     </p>
                 </Row>
-                <Row className="ms-0">
-                    <p><b style={{color: 'var(--bs-primary)'}}>Skills:</b> Machine Learnin, SVM, CNN, Swift, Python, CSS</p>
+                <Row className="ms-0 ps-0">
+                    <p><b style={{color: 'var(--bs-primary)'}}>Skills: </b>{this.props.project?.skills}</p>
                 </Row>
-                <Row className="ms-0 mt-3">
+                <Row className="ms-0 ps-0 mt-3">
                     <div>
+                        {this.props.project?.code_link && (
+                        <a target="_blank" rel="noopener noreferrer" href={this.props.project?.code_link}>
                         <Button size="sm" className="me-3" variant="outline-primary">View Code
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Skalwalker">
                             <FaGithub color="#60D7F9" className='float-start me-2' size="25"></FaGithub>
-                        </a>
                         </Button>
+                        </a>
+                        )}
+                        {this.props.project?.paper_link && (
+                        <a target="_blank" rel="noopener noreferrer" href={this.props.project?.paper_link}>
                         <Button size="sm" className="me-3" variant="outline-primary">Read Paper
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Skalwalker">
                             <IoIosPaper color="#60D7F9" className='float-start me-2' size="25"></IoIosPaper>
-                        </a>
                         </Button>
+                        </a>
+                        )}
                     </div>
                 </Row>
             </Col>

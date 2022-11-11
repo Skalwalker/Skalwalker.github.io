@@ -9,9 +9,14 @@ class Hare extends React.Component {
 
     render() {
         const page_project = project.projects["hare"]
-        const abstract = ""
+        const footer_info = [
+                {
+                    heading: "Project Info",
+                    desc: "Developed in Master's Degree Course - Audio Pattern Recognition - 2022"
+                }
+            ]
      return(
-        <ProjectPageContainer project={page_project} abstract={abstract}>
+        <ProjectPageContainer project={page_project} footer={footer_info}>
             <ProjectSection id="intro-header" title="Introduction">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas, turpis sed condimentum interdum, nisi augue faucibus libero, non finibus libero tellus eu sapien. Phasellus egestas, turpis non mollis tincidunt, dolor augue gravida turpis, et rhoncus dui urna eu lorem. Duis dapibus lacus ac velit viverra convallis finibus viverra dui. Mauris scelerisque porttitor congue. In hac habitasse platea dictumst. Maecenas varius facilisis dictum. Pellentesque porttitor felis id vehicula hendrerit. In turpis dui, mattis sed condimentum vel, consectetur eu ipsum. Phasellus et augue nec risus tincidunt volutpat et ac odio.
 
