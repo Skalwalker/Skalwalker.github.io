@@ -11,6 +11,7 @@ import ProjectFooter from '../../components/projects/ProjectFooter'
 
 import '../../assets/css/font.css';
 import '../../assets/css/stickytable.css';
+import '../../assets/css/projects.css'
 import ScrollButton from '../shared/ScrollButton';
 
 
@@ -22,7 +23,7 @@ class ProjectPageContainer extends React.Component<myProps, myState> {
   render () {
     return (
         <Background>
-            <Container fluid style={{paddingLeft: "70px", paddingRight: "70px"}}>
+            <Container fluid className="project_page">
                 <Row className="ms-0 me-0" style={{marginTop: "80px", marginBottom: '80px'}}>
                     <ProjectHeader project={this.props.project}/>
                 </Row>

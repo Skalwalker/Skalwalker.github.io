@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { IoIosPaper } from 'react-icons/io';
 
 import '../../assets/css/font.css';
+import '../../assets/css/projects.css'
 
 type myState = { }
 type myProps = { project: any }
@@ -18,10 +19,10 @@ class ProjectHeader extends React.Component<myProps, myState> {
             <Col xl={8} md={7} className="my-auto ps-0">
                 <Row className="ms-0 ps-0">
                     <div className="bottom_project_text">
-                        <h1 className="font_text" style={style.nameStyle}>{this.props.project?.title}</h1>
-                            <div className="top_project_text">
-                                <h1 className="font_text_2" style={style.nameStyle}>{this.props.project?.title}</h1>
-                            </div>
+                        <h1 className="font_text title_style">{this.props.project?.title}</h1>
+                        <div className="top_project_text">
+                            <h1 className="font_text_2 title_style">{this.props.project?.title}</h1>
+                        </div>
                     </div>
                 </Row>
                 <Row className="ms-0 ps-0 my-auto">
@@ -51,7 +52,7 @@ class ProjectHeader extends React.Component<myProps, myState> {
                     </div>
                 </Row>
             </Col>
-            <Col className='ps-5 my-auto mt-5 mt-xl-0' xl={4} md={5} >
+            <Col className='ps-2 pe-2 ps-md-5 pe-md-0 my-auto mt-5 mt-xl-0' xl={4} md={5} >
                 <Image className="w-100"
                     src={this.props.project?.banner}
                     style={{borderRadius: '20px', borderWidth: '5px', border: 'solid', borderColor: 'var(--bs-primary)'}}/>
@@ -62,13 +63,6 @@ class ProjectHeader extends React.Component<myProps, myState> {
   }
 }
 
-
-const style = {
-    nameStyle: {
-      fontSize: '70px',
-      color: '#60D7F9'
-    }
-}
 
 
 export default ProjectHeader;
