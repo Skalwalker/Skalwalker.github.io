@@ -2,6 +2,8 @@ import React from 'react';
 import ProjectPageContainer from '../../components/projects/ProjectPageContainer';
 import ProjectSection from '../../components/projects/ProjectSection';
 import ProjectParagraph from '../../components/projects/ProjectParagraph';
+
+
 import Table from 'react-bootstrap/Table';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';

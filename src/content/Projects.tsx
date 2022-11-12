@@ -26,10 +26,10 @@ const project = {
             highlight: true,
             headline: "Simulating global temperature with respect to CO2 emissions and deforestation.",
             target: "",
-            skills: "",
-            abstract: "",
-            code_link: "",
-            paper_link: ""
+            skills: "Agent-based Simulations, Anylogic, Monte Carlo, System Dynamics,",
+            abstract: "At COP21, 195 nations adopted the Paris Agreement, intending to hold the increase in the global temperature to below 2°C above pre-industrial levels. Where will we be if countries disregard the agreement? I decided to simulate global warming as a relationship between CO2 emissions and world deforestation. Considering that the countries continue their historical trends, simulation results expect the world to reach the temperature recommendation in 2064.",
+            code_link: "https://cloud.anylogic.com/model/ba6ea900-9637-4817-a172-226847603ebf?mode=SETTINGS&tab=GENERAL",
+            paper_link:  "https://drive.google.com/file/d/1ZRBn_5ddMIygHjv697twuZtW5BbO9Cr5/view?usp=sharing"
         },
         "ecosampling": {
             banner: "/img/ecosampling.png",
@@ -73,8 +73,8 @@ const project = {
             target: "",
             skills: "",
             abstract: "",
-            code_link: "",
-            paper_link: ""
+            code_link: "https://github.com/EmpyreanAI",
+            paper_link: "https://rdcu.be/cysdA"
         },
         "dodfminer": {
             banner: "/img/dodfminer.png",
@@ -149,8 +149,8 @@ const project = {
             target: "",
             skills: "",
             abstract: "",
-            code_link: "",
-            paper_link: ""
+            code_link: "https://github.com/Skalwalker/MRLCommunication",
+            paper_link: "https://drive.google.com/file/d/1Ms01uQN4HshG3UMca5WwqtaDDiPAgcA1/view?usp=sharing"
         },
         "medipreco": {
             banner: "/img/medipreco.png",
