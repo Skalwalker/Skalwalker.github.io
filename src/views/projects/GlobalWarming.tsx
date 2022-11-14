@@ -48,7 +48,7 @@ class GlobalWarming extends React.Component {
                     During the past five decades, the Earth's average temperature has been increasing at a high rate [1], and one of the causes are  CO<sub>2</sub> emissions [2]. The Intergovernmental Panel on Climate Change (IPCC) has strongly recommended limiting the increase in global temperature below 2<sup>o</sup> C as compared to the pre-industrial level to avoid severe ecological and economic threats [2]. Therefore, understanding future climatic conditions and situations is the basis for the world countries to develop mitigation strategies.
                 </ProjectParagraph>
                 <ProjectParagraph>
-                    A helpful tool the world has to fight climate change is our forests. Forests can remove large amounts of CO<sub>2</sub> from the atmosphere [3]. Researchers at ETH Zurich have even calculated that large-scale afforestation could help solve the climate problem [3]. However, around 10 million hectares of forest are lost every year [4]. Recently, the concept of Net Zero <sup>1</sup> has become popular, and with such, multiple environmental companies <sup>2</sup> are offering services to help people and companies offset their CO<sub>2</sub> emissions.
+                    A helpful tool the world has to fight climate change is our forests. Forests can remove large amounts of CO<sub>2</sub> from the atmosphere [3]. Researchers at ETH Zurich have even calculated that large-scale afforestation could help solve the climate problem [3]. However, around 10 million hectares of forest are lost every year [4]. Recently, the concept of Net Zero<sup>1</sup> has become popular, and with such, multiple environmental companies<sup>2</sup> are offering services to help people and companies offset their CO<sub>2</sub> emissions.
                 </ProjectParagraph>
             </ProjectSection>
             <ProjectSection key="dev-header" id="dev-header" title="Overview">
@@ -152,7 +152,7 @@ function ResultsTabs() {
                     className='proper_img_size_3'
                     style={{backgroundColor: 'white'}}
                     alt="Year temperature exceeds recommended"
-                    src={require('../../assets/images/projects/globalwarming/exps/e2/year.png').default}
+                    src={require('../../assets/images/projects/globalwarming/exps/e3/year.png').default}
                 />
                 <Figure.Caption className="paragraph">
                     Year temperature exceeds recommended
@@ -194,7 +194,7 @@ function ResultsTabs() {
                     className='proper_img_size_3'
                     style={{backgroundColor: 'white'}}
                     alt="Year temperature exceeds recommended"
-                    src={require('../../assets/images/projects/globalwarming/exps/e2/year.png').default}
+                    src={require('../../assets/images/projects/globalwarming/exps/e4/year.png').default}
                 />
                 <Figure.Caption className="paragraph">
                     Year temperature exceeds recommended
@@ -248,18 +248,17 @@ function ResultsTabs() {
     );
 }
 
-
 function DynamicsAccordion() {
     return (
       <Container className='mt-3 mb-3'>
       <Accordion defaultActiveKey="0" style={{color: 'var(--bs-white)'}}>
         <Accordion.Item eventKey="0">
           <Accordion.Header as='h3'>Global Dynamics</Accordion.Header>
-          <Accordion.Body className= "text-center">
+          <Accordion.Body className= "text-left">
               <ProjectParagraph>
                 The figure below describes the system dynamics of the world, relating the world CO<sub>2</sub> concentration and the GST. The initial global CO<sub>2</sub> stock has an output flow of a 0.1% yearly global dissipation. After its output flow dissipation, the initial global CO<sub>2</sub> stock is added with the total amount of CO<sub>2</sub> emitted by every country in that year (deduced by their forest absorption), generating the current global CO<sub>2</sub>. Additionally, a variable is created to track the previous global CO<sub>2</sub> concentration, which is further used to calculate the global temperature.
               </ProjectParagraph>
-              <Figure className="mx-auto">
+              <Figure className="mx-auto text-center">
                   <Figure.Image
                   className='w-80'
                       style={{width: '60%', backgroundColor: 'white'}}
@@ -273,11 +272,11 @@ function DynamicsAccordion() {
         </Accordion.Item>
         <Accordion.Item eventKey="1">
           <Accordion.Header as='h3'>Agent's Forest Size Dynamics</Accordion.Header>
-          <Accordion.Body className= "text-center">
+          <Accordion.Body className= "text-left">
               <ProjectParagraph>
                 Each country has a forest, whether increasing or decreasing in size. In the way that I modeled the system, the country's forest is responsible for deducting the country's CO<sub>2</sub> emissions. Thus, each country is independently responsible for balancing its emissions with its forest area absorption. The figure below represents the system dynamics of a country forest. Each country starts with its respective stock forest area using a historically based initial size.
               </ProjectParagraph>
-              <Figure className="mx-auto">
+              <Figure className="mx-auto text-center">
                       <Figure.Image
                       className='w-80'
                           style={{width: '80%', backgroundColor: 'white'}}
@@ -291,11 +290,11 @@ function DynamicsAccordion() {
         </Accordion.Item>
         <Accordion.Item eventKey="2">
           <Accordion.Header as='h3'>Agent's CO2 Dynamics</Accordion.Header>
-          <Accordion.Body className= "text-center">
+          <Accordion.Body className= "text-left">
               <ProjectParagraph>
                 Regardless of how ecofriendly a country might be, they are continually generating CO<sub>2</sub>, whether by their population's daily life or industrial activity. The figure below illustrates how each country's  CO<sub>2</sub> concentration is generated.
               </ProjectParagraph>
-              <Figure className="mx-auto">
+              <Figure className="mx-auto text-center">
                   <Figure.Image
                   className='w-90'
                       style={{width: '90%', backgroundColor: 'white'}}

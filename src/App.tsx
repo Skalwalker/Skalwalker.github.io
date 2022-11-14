@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef, useEffect, useState} from 'react'
 import { NavRouter } from './routes'
 import Splashscreen from './views/Splashscreen'
 import './assets/css/splashscreen.css';
@@ -6,39 +6,37 @@ import './assets/css/splashscreen.css';
 
 
 
-type MyProps = {}
-type MyState = {loading: boolean}
+export default function App()  {
+
+  var myRef: any = useRef(null);
+  const [showSplash, setShowSplash] = useState(myRef.current);
+
+  useEffect(() => {
+
+    if (myRef.current === null) {
+      myRef.current = true;
+      setShowSplash(myRef.current)
+
+      setTimeout(() => {
+        console.log("Entrou!")
+        myRef.current = false;
+        setShowSplash(myRef.current)
+      }, 4000);
+    }
+}, []);
 
 
 
+  return (
+    <div>
+      {
+      showSplash && (
+        <div className="loader-container">
+          <Splashscreen/>
+        </div>
+      )}
+      <NavRouter/>
+    </div>
+  )
 
-class App extends React.Component<MyProps, MyState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-        loading: true,
-    };
-  }
-
-  componentDidMount() {
-    this.setState({loading: true});
-    setTimeout(() => {
-      this.setState({loading: false});
-    }, 4000);
-  };
-
-  render() {
-    return (
-      <div>
-        {this.state.loading && (
-          <div className="loader-container">
-            <Splashscreen/>
-          </div>
-        )}
-        <NavRouter/>
-      </div>
-    )
-  }
 }
-
-export default App;

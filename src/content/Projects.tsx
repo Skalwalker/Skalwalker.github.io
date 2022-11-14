@@ -26,7 +26,7 @@ const project = {
             highlight: true,
             headline: "Simulating global temperature with respect to CO2 emissions and deforestation.",
             target: "",
-            skills: "Agent-based Simulations, Anylogic, Monte Carlo, System Dynamics,",
+            skills: "Agent-based Simulations, Anylogic, Monte Carlo, System Dynamics",
             abstract: "At COP21, 195 nations adopted the Paris Agreement, intending to hold the increase in the global temperature to below 2°C above pre-industrial levels. Where will we be if countries disregard the agreement? I decided to simulate global warming as a relationship between CO2 emissions and world deforestation. Considering that the countries continue their historical trends, simulation results expect the world to reach the temperature recommendation in 2064.",
             code_link: "https://cloud.anylogic.com/model/ba6ea900-9637-4817-a172-226847603ebf?mode=SETTINGS&tab=GENERAL",
             paper_link:  "https://drive.google.com/file/d/1ZRBn_5ddMIygHjv697twuZtW5BbO9Cr5/view?usp=sharing"
@@ -61,18 +61,18 @@ const project = {
             code_link: "",
             paper_link: ""
         },
-        "hare": {
+        "aurora": {
             banner: "/img/hare.png",
             title: "Aurora",
             tags: ["Machine Learning"],
             language: "Python",
             year: "2021",
-            url: "/projects/hare",
+            url: "/projects/aurora",
             highlight: true,
             headline: "Predicting the stock market with LSTMs and Reinforcement Learning.",
             target: "",
-            skills: "",
-            abstract: "",
+            skills: "DDPG, Finance, LSTM, Machine Learning, Python, Reinforcement Learning, Tensorflow, Time Series",
+            abstract: "Understanding the stock exchange's intrinsic rules and taking opportunities are not trivial tasks. With that in mind, we developed AURORA: a new hybrid service to trade equities in the stock market, using an autonomous agent-based approach. Using a rational agent capable of perceiving the market and acting upon its perception autonomously, AURORA can manage a portfolio achieving profitability of up to 11.74%.",
             code_link: "https://github.com/EmpyreanAI",
             paper_link: "https://rdcu.be/cysdA"
         },

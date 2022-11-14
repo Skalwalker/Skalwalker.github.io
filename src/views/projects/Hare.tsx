@@ -2,61 +2,459 @@ import React from 'react';
 
 import ProjectPageContainer from '../../components/projects/ProjectPageContainer';
 import ProjectSection from '../../components/projects/ProjectSection'
+import ProjectParagraph from '../../components/projects/ProjectParagraph';
 
-import {project} from '../../content/Projects'
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import Table from 'react-bootstrap/Table';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Figure from 'react-bootstrap/Figure';
+
+import Accordion from 'react-bootstrap/Accordion';
+import Container from 'react-bootstrap/Container';
+
+import '../../assets/css/font.css'
+import '../../assets/css/tabs.css'
+import '../../assets/css/projects.css'
+
+import { project } from '../../content/Projects'
 
 class Hare extends React.Component {
 
     render() {
-        const page_project = project.projects["hare"]
+        const page_project = project.projects["aurora"]
         const footer_info = [
-                {
-                    heading: "Project Info",
-                    desc: "Developed in Master's Degree Course - Audio Pattern Recognition - 2022"
-                }
-            ]
-     return(
-        <ProjectPageContainer project={page_project} footer={footer_info}>
-            <ProjectSection id="intro-header" title="Introduction">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas, turpis sed condimentum interdum, nisi augue faucibus libero, non finibus libero tellus eu sapien. Phasellus egestas, turpis non mollis tincidunt, dolor augue gravida turpis, et rhoncus dui urna eu lorem. Duis dapibus lacus ac velit viverra convallis finibus viverra dui. Mauris scelerisque porttitor congue. In hac habitasse platea dictumst. Maecenas varius facilisis dictum. Pellentesque porttitor felis id vehicula hendrerit. In turpis dui, mattis sed condimentum vel, consectetur eu ipsum. Phasellus et augue nec risus tincidunt volutpat et ac odio.
+            {
+                heading: "Project Info",
+                desc: "Undergraduate Dissertation - Published @ Neural Computing and Application - 2022"
+            },
+            {
+                heading: "Developers",
+                desc: "Renato A Nobre, Khalil C. do Nascimento"
+            },
+            {
+                heading: "Contributors",
+                desc: "Geraldo P. Rocha Filho, Patricia A. Vargas, Alan Demétrius Baria Valejo, Gustavo Pessin, Leandro A. Villas"
+            },
+            {
+                heading: "Footnotes",
+                desc: "1.\tThe fundamental analysis concerns studying the company that underlies the stock itself and the sentiment around it. In contrast, technical analysis focuses on predicting the future price of a stock by studying its price trends [1].\n\n2.\tAll used data are public available on the B3 stock market website: www.b3.com.br\n\n3.\tA detailed description of the hyper-parametrization process is left for the complete paper.\n\n4.\tStrategy used by investors who decide to buy an asset for the long term."
+            },
+            {
+                heading: "References",
+                desc: "[1]\tLam, M.: Neural network techniques for financial performance prediction: integrating fundamental and technical analysis. Decision support systems 37(4), 567-581 (2004).\n\n[2]\tGoodfellow, I., Bengio, Y., Courville, A.: Deep learning. MIT press (2016).\n\n[3]\tMarkowitz, H.: Portfolio selection, journal of finance. Markowitz HM—1952 pp. 77-91 (1952)\n\n[4]\tSharpe, W.F.: Mutual fund performance. The Journal of business 39(1), 119–138 (1966)"
+            },
+        ]
 
-                Sed ac pellentesque ex. Morbi nec egestas ipsum. Sed fringilla odio nec tortor ultrices mollis. Proin tincidunt varius dolor. Sed non magna ac lorem cursus aliquet. Cras semper aliquam purus, sit amet pharetra augue placerat feugiat. Phasellus sollicitudin est a augue scelerisque auctor. Phasellus at ultrices ipsum. Phasellus blandit eleifend eros, nec ultricies urna consectetur sit amet. Praesent sem odio, molestie sed orci ut, mattis faucibus nulla. Fusce odio massa, hendrerit quis tincidunt et, volutpat vel quam. Nulla semper blandit mattis. Nullam vel malesuada ante. Etiam quis porta est. Fusce metus mauris, lacinia vel ornare cursus, maximus at massa. Mauris sodales semper orci.
 
-                In vitae feugiat est. Maecenas volutpat ac lorem non egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean placerat augue nec dui sagittis, sed ultrices metus cursus. Suspendisse semper hendrerit nunc, vitae consectetur nulla scelerisque id. Proin aliquam laoreet risus sed fringilla. Curabitur sed augue at dolor tempor viverra quis eget dolor. Integer pulvinar mattis enim sed commodo. Pellentesque enim ex, tincidunt non augue ac, volutpat pellentesque est.
-            </ProjectSection>
-            <ProjectSection id="dev-header" title="Development">
-                In ac tempus urna, at molestie nisl. Quisque ac est ac dolor tristique vehicula. Integer eleifend efficitur convallis. In blandit purus velit, ut iaculis ante vestibulum feugiat. Aliquam molestie vehicula urna, quis gravida ipsum viverra eget. Suspendisse ante quam, viverra sed dictum in, blandit a libero. Morbi eu fringilla eros. Integer eu leo est. Vivamus lacinia ante et ante dignissim tincidunt. Phasellus non risus nec metus finibus eleifend pulvinar non quam. Integer eget nulla viverra, gravida ante a, sagittis velit. Nullam vitae gravida ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam pretium molestie odio, fermentum consectetur lectus consequat nec. Donec elit ligula, tempor in quam et, gravida blandit dolor.
 
-                Vivamus id ante et leo ultricies fringilla eget auctor erat. In non magna non massa aliquam hendrerit vitae id dui. Nunc sed consequat felis, eget elementum augue. Donec porta aliquet est. Quisque ultrices elit sit amet fringilla feugiat. Aliquam efficitur risus semper mauris ultricies, quis dapibus nunc condimentum. Donec id ipsum aliquam, euismod turpis eu, viverra lacus. Proin sit amet ligula lacus.
 
-                Praesent faucibus nec dui sit amet vulputate. Morbi dapibus volutpat lorem at convallis. Nunc a velit purus. Donec at ipsum ut ipsum rhoncus mattis. Proin vitae libero posuere ligula volutpat sagittis non in odio. Aliquam scelerisque leo at neque varius, porta aliquam ex sagittis. Fusce purus lectus, fringilla eu ligula id, convallis feugiat orci. In volutpat, mauris sit amet auctor fermentum, libero felis ornare est, eu vehicula sem dui et libero. Nullam vitae pharetra tortor.
-            </ProjectSection>
-            <ProjectSection id="res-header" title="Results">
-                Phasellus vitae fermentum turpis, eu aliquet enim. Curabitur urna lectus, rhoncus non suscipit eget, pretium non felis. Etiam rutrum metus quis blandit finibus. Etiam ullamcorper elit nec sodales vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean mattis diam eget ex bibendum luctus. Pellentesque sed neque volutpat, placerat libero et, hendrerit purus. Mauris facilisis justo sed ex suscipit, id molestie nulla tincidunt. Fusce aliquam accumsan nulla in iaculis. Cras fringilla diam sed tellus tempor blandit. Ut lacus lectus, hendrerit sit amet mauris a, aliquam molestie ligula. Sed ut ante tortor.
+        // . \"
 
-                Donec sodales auctor orci sit amet venenatis. Vestibulum fermentum nisi quis elit aliquet tincidunt. Vivamus ullamcorper enim tortor, sit amet sagittis turpis elementum ut. Nam in ex vitae dolor semper congue ac vitae augue. Nulla eget vulputate urna. Etiam lacinia et odio tincidunt tempus. Duis cursus dictum ipsum vel suscipit. Morbi mollis nisi porta magna molestie, id mollis arcu malesuada. Maecenas pulvinar mauris eu ornare pellentesque. Donec ornare condimentum lectus eu faucibus. Aenean suscipit lorem pharetra justo consequat varius. Cras et tempus velit, a molestie est. Etiam laoreet faucibus gravida. Duis bibendum ex ac posuere tincidunt. Maecenas ultrices ipsum ex, in ultricies lacus facilisis eget. Duis laoreet nisl vitae augue finibus scelerisque.
-
-                In hac habitasse platea dictumst. Donec ultrices nisl eget lacus consectetur, id posuere libero lacinia. Nunc enim diam, accumsan bibendum enim nec, vehicula semper quam. Maecenas rutrum sed nisl vitae sagittis. Vestibulum interdum pretium augue sed congue. Donec nibh est, mollis in luctus rhoncus, condimentum eget dolor. Quisque a sapien a libero hendrerit convallis. Proin eu fringilla ipsum, mattis congue erat. Vivamus in rutrum arcu. Nam eu congue libero. Curabitur eget velit ac dolor ultricies placerat at ac orci. Etiam et tempus ipsum. In sed massa non nulla faucibus pellentesque. Vestibulum ultricies ultricies dolor nec volutpat.
-
-                Curabitur dapibus auctor sem at tincidunt. Proin ex erat, sodales nec turpis vel, accumsan mollis lectus. Fusce sit amet metus sit amet lacus rhoncus dapibus. Maecenas convallis, nisl dictum posuere congue, velit nibh tempus ligula, in porttitor lectus nulla sed est. Pellentesque interdum lectus consequat, lacinia velit sed, luctus nisi. Maecenas mollis erat mauris, a venenatis velit consequat ac. Ut pellentesque magna augue, vel fringilla orci rhoncus ac. Aliquam volutpat id nulla eget vestibulum. Aliquam tempor, nibh ultricies tincidunt lobortis, sapien nisi rutrum lorem, id accumsan lacus ex ut est. Integer est enim, malesuada non dignissim sit amet, condimentum at sem. Quisque a tincidunt quam. Etiam enim nisi, fermentum quis tincidunt quis, bibendum non mi. Integer euismod erat in massa efficitur, a dignissim dolor fermentum. Pellentesque faucibus, diam ac pulvinar hendrerit, mi arcu sollicitudin tellus, eget commodo dolor dolor quis sem.
-            </ProjectSection>
-            <ProjectSection id="conc-header" title="Conclusion">
-                Donec a magna mattis magna semper scelerisque vitae ut enim. Ut dapibus, magna vel bibendum scelerisque, mi purus pharetra dolor, vitae condimentum nisl nunc a turpis. Duis ac molestie velit, condimentum venenatis lorem. Quisque convallis efficitur accumsan. Phasellus ornare ipsum sed massa accumsan tincidunt. Phasellus iaculis augue a leo viverra molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-
-                Vestibulum felis nulla, placerat in leo vel, interdum volutpat tellus. Proin ligula est, sagittis sit amet cursus eget, porttitor vel tortor. Etiam tristique turpis in tincidunt porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ut pulvinar odio, et tincidunt tortor. Vivamus auctor pharetra eros, vel lobortis dui semper eu. Sed porttitor enim vitae tellus fermentum condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla a viverra odio. Vivamus euismod nulla vitae blandit sagittis. Vivamus tortor nunc, pulvinar tincidunt urna at, suscipit semper erat. Maecenas quis est non velit mollis imperdiet quis sed magna.
-
-                Nunc tristique, arcu ac tristique dictum, quam dui varius purus, pellentesque mattis purus dui a ligula. Pellentesque eget augue pretium, mattis enim viverra, tempus sem. Duis in sapien eu mauris venenatis ornare. Suspendisse a bibendum urna. Suspendisse aliquam luctus luctus. Nulla pretium tellus quis pretium cursus. Praesent id consectetur mauris. Nunc a euismod leo. Pellentesque erat lectus, ultrices sed nunc id, condimentum luctus urna. Nunc dignissim imperdiet consequat. Suspendisse ut turpis quis risus vestibulum cursus.
-            </ProjectSection>
-            <ProjectSection id="future-header" title="Future Work">
-                Donec a magna mattis magna semper scelerisque vitae ut enim. Ut dapibus, magna vel bibendum scelerisque, mi purus pharetra dolor, vitae condimentum nisl nunc a turpis. Duis ac molestie velit, condimentum venenatis lorem. Quisque convallis efficitur accumsan. Phasellus ornare ipsum sed massa accumsan tincidunt. Phasellus iaculis augue a leo viverra molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-
-                Vestibulum felis nulla, placerat in leo vel, interdum volutpat tellus. Proin ligula est, sagittis sit amet cursus eget, porttitor vel tortor. Etiam tristique turpis in tincidunt porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ut pulvinar odio, et tincidunt tortor. Vivamus auctor pharetra eros, vel lobortis dui semper eu. Sed porttitor enim vitae tellus fermentum condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla a viverra odio. Vivamus euismod nulla vitae blandit sagittis. Vivamus tortor nunc, pulvinar tincidunt urna at, suscipit semper erat. Maecenas quis est non velit mollis imperdiet quis sed magna.
-
-                Nunc tristique, arcu ac tristique dictum, quam dui varius purus, pellentesque mattis purus dui a ligula. Pellentesque eget augue pretium, mattis enim viverra, tempus sem. Duis in sapien eu mauris venenatis ornare. Suspendisse a bibendum urna. Suspendisse aliquam luctus luctus. Nulla pretium tellus quis pretium cursus. Praesent id consectetur mauris. Nunc a euismod leo. Pellentesque erat lectus, ultrices sed nunc id, condimentum luctus urna. Nunc dignissim imperdiet consequat. Suspendisse ut turpis quis risus vestibulum cursus.
-            </ProjectSection>
-        </ProjectPageContainer>
-     )
+        return (
+            <ProjectPageContainer project={page_project} footer={footer_info}>
+                <ProjectSection id="intro-header" title="Introduction">
+                    <ProjectParagraph>
+                        The study of financial markets and potential predictions of exchanges allow investors to increase their profits and better understand their investments' behavior. Among different types of financial markets, the stock market stands out in popularity. This market negotiates fractions of company assets, denominated stocks, or other publicly listed companies' financial instruments. Investors trading their stocks in the market are guided by some form of prediction or analysis, such as studying the price's behavior or reading the company's economic report.
+                    </ProjectParagraph>
+                    <ProjectParagraph>
+                        This work supports the hypothesis that it is possible to model a high-accuracy service to predict the stock's movement and trade market assets based on technical and fundamental<sup>1</sup> analysis. AURORA is based on a rational agent, a computational entity capable of perceiving the market and acting upon its perception autonomously. As proof of concept, AURORA was designed to operate a swing trade on a portfolio on the B3 stock exchange, the Brazilian market. The considered portfolio had shares of 3 Brazilian companies: Petrobras (PETR3), Ambev (ABEV3), and Vale S.A. (VALE3).
+                    </ProjectParagraph>
+                </ProjectSection>
+                <ProjectSection id="overview-header" title="Overview">
+                    <ProjectParagraph>
+                        AURORA takes advantage of time series from historical data of assets and fundamental analysis variables in its investment process. Through an LSTM, time series are used to predict a given asset's value. On the other hand, the fundamental variables observe the existence of possible risks in the asset. Such information is used as input to a deep reinforcement learning model to manage the investor's resources in his portfolio. As a result, AURORA was designed into three modules: (i) the <b>Insider</b>, a predictor module that can predict the stocks' movements; (ii) a <b>risk management module</b> to deal with market volatility through the news and (iii) an <b>agent module</b>, a rational actuator that aims to allocate the resources available to the agent and act upon them. The Figure below shows an overview of AURORA's service and operation.
+                    </ProjectParagraph>
+                    <Figure className="mx-auto text-center">
+                      <Figure.Image
+                      className='w-80'
+                          style={{width: '80%', backgroundColor: 'white', padding: '10px'}}
+                          src={require('../../assets/images/projects/aurora/system.png').default}
+                      />
+                      <Figure.Caption>
+                        AURORA's operational scenario presents the process flow, from data gathering to market interaction. The Figure highlights the Agent Module and its submodules
+                      </Figure.Caption>
+                    </Figure>
+                    <AuroraModules/>
+                </ProjectSection>
+                <ProjectSection id="method-header" title="Environment">
+                    <ProjectParagraph>
+                        To interact with the reinforcement learning algorithm, it was necessary to develop an environment simulating the B3 stock market. This environment is designed for training and testing the DDPG model and defines the state space, action space, and reward function. The following definitions were used:
+                    </ProjectParagraph>
+                    <ListGroup className="w-100 mt-1 mb-3 subtitle" style={{padding: '12px'}}>
+                        <ListGroup.Item><b>State-Space:</b> Quantity of deallocated money, how much the portfolio is yielding, and for each invested asset: the price, prediction, profitability, risk, and amount in the portfolio.</ListGroup.Item>
+                        <ListGroup.Item><b>Action Space:</b> Vector of actions the agent should make for the assets at the time step. Actions include: buying, selling, or holding and are represented through percentages of quantities and available money.
+                        </ListGroup.Item>
+                        <ListGroup.Item><b>Reward:</b> Profit of a Sale, Stock valorization on holding, Buying penalty (because money is being spent), Loss penalty (unprofitable sale).</ListGroup.Item>
+                    </ListGroup>
+                </ProjectSection>
+                <ProjectSection id="method-header" title="Methodology">
+                    <ProjectParagraph>
+                        The dataset used to feed the service of AURORA was obtained manually from the B3 official website<sup>2</sup>. The website provides daily information from assets since 1986, such as company name and code, stock code, market type, pricing, number of trades, and volume traded with paper. AURORA's model uses a semester time window for training, validation, and testing. In our approach, the agent's portfolio comprised the VALE3, PETR3, and ABEV3 assets. We made predictions on the assets' closing price as it reflects the day's movements in the market. The label of our data was created using a discrete approach for each asset at each time step, indicating whether an asset will gain or lose value.
+                    </ProjectParagraph>
+                    <ProjectParagraph>
+                        The validation of our proposed service was then broken down into two individual validations. First, we analyzed whether the Insiders could predict the stock direction correctly. Second, we uncovered whether the DDPG ResAM would be able to handle a portfolio allocation, given that it knows when stock will increase or decrease in value.
+                    </ProjectParagraph>
+                </ProjectSection>
+                <ProjectSection id="dev-header" title="Stock Prediction">
+                    <ProjectParagraph>
+                        Concerning the ability to predict the movement of a stock, the objective was to determine if it was feasible to model an LSTM in a decision system like AURORA. Each stock was trained using the hyper parameterization process's best settings<sup>3</sup>. The experiment consisted of K-fold cross-validation, with k = 6, for multiple window sizes.
+                    </ProjectParagraph>
+                    <ResultsTabs/>
+                </ProjectSection>
+                <ProjectSection id="res-header" title="Portfolio Allocation">
+                    <ProjectParagraph>
+                        Next, we needed to evaluate AURORA's efficiency in resource allocation. The objective was to prove that AURORA could manage a portfolio with multiple assets in a stock market. Therefore, we compared AURORA with the Savings Profitability and a buy and hold strategy<sup>4</sup>. The table below presents the parameters established to carry out the experiments. We used the following performance measures to evaluate the efficiency of AURORA: profit, profitability, return and yield.
+                    </ProjectParagraph>
+                    <RLTable/>
+                    <ProjectParagraph>
+                        We built our portfolio with the PETR3, VALE3, and ABEV3 assets and with the parameters of the table above. The agent's initial investment money was defined as R$ 50,000.00, allowing for multiple investment possibilities. The figure below shows the behavior of the average return during the experiments.
+                    </ProjectParagraph>
+                    <Figure className="mx-auto text-center">
+                      <Figure.Image
+                      className='w-80'
+                          style={{width: '80%', backgroundColor: 'white', padding: '10px'}}
+                          src={require('../../assets/images/projects/aurora/return.png').default}
+                      />
+                      <Figure.Caption>
+                        Performance evaluation of the average return of portfolio
+                      </Figure.Caption>
+                    </Figure>
+                    <ProjectParagraph>
+                        To compare AURORA's profit to a buy-and-hold strategy is necessary to create such a comparison portfolio. When an investment with more than one asset is created, the possibility of portfolio compositions is endless. In this project, the comparison portfolio created was based on the Markowitz Mean-Variance theory [3]. It states that the construction process of an optimal portfolio considers the quantification of each asset's profit and risk with the objective of creating a frontier of the most efficient portfolios [3]. This frontier is presented with the set of portfolios that theoretically provides the higher return with the lowest risk. Markowitz's efficient frontier for the selected asset composition is shown in the figure below. The color of each portfolio combination is related to an indicator that helps to find a balance point between risk and return, called Sharpe ratio [4]. We then calculated the efficient frontier with a set of 25,000 random simulations. For the comparison, we considered two portfolios with the lowest risk and the highest Sharpe ratio, represented by the green and red markers. The lowest risk portfolio estimates a half-yearly return of 1.18%, with a risk of 45%. On the other hand, Sharpe's highest ratio portfolio has a potential return of 4.28%  with a risk of 80%.
+                    </ProjectParagraph>
+                    <Figure className="mx-auto text-center">
+                      <Figure.Image
+                      className='w-80'
+                          style={{width: '80%', backgroundColor: 'white', padding: '10px'}}
+                          src={require('../../assets/images/projects/aurora/fronteira.png').default}
+                      />
+                      <Figure.Caption>
+                        Portfolio-based efficient frontier
+                      </Figure.Caption>
+                    </Figure>
+                    <ProjectParagraph>
+                        The table below shows the results obtained from the AURORA portfolio, comparing it with the efficient frontier portfolios and the savings. If the investor decided to migrate to the lower-risk portfolio, the investor would obtain a total yield of -R$3000.00. The investor who decided to take the portfolio with the highest Sharpe ratio would lose R$3,984.00 of the money invested. In contrast, AURORA made a profit of R$5,874.00, a return of 11.74% more significant than the actual and projected returns of the portfolios considered efficient. The yield obtained is also 250.44% greater than the savings yield.
+                    </ProjectParagraph>
+                    <ResultsTable/>
+                </ProjectSection>
+                <ProjectSection id="conc-header" title="Conclusion">
+                    <ProjectParagraph>
+                        Experimental results show that the proposed service can predict the gain or loss of value at the price of a stock with an accuracy higher than 82.86% in the worst case and 89.23% in the best case. Furthermore, the proposed service can achieve profitability of 11.74%, overcoming fixed-income investments and portfolios built with the Markowitz Mean-Variance model. These results corroborate the hypothesis that AURORA is a reliable service to trade assets in the stock market with high precision and stability.
+                    </ProjectParagraph>
+                    <ProjectParagraph>
+                        In future works, we propose a rational model for the RMM, better-using information from fundamental variables. Furthermore, future research can also implement the following: hyper-parameterization of the DDPG using Hyperopt, experimenting with more input features for the LSTM model, studying possible reformulations of the B3 environment, and discretizing the actions space to implement the Deep Q-Network algorithm.
+                    </ProjectParagraph>
+                </ProjectSection>
+            </ProjectPageContainer>
+        )
     }
 }
 
 export default Hare;
+
+
+
+function AuroraModules() {
+    return (
+      <Container className='mt-3 mb-3'>
+      <Accordion defaultActiveKey="0" style={{color: 'var(--bs-white)'}}>
+        <Accordion.Item eventKey="0">
+          <Accordion.Header as='h3'>Insiders - Predictor Module for Stock's Movements</Accordion.Header>
+          <Accordion.Body className= "text-left">
+              <ProjectParagraph>
+                The insider module is one of the central rational modules. Its task is to support the resource allocation model, predicting the movement of a specific stock. Insider units gather their data from the database of a stock exchange, where multiple pieces of information are available to be used as input, such as closing and opening prices and volume. The prediction made by the Insider takes the shape of a binary value, one indicating that a stock is increasing in value and zero showing a decrease.
+              </ProjectParagraph>
+              <Figure className="mx-auto  text-center">
+                  <Figure.Image
+                  className='w-80'
+                      style={{width: '60%', backgroundColor: 'white', padding: '10px'}}
+                      src={require('../../assets/images/projects/aurora/insider.png').default}
+                  />
+                  <Figure.Caption>
+                    Overview of the Insider module
+                  </Figure.Caption>
+              </Figure>
+              <ProjectParagraph>
+                In our service, Insiders were modeled based on an LSTM, a gated RNN network. Gated RNNs were chosen because of their principle of creating paths through time with derivatives that neither vanish nor explode [2]. With this, the LSTM can decide what information it wants to keep or forget, aiming at improving the decision-making process's accuracy.
+              </ProjectParagraph>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header as='h3'>Risk Management Module</Accordion.Header>
+          <Accordion.Body className= "text-left">
+              <ProjectParagraph>
+                The use of time series in the stock market can lead to promising information in predictions, but more is needed to generate robust models. To address market volatility about external influences, the RMM was modeled into AURORA. The RMM's goal is to make a fundamental analysis using multiple sources of information to reflect an asset's present situation in the market.
+              </ProjectParagraph>
+              <Figure className="mx-auto text-center">
+                      <Figure.Image
+                      className='w-80'
+                          style={{width: '80%', backgroundColor: 'white', padding: '10px'}}
+                          src={require('../../assets/images/projects/aurora/rmm.png').default}
+                      />
+                      <Figure.Caption>
+                        Risk Management Module
+                      </Figure.Caption>
+                </Figure>
+                <ProjectParagraph>
+                RMM is modeled in this research using the volume of queries of an asset on Google Trends. The data from Google Trends is provided in weekly values of interest for the desired term. When the research interest is below a threshold, the mechanism does not pose a risk to the asset. On the other hand, when the interest passes the threshold, a risk is indicated.
+                </ProjectParagraph>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="2">
+          <Accordion.Header as='h3'>Agent Module and Resource Allocation Model</Accordion.Header>
+          <Accordion.Body className= "text-left">
+              <ProjectParagraph>
+                AURORA's service has an agent-based structure in which the agent can be seen as a trader, which aims to maximize its profit and reduce risks, making decisions in its user's portfolio. The agent has a wallet where unallocated money is stored, a portfolio, and a set of user-chosen assets in which the agent invests its available money.
+              </ProjectParagraph>
+              <Figure className="mx-auto text-center">
+                  <Figure.Image
+                  className='w-90'
+                      style={{width: '90%', backgroundColor: 'white', padding: '10px'}}
+                      src={require('../../assets/images/projects/aurora/resam.png').default}
+                  />
+                  <Figure.Caption>
+                    Overview - Resource Allocation Model (ResAM)
+                  </Figure.Caption>
+              </Figure>
+              <ProjectParagraph>
+                Decisions made by the agent are supported by its Resource Allocation Model (ResAM). The module receives as input information on the direction of the stocks provided by its Insiders and information from the RMM, which decides whether an asset is a liability that could place the agent's profit in jeopardy. After learning, the model decides which asset should be sold or bought at each step. AURORA's ResAM was modeled based on a deep reinforcement learning model, denominated Deep Deterministic Policy Gradient (DDPG). In such, the entity will need to learn how to map the market's state with responsive actions, aiming to increase its profits and reduce risks.
+              </ProjectParagraph>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
+      </Container>
+    )
+}
+
+function ResultsTable() {
+    return (
+        <Container>
+            <Table striped bordered className="mt-1 mb-3 subtitle" responsive>
+                <thead>
+                    <tr>
+                        <th colSpan={2}>Portfolios</th>
+                        <th>Estimated</th>
+                        <th>Real</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowSpan={2}>Lower risk</td>
+                        <td>Profit</td>
+                        <td>R$590.00</td>
+                        <td>-R$3,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>Profitability</td>
+                        <td>1.18%</td>
+                        <td>-6%</td>
+                    </tr>
+                    <tr>
+                        <td rowSpan={2}>Higher risk</td>
+                        <td>Profit</td>
+                        <td>R$2,140.00</td>
+                        <td>-R$3,984.00</td>
+                    </tr>
+                    <tr>
+                        <td>Profitability</td>
+                        <td>4.28%</td>
+                        <td>-7.96%</td>
+                    </tr>
+                    <tr>
+                        <td rowSpan={3}>AURORA</td>
+                        <td>Profit</td>
+                        <td>-</td>
+                        <td>R$5,874.00</td>
+                    </tr>
+                    <tr>
+                        <td>Profitability</td>
+                        <td>-</td>
+                        <td>11.74%</td>
+                    </tr>
+                    <tr>
+                        <td>Yield - Savings</td>
+                        <td>-</td>
+                        <td>250.44%</td>
+                    </tr>
+                </tbody>
+            </Table>
+        </Container>
+    )
+}
+
+function RLTable() {
+    return(
+        <Container>
+            <Table striped bordered className="mt-1 mb-3 subtitle" responsive>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Standard value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Epoch</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>Steps by epoch</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>Policy learning rate</td>
+                        <td>0.0005</td>
+                    </tr>
+                    <tr>
+                        <td>Q-Value learning rate</td>
+                        <td>0.0001</td>
+                    </tr>
+                    <tr>
+                        <td>Buffer</td>
+                        <td>500,000</td>
+                    </tr>
+                    <tr>
+                        <td>Batch Size</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Initial Steps</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Noise</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>Hidden Layer</td>
+                        <td>(16, 16)</td>
+                    </tr>
+                    <tr>
+                        <td>Activation function - Hidden Layer</td>
+                        <td>ReLU</td>
+                    </tr>
+                    <tr>
+                        <td>Activation function - Output Layer</td>
+                        <td>Tanh</td>
+                    </tr>
+                    <tr>
+                        <td>Test episodes</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </Table>
+        </Container>
+    )
+}
+
+function ResultsTabs() {
+    return (
+    <Container>
+      <Tabs
+        defaultActiveKey="best_case"
+        id="uncontrolled-tab-example"
+        className="mt-1 mb-3 w-100 subtitle"
+        fill
+      >
+        <Tab eventKey="best_case" title="Prediction Plots" className="w-100 text-left">
+                <ProjectParagraph>
+                    We analyzed how AURORA's LSTM model behaved in an actual market situation. The goal was to understand the behavior of the predictions over the days. As can be seen in the results, the accuracy was satisfactory for all evaluated stocks. In the worst case, we obtained an accuracy of 80% for VALE3. In contrast, ABEV3 and PETR3 achieved 88% and 93% accuracy, respectively. Despite the promising results, it is noted that the LSTM has a limitation in predicting sudden movement direction changes. On the other hand, in the stock's continuous movements, the modeled LSTM showed great accuracy and ensured that its previous errors did not affect its performance.
+                </ProjectParagraph>
+                <Figure className="mx-auto text-center">
+                    <Row className="mx-auto">
+                        <Col md={6} sm={12}>
+                            <Figure.Image
+                                className='proper_img_size_2'
+                                style={{backgroundColor: 'white'}}
+                                alt="VALE3"
+                                src={require('../../assets/images/projects/aurora/VALE3_pred.png').default}
+                            />
+                            <Figure.Caption className="paragraph">
+                                VALE3
+                            </Figure.Caption>
+                        </Col>
+                        <Col md={6} sm={12}>
+                            <Figure.Image
+                                className='proper_img_size'
+                                style={{backgroundColor: 'white'}}
+                                alt="PETR3"
+                                src={require('../../assets/images/projects/aurora/PETR3_pred.png').default}
+                            />
+                            <Figure.Caption className="paragraph">
+                                PETR3
+                            </Figure.Caption>
+                        </Col>
+                    </Row>
+                </Figure>
+                <Figure className="mx-auto text-center">
+                <Figure.Image
+                    className='proper_img_size_3'
+                    style={{backgroundColor: 'white'}}
+                    alt="ABEV3"
+                    src={require('../../assets/images/projects/aurora/ABEV3_pred.png').default}
+                />
+                <Figure.Caption className="paragraph">
+                    ABEV3
+                </Figure.Caption>
+            </Figure>
+            <ProjectParagraph>
+                    The plots show the predictions made by AURORA's LSTM model for each stock. The cyan line represents the average price in specific time steps. The blue line is the closing price of the stock on that day. The markers represent the correctness of the predictions.
+            </ProjectParagraph>
+        </Tab>
+        <Tab eventKey="likely_case" title="Training Plots" className="w-100 text-left">
+            <ProjectParagraph>
+                The figures below present the loss value behavior in 5000 epochs of training. In the top right, the boxplot shows the dispersion of the cross-validation accuracies for each time-step size. We can notice that over time, such models converged and stabilized before completing 500 training seasons. These findings indicate the ability to generalize models to predict the movement of a given stock without overfitting. Additionally, due to the boxplot's interquartile amplitude, we can infer that it is possible to model an LSTM in AURORA with a stable, high-accuracy prediction.
+            </ProjectParagraph>
+            <Figure className="mx-auto text-center">
+                <Row className="mx-auto">
+                    <Col md={6} sm={12}>
+                        <Figure.Image
+                            className='proper_img_size'
+                            style={{backgroundColor: 'white'}}
+                            alt="VALE3"
+                            src={require('../../assets/images/projects/aurora/VALE3_LOSS.png').default}
+                        />
+                        <Figure.Caption className="paragraph">
+                            VALE3 - Performance evaluation of decision-making process for multiple time-steps
+                        </Figure.Caption>
+                    </Col>
+                    <Col md={6} sm={12}>
+                        <Figure.Image
+                            className='proper_img_size'
+                            style={{backgroundColor: 'white'}}
+                            alt="PETR3"
+                            src={require('../../assets/images/projects/aurora/PETR3_LOSS.png').default}
+                        />
+                        <Figure.Caption className="paragraph">
+                            PETR3 - Performance evaluation of decision-making process for multiple time-steps
+                        </Figure.Caption>
+                    </Col>
+                </Row>
+            </Figure>
+            <Figure className="mx-auto text-center">
+                <Figure.Image
+                    className='proper_img_size_3'
+                    style={{backgroundColor: 'white'}}
+                    alt="ABEV3"
+                    src={require('../../assets/images/projects/aurora/ABEV3_LOSS.png').default}
+                />
+                <Figure.Caption className="paragraph">
+                    ABEV3 - Performance evaluation of decision-making process for multiple time-steps
+                </Figure.Caption>
+            </Figure>
+        </Tab>
+      </Tabs>
+      </Container>
+    );
+}
+
+//   An autonomous, rational, and agent-based investment service to deal with the proper allocation of resources in portfolio selection.
+
+// A methodology to improve the stock market prediction, independently of the stock market.
+
+// A mechanism that uses LSTM to predict the stock's behavior and uses the Deep Deterministic Policy Gradient (DDPG) to manage the financial resources of the portfolio.

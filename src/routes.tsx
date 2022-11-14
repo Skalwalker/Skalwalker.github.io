@@ -37,7 +37,7 @@ export function NavRouter() {
         <Route path="/projects">
           <Route index element={<Projects/>}/>
           <Route path="covid_19" element={<Covid19/>}/>
-          <Route path="hare" element={<Hare/>}/>
+          <Route path="aurora" element={<Hare/>}/>
           <Route path="global_warming" element={<GlobalWarming/>}/>
           <Route path="multiagent_pacman" element={<Pacman/>}/>
         </Route>
