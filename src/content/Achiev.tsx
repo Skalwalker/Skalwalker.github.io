@@ -108,7 +108,7 @@ const achievs = [
     },
     {
         title: "Get a Masters",
-        desc: "I am currently an M.Sc. student at Università degli Studi di Milano, in Italy!",
+        desc: "I am currently an M.Sc. student with a scholarship at Università degli Studi di Milano in Italy!",
         img: "jedi",
         locked: false,
         earned: "Enrolled in 2021",
