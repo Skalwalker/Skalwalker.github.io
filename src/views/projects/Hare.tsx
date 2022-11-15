@@ -75,7 +75,7 @@ class Hare extends React.Component {
                           style={{width: '80%', backgroundColor: 'white', padding: '10px'}}
                           src={require('../../assets/images/projects/aurora/system.png').default}
                       />
-                      <Figure.Caption>
+                      <Figure.Caption className="paragraph">
                         AURORA's operational scenario presents the process flow, from data gathering to market interaction. The Figure highlights the Agent Module and its submodules
                       </Figure.Caption>
                     </Figure>
@@ -120,7 +120,7 @@ class Hare extends React.Component {
                           style={{width: '80%', backgroundColor: 'white', padding: '10px'}}
                           src={require('../../assets/images/projects/aurora/return.png').default}
                       />
-                      <Figure.Caption>
+                      <Figure.Caption className="paragraph">
                         Performance evaluation of the average return of portfolio
                       </Figure.Caption>
                     </Figure>
@@ -133,7 +133,7 @@ class Hare extends React.Component {
                           style={{width: '80%', backgroundColor: 'white', padding: '10px'}}
                           src={require('../../assets/images/projects/aurora/fronteira.png').default}
                       />
-                      <Figure.Caption>
+                      <Figure.Caption className="paragraph">
                         Portfolio-based efficient frontier
                       </Figure.Caption>
                     </Figure>
@@ -175,7 +175,7 @@ function AuroraModules() {
                       style={{width: '60%', backgroundColor: 'white', padding: '10px'}}
                       src={require('../../assets/images/projects/aurora/insider.png').default}
                   />
-                  <Figure.Caption>
+                  <Figure.Caption className="paragraph">
                     Overview of the Insider module
                   </Figure.Caption>
               </Figure>
@@ -196,7 +196,7 @@ function AuroraModules() {
                           style={{width: '80%', backgroundColor: 'white', padding: '10px'}}
                           src={require('../../assets/images/projects/aurora/rmm.png').default}
                       />
-                      <Figure.Caption>
+                      <Figure.Caption className="paragraph">
                         Risk Management Module
                       </Figure.Caption>
                 </Figure>
@@ -217,7 +217,7 @@ function AuroraModules() {
                       style={{width: '90%', backgroundColor: 'white', padding: '10px'}}
                       src={require('../../assets/images/projects/aurora/resam.png').default}
                   />
-                  <Figure.Caption>
+                  <Figure.Caption className="paragraph">
                     Overview - Resource Allocation Model (ResAM)
                   </Figure.Caption>
               </Figure>
@@ -453,8 +453,3 @@ function ResultsTabs() {
     );
 }
 
-//   An autonomous, rational, and agent-based investment service to deal with the proper allocation of resources in portfolio selection.
-
-// A methodology to improve the stock market prediction, independently of the stock market.
-
-// A mechanism that uses LSTM to predict the stock's behavior and uses the Deep Deterministic Policy Gradient (DDPG) to manage the financial resources of the portfolio.

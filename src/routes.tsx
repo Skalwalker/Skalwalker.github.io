@@ -12,7 +12,7 @@ import Errorscreen from './views/ErrorScreen';
 import Covid19 from './views/projects/Covid19';
 import GlobalWarming from './views/projects/GlobalWarming';
 import Hare from './views/projects/Hare';
-import Pacman from './views/projects/Pacman';
+import Ecosampling from './views/projects/Ecosampling';
 
 import {
   Routes,
@@ -39,7 +39,7 @@ export function NavRouter() {
           <Route path="covid_19" element={<Covid19/>}/>
           <Route path="aurora" element={<Hare/>}/>
           <Route path="global_warming" element={<GlobalWarming/>}/>
-          <Route path="multiagent_pacman" element={<Pacman/>}/>
+          <Route path="ecosampling" element={<Ecosampling/>}/>
         </Route>
         <Route path="*" element={<Errorscreen/>}/>
     </Routes>

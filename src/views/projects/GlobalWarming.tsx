@@ -258,13 +258,15 @@ function DynamicsAccordion() {
               <ProjectParagraph>
                 The figure below describes the system dynamics of the world, relating the world CO<sub>2</sub> concentration and the GST. The initial global CO<sub>2</sub> stock has an output flow of a 0.1% yearly global dissipation. After its output flow dissipation, the initial global CO<sub>2</sub> stock is added with the total amount of CO<sub>2</sub> emitted by every country in that year (deduced by their forest absorption), generating the current global CO<sub>2</sub>. Additionally, a variable is created to track the previous global CO<sub>2</sub> concentration, which is further used to calculate the global temperature.
               </ProjectParagraph>
-              <Figure className="mx-auto text-center">
+              <Container className="mx-auto text-center">
+              <Figure>
                   <Figure.Image
                   className='w-80'
                       style={{width: '60%', backgroundColor: 'white'}}
                       src={require('../../assets/images/projects/globalwarming/global_dynamics.png').default}
                   />
               </Figure>
+              </Container>
               <ProjectParagraph>
                 The following year's global temperature is calculated using the current year's temperature with an addition of the log difference in carbon concentration multiplied by the climate sensitivity constant.
               </ProjectParagraph>
@@ -309,7 +311,7 @@ function DynamicsAccordion() {
       </Accordion>
       </Container>
     )
-  }
+}
 
 function ResearchQuestions() {
     return (
@@ -341,18 +343,3 @@ function ResearchQuestions() {
 
 
 
-
-
-
-
-// {/* <Figure className="mx-auto text-center">
-// <Figure.Image
-// className='w-70'
-//     style={{width: '70%'}}
-//     alt="Overview of C19-Audit framework"
-//     src={require('../../assets/images/projects/globalwarming/exps/process_diagram.png').default}
-// />
-// <Figure.Caption className="paragraph">
-//     Overview of C19-Audit framework
-// </Figure.Caption>
-// </Figure> */}
