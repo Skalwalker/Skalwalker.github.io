@@ -98,11 +98,11 @@ class Skills extends React.Component<MyProps, MyState>  {
       .style("text-anchor", "middle")
       .attr("x", function (d) { return d.x })
       .attr("y", function (d) {
-        let radius: number = d.size * 3 > 40 ? d.size * 3 : 40
+        let radius: number = d.size * 3 > 40 ? d.size * 2.5 : 40
         return (radius / 8.5)  / (mobile ? 1.3 : 1)
       })
       .style("font-size", function (d) {
-        let radius: number = d.size * 3 > 40 ? d.size * 3 : 40
+        let radius: number = d.size * 3 > 40 ? d.size * 2.5 : 40
         return (radius / 3.5)  / (mobile ? 1.3 : 1)
       })
       .style("fill", 'white')

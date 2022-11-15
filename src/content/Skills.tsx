@@ -3,27 +3,35 @@ const skills = {
         title: "Python 3",
         linkedin: 7,
         years: 4,
-        projects: 10,
+        projects: 5,
         self_ass: 10,
         group: 1,
+        desc: "Python is my main programming language.\nMost of my programs were developed\nin Python and its libraries.\nI also give Python classes for newcomers."
+    },
+    'research': {
+        title: "Research",
+        linkedin: 7,
+        years: 4,
+        projects: 5,
+        self_ass: 10,
+        group: 4,
         desc: "Python is my main programming language.\nMost of my programs were developed\nin Python and its libraries.\nI also give Python classes for newcomers."
     },
     'swift': {
         title: "Swift",
         linkedin: 2,
         years: 6,
-        projects: 6,
+        projects: 1,
         self_ass: 8,
         group: 1,
         desc: "Swift was my first language.\nI learned it through Treehouse in\nhighschool, and started my development\nskills with iOS Apps."
     },
     'numpy': {
-
         title: "Numpy",
         linkedin: 2,
         years: 6,
         projects: 6,
-        self_ass: 8,
+        self_ass: 3,
         group: 2,
         desc: "Numpy "
     },
@@ -31,7 +39,7 @@ const skills = {
         title: "C/C++",
         linkedin: 5,
         years: 5,
-        projects: 10,
+        projects: 5,
         self_ass: 9,
         group: 1,
         desc: "C and C++ were my first,\nand most used, language in my\nbachelors degree. C is the main language\nthat helped me develop programming skills,\nit taught me to understand every aspect\nof core logic programming."
@@ -45,32 +53,23 @@ const skills = {
         group: 1,
         desc: "Javascript and TypeScript is the language\nI use for web development.\nI am not a big fan, neither a big adept\nfor windows"
     },
-    'gym': {
-        title: "Gym",
-        linkedin: "Unmeasured",
-        years: 1,
-        projects: 1,
-        self_ass: 8,
-        group: 2,
-        desc: "Gym is a Python Library for\ndeveloping environments\nfor reinforcement learning algorithms.\nI used it in my graduation thesis to\ncreate a stock market environment."
-    },
-    'spin': {
-        title: "SpinningUp",
-        linkedin: "Unmeasured",
-        years: 1,
-        projects: 1,
-        self_ass: 9,
-        group: 2,
-        desc: "Spinning-Up is a library that\nimplements deep reinforcement\nlearning algorithms. This library uses the\nTensorFlow backend and was\nused in my graduation thesis."
-    },
-    'keras': {
-        title: "Keras",
+    'rl': {
+        title: "RL",
         linkedin: 0,
-        years: 1,
-        projects: 1,
-        self_ass: 8,
+        years: 2,
+        projects: 2,
+        self_ass: 10,
         group: 2,
-        desc: "Keras is a neural-network\nlibrary running on top of TensorFlow.\nI used this library to create\nLSTM models for market prediction\nin my graduation thesis."
+        desc: ""
+    },
+    'deeplearning': {
+        title: "Deep Learning",
+        linkedin: 0,
+        years: 2,
+        projects: 2,
+        self_ass: 15,
+        group: 2,
+        desc: ""
     },
     'scikit': {
         title: "Scikit Learn",
@@ -93,9 +92,9 @@ const skills = {
     'tf': {
         title: "TensorFlow",
         linkedin: 0,
-        years: 2,
-        projects: 2,
-        self_ass: 8,
+        years: 4,
+        projects: 4,
+        self_ass: 15,
         group: 2,
         desc: ""
     },
@@ -130,7 +129,7 @@ const skills = {
         title: "Git/Github",
         linkedin: 5,
         years: 5,
-        projects: 10,
+        projects: 5,
         self_ass: 8,
         group: 4,
         desc: "I learned Git and Github in my\nsecond semester at my university.\nI use it for all my projects.\nFeel free to follow me there."
@@ -148,7 +147,7 @@ const skills = {
         title: "XCode",
         linkedin: 2,
         years: 6,
-        projects: 6,
+        projects: 1,
         self_ass: 9,
         group: 3,
         desc: "XCode is an iOS App development platform.\nI started using it before I enrolled in\nthe university and made several apps\nwith it."
@@ -157,7 +156,7 @@ const skills = {
         title: "LaTeX",
         linkedin: 3,
         years: 4,
-        projects: 10,
+        projects: 0,
         self_ass: 9,
         group: 4,
         desc: "I dropped Word a long time ago.\nLatex is my main source for report\nand document creation."

@@ -53,9 +53,9 @@ const achievs = [
         attc_content: ""
     },
     {
-        title: "Workshop",
-        desc: "Presented a Workshop on the data mining python library I developed to extract information from an official government gazette. I did this project during my time working at the Department of Computer Science and presented this workshop to members of the state government.",
-        earned: "Earned in 2020",
+        title: "Guest Speaker",
+        desc: "Speaker of Ethics and AI at Latin America Innovation Week, LATAM's most prominent event on innovation in the public sector.",
+        earned: "Earned in 2022",
         img: "workshop",
         locked: false,
         attachment: true,
