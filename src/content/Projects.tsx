@@ -1,6 +1,21 @@
 const project = {
     tags: ["Machine Learning", "Robotics", "App/Web Dev", "Others"],
     projects: {
+        "vitalsigns": {
+            banner: "/img/vitalsigns.png",
+            title: "Vital Signs IMU",
+            tags: ["App/Web Dev", "Others"],
+            language: "Matlab",
+            year: "2023",
+            url: "vital_signs",
+            highlight: true,
+            headline: "Using an iPhone IMU to measure heart and respiratory rate.",
+            target: "",
+            skills: "Signal Processing, Biomedical Signals, MATLAB, ICA",
+            abstract: "This project uses a smartphone device to measure heart and respiratory rate, using the composite of the 3-axis from the accelerometer and the 3-axis from the gyroscope sensors. The methodology involves applying independent component analysis (ICA) and Fourier transform to identify the desired values. Results were promising for the respiratory rate with 82% accuracy, while the heart rate provided a good initial estimate, with a 6.84 MAE.",
+            code_link: "https://github.com/Skalwalker/VitalSignsIMU",
+            paper_link: "https://docs.google.com/presentation/d/1JFS_xKJzNkGZN91v-QUXHumuIu778Toloh1SlQQi8Po/edit?usp=share_link"
+        },
         "covid": {
             banner: "/img/covid19.png",
             title: "COVID-19 Detection",
@@ -38,7 +53,7 @@ const project = {
             language: "Python",
             year: "2022",
             url: "/projects/ecosampling",
-            highlight: true,
+            highlight: false, // true
             headline: "A Python implementation of the ecological sampling of gaze shifts.",
             target: "",
             skills: "Alpha-stable processes, Langevin SDEs, Lévy flight, Probabilistic Programming, Python, Visual Attention, Random Walks, Sphinx",

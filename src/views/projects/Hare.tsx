@@ -57,7 +57,7 @@ class Hare extends React.Component {
 
         return (
             <ProjectPageContainer project={page_project} footer={footer_info}>
-                <ProjectSection id="intro-header" title="Introduction">
+                <ProjectSection id="intro-header" title="Introduction" first={true}>
                     <ProjectParagraph>
                         The study of financial markets and potential predictions of exchanges allow investors to increase their profits and better understand their investments' behavior. Among different types of financial markets, the stock market stands out in popularity. This market negotiates fractions of company assets, denominated stocks, or other publicly listed companies' financial instruments. Investors trading their stocks in the market are guided by some form of prediction or analysis, such as studying the price's behavior or reading the company's economic report.
                     </ProjectParagraph>
