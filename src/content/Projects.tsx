@@ -46,6 +46,36 @@ const project = {
             code_link: "https://cloud.anylogic.com/model/ba6ea900-9637-4817-a172-226847603ebf?mode=SETTINGS&tab=GENERAL",
             paper_link:  "https://drive.google.com/file/d/1ZRBn_5ddMIygHjv697twuZtW5BbO9Cr5/view?usp=sharing"
         },
+        "bigdata": {
+            banner: "/img/forest.png",
+            title: "ALDER",
+            tags: ["Machine Learning"],
+            language: "Python",
+            year: "2023",
+            url: "https://github.com/Skalwalker/AntiMoneyLaundering",
+            highlight: false, // true
+            headline: "Anti money laundering using decision trees methods in a big data scenario.",
+            target: "",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
+        },
+        "bioinformatics": {
+            banner: "/img/dna.png",
+            title: "PRADC",
+            tags: ["Machine Learning"],
+            language: "Python",
+            year: "2023",
+            url: "https://github.com/Skalwalker/Bioinformatics",
+            highlight: false,
+            headline: "Prostate adenocarcinoma subtype discovery on multi-omics data clustering.",
+            target: "",
+            skills: "",
+            abstract: "",
+            code_link: "",
+            paper_link: ""
+        },
         "ecosampling": {
             banner: "/img/ecosampling.png",
             title: "Gaze Shifts Sampling",

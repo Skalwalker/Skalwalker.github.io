@@ -8,8 +8,8 @@ import {RiMedalLine, RiStockFill, RiSlideshowLine} from 'react-icons/ri'
 import {IoIosPaper} from 'react-icons/io'
 import {SiIos, SiSwift} from 'react-icons/si'
 import {GiMaterialsScience, GiPlagueDoctorProfile, GiCarnivorousPlant,
-        GiAirplaneDeparture, GiCook, GiMonumentValley} from 'react-icons/gi';
-import { FaVuejs, FaGraduationCap, FaKaggle,
+        GiAirplaneDeparture, GiCook} from 'react-icons/gi';
+import { FaVuejs, FaGraduationCap, FaKaggle, FaAmazon,
          FaJedi, FaMoneyBillAlt} from 'react-icons/fa';
 
 import '../../assets/css/card.css'
@@ -65,8 +65,8 @@ class AchievCard extends React.Component<MyProps, MyState> {
         return <FaJedi className={class_name} color={selected_color} size={size-2}/>
       case 'doctor':
         return <GiPlagueDoctorProfile className={class_name} color={selected_color} size={size}/>
-      case 'valley':
-        return <GiMonumentValley className={class_name} color={selected_color} size={size}/>
+      case 'amazon':
+        return <FaAmazon className={class_name} color={selected_color} size={size}/>
       case 'website':
         return <CgWebsite className={class_name} color={selected_color} size={size-2}/>
       default:
@@ -86,7 +86,7 @@ class AchievCard extends React.Component<MyProps, MyState> {
     }
 
     return (
-      <Card className="mt-1 mb-1 click_cards" style={{height: '4.65rem', minWidth: '270px', opacity: opcValue}}>
+      <Card className="mt-2 click_cards" style={{height: '4.65rem', minWidth: '270px', opacity: opcValue}}>
         <Col>
           <Row>
             <Col xl={3} md={3} sm={3} xs={3} className="my-auto mx-auto" style={{padding: '5px'}}>

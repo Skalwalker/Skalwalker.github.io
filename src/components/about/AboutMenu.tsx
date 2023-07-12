@@ -22,14 +22,14 @@ class AboutMenu extends React.Component{
           </Row>
           <Row className="paragraph mt-3 ps-0 pe-0 " style={{ marginLeft: '10px' }}>
             <p className='pe-0 pe-sm-2 ps-0'>
-              <IoMdSchool className='me-1 mb-1' size={18} />
-              M.Sc. Student at Università degli Studi di Milano
+              <HiOfficeBuilding className='me-1 mb-1 ps-0 pe-0' size={18} />
+              Data Engineer at Amazon Italy
             </p>
           </Row>
           <Row className="paragraph mb-4" style={{ marginLeft: '10px' }}>
             <p className='pe-0 pe-sm-2 ps-0'>
-              <HiOfficeBuilding className='me-1 mb-1 ps-0 pe-0' size={18} />
-              Volunteer at Tree-Nation
+              <IoMdSchool className='me-1 mb-1' size={18} />
+              M.Sc. Student at Università degli Studi di Milano
             </p>
           </Row>
           <Row className='about_menu_row float-start float-lg-end nav-item-custom pb-0 pb-lg-3 ms-2'>

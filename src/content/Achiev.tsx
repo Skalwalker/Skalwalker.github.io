@@ -116,18 +116,18 @@ const achievs = [
         attc_content: ""
     },
     {
-        title: "Get a Doctors",
-        desc: "I am doing my best to unlock this achievement, but to do so, I need first to be accepted at a university. I aim high. I am looking to enroll in one of the bests universities in the world. You can help me unlock this by accepting me at your university. Feel free to send me that acceptance letter.",
-        img: "doctor",
-        locked: true,
-        earned: "Achievement Locked",
+        title: "Big Four",
+        desc: "Work for one of the giants GAAM. Since I was a child, I glanced forward to being at the center of innovation and technology. In July 2023 I joined Amazon Italy as a Data Engineer Intern.",
+        img: "amazon",
+        locked: false,
+        earned: "Joined Amazon in 2023",
         attachment: false,
         attc_content: ""
     },
     {
-        title: "Silicon Valley",
-        desc: "Work for one of the giants at Silicon Valley. Since I was a child, I glanced forward to being at the center of innovation and technology. If you are in one of those companies, you can help me unlock this achievement by hiring me!",
-        img: "valley",
+        title: "Get a Doctors",
+        desc: "I am doing my best to unlock this achievement, but to do so, I need first to be accepted at a university. I aim high. I am looking to enroll in one of the bests universities in the world. You can help me unlock this by accepting me at your university. Feel free to send me that acceptance letter.",
+        img: "doctor",
         locked: true,
         earned: "Achievement Locked",
         attachment: false,

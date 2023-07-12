@@ -38,7 +38,7 @@
     "react-scripts": "^4.0.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "start-api": "cd api && flask run --no-debugger",
     "build": "react-scripts build",
     "test": "react-scripts test",

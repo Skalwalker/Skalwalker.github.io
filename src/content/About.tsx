@@ -1,6 +1,6 @@
 const core = {
     profile_img: require("../assets/images/profile.jpg").default,
-    text: "I am a data scientist with a personal focus on Reinforcement Learning and Deep Learning methods applied to solving social-environmental problems. Since beginning my undergraduate in computer science, I have been interested in research. Over time, I developed my skills in the field and decided that I wanted to work in research-oriented companies. Since then, I have constantly been looking for opportunities and preparing my curriculum for applying to these companies. I have already participated in publishing five papers while also having multiple practical projects with a plethora of technical skills"
+    text: "I am a data engineer at Amazon Italy and a data scientist by love. Passionate about Reinforcement Learning and Deep Learning methods for solving social-environmental problems. I am also highly motivated by research activities, where I have participated in publishing five papers. I have also developed diverse practical projects with multiple technical skills. Beyond my work, I am an excellent cook, I love playing games, and  I am learning to play the piano."
 }
 
 

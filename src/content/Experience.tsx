@@ -1,5 +1,14 @@
 const experience = [
     {
+        type: 'work',
+        title: "Data Engineer Intern",
+        start_year: "2023",
+        end_year: "2024",
+        company: "Amazon Italy",
+        description: "Six months internship on Amazon Italy as a data engineer.",
+        button: false
+    },
+    {
         type: 'edu',
         title: "M.Sc. in Computer Science",
         start_year: "2021",

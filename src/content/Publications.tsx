@@ -34,6 +34,22 @@ const publications_content = {
             url: "https://drive.google.com/file/d/1ZRBn_5ddMIygHjv697twuZtW5BbO9Cr5/view?usp=sharing"
         },
         {
+            title: "ALDER: Anti Money Laundering Using Decision Trees Methods",
+            year: "2023",
+            publisher: "M.Sc. Course Report",
+            highlight: false,
+            tags: ["Report"],
+            url: "https://drive.google.com/file/d/1VJ_U73TDTaqila00xaKKrvcjMZX4AHDd/view?usp=share_link"
+        },
+        {
+            title: "PRADC: Prostate adenocarcinoma subtype discovery on multi-omics data through clustering",
+            year: "2023",
+            publisher: "M.Sc. Course Report",
+            highlight: false,
+            tags: ["Report"],
+            url: "https://drive.google.com/file/d/1_HdKpU7ASh8POrTafFNU1u7eAi9wpuha/view?usp=share_link"
+        },
+        {
             title: "PyEcosampling Whitepaper: Ecological Sampling of Gaze Shift in Python",
             year: "2022",
             publisher: "M.Sc. Course Report",
