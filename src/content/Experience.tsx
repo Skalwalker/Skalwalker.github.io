@@ -5,7 +5,7 @@ const experience = [
         start_year: "2024",
         end_year: "Present",
         company: "Amazon",
-        description: "Software Developer Engineer for Amazon Logistics at Luxembourg",
+        description: "Software Developer Engineer for Amazon Logistics in Luxembourg.",
         button: false
     },
     {
@@ -13,8 +13,8 @@ const experience = [
         title: "Data Engineer Intern",
         start_year: "2023",
         end_year: "2024",
-        company: "Amazon Italy",
-        description: "Six months internship on Amazon Italy as a data engineer.",
+        company: "Amazon",
+        description: "Data Engineer Intern for Amazon Logistics in Italy.",
         button: true,
         btn_info: [
             {
