@@ -23,7 +23,7 @@ class AboutMenu extends React.Component{
           <Row className="paragraph mt-3 ps-0 pe-0 " style={{ marginLeft: '10px' }}>
             <p className='pe-0 pe-sm-2 ps-0'>
               <HiOfficeBuilding className='me-1 mb-1 ps-0 pe-0' size={18} />
-              Data Engineer at Amazon Italy
+              Software Engineer at Amazon
             </p>
           </Row>
           <Row className="paragraph mb-4" style={{ marginLeft: '10px' }}>

@@ -117,7 +117,7 @@ const achievs = [
     },
     {
         title: "Big Four",
-        desc: "Work for one of the giants GAAM. Since I was a child, I glanced forward to being at the center of innovation and technology. In July 2023 I joined Amazon Italy as a Data Engineer Intern.",
+        desc: "Work for one of the giants GAAM. Since I was a child, I glanced forward to being at the center of innovation and technology. In July 2023 I joined Amazon Italy as a Data Engineer Intern. Currently, I am a full-time Software Engineer for Amazon Logistics.",
         img: "amazon",
         locked: false,
         earned: "Joined Amazon in 2023",

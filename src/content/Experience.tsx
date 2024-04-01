@@ -1,12 +1,27 @@
 const experience = [
     {
         type: 'work',
+        title: "Software Developer Engineer",
+        start_year: "2024",
+        end_year: "Present",
+        company: "Amazon",
+        description: "Software Developer Engineer for Amazon Logistics at Luxembourg",
+        button: false
+    },
+    {
+        type: 'work',
         title: "Data Engineer Intern",
         start_year: "2023",
         end_year: "2024",
         company: "Amazon Italy",
         description: "Six months internship on Amazon Italy as a data engineer.",
-        button: false
+        button: true,
+        btn_info: [
+            {
+                button_link: "https://drive.google.com/file/d/1qBgnAHSPX6MhjCzIcv7jxoMMPSRncDQO/view?usp=share_link",
+                button_text: "Certificate"
+            },
+        ]
     },
     {
         type: 'edu',
@@ -21,7 +36,7 @@ const experience = [
         type: 'work',
         title: "Data Engineer (Freelance)",
         start_year: "2022",
-        end_year: "Present",
+        end_year: "2024",
         company: "Pharmacognosy Laboratory, UnB",
         description: "Structuring a complex database for pharmacognosy data from the cerrado plants. Additionally, developing the full-stack kit to interact with the data.",
         button: false
