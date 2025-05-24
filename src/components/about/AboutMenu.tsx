@@ -29,7 +29,7 @@ class AboutMenu extends React.Component{
           <Row className="paragraph mb-4" style={{ marginLeft: '10px' }}>
             <p className='pe-0 pe-sm-2 ps-0'>
               <IoMdSchool className='me-1 mb-1' size={18} />
-              M.Sc. Student at Università degli Studi di Milano
+              M.Sc. in Computer Science — University of Milan
             </p>
           </Row>
           <Row className='about_menu_row float-start float-lg-end nav-item-custom pb-0 pb-lg-3 ms-2'>

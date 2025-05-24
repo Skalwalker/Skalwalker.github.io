@@ -108,16 +108,16 @@ const achievs = [
     },
     {
         title: "Get a Masters",
-        desc: "I am currently an M.Sc. student with a scholarship at Università degli Studi di Milano in Italy!",
+        desc: "M.Sc. in Computer Science from Università degli Studi di Milano, graduated with honors (110/110 cum laude).",
         img: "jedi",
         locked: false,
-        earned: "Enrolled in 2021",
+        earned: "Earned in 2025",
         attachment: false,
         attc_content: ""
     },
     {
-        title: "Big Four",
-        desc: "Work for one of the giants GAAM. Since I was a child, I glanced forward to being at the center of innovation and technology. In July 2023 I joined Amazon Italy as a Data Engineer Intern. Currently, I am a full-time Software Engineer for Amazon Logistics.",
+        title: "GAFAM",
+        desc: "Work for one of the giants GAFAM. Since I was a child, I glanced forward to being at the center of innovation and technology. In July 2023 I joined Amazon Italy as a Data Engineer Intern. Currently, I am a full-time Software Engineer for Amazon Logistics.",
         img: "amazon",
         locked: false,
         earned: "Joined Amazon in 2023",
