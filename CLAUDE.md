@@ -9,10 +9,14 @@ Personal portfolio website for Renato Avellar Nobre, built with React and TypeSc
 ## Commands
 
 ```bash
-yarn start          # Development server at localhost:3000
-yarn build          # Production build to /build
-yarn test           # Jest tests in watch mode
-yarn deploy         # Build and deploy to GitHub Pages
+npm start           # Development server at localhost:3000
+npm run build       # Production build to /build
+npm test            # Jest tests in watch mode
+npm run deploy      # Build and deploy to GitHub Pages
+npm run lint        # Run ESLint
+npm run lint:fix    # Run ESLint with auto-fix
+npm run format      # Format code with Prettier
+npm run format:check # Check formatting without modifying
 ```
 
 ## Architecture
