@@ -20,6 +20,19 @@ import '../../assets/css/projects.css';
 
 import { project } from '../../content/Projects';
 
+import overviewImg from '../../assets/images/projects/vitalsigns/overview.png';
+import signalsImg from '../../assets/images/projects/vitalsigns/signals.png';
+import componentsImg from '../../assets/images/projects/vitalsigns/components.png';
+import correlationImg from '../../assets/images/projects/vitalsigns/correlation.png';
+import respiratoryRateImg from '../../assets/images/projects/vitalsigns/respiratory_rate.png';
+import heartRateImg from '../../assets/images/projects/vitalsigns/heart_rate.png';
+import rrSignalImg from '../../assets/images/projects/vitalsigns/rrsignal.png';
+import heartSignalImg from '../../assets/images/projects/vitalsigns/heartsignal.png';
+import appImg1 from '../../assets/images/projects/vitalsigns/appimg1.PNG';
+import appImg2 from '../../assets/images/projects/vitalsigns/appimg2.PNG';
+import appImg3 from '../../assets/images/projects/vitalsigns/appimg3.PNG';
+import appImg4 from '../../assets/images/projects/vitalsigns/appimg4.PNG';
+
 class VitalSigns extends React.Component {
   render() {
     const page_project = project.projects['vitalsigns'];
@@ -86,7 +99,7 @@ class VitalSigns extends React.Component {
             <Figure.Image
               className="w-100"
               style={{ width: '100%' }}
-              src={require('../../assets/images/projects/vitalsigns/overview.png').default}
+              src={overviewImg}
             />
             <Figure.Caption className="paragraph">
               Overview of the signals' separation pipeline
@@ -164,7 +177,7 @@ function SubjectExample() {
               <Figure.Image
                 className="w-80"
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={require('../../assets/images/projects/vitalsigns/signals.png').default}
+                src={signalsImg}
               />
               <Figure.Caption className="paragraph">
                 Accelerometer and Gyroscope Signals
@@ -185,7 +198,7 @@ function SubjectExample() {
               <Figure.Image
                 className="w-80"
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={require('../../assets/images/projects/vitalsigns/components.png').default}
+                src={componentsImg}
               />
               <Figure.Caption className="paragraph">
                 Resulting components of the ICA process
@@ -210,7 +223,7 @@ function SubjectExample() {
               <Figure.Image
                 className="w-90"
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={require('../../assets/images/projects/vitalsigns/correlation.png').default}
+                src={correlationImg}
               />
               <Figure.Caption className="paragraph">
                 Independent components correlation with sine wave
@@ -231,9 +244,7 @@ function SubjectExample() {
               <Figure.Image
                 className="w-90"
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={
-                  require('../../assets/images/projects/vitalsigns/respiratory_rate.png').default
-                }
+                src={respiratoryRateImg}
               />
               <Figure.Caption className="paragraph">
                 Signal waves for the respiratory rate
@@ -254,7 +265,7 @@ function SubjectExample() {
               <Figure.Image
                 className="w-90"
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={require('../../assets/images/projects/vitalsigns/heart_rate.png').default}
+                src={heartRateImg}
               />
               <Figure.Caption className="paragraph">Signal waves for the heart rate</Figure.Caption>
             </Figure>
@@ -314,7 +325,7 @@ function SignalTabs() {
             <Figure.Image
               className="w-100"
               style={{ width: '100%' }}
-              src={require('../../assets/images/projects/vitalsigns/rrsignal.png').default}
+              src={rrSignalImg}
             />
             <Figure.Caption className="paragraph">
               Respiratory rate identification pipeline
@@ -333,7 +344,7 @@ function SignalTabs() {
             <Figure.Image
               className="w-100"
               style={{ width: '100%' }}
-              src={require('../../assets/images/projects/vitalsigns/heartsignal.png').default}
+              src={heartSignalImg}
             />
             <Figure.Caption className="paragraph">
               Heart rate identification pipeline
@@ -360,7 +371,7 @@ function AppImagesCarrousel() {
           <Figure.Image
             className="w-100"
             style={{ width: '100%' }}
-            src={require('../../assets/images/projects/vitalsigns/appimg1.PNG').default}
+            src={appImg1}
           />
         </Figure>
         <Carousel.Caption className="paragraph">
@@ -372,7 +383,7 @@ function AppImagesCarrousel() {
           <Figure.Image
             className="w-100"
             style={{ width: '100%' }}
-            src={require('../../assets/images/projects/vitalsigns/appimg2.PNG').default}
+            src={appImg2}
           />
         </Figure>
         <Carousel.Caption className="paragraph">
@@ -384,7 +395,7 @@ function AppImagesCarrousel() {
           <Figure.Image
             className="w-100"
             style={{ width: '100%' }}
-            src={require('../../assets/images/projects/vitalsigns/appimg3.PNG').default}
+            src={appImg3}
           />
         </Figure>
         <Carousel.Caption className="paragraph">
@@ -396,7 +407,7 @@ function AppImagesCarrousel() {
           <Figure.Image
             className="w-100"
             style={{ width: '100%' }}
-            src={require('../../assets/images/projects/vitalsigns/appimg4.PNG').default}
+            src={appImg4}
           />
         </Figure>
         <Carousel.Caption className="paragraph">

@@ -23,6 +23,19 @@ import '../../assets/css/projects.css';
 
 import { project } from '../../content/Projects';
 
+import systemImg from '../../assets/images/projects/aurora/system.png';
+import returnImg from '../../assets/images/projects/aurora/return.png';
+import fronteiraImg from '../../assets/images/projects/aurora/fronteira.png';
+import insiderImg from '../../assets/images/projects/aurora/insider.png';
+import rmmImg from '../../assets/images/projects/aurora/rmm.png';
+import resamImg from '../../assets/images/projects/aurora/resam.png';
+import vale3PredImg from '../../assets/images/projects/aurora/VALE3_pred.png';
+import petr3PredImg from '../../assets/images/projects/aurora/PETR3_pred.png';
+import abev3PredImg from '../../assets/images/projects/aurora/ABEV3_pred.png';
+import vale3LossImg from '../../assets/images/projects/aurora/VALE3_LOSS.png';
+import petr3LossImg from '../../assets/images/projects/aurora/PETR3_LOSS.png';
+import abev3LossImg from '../../assets/images/projects/aurora/ABEV3_LOSS.png';
+
 class Hare extends React.Component {
   render() {
     const page_project = project.projects['aurora'];
@@ -90,7 +103,7 @@ class Hare extends React.Component {
             <Figure.Image
               className="w-80"
               style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-              src={require('../../assets/images/projects/aurora/system.png').default}
+              src={systemImg}
             />
             <Figure.Caption className="paragraph">
               AURORA's operational scenario presents the process flow, from data gathering to market
@@ -172,7 +185,7 @@ class Hare extends React.Component {
             <Figure.Image
               className="w-80"
               style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-              src={require('../../assets/images/projects/aurora/return.png').default}
+              src={returnImg}
             />
             <Figure.Caption className="paragraph">
               Performance evaluation of the average return of portfolio
@@ -200,7 +213,7 @@ class Hare extends React.Component {
             <Figure.Image
               className="w-80"
               style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-              src={require('../../assets/images/projects/aurora/fronteira.png').default}
+              src={fronteiraImg}
             />
             <Figure.Caption className="paragraph">
               Portfolio-based efficient frontier
@@ -263,7 +276,7 @@ function AuroraModules() {
               <Figure.Image
                 className="w-80"
                 style={{ width: '60%', backgroundColor: 'white', padding: '10px' }}
-                src={require('../../assets/images/projects/aurora/insider.png').default}
+                src={insiderImg}
               />
               <Figure.Caption className="paragraph">Overview of the Insider module</Figure.Caption>
             </Figure>
@@ -290,7 +303,7 @@ function AuroraModules() {
               <Figure.Image
                 className="w-80"
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={require('../../assets/images/projects/aurora/rmm.png').default}
+                src={rmmImg}
               />
               <Figure.Caption className="paragraph">Risk Management Module</Figure.Caption>
             </Figure>
@@ -317,7 +330,7 @@ function AuroraModules() {
               <Figure.Image
                 className="w-90"
                 style={{ width: '90%', backgroundColor: 'white', padding: '10px' }}
-                src={require('../../assets/images/projects/aurora/resam.png').default}
+                src={resamImg}
               />
               <Figure.Caption className="paragraph">
                 Overview - Resource Allocation Model (ResAM)
@@ -488,7 +501,7 @@ function ResultsTabs() {
                   className="proper_img_size_2"
                   style={{ backgroundColor: 'white' }}
                   alt="VALE3"
-                  src={require('../../assets/images/projects/aurora/VALE3_pred.png').default}
+                  src={vale3PredImg}
                 />
                 <Figure.Caption className="paragraph">VALE3</Figure.Caption>
               </Col>
@@ -497,7 +510,7 @@ function ResultsTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="PETR3"
-                  src={require('../../assets/images/projects/aurora/PETR3_pred.png').default}
+                  src={petr3PredImg}
                 />
                 <Figure.Caption className="paragraph">PETR3</Figure.Caption>
               </Col>
@@ -508,7 +521,7 @@ function ResultsTabs() {
               className="proper_img_size_3"
               style={{ backgroundColor: 'white' }}
               alt="ABEV3"
-              src={require('../../assets/images/projects/aurora/ABEV3_pred.png').default}
+              src={abev3PredImg}
             />
             <Figure.Caption className="paragraph">ABEV3</Figure.Caption>
           </Figure>
@@ -535,7 +548,7 @@ function ResultsTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="VALE3"
-                  src={require('../../assets/images/projects/aurora/VALE3_LOSS.png').default}
+                  src={vale3LossImg}
                 />
                 <Figure.Caption className="paragraph">
                   VALE3 - Performance evaluation of decision-making process for multiple time-steps
@@ -546,7 +559,7 @@ function ResultsTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="PETR3"
-                  src={require('../../assets/images/projects/aurora/PETR3_LOSS.png').default}
+                  src={petr3LossImg}
                 />
                 <Figure.Caption className="paragraph">
                   PETR3 - Performance evaluation of decision-making process for multiple time-steps
@@ -559,7 +572,7 @@ function ResultsTabs() {
               className="proper_img_size_3"
               style={{ backgroundColor: 'white' }}
               alt="ABEV3"
-              src={require('../../assets/images/projects/aurora/ABEV3_LOSS.png').default}
+              src={abev3LossImg}
             />
             <Figure.Caption className="paragraph">
               ABEV3 - Performance evaluation of decision-making process for multiple time-steps

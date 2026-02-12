@@ -18,6 +18,19 @@ import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
 
+import e3TempImg from '../../assets/images/projects/globalwarming/exps/e3/temp.png';
+import e3Co2Img from '../../assets/images/projects/globalwarming/exps/e3/co2.png';
+import e3YearImg from '../../assets/images/projects/globalwarming/exps/e3/year.png';
+import e4TempImg from '../../assets/images/projects/globalwarming/exps/e4/temp.png';
+import e4Co2Img from '../../assets/images/projects/globalwarming/exps/e4/co2.png';
+import e4YearImg from '../../assets/images/projects/globalwarming/exps/e4/year.png';
+import e2TempImg from '../../assets/images/projects/globalwarming/exps/e2/temp.png';
+import e2Co2Img from '../../assets/images/projects/globalwarming/exps/e2/co2.png';
+import e2YearImg from '../../assets/images/projects/globalwarming/exps/e2/year.png';
+import globalDynamicsImg from '../../assets/images/projects/globalwarming/global_dynamics.png';
+import forestDynamicsImg from '../../assets/images/projects/globalwarming/forest_dynamics.png';
+import co2DynamicsImg from '../../assets/images/projects/globalwarming/co2_dynamics.png';
+
 class GlobalWarming extends React.Component {
   render() {
     const page_project = project.projects['globalwarming'];
@@ -192,9 +205,7 @@ function ResultsTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="Temperature density over 100 years"
-                  src={
-                    require('../../assets/images/projects/globalwarming/exps/e3/temp.png').default
-                  }
+                  src={e3TempImg}
                 />
                 <Figure.Caption className="paragraph">
                   Temperature density over 100 years
@@ -205,9 +216,7 @@ function ResultsTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="CO2 density over 100 years"
-                  src={
-                    require('../../assets/images/projects/globalwarming/exps/e3/co2.png').default
-                  }
+                  src={e3Co2Img}
                 />
                 <Figure.Caption className="paragraph">
                   CO<sub>2</sub> density over 100 years
@@ -220,7 +229,7 @@ function ResultsTabs() {
               className="proper_img_size_3"
               style={{ backgroundColor: 'white' }}
               alt="Year temperature exceeds recommended"
-              src={require('../../assets/images/projects/globalwarming/exps/e3/year.png').default}
+              src={e3YearImg}
             />
             <Figure.Caption className="paragraph">
               Year temperature exceeds recommended
@@ -243,9 +252,7 @@ function ResultsTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="Temperature density over 100 years"
-                  src={
-                    require('../../assets/images/projects/globalwarming/exps/e4/temp.png').default
-                  }
+                  src={e4TempImg}
                 />
                 <Figure.Caption className="paragraph">
                   Temperature density over 100 years
@@ -256,9 +263,7 @@ function ResultsTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="CO2 density over 100 years"
-                  src={
-                    require('../../assets/images/projects/globalwarming/exps/e4/co2.png').default
-                  }
+                  src={e4Co2Img}
                 />
                 <Figure.Caption className="paragraph">
                   CO<sub>2</sub> density over 100 years
@@ -271,7 +276,7 @@ function ResultsTabs() {
               className="proper_img_size_3"
               style={{ backgroundColor: 'white' }}
               alt="Year temperature exceeds recommended"
-              src={require('../../assets/images/projects/globalwarming/exps/e4/year.png').default}
+              src={e4YearImg}
             />
             <Figure.Caption className="paragraph">
               Year temperature exceeds recommended
@@ -294,9 +299,7 @@ function ResultsTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="Temperature density over 100 years"
-                  src={
-                    require('../../assets/images/projects/globalwarming/exps/e2/temp.png').default
-                  }
+                  src={e2TempImg}
                 />
                 <Figure.Caption className="paragraph">
                   Temperature density over 100 years
@@ -307,9 +310,7 @@ function ResultsTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="CO2 density over 100 years"
-                  src={
-                    require('../../assets/images/projects/globalwarming/exps/e2/co2.png').default
-                  }
+                  src={e2Co2Img}
                 />
                 <Figure.Caption className="paragraph">
                   CO<sub>2</sub> density over 100 years
@@ -322,7 +323,7 @@ function ResultsTabs() {
               className="proper_img_size_3"
               style={{ backgroundColor: 'white' }}
               alt="Year temperature exceeds recommended"
-              src={require('../../assets/images/projects/globalwarming/exps/e2/year.png').default}
+              src={e2YearImg}
             />
             <Figure.Caption className="paragraph">
               Year temperature exceeds recommended
@@ -356,10 +357,7 @@ function DynamicsAccordion() {
                 <Figure.Image
                   className="w-80"
                   style={{ width: '60%', backgroundColor: 'white' }}
-                  src={
-                    require('../../assets/images/projects/globalwarming/global_dynamics.png')
-                      .default
-                  }
+                  src={globalDynamicsImg}
                 />
               </Figure>
             </Container>
@@ -385,9 +383,7 @@ function DynamicsAccordion() {
               <Figure.Image
                 className="w-80"
                 style={{ width: '80%', backgroundColor: 'white' }}
-                src={
-                  require('../../assets/images/projects/globalwarming/forest_dynamics.png').default
-                }
+                src={forestDynamicsImg}
               />
             </Figure>
             <ProjectParagraph>
@@ -411,7 +407,7 @@ function DynamicsAccordion() {
               <Figure.Image
                 className="w-90"
                 style={{ width: '90%', backgroundColor: 'white' }}
-                src={require('../../assets/images/projects/globalwarming/co2_dynamics.png').default}
+                src={co2DynamicsImg}
               />
             </Figure>
             <ProjectParagraph>

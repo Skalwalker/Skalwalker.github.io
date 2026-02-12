@@ -20,6 +20,23 @@ import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
 
+// Image imports
+import imgRmsPower from '../../assets/images/projects/covid19/features/rms_power.png';
+import imgZeroCrossing from '../../assets/images/projects/covid19/features/zero_crossing_rate.png';
+import imgSpectralBandwidth from '../../assets/images/projects/covid19/features/spectral_bandwith.png';
+import imgSpectralFlatness from '../../assets/images/projects/covid19/features/spectral_flatness.png';
+import imgSpectralRolloff from '../../assets/images/projects/covid19/features/spectral_rolloff.png';
+import imgMfccs from '../../assets/images/projects/covid19/features/mfccs.png';
+import imgSvmCoswaraCm from '../../assets/images/projects/covid19/svm_coswara_cm.png';
+import imgSvmCoswaraRoc from '../../assets/images/projects/covid19/svm_coswara_roc.png';
+import imgSvmCoughvidCm from '../../assets/images/projects/covid19/svm_coughvid_cm.png';
+import imgSvmCoughvidRoc from '../../assets/images/projects/covid19/svm_coughvid_roc.png';
+import imgCnnCoswaraCm from '../../assets/images/projects/covid19/cnn_coswara_cm.png';
+import imgCnnCoswaraRoc from '../../assets/images/projects/covid19/cnn_coswara_roc.png';
+import imgCnnCoughvidCm from '../../assets/images/projects/covid19/cnn_coughvid_cm.png';
+import imgCnnCoughvidRoc from '../../assets/images/projects/covid19/cnn_coughvid_roc.png';
+import imgProcessDiagram from '../../assets/images/projects/covid19/process_diagram.png';
+
 function FeaturesAccordion() {
   return (
     <Container>
@@ -34,7 +51,7 @@ function FeaturesAccordion() {
               <Figure.Image
                 className="w-80"
                 style={{ width: '80%', backgroundColor: 'white' }}
-                src={require('../../assets/images/projects/covid19/features/rms_power.png').default}
+                src={imgRmsPower}
               />
             </Figure>
           </Accordion.Body>
@@ -52,8 +69,7 @@ function FeaturesAccordion() {
                 className="w-80"
                 style={{ width: '80%', backgroundColor: 'white' }}
                 src={
-                  require('../../assets/images/projects/covid19/features/zero_crossing_rate.png')
-                    .default
+                  imgZeroCrossing
                 }
               />
             </Figure>
@@ -72,8 +88,7 @@ function FeaturesAccordion() {
                 className="w-90"
                 style={{ width: '90%', backgroundColor: 'white' }}
                 src={
-                  require('../../assets/images/projects/covid19/features/spectral_bandwith.png')
-                    .default
+                  imgSpectralBandwidth
                 }
               />
             </Figure>
@@ -92,8 +107,7 @@ function FeaturesAccordion() {
                 className="w-80"
                 style={{ width: '80%', backgroundColor: 'white' }}
                 src={
-                  require('../../assets/images/projects/covid19/features/spectral_flatness.png')
-                    .default
+                  imgSpectralFlatness
                 }
               />
             </Figure>
@@ -111,8 +125,7 @@ function FeaturesAccordion() {
                 className="w-90"
                 style={{ width: '90%', backgroundColor: 'white' }}
                 src={
-                  require('../../assets/images/projects/covid19/features/spectral_rolloff.png')
-                    .default
+                  imgSpectralRolloff
                 }
               />
             </Figure>
@@ -129,7 +142,7 @@ function FeaturesAccordion() {
               <Figure.Image
                 className="w-90"
                 style={{ width: '90%', backgroundColor: 'white' }}
-                src={require('../../assets/images/projects/covid19/features/mfccs.png').default}
+                src={imgMfccs}
               />
             </Figure>
           </Accordion.Body>
@@ -156,7 +169,7 @@ function ResultSVMTabs() {
                   className="proper_img_size_2"
                   style={{ backgroundColor: 'white' }}
                   alt="Validation Set Confusion Matrix"
-                  src={require('../../assets/images/projects/covid19/svm_coswara_cm.png').default}
+                  src={imgSvmCoswaraCm}
                 />
                 <Figure.Caption className="paragraph">
                   Validation Set Confusion Matrix
@@ -167,7 +180,7 @@ function ResultSVMTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="Receiver Operating Characteristic Curve"
-                  src={require('../../assets/images/projects/covid19/svm_coswara_roc.png').default}
+                  src={imgSvmCoswaraRoc}
                 />
                 <Figure.Caption className="paragraph">
                   Receiver Operating Characteristic Curve
@@ -184,7 +197,7 @@ function ResultSVMTabs() {
                   className="proper_img_size_2"
                   style={{ backgroundColor: 'white' }}
                   alt="Validation Set Confusion Matrix"
-                  src={require('../../assets/images/projects/covid19/svm_coughvid_cm.png').default}
+                  src={imgSvmCoughvidCm}
                 />
                 <Figure.Caption className="paragraph">
                   Validation Set Confusion Matrix
@@ -195,7 +208,7 @@ function ResultSVMTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="Receiver Operating Characteristic Curve"
-                  src={require('../../assets/images/projects/covid19/svm_coughvid_roc.png').default}
+                  src={imgSvmCoughvidRoc}
                 />
                 <Figure.Caption className="paragraph">
                   Receiver Operating Characteristic Curve
@@ -226,7 +239,7 @@ function ResultCNNTabs() {
                   className="proper_img_size_2"
                   style={{ backgroundColor: 'white' }}
                   alt="Validation Set Confusion Matrix"
-                  src={require('../../assets/images/projects/covid19/cnn_coswara_cm.png').default}
+                  src={imgCnnCoswaraCm}
                 />
                 <Figure.Caption className="paragraph">
                   Validation Set Confusion Matrix
@@ -237,7 +250,7 @@ function ResultCNNTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="Receiver Operating Characteristic Curve"
-                  src={require('../../assets/images/projects/covid19/cnn_coswara_roc.png').default}
+                  src={imgCnnCoswaraRoc}
                 />
                 <Figure.Caption className="paragraph">
                   Receiver Operating Characteristic Curve
@@ -254,7 +267,7 @@ function ResultCNNTabs() {
                   className="proper_img_size_2"
                   style={{ backgroundColor: 'white' }}
                   alt="Validation Set Confusion Matrix"
-                  src={require('../../assets/images/projects/covid19/cnn_coughvid_cm.png').default}
+                  src={imgCnnCoughvidCm}
                 />
                 <Figure.Caption className="paragraph">
                   Validation Set Confusion Matrix
@@ -265,7 +278,7 @@ function ResultCNNTabs() {
                   className="proper_img_size"
                   style={{ backgroundColor: 'white' }}
                   alt="Receiver Operating Characteristic Curve"
-                  src={require('../../assets/images/projects/covid19/cnn_coughvid_roc.png').default}
+                  src={imgCnnCoughvidRoc}
                 />
                 <Figure.Caption className="paragraph">
                   Receiver Operating Characteristic Curve
@@ -414,7 +427,7 @@ class Covid19 extends React.Component {
               className="w-70"
               style={{ width: '70%' }}
               alt="Overview of C19-Audit framework"
-              src={require('../../assets/images/projects/covid19/process_diagram.png').default}
+              src={imgProcessDiagram}
             />
             <Figure.Caption className="paragraph">Overview of C19-Audit framework</Figure.Caption>
           </Figure>

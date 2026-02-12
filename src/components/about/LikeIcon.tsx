@@ -23,12 +23,12 @@ import { MdPiano, MdLocationCity } from 'react-icons/md';
 import { BiCoffeeTogo } from 'react-icons/bi';
 import { RiStockFill, RiPlantFill } from 'react-icons/ri';
 
-import { ReactComponent as RkSaints } from '../../assets/images/icons/saints.svg';
-import { ReactComponent as RkRHCP } from '../../assets/images/icons/rhcp.svg';
-import { ReactComponent as RkWestworld } from '../../assets/images/icons/westworld.svg';
-import { ReactComponent as RkWOW } from '../../assets/images/icons/horde.svg';
-import { ReactComponent as RkGoT } from '../../assets/images/icons/got.svg';
-import { ReactComponent as RkMarvel } from '../../assets/images/icons/avangers.svg';
+import saintsIcon from '../../assets/images/icons/saints.svg';
+import rhcpIcon from '../../assets/images/icons/rhcp.svg';
+import westworldIcon from '../../assets/images/icons/westworld.svg';
+import hordeIcon from '../../assets/images/icons/horde.svg';
+import gotIcon from '../../assets/images/icons/got.svg';
+import marvelIcon from '../../assets/images/icons/avangers.svg';
 
 type myState = {};
 type myProps = { img: string };
@@ -98,13 +98,13 @@ class LikeDesc extends React.Component<myProps, myState> {
       case 'apple':
         return <FaApple className="m-auto d-block my-auto" color={selected_color} size={size} />;
       case 'saints':
-        return <RkSaints stroke="white" width={size} height={size} />;
+        return <img src={saintsIcon} alt="Saints" width={size} height={size} className="m-auto d-block" />;
       case 'rhcp':
-        return <RkRHCP stroke="white" color="white" fill="white" width={size} height={size} />;
+        return <img src={rhcpIcon} alt="RHCP" width={size} height={size} className="m-auto d-block" />;
       case 'westworld':
-        return <RkWestworld stroke="white" color="white" fill="white" width={size} height={size} />;
+        return <img src={westworldIcon} alt="Westworld" width={size} height={size} className="m-auto d-block" />;
       case 'marvel':
-        return <RkMarvel stroke="white" color="white" fill="white" width={size} height={size} />;
+        return <img src={marvelIcon} alt="Marvel" width={size} height={size} className="m-auto d-block" />;
       case 'board':
         return (
           <GiDiceTwentyFacesTwenty
@@ -116,9 +116,9 @@ class LikeDesc extends React.Component<myProps, myState> {
       case 'sandman':
         return <GiBookmark className="m-auto d-block my-auto" color={selected_color} size={size} />;
       case 'wow':
-        return <RkWOW stroke="white" color="white" fill="white" width={size} height={size} />;
+        return <img src={hordeIcon} alt="WoW Horde" width={size} height={size} className="m-auto d-block" />;
       case 'got':
-        return <RkGoT stroke="white" color="white" fill="white" width={size} height={size} />;
+        return <img src={gotIcon} alt="Game of Thrones" width={size} height={size} className="m-auto d-block" />;
       default:
         return <FaVuejs className="m-auto d-block my-auto" color={selected_color} size={size} />;
     }

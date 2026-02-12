@@ -1,5 +1,7 @@
+import profileImg from '../assets/images/profile.jpg';
+
 const core = {
-  profile_img: require('../assets/images/profile.jpg').default,
+  profile_img: profileImg,
   text: 'I am a Software Developer Engineer at Amazon and a passionate data scientist. Passionate about Reinforcement Learning and Deep Learning methods for solving social-environmental problems. I am also highly motivated by research activities, where I have participated in publishing five papers. I have also developed diverse practical projects with multiple technical skills. Beyond my work, I am an excellent cook, I love playing games, and I am learning to play the piano.',
 };
 

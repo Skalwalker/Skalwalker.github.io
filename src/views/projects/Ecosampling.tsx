@@ -10,6 +10,18 @@ import Card from 'react-bootstrap/Card';
 
 import { project } from '../../content/Projects';
 
+import simulationGif from '../../assets/images/projects/ecosampling/simulation.gif';
+import diagramPng from '../../assets/images/projects/ecosampling/diagram.png';
+import currentJpg from '../../assets/images/projects/ecosampling/current.jpg';
+import foveated2Png from '../../assets/images/projects/ecosampling/foveated_2.png';
+import salience2Png from '../../assets/images/projects/ecosampling/salience_2.png';
+import protos2Png from '../../assets/images/projects/ecosampling/protos_2.png';
+import empiricalDists2Png from '../../assets/images/projects/ecosampling/empirical_dists_2.png';
+import orderDisorderPlotPng from '../../assets/images/projects/ecosampling/order_disorder_plot.png';
+import complexityPlotPng from '../../assets/images/projects/ecosampling/complexity_plot.png';
+import foa2Png from '../../assets/images/projects/ecosampling/foa_2.png';
+import ips2Png from '../../assets/images/projects/ecosampling/ips_2.png';
+
 class Ecosampling extends React.Component {
   render() {
     const page_project = project.projects['ecosampling'];
@@ -54,7 +66,7 @@ class Ecosampling extends React.Component {
               className="w-100"
               style={{ backgroundColor: 'white' }}
               alt="Example of the PyEcosampling results in a given video"
-              src={require('../../assets/images/projects/ecosampling/simulation.gif').default}
+              src={simulationGif}
             />
             <Figure.Caption className="paragraph">
               Example of the PyEcosampling results in a given video
@@ -96,7 +108,7 @@ class Ecosampling extends React.Component {
               className="w-75 p-2"
               style={{ backgroundColor: 'white' }}
               alt="Diagram of the PyEcosampling system"
-              src={require('../../assets/images/projects/ecosampling/diagram.png').default}
+              src={diagramPng}
             />
             <Figure.Caption className="paragraph">
               Diagram of the PyEcosampling system
@@ -205,7 +217,7 @@ function StepsAccordion() {
                   className="h-100"
                   style={{ width: '60%', backgroundColor: 'white' }}
                   alt="Frame Processor visualization of a frame"
-                  src={require('../../assets/images/projects/ecosampling/current.jpg').default}
+                  src={currentJpg}
                 />
                 <Figure.Caption className="paragraph">
                   Frame Processor visualization of a frame
@@ -223,7 +235,7 @@ function StepsAccordion() {
                 <Figure.Image
                   alt="Foveated Imaging of the current frame using a Gaussian filter"
                   style={{ width: '60%', backgroundColor: 'white' }}
-                  src={require('../../assets/images/projects/ecosampling/foveated_2.png').default}
+                  src={foveated2Png}
                 />
                 <Figure.Caption className="paragraph">
                   Foveated Imaging of the current frame using a Gaussian filter
@@ -265,7 +277,7 @@ function StepsAccordion() {
                   className="w-80"
                   alt="Salience Map with the 3D self-resemblance spatial temporal saliency method"
                   style={{ width: '60%', backgroundColor: 'white' }}
-                  src={require('../../assets/images/projects/ecosampling/salience_2.png').default}
+                  src={salience2Png}
                 />
                 <Figure.Caption className="paragraph">
                   Salience Map with the 3D self-resemblance spatial temporal saliency method
@@ -295,7 +307,7 @@ function StepsAccordion() {
                   className="w-80"
                   alt="Patch map and its proto-objects surrounded by their corresponding ellipses"
                   style={{ width: '60%', backgroundColor: 'white' }}
-                  src={require('../../assets/images/projects/ecosampling/protos_2.png').default}
+                  src={protos2Png}
                 />
                 <Figure.Caption className="paragraph">
                   Patch map and its proto-objects surrounded by their corresponding ellipses
@@ -324,7 +336,7 @@ function StepsAccordion() {
                   className="w-80"
                   alt="Interest points (red dots) in the current frame. Yellow and green dots represents both all candidates and the maximum focus of attention."
                   style={{ width: '60%', backgroundColor: 'white' }}
-                  src={require('../../assets/images/projects/ecosampling/ips_2.png').default}
+                  src={ips2Png}
                 />
                 <Figure.Caption className="paragraph">
                   Interest points (red dots) in the current frame. Yellow and green dots represents
@@ -345,10 +357,7 @@ function StepsAccordion() {
                   className="w-80"
                   alt="Empirical Distribution for sampled IPs"
                   style={{ width: '60%', backgroundColor: 'white' }}
-                  src={
-                    require('../../assets/images/projects/ecosampling/empirical_dists_2.png')
-                      .default
-                  }
+                  src={empiricalDists2Png}
                 />
                 <Figure.Caption className="paragraph">
                   Empirical Distribution for sampled IPs
@@ -376,10 +385,7 @@ function StepsAccordion() {
                   className="w-80"
                   alt="Order and Disorder values for each frame on the end of the experiment"
                   style={{ width: '60%', backgroundColor: 'white' }}
-                  src={
-                    require('../../assets/images/projects/ecosampling/order_disorder_plot.png')
-                      .default
-                  }
+                  src={orderDisorderPlotPng}
                 />
                 <Figure.Caption className="paragraph">
                   Order and Disorder values for each frame on the end of the experiment
@@ -390,9 +396,7 @@ function StepsAccordion() {
                   className="w-80"
                   alt="Complexity values on the end of the experiment"
                   style={{ width: '60%', backgroundColor: 'white' }}
-                  src={
-                    require('../../assets/images/projects/ecosampling/complexity_plot.png').default
-                  }
+                  src={complexityPlotPng}
                 />
                 <Figure.Caption className="paragraph">
                   Complexity values on the end of the experiment
@@ -442,7 +446,7 @@ function StepsAccordion() {
                   className="w-80"
                   alt="Final focus of attention for the current frame"
                   style={{ width: '60%', backgroundColor: 'white' }}
-                  src={require('../../assets/images/projects/ecosampling/foa_2.png').default}
+                  src={foa2Png}
                 />
                 <Figure.Caption className="paragraph">
                   Final focus of attention for the current frame

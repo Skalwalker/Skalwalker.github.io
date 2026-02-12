@@ -18,7 +18,7 @@ class ProjectCardContent extends React.Component<myProps, myState> {
       >
         <Card.Img
           variant="top"
-          src={process.env.PUBLIC_URL + this.props.project?.banner}
+          src={this.props.project?.banner}
           style={{ borderRadius: '15px 15px 0 0' }}
         />
         <Card.Body>
