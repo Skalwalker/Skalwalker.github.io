@@ -15,7 +15,7 @@ import Hare from './views/projects/Hare';
 import Ecosampling from './views/projects/Ecosampling';
 import VitalSigns from './views/projects/VitalSigns';
 
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router';
 
 export function NavRouter() {
   return (
