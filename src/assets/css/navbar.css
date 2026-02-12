@@ -1,18 +1,19 @@
-.navbar-collapse {}
-
-@media (max-width: 767.98px) {
-    .navbar-collapse {
-        background-color: rgba(7, 14, 32, 0.9);
-        border-radius: 15px;
-        border-width: 3px;
-        border: solid;
-        border-color: var(--bs-primary);
-        padding: 10px;
-    }
+.navbar-collapse {
 }
 
-.navbar-toggler:focus{
-    border: none;
-    text-decoration: none;
-    outline: none
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    background-color: rgba(7, 14, 32, 0.9);
+    border-radius: 15px;
+    border-width: 3px;
+    border: solid;
+    border-color: var(--bs-primary);
+    padding: 10px;
+  }
+}
+
+.navbar-toggler:focus {
+  border: none;
+  text-decoration: none;
+  outline: none;
 }

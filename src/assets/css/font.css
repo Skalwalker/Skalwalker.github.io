@@ -1,19 +1,19 @@
 .bottom_text {
   position: relative;
   margin: 0 auto;
-  text-align: center
+  text-align: center;
 }
 
 .bottom_project_text {
   position: relative;
   /* margin: 0 auto; */
-  text-align: left
+  text-align: left;
 }
 
 .top_project_text {
   position: absolute;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 
 .test_font {
@@ -27,7 +27,6 @@
   font-weight: 400;
   font-style: normal;
 }
-
 
 .subtitle_bold {
   font-family: filson-pro, sans-serif;
@@ -56,21 +55,19 @@
 .top_text {
   position: absolute;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 
 .font_text {
-    font-family: acier-bat-strokes, sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: acier-bat-strokes, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-
 
 .font_text_2 {
   font-family: acier-bat-gris, sans-serif;
   font-weight: 400;
   font-style: normal;
-
 }
 
 .font_text_2 {
@@ -79,27 +76,29 @@
   animation: font_show 1.7s ease-in-out infinite alternate;
 }
 
-
 @-webkit-keyframes font_show {
   from {
-    color: rgba(98, 216, 249, 0.0)
-  } to {
-    color: rgba(98, 216, 249, 1.0)
+    color: rgba(98, 216, 249, 0);
+  }
+  to {
+    color: rgba(98, 216, 249, 1);
   }
 }
 
 @-moz-keyframes font_show {
   from {
-    color: rgba(98, 216, 249, 0.0)
-  } to {
-    color: rgba(98, 216, 249, 1.0)
+    color: rgba(98, 216, 249, 0);
+  }
+  to {
+    color: rgba(98, 216, 249, 1);
   }
 }
 
 @keyframes font_show {
   from {
-    color: rgba(98, 216, 249, 0.0)
-  } to {
-    color: rgba(98, 216, 249, 1.0)
+    color: rgba(98, 216, 249, 0);
+  }
+  to {
+    color: rgba(98, 216, 249, 1);
   }
 }

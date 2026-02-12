@@ -1,29 +1,40 @@
-
 .loader-container {
-    z-index: 200;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    display: inline;
-    -webkit-animation: fade_out 1.0s;
-    -moz-animation: fade_out 1.0s;
-    animation: fade_out 1.0s;
-    -webkit-animation-delay: 3.0s;
-    -moz-animation-delay: 3.0s;
-    animation-delay: 3.0s;
+  z-index: 200;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: inline;
+  -webkit-animation: fade_out 1s;
+  -moz-animation: fade_out 1s;
+  animation: fade_out 1s;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
 }
 
 @-webkit-keyframes fade_out {
-    100% { opacity: 0; }
-    0% { opacity: 1; }
+  100% {
+    opacity: 0;
   }
+  0% {
+    opacity: 1;
+  }
+}
 
 @-moz-keyframes fade_out {
-    100% { opacity: 0; }
-    0% { opacity: 1; }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
 }
 
 @keyframes fade_out {
-    100% { opacity: 0; }
-    0% { opacity: 1; }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
 }

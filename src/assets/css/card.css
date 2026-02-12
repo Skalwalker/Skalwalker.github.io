@@ -1,12 +1,11 @@
-.click_cards:hover{
-    border-color: var(--bs-secondary);
-    /* Secondary in RGB to apply alpha */
-    background-color: rgba(255, 48, 214, 0.3);
-    color: var(--bs-white);
+.click_cards:hover {
+  border-color: var(--bs-secondary);
+  /* Secondary in RGB to apply alpha */
+  background-color: rgba(255, 48, 214, 0.3);
+  color: var(--bs-white);
 }
 
-
 .click_cards:hover .card-footer {
-    border-color: var(--bs-secondary) !important;
-    color: var(--bs-white);
+  border-color: var(--bs-secondary) !important;
+  color: var(--bs-white);
 }

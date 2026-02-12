@@ -1,42 +1,33 @@
-import React, {useRef, useEffect, useState} from 'react'
-import { NavRouter } from './routes'
-import Splashscreen from './views/Splashscreen'
+import React, { useRef, useEffect, useState } from 'react';
+import { NavRouter } from './routes';
+import Splashscreen from './views/Splashscreen';
 import './assets/css/splashscreen.css';
 
-
-
-
-export default function App()  {
-
+export default function App() {
   var myRef: any = useRef(null);
   const [showSplash, setShowSplash] = useState(myRef.current);
 
   useEffect(() => {
-
     if (myRef.current === null) {
       myRef.current = true;
-      setShowSplash(myRef.current)
+      setShowSplash(myRef.current);
 
       setTimeout(() => {
-        console.log("Entrou!")
+        console.log('Entrou!');
         myRef.current = false;
-        setShowSplash(myRef.current)
+        setShowSplash(myRef.current);
       }, 4000);
     }
-}, []);
-
-
+  }, []);
 
   return (
     <div>
-      {
-      showSplash && (
+      {showSplash && (
         <div className="loader-container">
-          <Splashscreen/>
+          <Splashscreen />
         </div>
       )}
-      <NavRouter/>
+      <NavRouter />
     </div>
-  )
-
+  );
 }

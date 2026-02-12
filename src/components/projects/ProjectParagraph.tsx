@@ -1,29 +1,25 @@
 import React from 'react';
 
+import '../../assets/css/font.css';
 
-import '../../assets/css/font.css'
-
-
-type myProps = {children: React.ReactNode}
-type myState = {}
-
+type myProps = { children: React.ReactNode };
+type myState = {};
 
 class ProjectParagraph extends React.Component<myProps, myState> {
-    render() {
-     return(
-        <p className='paragraph mt-2' style={style.paragraph_style}>
-            {this.props.children}
-        </p>
-     )
-    }
+  render() {
+    return (
+      <p className="paragraph mt-2" style={style.paragraph_style}>
+        {this.props.children}
+      </p>
+    );
+  }
 }
 
 const style = {
-    paragraph_style: {
-        fontSize: '16px',
-        lineHeight: 1.6
-    }
-}
+  paragraph_style: {
+    fontSize: '16px',
+    lineHeight: 1.6,
+  },
+};
 
-
-export default ProjectParagraph
+export default ProjectParagraph;
