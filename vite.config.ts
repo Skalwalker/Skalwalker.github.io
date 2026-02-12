@@ -27,6 +27,15 @@ export default defineConfig({
       },
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // TODO: Remove once Bootstrap 6 migrates to @use/@forward
+        silenceDeprecations: ['import', 'if-function', 'global-builtin', 'color-functions'],
+        quietDeps: true,
+      },
+    },
+  },
   build: {
     outDir: 'build',
   },
