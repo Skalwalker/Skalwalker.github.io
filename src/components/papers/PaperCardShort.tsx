@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import { StyledCard } from '../../components/shared/StyledCard';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import '../../assets/css/card.css';
 
 type myState = {};
 type myProps = { title: any; url: any; publisher: any; year: any };
@@ -18,7 +18,7 @@ class PaperCardShort extends React.Component<myProps, myState> {
   render() {
     return (
       <a href={this.props.url} style={{ width: '100%' }} target="_blank" rel="noopener noreferrer">
-        <Card className="click_cards">
+        <StyledCard className="click_cards">
           <Card.Body style={{ padding: '0.8rem' }}>
             <Card.Text className="mb-0 mt-0 paragraph_bold" style={{ color: 'white' }}>
               <Row>
@@ -34,7 +34,7 @@ class PaperCardShort extends React.Component<myProps, myState> {
               {this.props.publisher}
             </Card.Subtitle>
           </Card.Body>
-        </Card>
+        </StyledCard>
       </a>
     );
   }

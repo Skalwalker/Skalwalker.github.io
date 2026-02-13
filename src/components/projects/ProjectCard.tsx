@@ -3,8 +3,8 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import { StyledCard } from '../../components/shared/StyledCard';
 import { Link } from 'react-router';
-import '../../assets/css/card.css';
 
 type myState = {};
 type myProps = { project: any };
@@ -12,7 +12,7 @@ type myProps = { project: any };
 class ProjectCardContent extends React.Component<myProps, myState> {
   render() {
     return (
-      <Card
+      <StyledCard
         className="ms-auto me-auto click_cards"
         style={{ minWidth: '15rem', maxWidth: '18rem', height: '100%' }}
       >
@@ -39,7 +39,7 @@ class ProjectCardContent extends React.Component<myProps, myState> {
             </Col>
           </Row>
         </Card.Footer>
-      </Card>
+      </StyledCard>
     );
   }
 }

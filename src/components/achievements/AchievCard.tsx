@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Row, Col } from 'react-bootstrap';
+import { StyledCard } from '../../components/shared/StyledCard';
 
 import { CgWebsite } from 'react-icons/cg';
 import { BiCoffeeTogo } from 'react-icons/bi';
@@ -22,8 +23,6 @@ import {
   FaJedi,
   FaMoneyBillAlt,
 } from 'react-icons/fa';
-
-import '../../assets/css/card.css';
 
 type MyProps = { title: string; date: string; img: string; locked: boolean };
 type MyState = {};
@@ -93,7 +92,7 @@ class AchievCard extends React.Component<MyProps, MyState> {
     }
 
     return (
-      <Card
+      <StyledCard
         className="mt-2 click_cards"
         style={{ height: '4.65rem', minWidth: '270px', opacity: opcValue }}
       >
@@ -114,7 +113,7 @@ class AchievCard extends React.Component<MyProps, MyState> {
             </Col>
           </Row>
         </Col>
-      </Card>
+      </StyledCard>
     );
   }
 }
