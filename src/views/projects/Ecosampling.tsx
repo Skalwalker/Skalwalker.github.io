@@ -24,7 +24,7 @@ import ips2Png from '../../assets/images/projects/ecosampling/ips_2.png';
 
 class Ecosampling extends React.Component {
   render() {
-    const page_project = project.projects['ecosampling'];
+    const page_project = project.projects.ecosampling;
     const footer_info = [
       {
         heading: 'Project Info',

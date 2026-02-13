@@ -7,8 +7,8 @@ import { IoIosPaper } from 'react-icons/io';
 import '../../assets/css/font.css';
 import '../../assets/css/projects.css';
 
-type myState = {};
-type myProps = { project: any };
+interface myState {}
+interface myProps { project: any }
 
 class ProjectHeader extends React.Component<myProps, myState> {
   render() {

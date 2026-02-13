@@ -1,8 +1,8 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 
-type MyProps = { desc: string; title: string; date: string; show: boolean; callback: any };
-type MyState = { show: boolean };
+interface MyProps { desc: string; title: string; date: string; show: boolean; callback: any }
+interface MyState { show: boolean }
 
 class AchievDescModal extends React.Component<MyProps, MyState> {
   constructor(props) {

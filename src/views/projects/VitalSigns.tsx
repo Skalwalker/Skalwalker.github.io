@@ -35,7 +35,7 @@ import appImg4 from '../../assets/images/projects/vitalsigns/appimg4.PNG';
 
 class VitalSigns extends React.Component {
   render() {
-    const page_project = project.projects['vitalsigns'];
+    const page_project = project.projects.vitalsigns;
     const footer_info = [
       {
         heading: 'Project Info',

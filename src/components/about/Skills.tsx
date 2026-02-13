@@ -8,8 +8,8 @@ import '../../assets/css/sidebar.css';
 import '../../assets/css/about.css';
 import { skills } from '../../content/Skills';
 
-type MyProps = {};
-type MyState = { mobile: boolean };
+interface MyProps {}
+interface MyState { mobile: boolean }
 
 class Skills extends React.Component<MyProps, MyState> {
   // private myRef: React.RefObject<HTMLInputElement>;
@@ -21,9 +21,9 @@ class Skills extends React.Component<MyProps, MyState> {
   }
 
   draw() {
-    let mobile = this.state.mobile;
-    var width = document.getElementById('d3_container')!.clientWidth;
-    var height = document.getElementById('d3_container')!.clientHeight * 0.92;
+    const mobile = this.state.mobile;
+    const width = document.getElementById('d3_container')!.clientWidth;
+    const height = document.getElementById('d3_container')!.clientHeight * 0.92;
 
     // What happens when a circle is dragged?
     function dragstarted(event, d) {
@@ -44,36 +44,36 @@ class Skills extends React.Component<MyProps, MyState> {
     }
     // append the svg object to the body of the page
     // d3.select("#d3_container_div").remove()
-    var svg = d3
+    const svg = d3
       .select('#d3_container_div')
       .insert('svg')
       .attr('width', width)
       .attr('height', height);
 
-    let data = [] as any;
-    for (var skill_key in skills) {
-      let skill = skills[skill_key];
-      let circle_size: number = skill.linkedin + skill.years + skill.projects + skill.self_ass;
+    const data = [] as any;
+    for (const skill_key in skills) {
+      const skill = skills[skill_key];
+      const circle_size: number = skill.linkedin + skill.years + skill.projects + skill.self_ass;
       data.push({ name: skill.title, group: skill.group, size: circle_size });
     }
 
     // A scale that gives a X target position for each group
-    var x = d3
+    const x = d3
       .scaleOrdinal()
       .domain([1, 2, 4, 3])
       .range([0.3 * width, 0.5 * width, 0.7 * width, 0.9 * width]);
 
     // A color scale
-    var color = d3
+    const color = d3
       .scaleOrdinal()
       .domain([2, 4, 1, 3])
       .range(['#ff30d6', '#FF6E27', '#60D7F9', '#FFFFFF']);
 
-    var g = svg.append('g').attr('class', 'everything');
+    const g = svg.append('g').attr('class', 'everything');
 
-    var nodes = g.append('g').attr('class', 'nodes');
+    const nodes = g.append('g').attr('class', 'nodes');
 
-    var node = nodes.selectAll('g').data(data).enter().append('g').attr('class', 'node');
+    const node = nodes.selectAll('g').data(data).enter().append('g').attr('class', 'node');
 
     // Skills Circles
     node
@@ -103,11 +103,11 @@ class Skills extends React.Component<MyProps, MyState> {
         return d.x;
       })
       .attr('y', function (d) {
-        let radius: number = d.size * 3 > 40 ? d.size * 2.5 : 40;
+        const radius: number = d.size * 3 > 40 ? d.size * 2.5 : 40;
         return radius / 8.5 / (mobile ? 1.3 : 1);
       })
       .style('font-size', function (d) {
-        let radius: number = d.size * 3 > 40 ? d.size * 2.5 : 40;
+        const radius: number = d.size * 3 > 40 ? d.size * 2.5 : 40;
         return radius / 3.5 / (mobile ? 1.3 : 1);
       })
       .style('fill', 'white')
@@ -115,7 +115,7 @@ class Skills extends React.Component<MyProps, MyState> {
       .style('font-weight', '400');
 
     // Call specific function when circle is dragged
-    var drag_handler = d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended);
+    const drag_handler = d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended);
 
     drag_handler(node);
 

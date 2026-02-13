@@ -1,7 +1,7 @@
 import React from 'react';
 
-type myState = {};
-type myProps = { text: any };
+interface myState {}
+interface myProps { text: any }
 
 class LikeDesc extends React.Component<myProps, myState> {
   render() {

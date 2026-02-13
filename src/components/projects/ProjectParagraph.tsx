@@ -2,8 +2,8 @@ import React from 'react';
 
 import '../../assets/css/font.css';
 
-type myProps = { children: React.ReactNode };
-type myState = {};
+interface myProps { children: React.ReactNode }
+interface myState {}
 
 class ProjectParagraph extends React.Component<myProps, myState> {
   render() {

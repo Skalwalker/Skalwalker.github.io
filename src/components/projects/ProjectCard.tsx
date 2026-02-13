@@ -6,8 +6,8 @@ import Card from 'react-bootstrap/Card';
 import { StyledCard } from '../../components/shared/StyledCard';
 import { Link } from 'react-router';
 
-type myState = {};
-type myProps = { project: any };
+interface myState {}
+interface myProps { project: any }
 
 class ProjectCardContent extends React.Component<myProps, myState> {
   render() {

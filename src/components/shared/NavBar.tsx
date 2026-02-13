@@ -7,8 +7,8 @@ import '../../assets/css/navbar.css';
 
 import CSS from 'csstype';
 
-type myState = {};
-type myProps = {};
+interface myState {}
+interface myProps {}
 
 class NavBar extends React.Component<myProps, myState> {
   render() {

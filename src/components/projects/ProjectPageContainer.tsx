@@ -14,8 +14,8 @@ import '../../assets/css/stickytable.css';
 import '../../assets/css/projects.css';
 import ScrollButton from '../shared/ScrollButton';
 
-type myState = {};
-type myProps = { project: any; children: React.ReactNode; footer: any };
+interface myState {}
+interface myProps { project: any; children: React.ReactNode; footer: any }
 
 class ProjectPageContainer extends React.Component<myProps, myState> {
   render() {

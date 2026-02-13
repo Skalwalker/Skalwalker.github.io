@@ -6,14 +6,14 @@ import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import type { Container, ISourceOptions } from '@tsparticles/engine';
 
-type myState = { height: number };
-type myProps = {
+interface myState { height: number }
+interface myProps {
   showParticles: boolean;
   style: CSSProperties;
   pageHeight: string;
   navbar: boolean;
   children: React.ReactNode;
-};
+}
 
 const BackgroundParticles = () => {
   const [init, setInit] = useState(false);

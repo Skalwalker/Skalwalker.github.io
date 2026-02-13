@@ -364,7 +364,7 @@ function ResultsTable() {
 
 class Covid19 extends React.Component {
   render() {
-    const page_project = project.projects['covid'];
+    const page_project = project.projects.covid;
     const footer_info = [
       {
         heading: 'Project Info',

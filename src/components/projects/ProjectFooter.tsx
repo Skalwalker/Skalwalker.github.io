@@ -4,8 +4,8 @@ import Col from 'react-bootstrap/Col';
 
 import '../../assets/css/font.css';
 
-type myProps = { footer: any };
-type myState = {};
+interface myProps { footer: any }
+interface myState {}
 
 function FooterSection({ heading, desc }) {
   return (

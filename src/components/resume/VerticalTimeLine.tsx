@@ -11,8 +11,8 @@ import { MdDoNotDisturbOnTotalSilence } from 'react-icons/md';
 import { IoLogoTableau } from 'react-icons/io5';
 import Button from 'react-bootstrap/Button';
 
-type myState = {};
-type myProps = {};
+interface myState {}
+interface myProps {}
 
 class ExperienceTimeline extends React.Component<myProps, myState> {
   openInNewTab = (url) => {
@@ -65,7 +65,7 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
                     <Button
                       key={btn.button_text}
                       className="float-end"
-                      onClick={() => this.openInNewTab(btn.button_link)}
+                      onClick={() => { this.openInNewTab(btn.button_link); }}
                       size="sm"
                       variant="outline-primary ms-2 mt-3"
                     >
@@ -75,7 +75,7 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
                     <Button
                       key={btn.button_text}
                       className="float-end"
-                      onClick={() => this.openInNewTab(btn.button_link)}
+                      onClick={() => { this.openInNewTab(btn.button_link); }}
                       size="sm"
                       variant="outline-secondary ms-2 mt-3"
                     >
@@ -85,7 +85,7 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
                     <Button
                       key={btn.button_text}
                       className="float-end"
-                      onClick={() => this.openInNewTab(btn.button_link)}
+                      onClick={() => { this.openInNewTab(btn.button_link); }}
                       size="sm"
                       variant="outline-warning ms-2 mt-3"
                     >

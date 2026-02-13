@@ -5,8 +5,8 @@ import LikeIcon from './LikeIcon';
 import { like } from '../../content/About';
 import '../../assets/css/about.css';
 
-type MyProps = {};
-type MyState = { isShown: boolean; text: any };
+interface MyProps {}
+interface MyState { isShown: boolean; text: any }
 
 class Likes extends React.Component<MyProps, MyState> {
   constructor(props: any) {
@@ -45,8 +45,8 @@ class Likes extends React.Component<MyProps, MyState> {
                   >
                     <div
                       className="m-auto"
-                      onMouseEnter={() => this.setIsShown(like_icon.title)}
-                      onMouseLeave={() => this.setIsShown('')}
+                      onMouseEnter={() => { this.setIsShown(like_icon.title); }}
+                      onMouseLeave={() => { this.setIsShown(''); }}
                       style={{ height: '70px', width: '70px' }}
                     >
                       <LikeIcon img={like_icon.img}></LikeIcon>

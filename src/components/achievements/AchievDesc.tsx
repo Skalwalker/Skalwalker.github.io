@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Image } from 'react-bootstrap';
 
-type MyProps = { desc: string; title: string; date: string };
-type MyState = {};
+interface MyProps { desc: string; title: string; date: string }
+interface MyState {}
 
 class AchievDesc extends React.Component<MyProps, MyState> {
   render() {

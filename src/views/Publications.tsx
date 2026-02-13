@@ -8,8 +8,8 @@ import ScrollButton from '../components/shared/ScrollButton';
 
 import '../assets/css/font.css';
 
-type myState = { activeTags: any; child: any };
-type myProps = {};
+interface myState { activeTags: any; child: any }
+interface myProps {}
 
 class Publications extends React.Component<myProps, myState> {
   constructor(props: any) {
@@ -21,7 +21,7 @@ class Publications extends React.Component<myProps, myState> {
   }
 
   clickButton = (id: string) => {
-    var aux = this.state.activeTags;
+    const aux = this.state.activeTags;
     if (aux.includes(id, 0)) {
       aux.splice(aux.indexOf(id), 1);
     } else {
@@ -96,7 +96,7 @@ class Publications extends React.Component<myProps, myState> {
                     <Col key={name} lg={2} style={{ paddingTop: '12px' }} className="d-grid mb-2">
                       <Button
                         key={name}
-                        onClick={() => this.clickButton(name)}
+                        onClick={() => { this.clickButton(name); }}
                         className="paragraph"
                         variant={this.checkIfIsActive(name)}
                         size="sm"

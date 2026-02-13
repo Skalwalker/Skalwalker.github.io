@@ -2,8 +2,8 @@ import React from 'react';
 import { BiUpArrowAlt } from 'react-icons/bi';
 import Button from 'react-bootstrap/Button';
 
-type myState = { visible: any };
-type myProps = {};
+interface myState { visible: any }
+interface myProps {}
 
 class ScrollButton extends React.Component<myProps, myState> {
   constructor(props: any) {
@@ -23,8 +23,8 @@ class ScrollButton extends React.Component<myProps, myState> {
   }
 
   toggleVisible() {
-    let scrolled = document.documentElement.scrollTop;
-    let new_this = this;
+    const scrolled = document.documentElement.scrollTop;
+    const new_this = this;
     if (scrolled > 300) {
       new_this.setState({ visible: true });
     } else if (scrolled <= 300) {

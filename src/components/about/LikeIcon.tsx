@@ -30,8 +30,8 @@ import hordeIcon from '../../assets/images/icons/horde.svg';
 import gotIcon from '../../assets/images/icons/got.svg';
 import marvelIcon from '../../assets/images/icons/avangers.svg';
 
-type myState = {};
-type myProps = { img: string };
+interface myState {}
+interface myProps { img: string }
 
 class LikeDesc extends React.Component<myProps, myState> {
   static defaultProps = {
@@ -39,8 +39,8 @@ class LikeDesc extends React.Component<myProps, myState> {
   };
 
   get_icon(img: string) {
-    let size = 70;
-    let selected_color = 'white';
+    const size = 70;
+    const selected_color = 'white';
 
     switch (img) {
       case 'sushi':

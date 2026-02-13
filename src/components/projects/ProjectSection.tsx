@@ -3,8 +3,8 @@ import Row from 'react-bootstrap/Row';
 
 import '../../assets/css/font.css';
 
-type myProps = { title: string; id: string; first: boolean; children: React.ReactNode };
-type myState = {};
+interface myProps { title: string; id: string; first: boolean; children: React.ReactNode }
+interface myState {}
 
 class ProjectSection extends React.Component<myProps, myState> {
   static defaultProps = {

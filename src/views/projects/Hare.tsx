@@ -38,7 +38,7 @@ import abev3LossImg from '../../assets/images/projects/aurora/ABEV3_LOSS.png';
 
 class Hare extends React.Component {
   render() {
-    const page_project = project.projects['aurora'];
+    const page_project = project.projects.aurora;
     const footer_info = [
       {
         heading: 'Project Info',

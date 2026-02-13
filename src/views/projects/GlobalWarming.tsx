@@ -33,7 +33,7 @@ import co2DynamicsImg from '../../assets/images/projects/globalwarming/co2_dynam
 
 class GlobalWarming extends React.Component {
   render() {
-    const page_project = project.projects['globalwarming'];
+    const page_project = project.projects.globalwarming;
     const footer_info = [
       {
         heading: 'Project Info',

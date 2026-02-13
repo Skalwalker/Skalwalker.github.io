@@ -7,8 +7,8 @@ import AchievDescModal from '../components/achievements/AchievDescModal';
 import { Col, Row, Container } from 'react-bootstrap';
 import { achievs } from '../content/Achiev';
 
-type MyProps = {};
-type MyState = {
+interface MyProps {}
+interface MyState {
   isShown: boolean;
   desc: string;
   title: string;
@@ -17,7 +17,7 @@ type MyState = {
   modalTitle: string;
   modalDesc: string;
   isModal: boolean;
-};
+}
 
 class Acheiv extends React.Component<MyProps, MyState> {
   constructor(props: any) {
@@ -81,7 +81,7 @@ class Acheiv extends React.Component<MyProps, MyState> {
                   date={this.state.date}
                 />
               )}
-              {this.state.isShown === false && (
+              {!this.state.isShown && (
                 <h2
                   className="subtitle_bold my-auto"
                   style={{ fontSize: '32px', color: '#FFFFFF' }}
@@ -114,16 +114,16 @@ class Acheiv extends React.Component<MyProps, MyState> {
   }
 }
 
-type FuncProps = {
+interface FuncProps {
   col: number;
   self: any;
-};
+}
 
 const ConstructAchievs = ({ self, col }: FuncProps) => {
   return (
     <Col className="mt-0">
       {[...Array(Math.floor(achievs.length / 3))].map((x, i) => {
-        let index = i + Number(col) - 1;
+        const index = i + Number(col) - 1;
         // console.log(col)
         console.log(i + Number(col) - 1);
         // console.log(i)

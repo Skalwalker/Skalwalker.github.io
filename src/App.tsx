@@ -4,7 +4,7 @@ import Splashscreen from './views/Splashscreen';
 import './assets/css/splashscreen.css';
 
 export default function App() {
-  var myRef: any = useRef(null);
+  const myRef: any = useRef(null);
   const [showSplash, setShowSplash] = useState(myRef.current);
 
   useEffect(() => {

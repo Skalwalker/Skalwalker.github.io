@@ -4,8 +4,8 @@ import { StyledCard } from '../../components/shared/StyledCard';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-type myState = {};
-type myProps = { title: any; url: any; publisher: any; year: any };
+interface myState {}
+interface myProps { title: any; url: any; publisher: any; year: any }
 
 class PaperCard extends React.Component<myProps, myState> {
   static defaultProps = {

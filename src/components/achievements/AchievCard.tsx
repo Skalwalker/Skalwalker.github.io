@@ -24,8 +24,8 @@ import {
   FaMoneyBillAlt,
 } from 'react-icons/fa';
 
-type MyProps = { title: string; date: string; img: string; locked: boolean };
-type MyState = {};
+interface MyProps { title: string; date: string; img: string; locked: boolean }
+interface MyState {}
 
 class AchievCard extends React.Component<MyProps, MyState> {
   static defaultProps = {
@@ -36,9 +36,9 @@ class AchievCard extends React.Component<MyProps, MyState> {
   };
 
   get_icon(name: string) {
-    let size = 50;
-    let selected_color = 'white';
-    let class_name = 'm-auto d-block';
+    const size = 50;
+    const selected_color = 'white';
+    const class_name = 'm-auto d-block';
 
     switch (name) {
       case 'graduate':
