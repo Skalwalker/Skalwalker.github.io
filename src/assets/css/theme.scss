@@ -5,15 +5,9 @@
 @import 'bootstrap/scss/mixins';
 
 // Brand Colors
-// $blue: #007bff;
 $indigo: #070e20;
-// $purple: #6f42c1;
 $pink: #ff30d6;
-// $red: #dc3545;
 $orange: #ff6e27;
-// $yellow: #ffc107;
-// $green: #28a745;
-// $teal: #20c997;
 $cyan: #60d7f9;
 
 // Gray Scale
@@ -75,66 +69,7 @@ $body-bg: $indigo;
 $body-color: $white;
 
 // Carousel
-// $carousel-control-color: $white;
-// $carousel-control-width: 15%;
-// $carousel-control-opacity: 0.5;
-
-// $carousel-indicator-width: 30px;
-// $carousel-indicator-height: 3px;
-// $carousel-indicator-spacer: 3px;
 $carousel-indicator-active-bg: $cyan;
-
-// $carousel-caption-width: 70%;
-// $carousel-caption-color: $white;
-
-// $carousel-control-icon-width: 20px;
-// $carousel-transition: transform 0.6s ease;
-
-// Fonts
-// $font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-// $font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-// $font-family-base: $font-family-sans-serif;
-// $font-size-base: 1rem;
-// $font-size-lg: 1.25rem;
-// $font-size-sm: 0.875rem;
-// $font-weight-normal: normal;
-// $font-weight-bold: bold;
-// $font-weight-base: $font-weight-normal;
-// $line-height-base: 1.5;
-// $h1-font-size: 2.5rem;
-// $h2-font-size: 2rem;
-// $h3-font-size: 1.75rem;
-// $h4-font-size: 1.5rem;
-// $h5-font-size: 1.25rem;
-// $h6-font-size: 1rem;
-// $headings-margin-bottom: ($spacer / 2);
-// $headings-font-family: inherit;
-// $headings-font-weight: 500;
-// $headings-line-height: 1.1;
-// $headings-color: inherit;
-// $display1-size: 6rem;
-// $display2-size: 5.5rem;
-// $display3-size: 4.5rem;
-// $display4-size: 3.5rem;
-// $display1-weight: 300;
-// $display2-weight: 300;
-// $display3-weight: 300;
-// $display4-weight: 300;
-// $display-line-height: $headings-line-height;
-// $lead-font-size: 1.25rem;
-// $lead-font-weight: 300;
-// $small-font-size: 80%;
-// $text-muted: $gray-600;
-// $blockquote-small-color: $gray-600;
-// $blockquote-font-size: ($font-size-base * 1.25);
-// $hr-border-color: rgba($black, 0.1);
-// $hr-border-width: $border-width;
-// $mark-padding: 0.2em;
-// $dt-font-weight: $font-weight-bold;
-// $kbd-box-shadow: inset 0 -0.1rem 0 rgba($black, 0.25);
-// $nested-kbd-font-weight: $font-weight-bold;
-// $list-inline-padding: 5px;
-// $mark-bg: #fcf8e3;
 
 // Cards
 $card-border-color: map-get($theme-colors, 'primary');
@@ -160,29 +95,9 @@ $navbar-light-hover-color: map-get($theme-colors, 'secondary');
 $navbar-light-active-color: $white;
 $navbar-light-color: $white;
 $navbar-light-brand-color: $white;
-
-//
-
-// $navbar-light-collapse: border-style solid;
-// $navbar-light-collapse-border-width: 10px;
-// $navbar-light-collapse-border-color: map-get($theme-colors,"primary");
-// $navbar-collapse: bg rgba(map-get($theme-colors,"primary"), 0.30);
-// $navbar-padding-y: ($spacer / 2);
-// $navbar-padding-x: $spacer;
-// $navbar-brand-font-size: $font-size-lg;
-// $nav-link-height: $navbar-brand-font-size * $line-height-base;
-// $navbar-brand-height: ($font-size-base * $line-height-base + $nav-link-padding-y * 2);
-// $navbar-brand-padding-y: ($navbar-brand-height - $nav-link-height) / 2;
 $navbar-toggler-padding-y: 0.25rem;
 $navbar-toggler-padding-x: 0.75rem;
 $navbar-toggler-font-size: $font-size-lg;
-// $navbar-dark-color: rgba($white, 0.5);
-// $navbar-dark-active-color: rgba($white, 1);
-// $navbar-dark-disabled-color: rgba($white, 0.25);
-// $navbar-dark-toggler-border-color: rgba($white, 0.1);
-// $navbar-light-hover-color: rgba($black, 0.7);
-// $navbar-light-disabled-color: rgba($white, 0.3);
-// $navbar-light-toggler-border-color: rgba($white, 0.0);
 
 //Table
 $table-color: $white;
@@ -196,11 +111,7 @@ $table-border-width: $border-width;
 $table-border-color: map-get($theme-colors, 'primary');
 $table-head-bg: rgba(map-get($theme-colors, 'primary'), 0.3);
 $table-head-color: $white;
-// $table-inverse-bg: rgba(map-get($theme-colors,"primary"), 0.3);
-// $table-inverse-accent-bg: rgba($white, 0.05);
-// $table-inverse-hover-bg: rgba($white, 0.075);
-// $table-inverse-border-color: lighten($gray-900, 7.5%);
-// $table-inverse-color: $white;
+$table-striped-color: $white;
 
 //Tabs
 $nav-tabs-border-color: map-get($theme-colors, 'primary');
@@ -225,16 +136,6 @@ $list-group-border-width: $border-width;
 $list-group-border-radius: $border-radius;
 $list-group-item-padding-y: 0.75rem;
 $list-group-item-padding-x: 1.25rem;
-// $list-group-hover-bg: $gray-100;
-// $list-group-active-color: $component-active-color;
-// $list-group-active-bg: $component-active-bg;
-// $list-group-active-border-color: $list-group-active-bg;
-// $list-group-disabled-color: $gray-600;
-// $list-group-disabled-bg: $list-group-bg;
-// $list-group-action-color: $gray-700;
-// $list-group-action-hover-color: $list-group-action-color;
-// $list-group-action-active-color: $body-color;
-// $list-group-action-active-bg: $gray-200;
 
 //Alert
 $alert-padding-y: 0.75rem;
@@ -272,15 +173,5 @@ $modal-title-line-color: map-get($theme-colors, 'primary');
 $modal-content-border-color: map-get($theme-colors, 'primary');
 $modal-backdrop-opacity: 0.85;
 $modal-header-border-color: map-get($theme-colors, 'primary');
-
-// @each $breakpoint in map-keys($grid-breakpoints) {
-//     @include media-breakpoint-up($breakpoint) {
-//       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-//       // Common values
-//       @each $position in $position-values {
-//         .position#{$infix}-#{$position} { position: $position !important; }
-//       }
-//     }
-//   }
 
 @import 'bootstrap';
