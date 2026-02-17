@@ -1,10 +1,10 @@
 import React from 'react';
-import Background from '../components/shared/Background';
+import { Background } from '../components/shared/Background';
 import { Col, Row, Button, Container } from 'react-bootstrap';
 import { projectContent } from '../content/Projects';
 import { ProjectCard } from '../components/projects/ProjectCard';
 import { ProjectData } from '../components/projects/types';
-import ScrollButton from '../components/shared/ScrollButton';
+import { ScrollButton } from '../components/shared/ScrollButton';
 import { useTagFilter } from '../hooks/useTagFilter';
 import '../assets/css/font.css';
 
@@ -63,7 +63,7 @@ export const Projects: React.FC = () => {
   const filtered = projectList.filter((p) => !p.highlight && matchesTags(p.tags));
 
   return (
-    <Background showParticles={true}>
+    <Background>
       <Container className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid>
         <Row>
           <h1 className="subtitle">

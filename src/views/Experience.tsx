@@ -1,5 +1,5 @@
 import React from 'react';
-import Background from '../components/shared/Background';
+import { Background } from '../components/shared/Background';
 import ExperienceTimeline from '../components/resume/VerticalTimeLine';
 import ScrollButton from '../components/shared/ScrollButton';
 

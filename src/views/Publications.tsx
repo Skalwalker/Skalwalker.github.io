@@ -1,14 +1,17 @@
 import React from 'react';
-import Background from '../components/shared/Background';
+import { Background } from '../components/shared/Background';
 import { Col, Row, Button, Container } from 'react-bootstrap';
+import { ScrollButton } from '../components/shared/ScrollButton';
 import { publications_content } from '../content/Publications';
 import PaperCard from '../components/papers/PaperCard';
 import PaperCardShort from '../components/papers/PaperCardShort';
-import ScrollButton from '../components/shared/ScrollButton';
 
 import '../assets/css/font.css';
 
-interface myState { activeTags: any; child: any }
+interface myState {
+  activeTags: any;
+  child: any;
+}
 interface myProps {}
 
 class Publications extends React.Component<myProps, myState> {
@@ -59,7 +62,7 @@ class Publications extends React.Component<myProps, myState> {
     const papers = publications_content.publications;
 
     return (
-      <Background showParticles={true}>
+      <Background>
         <Container className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid>
           <Row>
             <h1 className="subtitle">
@@ -96,7 +99,9 @@ class Publications extends React.Component<myProps, myState> {
                     <Col key={name} lg={2} style={{ paddingTop: '12px' }} className="d-grid mb-2">
                       <Button
                         key={name}
-                        onClick={() => { this.clickButton(name); }}
+                        onClick={() => {
+                          this.clickButton(name);
+                        }}
                         className="paragraph"
                         variant={this.checkIfIsActive(name)}
                         size="sm"

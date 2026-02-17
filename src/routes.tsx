@@ -3,12 +3,10 @@ import Experience from './views/Experience';
 import Achiev from './views/Achiev';
 import { Projects } from './views/Projects';
 import Publications from './views/Publications';
-
 import Core from './components/about/Core';
 import Likes from './components/about/Likes';
 import Skills from './components/about/Skills';
-import Errorscreen from './views/ErrorScreen';
-
+import { Errorscreen } from './views/ErrorScreen';
 import { Covid19 } from './views/projects/Covid19';
 import { GlobalWarming } from './views/projects/GlobalWarming';
 import { Hare } from './views/projects/Hare';

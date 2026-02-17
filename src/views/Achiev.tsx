@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/css/sidebar.css';
-import Background from '../components/shared/Background';
+import { Background } from '../components/shared/Background';
 import AchievCard from '../components/achievements/AchievCard';
 import AchievDesc from '../components/achievements/AchievDesc';
 import AchievDescModal from '../components/achievements/AchievDescModal';

@@ -1,7 +1,7 @@
 import '../assets/css/sidebar.css';
 import React from 'react';
 import AboutMenu from '../components/about/AboutMenu';
-import Background from '../components/shared/Background';
+import { Background } from '../components/shared/Background';
 import { Container, Row, Col } from 'react-bootstrap';
 import { AboutRouter } from '../routes';
 import '../assets/css/about.css';
