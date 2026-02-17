@@ -1,7 +1,7 @@
 import About from './views/About';
 import Experience from './views/Experience';
 import Achiev from './views/Achiev';
-import Projects from './views/Projects';
+import { Projects } from './views/Projects';
 import Publications from './views/Publications';
 
 import Core from './components/about/Core';

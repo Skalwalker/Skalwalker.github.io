@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ProjectPageContainer from '../../components/projects/ProjectPageContainer';
-import ProjectSection from '../../components/projects/ProjectSection';
-import ProjectParagraph from '../../components/projects/ProjectParagraph';
-import { project } from '../../content/Projects';
+import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
+import { ProjectSection } from '../../components/projects/ProjectSection';
+import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
+import { projectContent } from '../../content/Projects';
 
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
@@ -33,7 +33,7 @@ import co2DynamicsImg from '../../assets/images/projects/globalwarming/co2_dynam
 
 class GlobalWarming extends React.Component {
   render() {
-    const page_project = project.projects.globalwarming;
+    const page_project = projectContent.projects.globalwarming;
     const footer_info = [
       {
         heading: 'Project Info',
@@ -50,7 +50,7 @@ class GlobalWarming extends React.Component {
     ];
     return (
       <ProjectPageContainer project={page_project} footer={footer_info}>
-        <ProjectSection key="intro-header" id="intro-header" title="Introduction" first={true}>
+        <ProjectSection key="intro-header" id="intro-header" title="Introduction" variant="first">
           <ProjectParagraph>
             During the past five decades, the Earth's average temperature has been increasing at a
             high rate [1], and one of the causes are CO<sub>2</sub> emissions [2]. The

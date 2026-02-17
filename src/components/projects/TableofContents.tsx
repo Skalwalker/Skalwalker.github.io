@@ -1,7 +1,17 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../../assets/css/stickytable.css';
 
-const Headings = ({ headings, activeId }) => (
+interface HeadingData {
+  id: string;
+  title: string;
+}
+
+interface HeadingsProps {
+  headings: HeadingData[];
+  activeId: string | undefined;
+}
+
+const Headings = ({ headings, activeId }: HeadingsProps): React.JSX.Element => (
   <ul className="subtitle" style={{ paddingLeft: '0px', fontSize: '17px' }}>
     {headings.map((heading) => (
       <li key={heading.id} className={heading.id === activeId ? 'active' : ''}>
@@ -21,8 +31,8 @@ const Headings = ({ headings, activeId }) => (
   </ul>
 );
 
-const TableOfContents = () => {
-  const [activeId, setActiveId] = useState();
+const TableOfContents = (): React.JSX.Element => {
+  const [activeId, setActiveId] = useState<string | undefined>();
   const { nestedHeadings } = useHeadingsData();
   useIntersectionObserver(setActiveId);
 
@@ -33,12 +43,7 @@ const TableOfContents = () => {
   );
 };
 
-interface HeadingData {
-  id: any;
-  title: any;
-}
-
-const useHeadingsData = () => {
+const useHeadingsData = (): { nestedHeadings: HeadingData[] } => {
   const [nestedHeadings, setNestedHeadings] = useState<HeadingData[]>([]);
 
   useEffect(() => {
@@ -51,36 +56,36 @@ const useHeadingsData = () => {
   return { nestedHeadings };
 };
 
-const getNestedHeadings = (headingElements) => {
-  const nestedHeadings: { id: any; title: any }[] = [];
+const getNestedHeadings = (headingElements: HTMLHeadingElement[]): HeadingData[] => {
+  const nestedHeadings: HeadingData[] = [];
 
-  headingElements.forEach((heading, index) => {
+  headingElements.forEach((heading) => {
     const { innerText: title, id } = heading;
 
     if (heading.nodeName === 'H2') {
-      nestedHeadings.push({ id: id, title: title });
+      nestedHeadings.push({ id, title });
     }
   });
 
   return nestedHeadings;
 };
 
-const useIntersectionObserver = (setActiveId) => {
-  const headingElementsRef = useRef({});
+const useIntersectionObserver = (setActiveId: React.Dispatch<React.SetStateAction<string | undefined>>): void => {
+  const headingElementsRef = useRef<Record<string, IntersectionObserverEntry>>({});
   useEffect(() => {
-    const callback = (headings) => {
+    const callback = (headings: IntersectionObserverEntry[]): void => {
       headingElementsRef.current = headings.reduce((map, headingElement) => {
         map[headingElement.target.id] = headingElement;
         return map;
       }, headingElementsRef.current);
 
-      const visibleHeadings: any[] = [];
+      const visibleHeadings: IntersectionObserverEntry[] = [];
       Object.keys(headingElementsRef.current).forEach((key) => {
         const headingElement = headingElementsRef.current[key];
         if (headingElement.isIntersecting) visibleHeadings.push(headingElement);
       });
 
-      const getIndexFromId = (id) => headingElements.findIndex((heading) => heading.id === id);
+      const getIndexFromId = (id: string): number => headingElements.findIndex((heading) => heading.id === id);
 
       if (visibleHeadings.length === 1) {
         setActiveId(visibleHeadings[0].target.id);

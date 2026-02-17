@@ -2,18 +2,12 @@ import React from 'react';
 
 import '../../assets/css/font.css';
 
-interface myProps { children: React.ReactNode }
-interface myState {}
 
-class ProjectParagraph extends React.Component<myProps, myState> {
-  render() {
-    return (
-      <p className="paragraph mt-2" style={style.paragraph_style}>
-        {this.props.children}
-      </p>
-    );
-  }
-}
+export const ProjectParagraph = ({ children }: { children: React.ReactNode }): React.JSX.Element => (
+  <p className="paragraph mt-2" style={style.paragraph_style}>
+    {children}
+  </p>
+);
 
 const style = {
   paragraph_style: {
@@ -21,5 +15,3 @@ const style = {
     lineHeight: 1.6,
   },
 };
-
-export default ProjectParagraph;

@@ -1,138 +1,89 @@
 import React from 'react';
 import Background from '../components/shared/Background';
 import { Col, Row, Button, Container } from 'react-bootstrap';
-import { project } from '../content/Projects';
-import ProjectCard from '../components/projects/ProjectCard';
+import { projectContent } from '../content/Projects';
+import { ProjectCard } from '../components/projects/ProjectCard';
+import { ProjectData } from '../components/projects/types';
 import ScrollButton from '../components/shared/ScrollButton';
+import { useTagFilter } from '../hooks/useTagFilter';
 import '../assets/css/font.css';
 
-interface myState { activeTags: any }
-interface myProps {}
+const FeaturedProjects: React.FC<{ projects: ProjectData[] }> = ({ projects }) => (
+  <Row>
+    {projects.map((p) => (
+      <Col key={p.title} xl={3} lg={6} sm={6} style={{ padding: '10px' }}>
+        <ProjectCard project={p} />
+      </Col>
+    ))}
+  </Row>
+);
 
-class Projects extends React.Component<myProps, myState> {
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      activeTags: [],
-    };
-  }
+const TagFilterBar: React.FC<{
+  tags: string[];
+  isTagActive: (tag: string) => boolean;
+  onToggle: (tag: string) => void;
+}> = ({ tags, isTagActive, onToggle }) => (
+  <Row>
+    <Col xl={4}>
+      <h1 className="subtitle">Newest</h1>
+    </Col>
+    {tags.map((name) => (
+      <Col xl={2} key={name} style={{ paddingTop: '12px' }} className="d-grid mb-2">
+        <Button
+          onClick={() => {
+            onToggle(name);
+          }}
+          className="paragraph"
+          variant={isTagActive(name) ? 'light' : 'outline-light'}
+          size="sm"
+        >
+          {name}
+        </Button>
+      </Col>
+    ))}
+    <div className="w-100 mt-2 mb-2" style={{ backgroundColor: 'white', height: '3px' }} />
+  </Row>
+);
 
-  clickButton = (id: string) => {
-    const aux = this.state.activeTags;
-    if (aux.includes(id, 0)) {
-      aux.splice(aux.indexOf(id), 1);
-    } else {
-      aux.push(id);
-    }
-    this.setState({
-      activeTags: aux,
-    });
-  };
+const ProjectGrid: React.FC<{ projects: ProjectData[] }> = ({ projects }) => (
+  <Row>
+    {projects.map((p) => (
+      <Col key={p.title} xl={3} lg={6} sm={6} style={{ paddingTop: '15px', paddingBottom: '15px' }}>
+        <ProjectCard project={p} />
+      </Col>
+    ))}
+  </Row>
+);
 
-  checkIfIsActive = (id: string) => {
-    if (this.state.activeTags.includes(id, 0)) {
-      return 'light';
-    } else {
-      return 'outline-light';
-    }
-  };
+export const Projects: React.FC = () => {
+  const { toggleTag, isTagActive, matchesTags } = useTagFilter();
 
-  checkInTags = (tag: any) => {
-    let found = 0;
-    for (let i = 0; i <= this.state.activeTags.length; i++) {
-      if (this.state.activeTags.includes(tag, 0)) {
-        found++;
-      }
-    }
-    if (found >= this.state.activeTags.length) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  const projectList = Object.values(projectContent.projects);
+  const featured = projectList.filter((p) => p.highlight);
+  const filtered = projectList.filter((p) => !p.highlight && matchesTags(p.tags));
 
-  render() {
-    const tags = project.tags;
-    const projects = project.projects;
-
-    return (
-      <Background showParticles={true}>
-        <Container className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid>
-          <Row>
-            <h1 className="subtitle">
-              Featured <b>Projects</b>
-            </h1>
-            <div className="w-100 mt-2 mb-2" style={{ backgroundColor: 'white', height: '3px' }} />
-          </Row>
-          <Row>
-            {Object.keys(projects).map((key, index) => {
-              if (projects[key].highlight) {
-                return (
-                  <Col key={projects[key].title} xl={3} lg={6} sm={6} style={{ padding: '10px' }}>
-                    <ProjectCard project={projects[key]} />
-                  </Col>
-                );
-              } else {
-                return null;
-              }
-            })}
-          </Row>
-          <Row className="pt-5">
-            <Col>
-              <Row>
-                <Col xl={4}>
-                  <h1 className="subtitle">Newest</h1>
-                </Col>
-                {tags.map((name, index) => {
-                  return (
-                    <Col xl={2} key={name} style={{ paddingTop: '12px' }} className="d-grid mb-2">
-                      <Button
-                        key={name}
-                        onClick={() => { this.clickButton(name); }}
-                        className="paragraph"
-                        variant={this.checkIfIsActive(name)}
-                        size="sm"
-                      >
-                        {name}
-                      </Button>
-                    </Col>
-                  );
-                })}
-                <div
-                  className="w-100 mt-2 mb-2"
-                  style={{ backgroundColor: 'white', height: '3px' }}
-                />
-              </Row>
-              <Row>
-                {Object.keys(projects).map((key, index) => {
-                  if (
-                    (projects[key].tags.some(this.checkInTags) ||
-                      this.state.activeTags.length === 0) &&
-                    !projects[key].highlight
-                  ) {
-                    return (
-                      <Col
-                        key={projects[key].title}
-                        xl={3}
-                        lg={6}
-                        sm={6}
-                        style={{ paddingTop: '15px', paddingBottom: '15px' }}
-                      >
-                        <ProjectCard project={projects[key]} />
-                      </Col>
-                    );
-                  } else {
-                    return null;
-                  }
-                })}
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-        <ScrollButton />
-      </Background>
-    );
-  }
-}
-
-export default Projects;
+  return (
+    <Background showParticles={true}>
+      <Container className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid>
+        <Row>
+          <h1 className="subtitle">
+            Featured <b>Projects</b>
+          </h1>
+          <div className="w-100 mt-2 mb-2" style={{ backgroundColor: 'white', height: '3px' }} />
+        </Row>
+        <FeaturedProjects projects={featured} />
+        <Row className="pt-5">
+          <Col>
+            <TagFilterBar
+              tags={projectContent.tags}
+              isTagActive={isTagActive}
+              onToggle={toggleTag}
+            />
+            <ProjectGrid projects={filtered} />
+          </Col>
+        </Row>
+      </Container>
+      <ScrollButton />
+    </Background>
+  );
+};

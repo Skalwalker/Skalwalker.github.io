@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ProjectPageContainer from '../../components/projects/ProjectPageContainer';
-import ProjectSection from '../../components/projects/ProjectSection';
-import ProjectParagraph from '../../components/projects/ProjectParagraph';
+import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
+import { ProjectSection } from '../../components/projects/ProjectSection';
+import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
 
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
@@ -18,7 +18,7 @@ import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
 
-import { project } from '../../content/Projects';
+import { projectContent } from '../../content/Projects';
 
 import overviewImg from '../../assets/images/projects/vitalsigns/overview.png';
 import signalsImg from '../../assets/images/projects/vitalsigns/signals.png';
@@ -28,14 +28,14 @@ import respiratoryRateImg from '../../assets/images/projects/vitalsigns/respirat
 import heartRateImg from '../../assets/images/projects/vitalsigns/heart_rate.png';
 import rrSignalImg from '../../assets/images/projects/vitalsigns/rrsignal.png';
 import heartSignalImg from '../../assets/images/projects/vitalsigns/heartsignal.png';
-import appImg1 from '../../assets/images/projects/vitalsigns/appimg1.PNG';
-import appImg2 from '../../assets/images/projects/vitalsigns/appimg2.PNG';
-import appImg3 from '../../assets/images/projects/vitalsigns/appimg3.PNG';
-import appImg4 from '../../assets/images/projects/vitalsigns/appimg4.PNG';
+import appImg1 from '../../assets/images/projects/vitalsigns/appimg1.png';
+import appImg2 from '../../assets/images/projects/vitalsigns/appimg2.png';
+import appImg3 from '../../assets/images/projects/vitalsigns/appimg3.png';
+import appImg4 from '../../assets/images/projects/vitalsigns/appimg4.png';
 
 class VitalSigns extends React.Component {
   render() {
-    const page_project = project.projects.vitalsigns;
+    const page_project = projectContent.projects.vitalsigns;
     const footer_info = [
       {
         heading: 'Project Info',
@@ -45,7 +45,7 @@ class VitalSigns extends React.Component {
 
     return (
       <ProjectPageContainer project={page_project} footer={footer_info}>
-        <ProjectSection id="intro-header" title="Introduction" first={true}>
+        <ProjectSection id="intro-header" title="Introduction" variant="first">
           <ProjectParagraph>
             Measuring respiration and heart rate is crucial to diagnosing and monitoring a wide
             range of disorders. However, most measuring techniques are obtrusive, impractical, and
@@ -96,11 +96,7 @@ class VitalSigns extends React.Component {
             rate signal and assigning all other components as heart rate signals.
           </ProjectParagraph>
           <Figure className="mx-auto text-center">
-            <Figure.Image
-              className="w-100"
-              style={{ width: '100%' }}
-              src={overviewImg}
-            />
+            <Figure.Image className="w-100" style={{ width: '100%' }} src={overviewImg} />
             <Figure.Caption className="paragraph">
               Overview of the signals' separation pipeline
             </Figure.Caption>
@@ -322,11 +318,7 @@ function SignalTabs() {
       >
         <Tab eventKey="rr_wave" title="Respiratory Signal" className="w-100 text-left">
           <Figure className="mx-auto text-center mt-4">
-            <Figure.Image
-              className="w-100"
-              style={{ width: '100%' }}
-              src={rrSignalImg}
-            />
+            <Figure.Image className="w-100" style={{ width: '100%' }} src={rrSignalImg} />
             <Figure.Caption className="paragraph">
               Respiratory rate identification pipeline
             </Figure.Caption>
@@ -341,11 +333,7 @@ function SignalTabs() {
         </Tab>
         <Tab eventKey="heart_case" title="Heart Signal" className="w-100 text-left">
           <Figure className="mx-auto text-center mt-4">
-            <Figure.Image
-              className="w-100"
-              style={{ width: '100%' }}
-              src={heartSignalImg}
-            />
+            <Figure.Image className="w-100" style={{ width: '100%' }} src={heartSignalImg} />
             <Figure.Caption className="paragraph">
               Heart rate identification pipeline
             </Figure.Caption>
@@ -368,11 +356,7 @@ function AppImagesCarrousel() {
     <Carousel style={{ width: '100%' }} className="text-center mx-auto">
       <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
         <Figure className="mx-auto text-center mt-4">
-          <Figure.Image
-            className="w-100"
-            style={{ width: '100%' }}
-            src={appImg1}
-          />
+          <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg1} />
         </Figure>
         <Carousel.Caption className="paragraph">
           <p>Initial view</p>
@@ -380,11 +364,7 @@ function AppImagesCarrousel() {
       </Carousel.Item>
       <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
         <Figure className="mx-auto text-center mt-4">
-          <Figure.Image
-            className="w-100"
-            style={{ width: '100%' }}
-            src={appImg2}
-          />
+          <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg2} />
         </Figure>
         <Carousel.Caption className="paragraph">
           <p>Recording screen with instructions before starting</p>
@@ -392,11 +372,7 @@ function AppImagesCarrousel() {
       </Carousel.Item>
       <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
         <Figure className="mx-auto text-center mt-4">
-          <Figure.Image
-            className="w-100"
-            style={{ width: '100%' }}
-            src={appImg3}
-          />
+          <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg3} />
         </Figure>
         <Carousel.Caption className="paragraph">
           <p>Recording screen showing remaining time to finish the record</p>
@@ -404,11 +380,7 @@ function AppImagesCarrousel() {
       </Carousel.Item>
       <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
         <Figure className="mx-auto text-center mt-4">
-          <Figure.Image
-            className="w-100"
-            style={{ width: '100%' }}
-            src={appImg4}
-          />
+          <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg4} />
         </Figure>
         <Carousel.Caption className="paragraph">
           <p>List of saved records to be shared to a computer</p>

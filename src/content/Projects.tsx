@@ -1,4 +1,32 @@
-const project = {
+import { ProjectData } from '../components/projects/types';
+
+type ProjectName =
+  | 'vitalsigns'
+  | 'covid'
+  | 'globalwarming'
+  | 'bigdata'
+  | 'bioinformatics'
+  | 'ecosampling'
+  | 'portfolio'
+  | 'aurora'
+  | 'dodfminer'
+  | 'trufes'
+  | 'datascience'
+  | 'sek'
+  | 'pacman'
+  | 'medipreco'
+  | 'computervision'
+  | 'graphtheory'
+  | 'zipcode'
+  | 'quotesbook'
+  | 'questionmark';
+
+interface ProjectsContent {
+  tags: string[];
+  projects: Record<ProjectName, ProjectData>;
+}
+
+export const projectContent = {
   tags: ['Machine Learning', 'Robotics', 'App/Web Dev', 'Others'],
   projects: {
     vitalsigns: {
@@ -61,13 +89,9 @@ const project = {
       language: 'Python',
       year: '2023',
       url: 'https://github.com/Skalwalker/AntiMoneyLaundering',
-      highlight: false, // true
+      highlight: false,
       headline: 'Anti money laundering using decision trees methods in a big data scenario.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     bioinformatics: {
       banner: '/img/dna.png',
@@ -79,10 +103,6 @@ const project = {
       highlight: false,
       headline: 'Prostate adenocarcinoma subtype discovery on multi-omics data clustering.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     ecosampling: {
       banner: '/img/ecosampling.png',
@@ -91,7 +111,7 @@ const project = {
       language: 'Python',
       year: '2022',
       url: '/projects/ecosampling',
-      highlight: false, // true
+      highlight: false,
       headline: 'A Python implementation of the ecological sampling of gaze shifts.',
       target: '',
       skills:
@@ -112,10 +132,6 @@ const project = {
       highlight: false,
       headline: 'This amazing website developed with React, Bootsrap, and Typescript.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     aurora: {
       banner: '/img/hare.png',
@@ -144,10 +160,6 @@ const project = {
       highlight: false,
       headline: 'Extraction of data from documents in PDF format to structured CSV.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     trufes: {
       banner: '/img/trufes.png',
@@ -159,10 +171,6 @@ const project = {
       highlight: false,
       headline: 'Omniwheel robot with LIDAR sensor for a package delivery simulation.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     // Number Recognition, Plants Recognition, Breast Cancer Recognition, Spam Recognition
     datascience: {
@@ -175,10 +183,6 @@ const project = {
       highlight: false,
       headline: 'A collection of data science mini-projects from an introductory class.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     sek: {
       banner: '/img/sek.png',
@@ -190,10 +194,6 @@ const project = {
       highlight: false,
       headline: 'Autonomous car simulation competition using Lego robotic kits.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     pacman: {
       banner: '/img/arcade.png',
@@ -205,8 +205,6 @@ const project = {
       highlight: false,
       headline: "Reinforcement Learning communication on Pac-man's ghosts.",
       target: '_blank',
-      skills: '',
-      abstract: '',
       code_link: 'https://github.com/Skalwalker/MRLCommunication',
       paper_link:
         'https://drive.google.com/file/d/1Ms01uQN4HshG3UMca5WwqtaDDiPAgcA1/view?usp=sharing',
@@ -221,10 +219,6 @@ const project = {
       highlight: false,
       headline: 'Developed the first iOS version of the collaborative medicine app Medipreço.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     // Panoramic, Photo Geometry, Metal Recognition
     computervision: {
@@ -237,10 +231,6 @@ const project = {
       highlight: false,
       headline: 'A collection of computer vision mini-projects from an introductory class.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     // College Path, SPA Problem
     graphtheory: {
@@ -253,10 +243,6 @@ const project = {
       highlight: false,
       headline: 'A collection of graph theory mini-projects from an introductory class.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     zipcode: {
       banner: '/img/zipcode.png',
@@ -268,10 +254,6 @@ const project = {
       highlight: false,
       headline: 'A simple iOS App to discover your zip code based on your location.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     quotesbook: {
       banner: '/img/quotesbook.png',
@@ -283,10 +265,6 @@ const project = {
       highlight: false,
       headline: 'An iOS App to keep your personal favorite quotes from movies or friends.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
     questionmark: {
       banner: '/img/questionmark.png',
@@ -298,12 +276,6 @@ const project = {
       highlight: false,
       headline: 'Always working on new amazing projects. Hope you enjoy what is coming next.',
       target: '_blank',
-      skills: '',
-      abstract: '',
-      code_link: '',
-      paper_link: '',
     },
   },
-};
-
-export { project };
+} satisfies ProjectsContent;

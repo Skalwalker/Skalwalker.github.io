@@ -1,7 +1,7 @@
 import React from 'react';
-import ProjectPageContainer from '../../components/projects/ProjectPageContainer';
-import ProjectSection from '../../components/projects/ProjectSection';
-import ProjectParagraph from '../../components/projects/ProjectParagraph';
+import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
+import { ProjectSection } from '../../components/projects/ProjectSection';
+import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
 
 import Table from 'react-bootstrap/Table';
 import Tabs from 'react-bootstrap/Tabs';
@@ -14,7 +14,7 @@ import { Accordion } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 
-import { project } from '../../content/Projects';
+import { projectContent } from '../../content/Projects';
 
 import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
@@ -68,9 +68,7 @@ function FeaturesAccordion() {
               <Figure.Image
                 className="w-80"
                 style={{ width: '80%', backgroundColor: 'white' }}
-                src={
-                  imgZeroCrossing
-                }
+                src={imgZeroCrossing}
               />
             </Figure>
           </Accordion.Body>
@@ -87,9 +85,7 @@ function FeaturesAccordion() {
               <Figure.Image
                 className="w-90"
                 style={{ width: '90%', backgroundColor: 'white' }}
-                src={
-                  imgSpectralBandwidth
-                }
+                src={imgSpectralBandwidth}
               />
             </Figure>
           </Accordion.Body>
@@ -106,9 +102,7 @@ function FeaturesAccordion() {
               <Figure.Image
                 className="w-80"
                 style={{ width: '80%', backgroundColor: 'white' }}
-                src={
-                  imgSpectralFlatness
-                }
+                src={imgSpectralFlatness}
               />
             </Figure>
           </Accordion.Body>
@@ -124,9 +118,7 @@ function FeaturesAccordion() {
               <Figure.Image
                 className="w-90"
                 style={{ width: '90%', backgroundColor: 'white' }}
-                src={
-                  imgSpectralRolloff
-                }
+                src={imgSpectralRolloff}
               />
             </Figure>
           </Accordion.Body>
@@ -364,7 +356,7 @@ function ResultsTable() {
 
 class Covid19 extends React.Component {
   render() {
-    const page_project = project.projects.covid;
+    const page_project = projectContent.projects.covid;
     const footer_info = [
       {
         heading: 'Project Info',
@@ -378,7 +370,7 @@ class Covid19 extends React.Component {
 
     return (
       <ProjectPageContainer project={page_project} footer={footer_info}>
-        <ProjectSection key="intro-header" id="intro-header" title="Introduction" first={true}>
+        <ProjectSection key="intro-header" id="intro-header" title="Introduction" variant="first">
           <ProjectParagraph>
             Keeping in mind the necessity for fast and widely accessible COVID-19 pre-screening
             methods [1], I propose C19-Audit, a framework for detecting covid in cough data.

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ProjectPageContainer from '../../components/projects/ProjectPageContainer';
-import ProjectSection from '../../components/projects/ProjectSection';
-import ProjectParagraph from '../../components/projects/ProjectParagraph';
+import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
+import { ProjectSection } from '../../components/projects/ProjectSection';
+import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
 
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
@@ -21,7 +21,7 @@ import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
 
-import { project } from '../../content/Projects';
+import { projectContent } from '../../content/Projects';
 
 import systemImg from '../../assets/images/projects/aurora/system.png';
 import returnImg from '../../assets/images/projects/aurora/return.png';
@@ -38,7 +38,7 @@ import abev3LossImg from '../../assets/images/projects/aurora/ABEV3_LOSS.png';
 
 class Hare extends React.Component {
   render() {
-    const page_project = project.projects.aurora;
+    const page_project = projectContent.projects.aurora;
     const footer_info = [
       {
         heading: 'Project Info',
@@ -66,7 +66,7 @@ class Hare extends React.Component {
 
     return (
       <ProjectPageContainer project={page_project} footer={footer_info}>
-        <ProjectSection id="intro-header" title="Introduction" first={true}>
+        <ProjectSection id="intro-header" title="Introduction" variant="first">
           <ProjectParagraph>
             The study of financial markets and potential predictions of exchanges allow investors to
             increase their profits and better understand their investments' behavior. Among

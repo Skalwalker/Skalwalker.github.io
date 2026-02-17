@@ -1,14 +1,14 @@
 import React from 'react';
-import ProjectPageContainer from '../../components/projects/ProjectPageContainer';
-import ProjectSection from '../../components/projects/ProjectSection';
-import ProjectParagraph from '../../components/projects/ProjectParagraph';
+import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
+import { ProjectSection } from '../../components/projects/ProjectSection';
+import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
 
 import Container from 'react-bootstrap/Container';
 import Accordion from 'react-bootstrap/Accordion';
 import Figure from 'react-bootstrap/Figure';
 import Card from 'react-bootstrap/Card';
 
-import { project } from '../../content/Projects';
+import { projectContent } from '../../content/Projects';
 
 import simulationGif from '../../assets/images/projects/ecosampling/simulation.gif';
 import diagramPng from '../../assets/images/projects/ecosampling/diagram.png';
@@ -24,7 +24,7 @@ import ips2Png from '../../assets/images/projects/ecosampling/ips_2.png';
 
 class Ecosampling extends React.Component {
   render() {
-    const page_project = project.projects.ecosampling;
+    const page_project = projectContent.projects.ecosampling;
     const footer_info = [
       {
         heading: 'Project Info',
@@ -42,7 +42,7 @@ class Ecosampling extends React.Component {
 
     return (
       <ProjectPageContainer project={page_project} footer={footer_info}>
-        <ProjectSection id="intro-header" title="Introduction" first={true}>
+        <ProjectSection id="intro-header" title="Introduction" variant="first">
           <ProjectParagraph>
             In Boccignone's original work [1], Ecosampling<sup>1</sup>, he considers the problem of
             the variability of visual scan paths produced by human observers. His work tries to
