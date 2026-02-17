@@ -19,7 +19,7 @@ const Headings = ({ headings, activeId }: HeadingsProps): React.JSX.Element => (
           href={`#${heading.id}`}
           onClick={(e) => {
             e.preventDefault();
-            document.querySelector(`#${heading.id}`)!.scrollIntoView({
+            document.querySelector(`#${heading.id}`)?.scrollIntoView({
               behavior: 'smooth',
             });
           }}
@@ -105,7 +105,7 @@ const useIntersectionObserver = (setActiveId: React.Dispatch<React.SetStateActio
 
     headingElements.forEach((element) => { observer.observe(element); });
 
-    return () => { observer.disconnect(); };
+    return (): void => { observer.disconnect(); };
   }, [setActiveId]);
 };
 

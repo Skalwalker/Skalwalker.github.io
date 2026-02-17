@@ -20,8 +20,8 @@ const FooterSection = ({ heading, desc }: FooterSectionType): React.JSX.Element 
 
 export const ProjectFooter = ({ footer }: { footer: FooterSectionType[] }): React.JSX.Element => (
   <div className="paragraph ms-2 me-4" style={{ color: 'rgba(var(--bs-primary-rgb),1.0)' }}>
-    {footer.map((sec, _index) => (
-      <FooterSection heading={sec.heading} desc={sec.desc} />
+    {footer.map((sec) => (
+      <FooterSection key={sec.heading} heading={sec.heading} desc={sec.desc} />
     ))}
     <Row className="mt-5 mb-5 pt-5"></Row>
   </div>

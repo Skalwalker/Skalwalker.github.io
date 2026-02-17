@@ -4,6 +4,7 @@ import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import prettier from 'eslint-config-prettier';
+import importPlugin from 'eslint-plugin-import';
 
 export default tseslint.config(
   {
@@ -35,6 +36,7 @@ export default tseslint.config(
   {
     plugins: {
       'react-hooks': reactHooks,
+      import: importPlugin,
     },
     rules: {
       '@typescript-eslint/no-explicit-any': 'error',
@@ -52,9 +54,11 @@ export default tseslint.config(
       '@typescript-eslint/prefer-nullish-coalescing': 'error',
       '@typescript-eslint/prefer-optional-chain': 'error',
       '@typescript-eslint/strict-boolean-expressions': 'error',
+      'import/no-default-export': 'error',
+      'prefer-arrow-callback': 'error',
       'react/prop-types': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
     },
-  },
+  }
 );

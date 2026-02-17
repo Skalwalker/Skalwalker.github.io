@@ -31,156 +31,151 @@ import globalDynamicsImg from '../../assets/images/projects/globalwarming/global
 import forestDynamicsImg from '../../assets/images/projects/globalwarming/forest_dynamics.png';
 import co2DynamicsImg from '../../assets/images/projects/globalwarming/co2_dynamics.png';
 
-class GlobalWarming extends React.Component {
-  render() {
-    const page_project = projectContent.projects.globalwarming;
-    const footer_info = [
-      {
-        heading: 'Project Info',
-        desc: "Developed in Master's Degree Course - Simulations - 2022",
-      },
-      {
-        heading: 'Footnotes',
-        desc: "1.\tNet zero is a scientific concept that conveys that there is a finite budget of carbon dioxide that is allowed into the atmosphere, alongside other greenhouse gases and beyond this budget, any further release must be balanced by removal into sinks.\n\n2.\tSuch as tree-nation.com\n\n3.\tYou can find a complete list of this project's simplifications and assumptions in the paper.",
-      },
-      {
-        heading: 'References',
-        desc: '[1]\tP. Shukla, J. Skea, R. Slade, A. Al Khourdajie, R. van Diemen, D. McCollum, M. Pathak, S. Some, P. Vyas, R. Fradera et al., “Climate change 2022: Mitigation of climate change. contribution of working group iii to the sixth assessment report of the intergovernmental panel on climate change,” 2021.\n\n[2]\tD. Pandey, M. Agrawal, and J. S. Pandey, “Carbon footprint: current methods of estimation,” Environmental monitoring and assessment, vol. 178, no. 1, pp. 135-160, 2011.\n\n[3]\tK. Jacob, “Forests change the climate,” 2020.\n\n[4]\tFAO, “Global forest resources assessment 2020: Main report. rome,” 2020.\n\n[5]\tD. Rind, “Complexity and climate,” science, vol. 284, no. 5411, pp. 105-107, 1999\n\n[6]\tS. Rahmstorf and E. Zedillo, “Anthropogenic climate change: Revisiting the facts,” in Global Warming: Looking Beyond Kyoto. Brookings Institution Press, 2008, pp. 34-53.',
-      },
-    ];
-    return (
-      <ProjectPageContainer project={page_project} footer={footer_info}>
-        <ProjectSection key="intro-header" id="intro-header" title="Introduction" variant="first">
-          <ProjectParagraph>
-            During the past five decades, the Earth's average temperature has been increasing at a
-            high rate [1], and one of the causes are CO<sub>2</sub> emissions [2]. The
-            Intergovernmental Panel on Climate Change (IPCC) has strongly recommended limiting the
-            increase in global temperature below 2<sup>o</sup> C as compared to the pre-industrial
-            level to avoid severe ecological and economic threats [2]. Therefore, understanding
-            future climatic conditions and situations is the basis for the world countries to
-            develop mitigation strategies.
-          </ProjectParagraph>
-          <ProjectParagraph>
-            A helpful tool the world has to fight climate change is our forests. Forests can remove
-            large amounts of CO<sub>2</sub> from the atmosphere [3]. Researchers at ETH Zurich have
-            even calculated that large-scale afforestation could help solve the climate problem [3].
-            However, around 10 million hectares of forest are lost every year [4]. Recently, the
-            concept of Net Zero<sup>1</sup> has become popular, and with such, multiple
-            environmental companies<sup>2</sup> are offering services to help people and companies
-            offset their CO<sub>2</sub> emissions.
-          </ProjectParagraph>
-        </ProjectSection>
-        <ProjectSection key="dev-header" id="dev-header" title="Overview">
-          <ProjectParagraph>
-            With this scenario in mind, I developed a simulator of global warming concerning CO
-            <sub>2</sub> emissions and forest area net changes. The system implementation considers
-            a multi-method model: an agent-based and a system dynamics method. The world is modeled
-            as a set of agents, each being a country. Each country has its own CO<sub>2</sub> yearly
-            emission values, CO<sub>2</sub> concentration, forest area net change, and forest size,
-            based on their historical trends. The simulator aims at studying the proposed
-            relationship to answer the following <b>research questions:</b>
-          </ProjectParagraph>
-          <ResearchQuestions />
-          <ProjectParagraph>
-            Real global warming considers an incredible amount of latent variables and uncertainties
-            [5]. Thus, simulating a complex system requires some basic assumptions and
-            simplifications. With such simplifications, we can focus on feasible system elements.
-            Therefore this simulation model focus on understanding only the relationship between CO
-            <sub>2</sub>, forest area net change, and global temperature while adding the complexity
-            of the country's individualization.<sup>3</sup>
-          </ProjectParagraph>
-        </ProjectSection>
-        <ProjectSection key="feature-header" id="features-header" title="Model Implementation">
-          <ProjectParagraph>
-            The interactive simulation below shows the main view of the simulation screen. The view
-            represents the world map, with each country's forest area net change colored from the
-            given scale. The simulation view also allows for a global visualization of CO
-            <sub>2</sub> emissions. On the bottom, three plots are displayed: the world's forest
-            area net change, the current Global Surface Temperature (GST), and the World emissions.
-            On the bottom left are two slides to configure the two key simulation parameters:
-            climate sensitivity and forest capture values. Additionally, on the top left is a
-            country selector, which allows viewing the desired country and understanding its impact
-            on the world system.
-          </ProjectParagraph>
-          <Container className="w-100 mt-3 mb-3">
-            <iframe
-              title="GlobalWarmingSimulation"
-              className="w-100 global_warming_frame"
-              allow="fullscreen"
-              src="https://cloud.anylogic.com/assets/embed?modelId=b637dd80-0c8a-4411-a006-f9fedadddd96"
-            ></iframe>
-          </Container>
-          <ProjectParagraph>
-            On a deeper view of the key system parameters, climate sensitivity is a term created by
-            the Intergovernmental Panel on Climate Change (IPCC) to describe how much warmer the GST
-            will get if the number of greenhouse gases in the atmosphere doubles [1]. Researchers
-            estimate that this parameter lies between 2 to 5 times [6]. Additionally, forest capture
-            values are also not set in stone. Environmental scientists estimate that the forest
-            contribution to reducing CO<sub>2</sub> emissions is about 2.8 to 4.9 tons per hectare
-            per year [3].
-          </ProjectParagraph>
-          <DynamicsAccordion />
-        </ProjectSection>
-        <ProjectSection key="eval-header" id="eval-header" title="Methodology">
-          <ProjectParagraph>
-            Considering that the model is highly stochastic with hundreds of random variables from
-            the countries, the examination was carried out by analyzing 3 "what-if'" scenarios in
-            Monte Carlo experimentation with 100 replications. In the worst-case scenario, the
-            climate sensitivity is the highest, and the forest capture is the lowest. In the
-            best-case scenario, its configuration is opposite from the worst-case. Finally, the most
-            probable scenario, the sensitivity and forest capture values are set to those that
-            literature [6, 3] believe to be most probable.
-          </ProjectParagraph>
-          <ProjectParagraph>
-            All experiments were developed with the 2015 initial values and considered the same year
-            for the initial moment of the simulation. The experiments also considered 100 years of
-            development.
-          </ProjectParagraph>
-        </ProjectSection>
-        <ProjectSection key="exp-header" id="exp-header" title="Experimental Results">
-          <ProjectParagraph>
-            Plots were generated and curated to analyze the experiments and answer our research
-            questions. I selected a box plot to answer RQ1 since its shape allows the study of the
-            results minimum, first quartile, median, third quartile, and maximum. On the other hand,
-            to answer RQ2 and RQ3, a density plot was selected, allowing visualization of the range
-            and slope in which the result was shaped. The figure set below illustrates the
-            worst-case, best-case, and likely-case results.
-          </ProjectParagraph>
-          <ResultsTabs />
-          <ProjectParagraph>
-            Availing the granularity of the country agent-based modeling and answering RQ4, I
-            analyzed the likely scenario to identify the most troublesome countries for the
-            environment. The metric used to identify problematic countries was their Net Zero
-            status. Results showed a strong pattern; within 100 Monte Carlo simulations, the same
-            result is always shown: the United States is the worst country, followed by India,
-            Russia, Japan, and China.
-          </ProjectParagraph>
-        </ProjectSection>
-        <ProjectSection key="conc-header" id="conc-header" title="Conclusion">
-          <ProjectParagraph>
-            Results indicate that the world will reach the 15.8<sup>o</sup> C temperature
-            recommendation in 2042 in the worst case, 2099 in the best case, and 2064 in the most
-            likely case. Additionally, in 100 years, we expect the global CO<sub>2</sub>{' '}
-            concentration in the atmosphere to be around 650 ppm and the global temperature to hit
-            16.738<sup>o</sup> C in the most likely case. Forest area is expected to decrease by
-            500.000ha in 100 years, one octave of the current forest area.
-          </ProjectParagraph>
-          <ProjectParagraph>
-            Future work could explore the tendencies of the countries in adhering to the Paris
-            Agreement, thus trying to reduce the amount of CO<sub>2</sub> generated and increase the
-            forest size. A good approach suitable to the agent-based paradigm would be to consider
-            using reinforcement learning techniques to devise environmentally friendly policies for
-            each country.
-          </ProjectParagraph>
-        </ProjectSection>
-      </ProjectPageContainer>
-    );
-  }
-}
+export const GlobalWarming = (): React.JSX.Element => {
+  const page_project = projectContent.projects.globalwarming;
+  const footer_info = [
+    {
+      heading: 'Project Info',
+      desc: "Developed in Master's Degree Course - Simulations - 2022",
+    },
+    {
+      heading: 'Footnotes',
+      desc: "1.\tNet zero is a scientific concept that conveys that there is a finite budget of carbon dioxide that is allowed into the atmosphere, alongside other greenhouse gases and beyond this budget, any further release must be balanced by removal into sinks.\n\n2.\tSuch as tree-nation.com\n\n3.\tYou can find a complete list of this project's simplifications and assumptions in the paper.",
+    },
+    {
+      heading: 'References',
+      desc: '[1]\tP. Shukla, J. Skea, R. Slade, A. Al Khourdajie, R. van Diemen, D. McCollum, M. Pathak, S. Some, P. Vyas, R. Fradera et al., “Climate change 2022: Mitigation of climate change. contribution of working group iii to the sixth assessment report of the intergovernmental panel on climate change,” 2021.\n\n[2]\tD. Pandey, M. Agrawal, and J. S. Pandey, “Carbon footprint: current methods of estimation,” Environmental monitoring and assessment, vol. 178, no. 1, pp. 135-160, 2011.\n\n[3]\tK. Jacob, “Forests change the climate,” 2020.\n\n[4]\tFAO, “Global forest resources assessment 2020: Main report. rome,” 2020.\n\n[5]\tD. Rind, “Complexity and climate,” science, vol. 284, no. 5411, pp. 105-107, 1999\n\n[6]\tS. Rahmstorf and E. Zedillo, “Anthropogenic climate change: Revisiting the facts,” in Global Warming: Looking Beyond Kyoto. Brookings Institution Press, 2008, pp. 34-53.',
+    },
+  ];
+  return (
+    <ProjectPageContainer project={page_project} footer={footer_info}>
+      <ProjectSection key="intro-header" id="intro-header" title="Introduction" variant="first">
+        <ProjectParagraph>
+          During the past five decades, the Earth&apos;s average temperature has been increasing at
+          a high rate [1], and one of the causes are CO<sub>2</sub> emissions [2]. The
+          Intergovernmental Panel on Climate Change (IPCC) has strongly recommended limiting the
+          increase in global temperature below 2<sup>o</sup> C as compared to the pre-industrial
+          level to avoid severe ecological and economic threats [2]. Therefore, understanding future
+          climatic conditions and situations is the basis for the world countries to develop
+          mitigation strategies.
+        </ProjectParagraph>
+        <ProjectParagraph>
+          A helpful tool the world has to fight climate change is our forests. Forests can remove
+          large amounts of CO<sub>2</sub> from the atmosphere [3]. Researchers at ETH Zurich have
+          even calculated that large-scale afforestation could help solve the climate problem [3].
+          However, around 10 million hectares of forest are lost every year [4]. Recently, the
+          concept of Net Zero<sup>1</sup> has become popular, and with such, multiple environmental
+          companies<sup>2</sup> are offering services to help people and companies offset their CO
+          <sub>2</sub> emissions.
+        </ProjectParagraph>
+      </ProjectSection>
+      <ProjectSection key="dev-header" id="dev-header" title="Overview">
+        <ProjectParagraph>
+          With this scenario in mind, I developed a simulator of global warming concerning CO
+          <sub>2</sub> emissions and forest area net changes. The system implementation considers a
+          multi-method model: an agent-based and a system dynamics method. The world is modeled as a
+          set of agents, each being a country. Each country has its own CO<sub>2</sub> yearly
+          emission values, CO<sub>2</sub> concentration, forest area net change, and forest size,
+          based on their historical trends. The simulator aims at studying the proposed relationship
+          to answer the following <b>research questions:</b>
+        </ProjectParagraph>
+        <ResearchQuestions />
+        <ProjectParagraph>
+          Real global warming considers an incredible amount of latent variables and uncertainties
+          [5]. Thus, simulating a complex system requires some basic assumptions and
+          simplifications. With such simplifications, we can focus on feasible system elements.
+          Therefore this simulation model focus on understanding only the relationship between CO
+          <sub>2</sub>, forest area net change, and global temperature while adding the complexity
+          of the country&apos;s individualization.<sup>3</sup>
+        </ProjectParagraph>
+      </ProjectSection>
+      <ProjectSection key="feature-header" id="features-header" title="Model Implementation">
+        <ProjectParagraph>
+          The interactive simulation below shows the main view of the simulation screen. The view
+          represents the world map, with each country&apos;s forest area net change colored from the
+          given scale. The simulation view also allows for a global visualization of CO
+          <sub>2</sub> emissions. On the bottom, three plots are displayed: the world&apos;s forest
+          area net change, the current Global Surface Temperature (GST), and the World emissions. On
+          the bottom left are two slides to configure the two key simulation parameters: climate
+          sensitivity and forest capture values. Additionally, on the top left is a country
+          selector, which allows viewing the desired country and understanding its impact on the
+          world system.
+        </ProjectParagraph>
+        <Container className="w-100 mt-3 mb-3">
+          <iframe
+            title="GlobalWarmingSimulation"
+            className="w-100 global_warming_frame"
+            allow="fullscreen"
+            src="https://cloud.anylogic.com/assets/embed?modelId=b637dd80-0c8a-4411-a006-f9fedadddd96"
+          ></iframe>
+        </Container>
+        <ProjectParagraph>
+          On a deeper view of the key system parameters, climate sensitivity is a term created by
+          the Intergovernmental Panel on Climate Change (IPCC) to describe how much warmer the GST
+          will get if the number of greenhouse gases in the atmosphere doubles [1]. Researchers
+          estimate that this parameter lies between 2 to 5 times [6]. Additionally, forest capture
+          values are also not set in stone. Environmental scientists estimate that the forest
+          contribution to reducing CO<sub>2</sub> emissions is about 2.8 to 4.9 tons per hectare per
+          year [3].
+        </ProjectParagraph>
+        <DynamicsAccordion />
+      </ProjectSection>
+      <ProjectSection key="eval-header" id="eval-header" title="Methodology">
+        <ProjectParagraph>
+          Considering that the model is highly stochastic with hundreds of random variables from the
+          countries, the examination was carried out by analyzing 3 &quot;what-if&quot; scenarios in
+          Monte Carlo experimentation with 100 replications. In the worst-case scenario, the climate
+          sensitivity is the highest, and the forest capture is the lowest. In the best-case
+          scenario, its configuration is opposite from the worst-case. Finally, the most probable
+          scenario, the sensitivity and forest capture values are set to those that literature [6,
+          3] believe to be most probable.
+        </ProjectParagraph>
+        <ProjectParagraph>
+          All experiments were developed with the 2015 initial values and considered the same year
+          for the initial moment of the simulation. The experiments also considered 100 years of
+          development.
+        </ProjectParagraph>
+      </ProjectSection>
+      <ProjectSection key="exp-header" id="exp-header" title="Experimental Results">
+        <ProjectParagraph>
+          Plots were generated and curated to analyze the experiments and answer our research
+          questions. I selected a box plot to answer RQ1 since its shape allows the study of the
+          results minimum, first quartile, median, third quartile, and maximum. On the other hand,
+          to answer RQ2 and RQ3, a density plot was selected, allowing visualization of the range
+          and slope in which the result was shaped. The figure set below illustrates the worst-case,
+          best-case, and likely-case results.
+        </ProjectParagraph>
+        <ResultsTabs />
+        <ProjectParagraph>
+          Availing the granularity of the country agent-based modeling and answering RQ4, I analyzed
+          the likely scenario to identify the most troublesome countries for the environment. The
+          metric used to identify problematic countries was their Net Zero status. Results showed a
+          strong pattern; within 100 Monte Carlo simulations, the same result is always shown: the
+          United States is the worst country, followed by India, Russia, Japan, and China.
+        </ProjectParagraph>
+      </ProjectSection>
+      <ProjectSection key="conc-header" id="conc-header" title="Conclusion">
+        <ProjectParagraph>
+          Results indicate that the world will reach the 15.8<sup>o</sup> C temperature
+          recommendation in 2042 in the worst case, 2099 in the best case, and 2064 in the most
+          likely case. Additionally, in 100 years, we expect the global CO<sub>2</sub> concentration
+          in the atmosphere to be around 650 ppm and the global temperature to hit 16.738
+          <sup>o</sup> C in the most likely case. Forest area is expected to decrease by 500.000ha
+          in 100 years, one octave of the current forest area.
+        </ProjectParagraph>
+        <ProjectParagraph>
+          Future work could explore the tendencies of the countries in adhering to the Paris
+          Agreement, thus trying to reduce the amount of CO<sub>2</sub> generated and increase the
+          forest size. A good approach suitable to the agent-based paradigm would be to consider
+          using reinforcement learning techniques to devise environmentally friendly policies for
+          each country.
+        </ProjectParagraph>
+      </ProjectSection>
+    </ProjectPageContainer>
+  );
+};
 
-export default GlobalWarming;
-
-function ResultsTabs() {
+const ResultsTabs = (): React.JSX.Element => {
   return (
     <Container>
       <Tabs
@@ -333,9 +328,9 @@ function ResultsTabs() {
       </Tabs>
     </Container>
   );
-}
+};
 
-function DynamicsAccordion() {
+const DynamicsAccordion = (): React.JSX.Element => {
   return (
     <Container className="mt-3 mb-3">
       <Accordion defaultActiveKey="0" style={{ color: 'var(--bs-white)' }}>
@@ -362,18 +357,19 @@ function DynamicsAccordion() {
               </Figure>
             </Container>
             <ProjectParagraph>
-              The following year's global temperature is calculated using the current year's
-              temperature with an addition of the log difference in carbon concentration multiplied
-              by the climate sensitivity constant.
+              The following year&apos;s global temperature is calculated using the current
+              year&apos;s temperature with an addition of the log difference in carbon concentration
+              multiplied by the climate sensitivity constant.
             </ProjectParagraph>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
-          <Accordion.Header as="h3">Agent's Forest Size Dynamics</Accordion.Header>
+          <Accordion.Header as="h3">Agent&apos;s Forest Size Dynamics</Accordion.Header>
           <Accordion.Body className="text-left">
             <ProjectParagraph>
               Each country has a forest, whether increasing or decreasing in size. In the way that I
-              modeled the system, the country's forest is responsible for deducting the country's CO
+              modeled the system, the country&apos;s forest is responsible for deducting the
+              country&apos;s CO
               <sub>2</sub> emissions. Thus, each country is independently responsible for balancing
               its emissions with its forest area absorption. The figure below represents the system
               dynamics of a country forest. Each country starts with its respective stock forest
@@ -388,20 +384,21 @@ function DynamicsAccordion() {
             </Figure>
             <ProjectParagraph>
               As the simulation develops, a current forest area net change is sampled each year from
-              a normal distribution shaped by the country's historical mean and standard deviation
-              of change. This sampled value can either be positive or negative, representing an
-              input or output flow of the country's forest. Therefore the forest area stock is
-              constantly changing.
+              a normal distribution shaped by the country&apos;s historical mean and standard
+              deviation of change. This sampled value can either be positive or negative,
+              representing an input or output flow of the country&apos;s forest. Therefore the
+              forest area stock is constantly changing.
             </ProjectParagraph>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-          <Accordion.Header as="h3">Agent's CO2 Dynamics</Accordion.Header>
+          <Accordion.Header as="h3">Agent&apos;s CO2 Dynamics</Accordion.Header>
           <Accordion.Body className="text-left">
             <ProjectParagraph>
               Regardless of how ecofriendly a country might be, they are continually generating CO
-              <sub>2</sub>, whether by their population's daily life or industrial activity. The
-              figure below illustrates how each country's CO<sub>2</sub> concentration is generated.
+              <sub>2</sub>, whether by their population&apos;s daily life or industrial activity.
+              The figure below illustrates how each country&apos;s CO<sub>2</sub> concentration is
+              generated.
             </ProjectParagraph>
             <Figure className="mx-auto text-center">
               <Figure.Image
@@ -412,21 +409,22 @@ function DynamicsAccordion() {
             </Figure>
             <ProjectParagraph>
               Each country starts with a CO<sub>2</sub> stock, and this value increases (or
-              decreases) as the simulation develops. Each country's emission values are sampled from
-              a left-bounded normal distribution that uses the country's historical emission mean
-              and standard deviation to define its shape. The CO<sub>2</sub> input flow deduces the
-              oceanic absorption from the country's emission before changing the country-generated
-              concentration. Furthermore, the country CO<sub>2</sub> concentration has two output
-              flows, atmospheric dissipation and the absorption by the country's forests.
+              decreases) as the simulation develops. Each country&apos;s emission values are sampled
+              from a left-bounded normal distribution that uses the country&apos;s historical
+              emission mean and standard deviation to define its shape. The CO<sub>2</sub> input
+              flow deduces the oceanic absorption from the country&apos;s emission before changing
+              the country-generated concentration. Furthermore, the country CO<sub>2</sub>{' '}
+              concentration has two output flows, atmospheric dissipation and the absorption by the
+              country&apos;s forests.
             </ProjectParagraph>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
     </Container>
   );
-}
+};
 
-function ResearchQuestions() {
+const ResearchQuestions = (): React.JSX.Element => {
   return (
     <Container>
       <Card className="subtitle_bold my-3">
@@ -451,4 +449,4 @@ function ResearchQuestions() {
       </Card>
     </Container>
   );
-}
+};
