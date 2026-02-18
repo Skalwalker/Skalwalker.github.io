@@ -28,10 +28,10 @@ export const useSkillsChart = (): RefObject<HTMLDivElement | null> => {
       const scaleFactor = isMobile ? MOBILE_SCALE_FACTOR : 1;
       const strokeWidth = isMobile ? 3 : 4;
 
-      const skillData: SkillNode[] = Object.values(skills).map((skill) => ({
+      const skillData: SkillNode[] = skills.map((skill) => ({
         name: skill.title,
         group: skill.group,
-        size: skill.linkedin + skill.years + skill.projects + skill.self_ass,
+        size: skill.linkedin + skill.years + skill.projects + skill.selfEval,
       }));
 
       const svg = d3.select(container).append('svg').attr('width', width).attr('height', height);
@@ -119,7 +119,7 @@ export const useSkillsChart = (): RefObject<HTMLDivElement | null> => {
 
       simulationRef.current = simulation;
 
-      const dragstarted = (
+      const dragStarted = (
         event: d3.D3DragEvent<SVGGElement, SkillNode, SkillNode>,
         d: SkillNode
       ): void => {
@@ -136,7 +136,7 @@ export const useSkillsChart = (): RefObject<HTMLDivElement | null> => {
         d.fy = event.y;
       };
 
-      const dragended = (
+      const dragEnded = (
         event: d3.D3DragEvent<SVGGElement, SkillNode, SkillNode>,
         d: SkillNode
       ): void => {
@@ -147,9 +147,9 @@ export const useSkillsChart = (): RefObject<HTMLDivElement | null> => {
 
       const dragBehavior = d3
         .drag<SVGGElement, SkillNode>()
-        .on('start', dragstarted)
+        .on('start', dragStarted)
         .on('drag', dragged)
-        .on('end', dragended);
+        .on('end', dragEnded);
 
       dragBehavior(node);
 

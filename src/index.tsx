@@ -1,14 +1,21 @@
-import './assets/css/theme.scss';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
 
 import { App } from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-root.render(
-  // <React.StrictMode>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-  // </React.StrictMode>
+import './assets/css/theme.scss';
+
+const rootElement = document.getElementById('root');
+
+if (rootElement === null) {
+  throw new Error('Root element #root not found in the document.');
+}
+
+ReactDOM.createRoot(rootElement).render(
+  <StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>
 );
