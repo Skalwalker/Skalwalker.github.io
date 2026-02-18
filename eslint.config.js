@@ -59,6 +59,48 @@ export default tseslint.config(
       'react/prop-types': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+      '@typescript-eslint/naming-convention': [
+        'error',
+        // Default: camelCase for everything not covered below
+        {
+          selector: 'default',
+          format: ['camelCase'],
+          leadingUnderscore: 'allow',
+          trailingUnderscore: 'forbid',
+        },
+        // Imports: no format enforced — names are defined by the package author
+        {
+          selector: 'import',
+          format: null,
+        },
+        // Variables: also allow PascalCase (React components) and UPPER_CASE (constants)
+        {
+          selector: 'variable',
+          format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+          leadingUnderscore: 'allow',
+        },
+        // Functions: camelCase or PascalCase (React components)
+        {
+          selector: 'function',
+          format: ['camelCase', 'PascalCase'],
+        },
+        // Parameters: camelCase, leading underscore allowed for intentionally unused params
+        {
+          selector: 'parameter',
+          format: ['camelCase'],
+          leadingUnderscore: 'allow',
+        },
+        // Types (classes, interfaces, type aliases, enums): PascalCase
+        {
+          selector: 'typeLike',
+          format: ['PascalCase'],
+        },
+        // Enum members: PascalCase or UPPER_CASE
+        {
+          selector: 'enumMember',
+          format: ['PascalCase', 'UPPER_CASE'],
+        },
+      ],
     },
   }
 );
