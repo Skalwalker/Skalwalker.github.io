@@ -1,145 +1,78 @@
-import React from 'react';
-import { Col, Row, Button, Container } from 'react-bootstrap';
+import type { JSX } from 'react';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 
 import { PaperCard } from '../components/papers/PaperCard';
 import { PaperCardShort } from '../components/papers/PaperCardShort';
 import { ScrollButton } from '../components/shared/ScrollButton';
-import { publications_content } from '../content/Publications';
+import { publicationsContent } from '../content/Publications';
+import { useTagFilter } from '../hooks/useTagFilter';
 
 import '../assets/css/font.css';
 
-interface myState {
-  activeTags: any;
-  child: any;
-}
-interface myProps {}
+export const Publications = (): JSX.Element => {
+  const { toggleTag, isTagActive, matchesTags } = useTagFilter();
 
-class Publications extends React.Component<myProps, myState> {
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      activeTags: [],
-      child: null,
-    };
-  }
+  const { tags, publications } = publicationsContent;
 
-  clickButton = (id: string) => {
-    const aux = this.state.activeTags;
-    if (aux.includes(id, 0)) {
-      aux.splice(aux.indexOf(id), 1);
-    } else {
-      aux.push(id);
-    }
-    this.setState({
-      activeTags: aux,
-    });
-  };
-
-  checkIfIsActive = (id: string) => {
-    if (this.state.activeTags.includes(id, 0)) {
-      return 'light';
-    } else {
-      return 'outline-light';
-    }
-  };
-
-  checkInTags = (tag: any) => {
-    let found = 0;
-    for (let i = 0; i <= this.state.activeTags.length; i++) {
-      if (this.state.activeTags.includes(tag, 0)) {
-        found++;
-      }
-    }
-    if (found >= this.state.activeTags.length) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  render() {
-    const tags = publications_content.tags;
-    const papers = publications_content.publications;
-
-    return (
-      <Container className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid>
-        <Row>
-          <h1 className="subtitle">
-            Featured <b>Publications</b>
-          </h1>
-          <div className="w-100 mt-2 mb-2" style={{ backgroundColor: 'white', height: '3px' }} />
-        </Row>
-        <Row style={{ padding: '8px' }}>
-          {papers.map((paper, index) => {
-            if (paper.highlight) {
-              return (
-                <Col key={paper.title} lg={6} style={{ padding: '10px' }}>
-                  <PaperCard
-                    title={paper.title}
-                    url={paper.url}
-                    publisher={paper.publisher}
-                    year={paper.year}
-                  />
-                </Col>
-              );
-            } else {
-              return null;
-            }
-          })}
-        </Row>
-        <Row className="pt-5">
-          <Col>
-            <Row>
-              <Col lg={6}>
-                <h1 className="subtitle">Newest</h1>
-              </Col>
-              {tags.map((name, index) => {
-                return (
-                  <Col key={name} lg={2} style={{ paddingTop: '12px' }} className="d-grid mb-2">
-                    <Button
-                      key={name}
-                      onClick={() => {
-                        this.clickButton(name);
-                      }}
-                      className="paragraph"
-                      variant={this.checkIfIsActive(name)}
-                      size="sm"
-                    >
-                      {name}
-                    </Button>
-                  </Col>
-                );
-              })}
-              <div
-                className="w-100 mt-2 mb-2"
-                style={{ backgroundColor: 'white', height: '3px' }}
+  return (
+    <Container className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid>
+      <Row>
+        <h1 className="subtitle">
+          Featured <b>Publications</b>
+        </h1>
+        <div className="w-100 mt-2 mb-2" style={{ backgroundColor: 'white', height: '3px' }} />
+      </Row>
+      <Row style={{ padding: '8px' }}>
+        {publications
+          .filter((paper) => paper.highlight)
+          .map((paper) => (
+            <Col key={paper.title} lg={6} style={{ padding: '10px' }}>
+              <PaperCard
+                title={paper.title}
+                url={paper.url}
+                publisher={paper.publisher}
+                year={paper.year}
               />
-            </Row>
-            {papers.map((paper, index) => {
-              if (
-                (paper.tags.some(this.checkInTags) || this.state.activeTags.length === 0) &&
-                !paper.highlight
-              ) {
-                return (
-                  <Row key={paper.title} style={{ padding: '10px', paddingTop: '10px' }}>
-                    <PaperCardShort
-                      title={paper.title}
-                      url={paper.url}
-                      publisher={paper.publisher}
-                      year={paper.year}
-                    />
-                  </Row>
-                );
-              } else {
-                return null;
-              }
-            })}
-          </Col>
-        </Row>
-        <ScrollButton />
-      </Container>
-    );
-  }
-}
-
-export default Publications;
+            </Col>
+          ))}
+      </Row>
+      <Row className="pt-5">
+        <Col>
+          <Row>
+            <Col lg={6}>
+              <h1 className="subtitle">Newest</h1>
+            </Col>
+            {tags.map((name) => (
+              <Col key={name} lg={2} style={{ paddingTop: '12px' }} className="d-grid mb-2">
+                <Button
+                  onClick={() => {
+                    toggleTag(name);
+                  }}
+                  className="paragraph"
+                  variant={isTagActive(name) ? 'light' : 'outline-light'}
+                  size="sm"
+                >
+                  {name}
+                </Button>
+              </Col>
+            ))}
+            <div className="w-100 mt-2 mb-2" style={{ backgroundColor: 'white', height: '3px' }} />
+          </Row>
+          {publications
+            .filter((paper) => !paper.highlight && matchesTags(paper.tags))
+            .map((paper) => (
+              <Row key={paper.title} style={{ padding: '10px', paddingTop: '10px' }}>
+                <PaperCardShort
+                  title={paper.title}
+                  url={paper.url}
+                  publisher={paper.publisher}
+                  year={paper.year}
+                />
+              </Row>
+            ))}
+        </Col>
+      </Row>
+      <ScrollButton />
+    </Container>
+  );
+};

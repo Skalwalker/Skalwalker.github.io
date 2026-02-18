@@ -13,7 +13,7 @@ import { Ecosampling } from './views/projects/Ecosampling';
 import { GlobalWarming } from './views/projects/GlobalWarming';
 import { Hare } from './views/projects/Hare';
 import { VitalSigns } from './views/projects/VitalSigns';
-import Publications from './views/Publications';
+import { Publications } from './views/Publications';
 
 export const NavRouter = (): React.JSX.Element => {
   return (

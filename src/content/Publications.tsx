@@ -1,4 +1,20 @@
-const publications_content = {
+type Tags = 'Article' | 'Dissertation' | 'Report';
+
+interface PublicationContent {
+  title: string;
+  year: string;
+  publisher: string;
+  highlight: boolean;
+  tags: Tags[];
+  url: string;
+}
+
+interface PublicationsContent {
+  tags: Tags[];
+  publications: PublicationContent[];
+}
+
+export const publicationsContent: PublicationsContent = {
   tags: ['Article', 'Dissertation', 'Report'],
   publications: [
     {
@@ -194,5 +210,3 @@ const publications_content = {
     },
   ],
 };
-
-export { publications_content };
