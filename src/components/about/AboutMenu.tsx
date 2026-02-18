@@ -13,12 +13,7 @@ import '../../assets/css/about.css';
 export const AboutMenu = (): React.JSX.Element => {
   return (
     <Row>
-      <Col
-        xl={11}
-        lg={11}
-        className="mb-0 mb-lg-5"
-        style={{ marginTop: '20px', marginBottom: '20px' }}
-      >
+      <Col lg={11} className="mb-0 mb-lg-5" style={{ marginTop: '20px', marginBottom: '20px' }}>
         <Row>
           <Image
             src={coreContent.profileImg}
