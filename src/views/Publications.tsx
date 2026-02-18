@@ -3,8 +3,8 @@ import { Background } from '../components/shared/Background';
 import { Col, Row, Button, Container } from 'react-bootstrap';
 import { ScrollButton } from '../components/shared/ScrollButton';
 import { publications_content } from '../content/Publications';
-import PaperCard from '../components/papers/PaperCard';
-import PaperCardShort from '../components/papers/PaperCardShort';
+import { PaperCard } from '../components/papers/PaperCard';
+import { PaperCardShort } from '../components/papers/PaperCardShort';
 
 import '../assets/css/font.css';
 
