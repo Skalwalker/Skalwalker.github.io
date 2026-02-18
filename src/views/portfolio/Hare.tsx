@@ -1,13 +1,15 @@
 import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Figure from 'react-bootstrap/Figure';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Row from 'react-bootstrap/Row';
-import Tab from 'react-bootstrap/Tab';
-import Table from 'react-bootstrap/Table';
-import Tabs from 'react-bootstrap/Tabs';
+import {
+  Accordion,
+  Col,
+  Container,
+  Figure,
+  Row,
+  Tab,
+  Table,
+  Tabs,
+  ListGroup,
+} from 'react-bootstrap';
 
 import abev3LossImg from '../../assets/images/projects/aurora/ABEV3_LOSS.png';
 import abev3PredImg from '../../assets/images/projects/aurora/ABEV3_pred.png';
@@ -21,10 +23,10 @@ import rmmImg from '../../assets/images/projects/aurora/rmm.png';
 import systemImg from '../../assets/images/projects/aurora/system.png';
 import vale3LossImg from '../../assets/images/projects/aurora/VALE3_LOSS.png';
 import vale3PredImg from '../../assets/images/projects/aurora/VALE3_pred.png';
-import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
-import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
-import { ProjectSection } from '../../components/projects/ProjectSection';
-import { projectContent } from '../../content/Projects';
+import { ProjectPageContainer } from '../../components';
+import { ProjectParagraph } from '../../components';
+import { ProjectSection } from '../../components';
+import { projectContent } from '../../content';
 
 import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';

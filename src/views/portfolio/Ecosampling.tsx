@@ -1,8 +1,5 @@
 import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Figure from 'react-bootstrap/Figure';
+import { Accordion, Card, Container, Figure } from 'react-bootstrap';
 
 import complexityPlotPng from '../../assets/images/projects/ecosampling/complexity_plot.png';
 import currentJpg from '../../assets/images/projects/ecosampling/current.jpg';
@@ -15,10 +12,8 @@ import orderDisorderPlotPng from '../../assets/images/projects/ecosampling/order
 import protos2Png from '../../assets/images/projects/ecosampling/protos_2.png';
 import salience2Png from '../../assets/images/projects/ecosampling/salience_2.png';
 import simulationGif from '../../assets/images/projects/ecosampling/simulation.gif';
-import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
-import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
-import { ProjectSection } from '../../components/projects/ProjectSection';
-import { projectContent } from '../../content/Projects';
+import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
+import { projectContent } from '../../content';
 
 export const Ecosampling = (): React.JSX.Element => {
   const footerInfo = [

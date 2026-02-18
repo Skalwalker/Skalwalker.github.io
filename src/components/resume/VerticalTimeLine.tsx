@@ -5,7 +5,7 @@ import { IoLogoTableau } from 'react-icons/io5';
 import { MdDoNotDisturbOnTotalSilence, MdWork } from 'react-icons/md';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
-import { experienceContent, type ExperienceType } from '../../content/Experience';
+import { experienceContent, ExperienceType } from '../../content';
 
 import 'react-vertical-timeline-component/style.min.css';
 import '../../assets/css/experience.css';

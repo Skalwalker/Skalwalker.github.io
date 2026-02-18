@@ -1,11 +1,9 @@
 import type { JSX } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 
-import { PaperCard } from '../components/papers/PaperCard';
-import { PaperCardShort } from '../components/papers/PaperCardShort';
-import { ScrollButton } from '../components/shared/ScrollButton';
-import { publicationsContent } from '../content/Publications';
-import { useTagFilter } from '../hooks/useTagFilter';
+import { PaperCard, PaperCardShort, ScrollButton } from '../components';
+import { publicationsContent } from '../content';
+import { useTagFilter } from '../hooks';
 
 import '../assets/css/font.css';
 

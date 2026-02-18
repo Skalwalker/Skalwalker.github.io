@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row, Button } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image';
+import { Image } from 'react-bootstrap';
 import { FaGithub } from 'react-icons/fa';
 import { IoIosPaper } from 'react-icons/io';
 

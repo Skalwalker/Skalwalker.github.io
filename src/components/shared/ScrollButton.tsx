@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
+import { Button } from 'react-bootstrap';
 import { BiUpArrowAlt } from 'react-icons/bi';
 
 export const ScrollButton = (): React.JSX.Element => {

@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-import { BackgroundParticles } from './components/shared/BackgroundParticles';
-import { NavBar } from './components/shared/NavBar';
+import { BackgroundParticles, NavBar } from './components';
 import { NavRouter } from './routes';
-import { Splashscreen } from './views/Splashscreen';
+import { Splashscreen } from './views';
+
 import './assets/css/splashscreen.css';
 
 export const App = (): React.JSX.Element => {

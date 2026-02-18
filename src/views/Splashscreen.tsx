@@ -2,7 +2,7 @@ import type { JSX } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import { BackgroundParticles } from '../components/shared/BackgroundParticles';
+import { BackgroundParticles } from '../components';
 import '../assets/css/font.css';
 
 export const Splashscreen = (): JSX.Element => (

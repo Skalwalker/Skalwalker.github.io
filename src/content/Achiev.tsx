@@ -1,4 +1,4 @@
-import { AchievementContent } from '../components/achievements/types';
+import { AchievementContent } from '../components';
 
 export const achievList: AchievementContent[] = [
   {

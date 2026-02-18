@@ -3,7 +3,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 
 import { LikeDesc } from './LikeDesc';
 import { LikeIcon } from './LikeIcon';
-import { likeContent } from '../../content/About';
+import { likeContent } from '../../content';
 import '../../assets/css/about.css';
 
 export const Likes = (): React.JSX.Element => {

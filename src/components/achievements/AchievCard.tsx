@@ -22,7 +22,7 @@ import { IoIosPaper } from 'react-icons/io';
 import { RiMedalLine, RiStockFill, RiSlideshowLine } from 'react-icons/ri';
 import { SiIos, SiSwift } from 'react-icons/si';
 
-import { StyledCard } from '../../components/shared/StyledCard';
+import { StyledCard } from '../../components';
 
 interface AchievCardProps {
   title: string;

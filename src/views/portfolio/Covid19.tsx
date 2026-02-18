@@ -1,18 +1,16 @@
 import React from 'react';
-import { Accordion } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Figure from 'react-bootstrap/Figure';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Row from 'react-bootstrap/Row';
-import Tab from 'react-bootstrap/Tab';
-import Table from 'react-bootstrap/Table';
-import Tabs from 'react-bootstrap/Tabs';
-
-import '../../assets/css/font.css';
-import '../../assets/css/tabs.css';
-import '../../assets/css/projects.css';
+import {
+  Accordion,
+  Card,
+  Col,
+  Container,
+  Figure,
+  ListGroup,
+  Row,
+  Tab,
+  Table,
+  Tabs,
+} from 'react-bootstrap';
 
 import imgCnnCoswaraCm from '../../assets/images/projects/covid19/cnn_coswara_cm.png';
 import imgCnnCoswaraRoc from '../../assets/images/projects/covid19/cnn_coswara_roc.png';
@@ -29,10 +27,12 @@ import imgSvmCoswaraCm from '../../assets/images/projects/covid19/svm_coswara_cm
 import imgSvmCoswaraRoc from '../../assets/images/projects/covid19/svm_coswara_roc.png';
 import imgSvmCoughvidCm from '../../assets/images/projects/covid19/svm_coughvid_cm.png';
 import imgSvmCoughvidRoc from '../../assets/images/projects/covid19/svm_coughvid_roc.png';
-import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
-import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
-import { ProjectSection } from '../../components/projects/ProjectSection';
-import { projectContent } from '../../content/Projects';
+import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
+import { projectContent } from '../../content';
+
+import '../../assets/css/font.css';
+import '../../assets/css/tabs.css';
+import '../../assets/css/projects.css';
 
 const FeaturesAccordion = (): React.JSX.Element => {
   return (

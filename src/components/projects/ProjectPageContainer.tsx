@@ -4,8 +4,8 @@ import { Row, Col, Container } from 'react-bootstrap';
 import { ProjectHeader } from './ProjectHeader';
 import { TableOfContents } from './TableofContents';
 import { ProjectInfo, FooterSectionType } from './types';
-import { ProjectFooter } from '../../components/projects/ProjectFooter';
-import { ScrollButton } from '../shared/ScrollButton';
+import { ProjectFooter } from '../../components';
+import { ScrollButton } from '../shared';
 
 import '../../assets/css/font.css';
 import '../../assets/css/stickytable.css';

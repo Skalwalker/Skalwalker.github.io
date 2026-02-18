@@ -1,11 +1,5 @@
 import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
-import Carousel from 'react-bootstrap/Carousel';
-import Container from 'react-bootstrap/Container';
-import Figure from 'react-bootstrap/Figure';
-import Tab from 'react-bootstrap/Tab';
-import Table from 'react-bootstrap/Table';
-import Tabs from 'react-bootstrap/Tabs';
+import { Accordion, Carousel, Container, Figure, Tab, Table, Tabs } from 'react-bootstrap';
 
 import appImg1 from '../../assets/images/projects/vitalsigns/appimg1.png';
 import appImg2 from '../../assets/images/projects/vitalsigns/appimg2.png';
@@ -19,10 +13,8 @@ import overviewImg from '../../assets/images/projects/vitalsigns/overview.png';
 import respiratoryRateImg from '../../assets/images/projects/vitalsigns/respiratory_rate.png';
 import rrSignalImg from '../../assets/images/projects/vitalsigns/rrsignal.png';
 import signalsImg from '../../assets/images/projects/vitalsigns/signals.png';
-import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
-import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
-import { ProjectSection } from '../../components/projects/ProjectSection';
-import { projectContent } from '../../content/Projects';
+import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
+import { projectContent } from '../../content';
 
 import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';

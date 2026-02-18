@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-import { ExperienceTimeline } from '../components/resume/VerticalTimeLine';
-import { ScrollButton } from '../components/shared/ScrollButton';
+import { ExperienceTimeline } from '../components';
+import { ScrollButton } from '../components';
 
 export const Experience = (): React.JSX.Element => {
   return (

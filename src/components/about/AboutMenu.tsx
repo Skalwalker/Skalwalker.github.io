@@ -6,7 +6,7 @@ import { HiCubeTransparent, HiOfficeBuilding } from 'react-icons/hi';
 import { IoMdSchool } from 'react-icons/io';
 import { NavLink } from 'react-router';
 
-import { coreContent } from '../../content/About';
+import { coreContent } from '../../content';
 
 import '../../assets/css/about.css';
 

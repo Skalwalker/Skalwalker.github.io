@@ -1,16 +1,5 @@
 import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Figure from 'react-bootstrap/Figure';
-import Row from 'react-bootstrap/Row';
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-
-import '../../assets/css/font.css';
-import '../../assets/css/tabs.css';
-import '../../assets/css/projects.css';
+import { Accordion, Card, Col, Container, Figure, Row, Tab, Tabs } from 'react-bootstrap';
 
 import co2DynamicsImg from '../../assets/images/projects/globalwarming/co2_dynamics.png';
 import e2Co2Img from '../../assets/images/projects/globalwarming/exps/e2/co2.png';
@@ -24,10 +13,12 @@ import e4TempImg from '../../assets/images/projects/globalwarming/exps/e4/temp.p
 import e4YearImg from '../../assets/images/projects/globalwarming/exps/e4/year.png';
 import forestDynamicsImg from '../../assets/images/projects/globalwarming/forest_dynamics.png';
 import globalDynamicsImg from '../../assets/images/projects/globalwarming/global_dynamics.png';
-import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
-import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
-import { ProjectSection } from '../../components/projects/ProjectSection';
-import { projectContent } from '../../content/Projects';
+import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
+import { projectContent } from '../../content';
+
+import '../../assets/css/font.css';
+import '../../assets/css/tabs.css';
+import '../../assets/css/projects.css';
 
 export const GlobalWarming = (): React.JSX.Element => {
   const footerInfo = [

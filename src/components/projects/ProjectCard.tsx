@@ -3,7 +3,7 @@ import { Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router';
 
 import { ProjectCardInfo } from './types';
-import { StyledCard } from '../../components/shared/StyledCard';
+import { StyledCard } from '../../components';
 
 const ProjectCardContent = ({ project }: { project: ProjectCardInfo }): React.JSX.Element => (
   <StyledCard

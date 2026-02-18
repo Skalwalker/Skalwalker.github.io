@@ -1,12 +1,9 @@
 import React, { SetStateAction, useState } from 'react';
 import { Col, Row, Container } from 'react-bootstrap';
 
-import { AchievCard } from '../components/achievements/AchievCard';
-import { AchievDesc } from '../components/achievements/AchievDesc';
-import { AchievDescModal } from '../components/achievements/AchievDescModal';
-import { AchievementContent } from '../components/achievements/types';
-import { achievList } from '../content/Achiev';
-import { useIsMobile } from '../hooks/useIsMobile';
+import { AchievCard, AchievDesc, AchievDescModal, AchievementContent } from '../components';
+import { achievList } from '../content';
+import { useIsMobile } from '../hooks';
 
 import '../assets/css/sidebar.css';
 

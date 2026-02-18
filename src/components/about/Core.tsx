@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 
-import { coreContent } from '../../content/About';
+import { coreContent } from '../../content';
 
 import '../../assets/css/about.css';
 

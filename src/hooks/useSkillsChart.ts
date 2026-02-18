@@ -2,7 +2,7 @@ import * as d3 from 'd3';
 import { useCallback, useEffect, useRef, type RefObject } from 'react';
 
 import { useIsMobile } from './useIsMobile';
-import { skills } from '../content/Skills';
+import { skills } from '../content';
 
 interface SkillNode extends d3.SimulationNodeDatum {
   name: string;

@@ -1,7 +1,6 @@
 import CSS from 'csstype';
 import React from 'react';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Nav, Navbar } from 'react-bootstrap';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { NavLink } from 'react-router';
 import '../../assets/css/navbar.css';

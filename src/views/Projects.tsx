@@ -1,18 +1,17 @@
 import React from 'react';
 import { Col, Row, Button, Container } from 'react-bootstrap';
 
-import { ProjectCard } from '../components/projects/ProjectCard';
-import { ProjectData } from '../components/projects/types';
-import { ScrollButton } from '../components/shared/ScrollButton';
-import { projectContent } from '../content/Projects';
-import { useTagFilter } from '../hooks/useTagFilter';
+import { ProjectCard, ProjectData, ScrollButton } from '../components';
+import { projectContent } from '../content';
+import { useTagFilter } from '../hooks';
+
 import '../assets/css/font.css';
 
 const FeaturedProjects: React.FC<{ projects: ProjectData[] }> = ({ projects }) => (
   <Row>
-    {projects.map((p) => (
-      <Col key={p.title} xl={3} lg={6} sm={6} style={{ padding: '10px' }}>
-        <ProjectCard project={p} />
+    {projects.map((project) => (
+      <Col key={project.title} xl={3} lg={6} sm={6} style={{ padding: '10px' }}>
+        <ProjectCard project={project} />
       </Col>
     ))}
   </Row>

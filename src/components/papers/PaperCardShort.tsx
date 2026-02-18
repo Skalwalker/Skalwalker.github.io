@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import { PaperCardProps } from './types';
-import { StyledCard } from '../../components/shared/StyledCard';
+import { StyledCard } from '../../components';
 
 export const PaperCardShort = ({
   title,

@@ -1,4 +1,4 @@
-import { ProjectData } from '../components/projects/types';
+import { ProjectData } from '../components';
 
 type ProjectName =
   | 'vitalsigns'
