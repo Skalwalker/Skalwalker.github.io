@@ -15,7 +15,7 @@ import { Hare } from './views/projects/Hare';
 import { VitalSigns } from './views/projects/VitalSigns';
 import Publications from './views/Publications';
 
-export function NavRouter() {
+export const NavRouter = (): React.JSX.Element => {
   return (
     <Routes>
       <Route path="/">
@@ -40,9 +40,9 @@ export function NavRouter() {
       <Route path="*" element={<Errorscreen />} />
     </Routes>
   );
-}
+};
 
-export function AboutRouter() {
+export const AboutRouter = (): React.JSX.Element => {
   return (
     <Routes>
       <Route index element={<Core />} />
@@ -50,4 +50,4 @@ export function AboutRouter() {
       <Route path="skills" element={<Skills />} />
     </Routes>
   );
-}
+};
