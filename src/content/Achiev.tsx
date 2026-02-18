@@ -1,20 +1,19 @@
-const achievs = [
+import { AchievementContent } from '../components/achievements/types';
+
+export const achievList: AchievementContent[] = [
   {
     title: 'Graduate',
     desc: 'Got my B.S. in Computer Science at the University of Brasilia. It was not easy, but I made it! My university degree is available under request. Send me an email.',
     earned: 'Earned in 2020',
     img: 'graduate',
     locked: false,
-    attachment: true,
-    attc_content: 'Contact Me',
   },
   {
     title: 'Study Abroad',
     desc: 'Went to study in Santa Barbara for my Junior Year of High School. Leaving Brazil and going to another country was such an enlightening experience. I learned a lot about American culture and developed my English to a higher level.',
     earned: 'Earned in 2013',
     img: 'plane',
-    attachment: false,
-    attc_content: '',
+    locked: false,
   },
   {
     title: 'Doing Science',
@@ -22,8 +21,6 @@ const achievs = [
     img: 'science',
     locked: false,
     earned: 'Earned in 2016',
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'On My Own',
@@ -31,8 +28,6 @@ const achievs = [
     img: 'ios',
     locked: false,
     earned: 'Earned in 2017',
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'Food Revolution',
@@ -40,8 +35,6 @@ const achievs = [
     earned: 'Earned in 2020',
     img: 'plants',
     locked: false,
-    attachment: true,
-    attc_content: 'Foto da minha hortinha se pa',
   },
   {
     title: 'Awesome Portfolio',
@@ -49,8 +42,6 @@ const achievs = [
     earned: 'Earned in 2020',
     img: 'website',
     locked: false,
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'Guest Speaker',
@@ -58,8 +49,6 @@ const achievs = [
     earned: 'Earned in 2022',
     img: 'workshop',
     locked: false,
-    attachment: true,
-    attc_content: 'Watch the Video, See Project',
   },
   {
     title: 'Money Maker',
@@ -67,8 +56,6 @@ const achievs = [
     earned: 'Earned in 2019',
     img: 'money',
     locked: false,
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'Writer',
@@ -76,8 +63,6 @@ const achievs = [
     earned: 'Earned in 2021',
     img: 'paper',
     locked: false,
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'Hacking the Market',
@@ -85,8 +70,6 @@ const achievs = [
     earned: 'Earned in 2020',
     img: 'market',
     locked: false,
-    attachment: true,
-    attc_content: 'See Project',
   },
   {
     title: 'Top of the Class',
@@ -94,8 +77,6 @@ const achievs = [
     earned: 'Earned in 2017',
     img: 'medal',
     locked: false,
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'Early Start',
@@ -103,8 +84,6 @@ const achievs = [
     earned: 'Earned in 2014',
     img: 'swift',
     locked: false,
-    attachment: true,
-    attc_content: 'See Projects',
   },
   {
     title: 'Get a Masters',
@@ -112,8 +91,6 @@ const achievs = [
     img: 'jedi',
     locked: false,
     earned: 'Earned in 2025',
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'GAFAM',
@@ -121,8 +98,6 @@ const achievs = [
     img: 'amazon',
     locked: false,
     earned: 'Joined Amazon in 2023',
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'Get a Doctors',
@@ -130,8 +105,6 @@ const achievs = [
     img: 'doctor',
     locked: true,
     earned: 'Achievement Locked',
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'Fancy Chef',
@@ -139,8 +112,6 @@ const achievs = [
     img: 'cook',
     locked: true,
     earned: 'Achievement Locked',
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'Barista',
@@ -148,8 +119,6 @@ const achievs = [
     img: 'coffee',
     locked: true,
     earned: 'Achievement Locked',
-    attachment: false,
-    attc_content: '',
   },
   {
     title: 'Kaggle Winner',
@@ -157,9 +126,5 @@ const achievs = [
     img: 'kaggle',
     locked: true,
     earned: 'Achievement Locked',
-    attachment: false,
-    attc_content: '',
   },
 ];
-
-export { achievs };

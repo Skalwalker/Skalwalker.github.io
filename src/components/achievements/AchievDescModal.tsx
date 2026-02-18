@@ -1,35 +1,17 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
+import { AchievementModalProps } from './types';
 
-interface MyProps { desc: string; title: string; date: string; show: boolean; callback: any }
-interface MyState { show: boolean }
-
-class AchievDescModal extends React.Component<MyProps, MyState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false,
-    };
-  }
-
-  componentWillReceiveProps(props) {
-    this.setState({ show: props.show });
-  }
-
-  handleClose = () => {
-    this.setState({ show: false });
-    this.props.callback();
-  };
-
-  render() {
-    return (
-      <Modal className="d-lg-none" show={this.state.show} onHide={this.handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title className="subtitle_bold">{this.props.title}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body className="paragraph">{this.props.desc}</Modal.Body>
-      </Modal>
-    );
-  }
-}
-export default AchievDescModal;
+export const AchievDescModal = ({
+  content,
+  callback,
+}: AchievementModalProps): React.JSX.Element => {
+  return (
+    <Modal className="d-lg-none" onHide={callback} centered>
+      <Modal.Header closeButton>
+        <Modal.Title className="subtitle_bold">{content.title}</Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="paragraph">{content.desc}</Modal.Body>
+    </Modal>
+  );
+};

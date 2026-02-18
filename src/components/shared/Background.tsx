@@ -16,7 +16,7 @@ export const Background = ({
   return (
     <div id="background" style={{ height: pageHeight, backgroundColor: '#070e20' }}>
       <div style={{ height: pageHeight, position: 'relative', margin: '0 auto' }}>
-        {<BackgroundParticles />}
+        <BackgroundParticles />
         <div style={{ position: 'absolute', top: '0', width: '100%', minHeight: '100vh' }}>
           <NavBar></NavBar>
           {children}

@@ -1,6 +1,6 @@
 import { About } from './views/About';
 import Experience from './views/Experience';
-import Achiev from './views/Achiev';
+import { AchievementView } from './views/Achiev';
 import { Projects } from './views/Projects';
 import Publications from './views/Publications';
 import { Core } from './components/about/Core';
@@ -27,7 +27,7 @@ export function NavRouter() {
         <Route path="skills" element={<Skills />} />
       </Route>
       <Route path="/experience" element={<Experience />} />
-      <Route path="/achivements" element={<Achiev />} />
+      <Route path="/achivements" element={<AchievementView />} />
       <Route path="/publications" element={<Publications />} />
       <Route path="/projects">
         <Route index element={<Projects />} />

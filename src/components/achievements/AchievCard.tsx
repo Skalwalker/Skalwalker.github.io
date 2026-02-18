@@ -24,98 +24,83 @@ import {
   FaMoneyBillAlt,
 } from 'react-icons/fa';
 
-interface MyProps { title: string; date: string; img: string; locked: boolean }
-interface MyState {}
+interface AchievCardProps {
+  title: string;
+  date: string;
+  img: string;
+  locked: boolean;
+}
 
-class AchievCard extends React.Component<MyProps, MyState> {
-  static defaultProps = {
-    title: 'Stranger',
-    date: 'Stranger',
-    img: 'default',
-    locked: false,
-  };
-
-  get_icon(name: string) {
-    const size = 50;
-    const selected_color = 'white';
-    const class_name = 'm-auto d-block';
+export const AchievCard = ({ title, date, img, locked }: AchievCardProps): React.JSX.Element => {
+  const getIcon = (name: string): React.JSX.Element => {
+    const iconSize = 50;
+    const defaultColor = 'white';
+    const className = 'm-auto d-block';
 
     switch (name) {
       case 'graduate':
-        return <FaGraduationCap className={class_name} color={selected_color} size={size} />;
+        return <FaGraduationCap className={className} color={defaultColor} size={iconSize} />;
       case 'paper':
-        return <IoIosPaper className={class_name} color={selected_color} size={size - 2} />;
+        return <IoIosPaper className={className} color={defaultColor} size={iconSize - 2} />;
       case 'money':
-        return <FaMoneyBillAlt className={class_name} color={selected_color} size={size - 2} />;
+        return <FaMoneyBillAlt className={className} color={defaultColor} size={iconSize - 2} />;
       case 'science':
-        return <GiMaterialsScience className={class_name} color={selected_color} size={size} />;
+        return <GiMaterialsScience className={className} color={defaultColor} size={iconSize} />;
       case 'plants':
-        return <GiCarnivorousPlant className={class_name} color={selected_color} size={size} />;
+        return <GiCarnivorousPlant className={className} color={defaultColor} size={iconSize} />;
       case 'plane':
-        return <GiAirplaneDeparture className={class_name} color={selected_color} size={size} />;
+        return <GiAirplaneDeparture className={className} color={defaultColor} size={iconSize} />;
       case 'ios':
-        return <SiIos className={class_name} color={selected_color} size={size} />;
+        return <SiIos className={className} color={defaultColor} size={iconSize} />;
       case 'workshop':
-        return <RiSlideshowLine className={class_name} color={selected_color} size={size - 2} />;
+        return <RiSlideshowLine className={className} color={defaultColor} size={iconSize - 2} />;
       case 'medal':
-        return <RiMedalLine className={class_name} color={selected_color} size={size} />;
+        return <RiMedalLine className={className} color={defaultColor} size={iconSize} />;
       case 'market':
-        return <RiStockFill className={class_name} color={selected_color} size={size} />;
+        return <RiStockFill className={className} color={defaultColor} size={iconSize} />;
       case 'coffee':
-        return <BiCoffeeTogo className={class_name} color={selected_color} size={size} />;
+        return <BiCoffeeTogo className={className} color={defaultColor} size={iconSize} />;
       case 'kaggle':
-        return <FaKaggle className={class_name} color={selected_color} size={size} />;
+        return <FaKaggle className={className} color={defaultColor} size={iconSize} />;
       case 'cook':
-        return <GiCook className={class_name} color={selected_color} size={size} />;
+        return <GiCook className={className} color={defaultColor} size={iconSize} />;
       case 'swift':
-        return <SiSwift className={class_name} color={selected_color} size={size - 2} />;
+        return <SiSwift className={className} color={defaultColor} size={iconSize - 2} />;
       case 'jedi':
-        return <FaJedi className={class_name} color={selected_color} size={size - 2} />;
+        return <FaJedi className={className} color={defaultColor} size={iconSize - 2} />;
       case 'doctor':
-        return <GiPlagueDoctorProfile className={class_name} color={selected_color} size={size} />;
+        return <GiPlagueDoctorProfile className={className} color={defaultColor} size={iconSize} />;
       case 'amazon':
-        return <FaAmazon className={class_name} color={selected_color} size={size} />;
+        return <FaAmazon className={className} color={defaultColor} size={iconSize} />;
       case 'website':
-        return <CgWebsite className={class_name} color={selected_color} size={size - 2} />;
+        return <CgWebsite className={className} color={defaultColor} size={iconSize - 2} />;
       default:
-        return <FaVuejs className={class_name} color={selected_color} size={size} />;
+        return <FaVuejs className={className} color={defaultColor} size={iconSize} />;
     }
-  }
+  };
 
-  render() {
-    const locked = this.props.locked;
-    let opcValue: string;
-    if (locked) {
-      opcValue = '0.5';
-    } else {
-      opcValue = '1.0';
-    }
-
-    return (
-      <StyledCard
-        className="mt-2 click_cards"
-        style={{ height: '4.65rem', minWidth: '270px', opacity: opcValue }}
-      >
-        <Col>
-          <Row>
-            <Col xl={3} md={3} sm={3} xs={3} className="my-auto mx-auto" style={{ padding: '5px' }}>
-              {this.get_icon(this.props.img)}
-            </Col>
-            <Col xl={9} md={9} sm={9} xs={9} style={{ paddingLeft: '0' }}>
-              <Card.Body style={{ padding: '0.5rem', paddingLeft: '0' }}>
-                <Card.Title className="subtitle_bold pt-2 mb-1" style={{ fontSize: '18px' }}>
-                  {this.props.title}
-                </Card.Title>
-                <Card.Text className="paragraph mb-1" style={{ fontSize: '12px' }}>
-                  {this.props.date}
-                </Card.Text>
-              </Card.Body>
-            </Col>
-          </Row>
-        </Col>
-      </StyledCard>
-    );
-  }
-}
-
-export default AchievCard;
+  return (
+    <StyledCard
+      className="mt-2 click_cards"
+      style={{ height: '4.65rem', minWidth: '270px', opacity: locked ? '0.5' : '1.0' }}
+    >
+      <Col>
+        <Row>
+          <Col xl={3} md={3} sm={3} xs={3} className="my-auto mx-auto" style={{ padding: '5px' }}>
+            {getIcon(img)}
+          </Col>
+          <Col xl={9} md={9} sm={9} xs={9} style={{ paddingLeft: '0' }}>
+            <Card.Body style={{ padding: '0.5rem', paddingLeft: '0' }}>
+              <Card.Title className="subtitle_bold pt-2 mb-1" style={{ fontSize: '18px' }}>
+                {title}
+              </Card.Title>
+              <Card.Text className="paragraph mb-1" style={{ fontSize: '12px' }}>
+                {date}
+              </Card.Text>
+            </Card.Body>
+          </Col>
+        </Row>
+      </Col>
+    </StyledCard>
+  );
+};
