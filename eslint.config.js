@@ -55,6 +55,25 @@ export default tseslint.config(
       '@typescript-eslint/prefer-optional-chain': 'error',
       '@typescript-eslint/strict-boolean-expressions': 'error',
       'import/no-default-export': 'error',
+      'import/order': [
+        'error',
+        {
+          groups: ['builtin', 'external', ['parent', 'sibling', 'index']],
+          'newlines-between': 'always',
+          alphabetize: { order: 'asc', caseInsensitive: true },
+        },
+      ],
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
       'prefer-arrow-callback': 'error',
       'react/prop-types': 'off',
       'react-hooks/rules-of-hooks': 'error',
