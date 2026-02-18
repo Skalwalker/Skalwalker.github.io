@@ -1,12 +1,12 @@
+import CSS from 'csstype';
 import React from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
+import { GiBookmark, GiCutDiamond } from 'react-icons/gi';
+import { HiCubeTransparent, HiOfficeBuilding } from 'react-icons/hi';
+import { IoMdSchool } from 'react-icons/io';
 import { NavLink } from 'react-router';
 
-import CSS from 'csstype';
 import { coreContent } from '../../content/About';
-import { HiCubeTransparent, HiOfficeBuilding } from 'react-icons/hi';
-import { GiBookmark, GiCutDiamond } from 'react-icons/gi';
-import { IoMdSchool } from 'react-icons/io';
 
 import '../../assets/css/about.css';
 

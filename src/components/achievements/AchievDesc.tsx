@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Image } from 'react-bootstrap';
+
 import { AchievementContent } from './types';
 
 interface AchievementDescProps {

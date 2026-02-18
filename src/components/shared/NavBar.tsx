@@ -1,11 +1,10 @@
+import CSS from 'csstype';
 import React from 'react';
-import { NavLink } from 'react-router';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { NavLink } from 'react-router';
 import '../../assets/css/navbar.css';
-
-import CSS from 'csstype';
 
 export const NavBar = (): React.JSX.Element => {
   return (
@@ -30,35 +29,35 @@ export const NavBar = (): React.JSX.Element => {
           <NavLink
             className="nav-link subtitle"
             to="/about"
-            style={({ isActive }) => (isActive ? button_active : {})}
+            style={({ isActive }) => (isActive ? buttonActive : {})}
           >
             About
           </NavLink>
           <NavLink
             className="nav-link subtitle"
             to="/projects"
-            style={({ isActive }) => (isActive ? button_active : {})}
+            style={({ isActive }) => (isActive ? buttonActive : {})}
           >
             Projects
           </NavLink>
           <NavLink
             className="nav-link subtitle"
             to="/publications"
-            style={({ isActive }) => (isActive ? button_active : {})}
+            style={({ isActive }) => (isActive ? buttonActive : {})}
           >
             Publications
           </NavLink>
           <NavLink
             className="nav-link subtitle"
             to="/experience"
-            style={({ isActive }) => (isActive ? button_active : {})}
+            style={({ isActive }) => (isActive ? buttonActive : {})}
           >
             Experience
           </NavLink>
           <NavLink
             className="nav-link subtitle"
             to="/achivements"
-            style={({ isActive }) => (isActive ? button_active : {})}
+            style={({ isActive }) => (isActive ? buttonActive : {})}
           >
             Achivements
           </NavLink>
@@ -68,7 +67,7 @@ export const NavBar = (): React.JSX.Element => {
   );
 };
 
-const button_active: CSS.Properties = {
+const buttonActive: CSS.Properties = {
   fontWeight: 'bold',
 };
 

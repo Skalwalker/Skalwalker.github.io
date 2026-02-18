@@ -1,13 +1,5 @@
 import React from 'react';
-
-import {
-  GiSushis,
-  GiCookingPot,
-  GiDiceTwentyFacesTwenty,
-  GiBookmark,
-  GiMusicalNotes,
-  GiArtificialHive,
-} from 'react-icons/gi';
+import { BiCoffeeTogo } from 'react-icons/bi';
 import {
   FaPizzaSlice,
   FaCrosshairs,
@@ -19,16 +11,23 @@ import {
   FaVuejs,
   FaApple,
 } from 'react-icons/fa';
+import {
+  GiSushis,
+  GiCookingPot,
+  GiDiceTwentyFacesTwenty,
+  GiBookmark,
+  GiMusicalNotes,
+  GiArtificialHive,
+} from 'react-icons/gi';
 import { MdPiano, MdLocationCity } from 'react-icons/md';
-import { BiCoffeeTogo } from 'react-icons/bi';
 import { RiStockFill, RiPlantFill } from 'react-icons/ri';
 
-import saintsIcon from '../../assets/images/icons/saints.svg';
-import rhcpIcon from '../../assets/images/icons/rhcp.svg';
-import westworldIcon from '../../assets/images/icons/westworld.svg';
-import hordeIcon from '../../assets/images/icons/horde.svg';
-import gotIcon from '../../assets/images/icons/got.svg';
 import marvelIcon from '../../assets/images/icons/avangers.svg';
+import gotIcon from '../../assets/images/icons/got.svg';
+import hordeIcon from '../../assets/images/icons/horde.svg';
+import rhcpIcon from '../../assets/images/icons/rhcp.svg';
+import saintsIcon from '../../assets/images/icons/saints.svg';
+import westworldIcon from '../../assets/images/icons/westworld.svg';
 
 export const LikeIcon = ({ img }: { img: string }): React.JSX.Element => {
   const getIcon = (): React.JSX.Element => {

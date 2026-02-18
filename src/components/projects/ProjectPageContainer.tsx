@@ -1,10 +1,10 @@
 import React from 'react';
-
 import { Row, Col, Container } from 'react-bootstrap';
-import { TableOfContents } from './TableofContents';
+
 import { ProjectHeader } from './ProjectHeader';
-import { ProjectFooter } from '../../components/projects/ProjectFooter';
+import { TableOfContents } from './TableofContents';
 import { ProjectInfo, FooterSectionType } from './types';
+import { ProjectFooter } from '../../components/projects/ProjectFooter';
 import { ScrollButton } from '../shared/ScrollButton';
 
 import '../../assets/css/font.css';

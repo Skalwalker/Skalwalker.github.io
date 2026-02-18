@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { BiUpArrowAlt } from 'react-icons/bi';
 import Button from 'react-bootstrap/Button';
+import { BiUpArrowAlt } from 'react-icons/bi';
 
 export const ScrollButton = (): React.JSX.Element => {
   const [visible, setVisible] = useState(false);

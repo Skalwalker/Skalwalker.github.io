@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useRef, type RefObject } from 'react';
 import * as d3 from 'd3';
+import { useCallback, useEffect, useRef, type RefObject } from 'react';
 
-import { skills } from '../content/Skills';
 import { useIsMobile } from './useIsMobile';
+import { skills } from '../content/Skills';
 
 interface SkillNode extends d3.SimulationNodeDatum {
   name: string;
@@ -34,11 +34,7 @@ export const useSkillsChart = (): RefObject<HTMLDivElement | null> => {
         size: skill.linkedin + skill.years + skill.projects + skill.self_ass,
       }));
 
-      const svg = d3
-        .select(container)
-        .append('svg')
-        .attr('width', width)
-        .attr('height', height);
+      const svg = d3.select(container).append('svg').attr('width', width).attr('height', height);
 
       const x = d3
         .scaleOrdinal<number, number>()
@@ -104,7 +100,13 @@ export const useSkillsChart = (): RefObject<HTMLDivElement | null> => {
             .strength(0.04)
             .y((d) => (isMobile ? x(d.group) : height / 2))
         )
-        .force('center', d3.forceCenter<SkillNode>().x(width / 2).y(height / 2))
+        .force(
+          'center',
+          d3
+            .forceCenter<SkillNode>()
+            .x(width / 2)
+            .y(height / 2)
+        )
         .force('charge', d3.forceManyBody<SkillNode>().strength(1))
         .force(
           'collide',

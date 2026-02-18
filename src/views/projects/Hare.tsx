@@ -1,40 +1,34 @@
 import React from 'react';
-
-import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
-import { ProjectSection } from '../../components/projects/ProjectSection';
-import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
-
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab';
-
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
-import Table from 'react-bootstrap/Table';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Figure from 'react-bootstrap/Figure';
-
 import Accordion from 'react-bootstrap/Accordion';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Figure from 'react-bootstrap/Figure';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Row from 'react-bootstrap/Row';
+import Tab from 'react-bootstrap/Tab';
+import Table from 'react-bootstrap/Table';
+import Tabs from 'react-bootstrap/Tabs';
+
+import abev3LossImg from '../../assets/images/projects/aurora/ABEV3_LOSS.png';
+import abev3PredImg from '../../assets/images/projects/aurora/ABEV3_pred.png';
+import fronteiraImg from '../../assets/images/projects/aurora/fronteira.png';
+import insiderImg from '../../assets/images/projects/aurora/insider.png';
+import petr3LossImg from '../../assets/images/projects/aurora/PETR3_LOSS.png';
+import petr3PredImg from '../../assets/images/projects/aurora/PETR3_pred.png';
+import resamImg from '../../assets/images/projects/aurora/resam.png';
+import returnImg from '../../assets/images/projects/aurora/return.png';
+import rmmImg from '../../assets/images/projects/aurora/rmm.png';
+import systemImg from '../../assets/images/projects/aurora/system.png';
+import vale3LossImg from '../../assets/images/projects/aurora/VALE3_LOSS.png';
+import vale3PredImg from '../../assets/images/projects/aurora/VALE3_pred.png';
+import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
+import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
+import { ProjectSection } from '../../components/projects/ProjectSection';
+import { projectContent } from '../../content/Projects';
 
 import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
-
-import { projectContent } from '../../content/Projects';
-
-import systemImg from '../../assets/images/projects/aurora/system.png';
-import returnImg from '../../assets/images/projects/aurora/return.png';
-import fronteiraImg from '../../assets/images/projects/aurora/fronteira.png';
-import insiderImg from '../../assets/images/projects/aurora/insider.png';
-import rmmImg from '../../assets/images/projects/aurora/rmm.png';
-import resamImg from '../../assets/images/projects/aurora/resam.png';
-import vale3PredImg from '../../assets/images/projects/aurora/VALE3_pred.png';
-import petr3PredImg from '../../assets/images/projects/aurora/PETR3_pred.png';
-import abev3PredImg from '../../assets/images/projects/aurora/ABEV3_pred.png';
-import vale3LossImg from '../../assets/images/projects/aurora/VALE3_LOSS.png';
-import petr3LossImg from '../../assets/images/projects/aurora/PETR3_LOSS.png';
-import abev3LossImg from '../../assets/images/projects/aurora/ABEV3_LOSS.png';
 
 export const Hare = (): React.JSX.Element => {
   const footerInfo = [

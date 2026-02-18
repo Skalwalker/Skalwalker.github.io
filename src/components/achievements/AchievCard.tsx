@@ -1,20 +1,8 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
 import { Row, Col } from 'react-bootstrap';
-import { StyledCard } from '../../components/shared/StyledCard';
-
-import { CgWebsite } from 'react-icons/cg';
+import Card from 'react-bootstrap/Card';
 import { BiCoffeeTogo } from 'react-icons/bi';
-import { RiMedalLine, RiStockFill, RiSlideshowLine } from 'react-icons/ri';
-import { IoIosPaper } from 'react-icons/io';
-import { SiIos, SiSwift } from 'react-icons/si';
-import {
-  GiMaterialsScience,
-  GiPlagueDoctorProfile,
-  GiCarnivorousPlant,
-  GiAirplaneDeparture,
-  GiCook,
-} from 'react-icons/gi';
+import { CgWebsite } from 'react-icons/cg';
 import {
   FaVuejs,
   FaGraduationCap,
@@ -23,6 +11,18 @@ import {
   FaJedi,
   FaMoneyBillAlt,
 } from 'react-icons/fa';
+import {
+  GiMaterialsScience,
+  GiPlagueDoctorProfile,
+  GiCarnivorousPlant,
+  GiAirplaneDeparture,
+  GiCook,
+} from 'react-icons/gi';
+import { IoIosPaper } from 'react-icons/io';
+import { RiMedalLine, RiStockFill, RiSlideshowLine } from 'react-icons/ri';
+import { SiIos, SiSwift } from 'react-icons/si';
+
+import { StyledCard } from '../../components/shared/StyledCard';
 
 interface AchievCardProps {
   title: string;

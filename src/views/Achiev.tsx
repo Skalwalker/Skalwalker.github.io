@@ -1,13 +1,14 @@
 import React, { SetStateAction, useState } from 'react';
+import { Col, Row, Container } from 'react-bootstrap';
+
 import { AchievCard } from '../components/achievements/AchievCard';
 import { AchievDesc } from '../components/achievements/AchievDesc';
 import { AchievDescModal } from '../components/achievements/AchievDescModal';
-import { Col, Row, Container } from 'react-bootstrap';
+import { AchievementContent } from '../components/achievements/types';
 import { achievList } from '../content/Achiev';
+import { useIsMobile } from '../hooks/useIsMobile';
 
 import '../assets/css/sidebar.css';
-import { useIsMobile } from '../hooks/useIsMobile';
-import { AchievementContent } from '../components/achievements/types';
 
 export const AchievementView = (): React.JSX.Element => {
   const isMobile = useIsMobile();

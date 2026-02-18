@@ -1,8 +1,9 @@
 import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
-import { StyledCard } from '../../components/shared/StyledCard';
 import { Link } from 'react-router';
+
 import { ProjectCardInfo } from './types';
+import { StyledCard } from '../../components/shared/StyledCard';
 
 const ProjectCardContent = ({ project }: { project: ProjectCardInfo }): React.JSX.Element => (
   <StyledCard

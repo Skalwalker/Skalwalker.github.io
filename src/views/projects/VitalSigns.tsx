@@ -1,37 +1,32 @@
 import React from 'react';
-
-import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
-import { ProjectSection } from '../../components/projects/ProjectSection';
-import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
-
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab';
-
-import Table from 'react-bootstrap/Table';
-import Figure from 'react-bootstrap/Figure';
-import Container from 'react-bootstrap/Container';
 import Accordion from 'react-bootstrap/Accordion';
-
 import Carousel from 'react-bootstrap/Carousel';
+import Container from 'react-bootstrap/Container';
+import Figure from 'react-bootstrap/Figure';
+import Tab from 'react-bootstrap/Tab';
+import Table from 'react-bootstrap/Table';
+import Tabs from 'react-bootstrap/Tabs';
 
-import '../../assets/css/font.css';
-import '../../assets/css/tabs.css';
-import '../../assets/css/projects.css';
-
-import { projectContent } from '../../content/Projects';
-
-import overviewImg from '../../assets/images/projects/vitalsigns/overview.png';
-import signalsImg from '../../assets/images/projects/vitalsigns/signals.png';
-import componentsImg from '../../assets/images/projects/vitalsigns/components.png';
-import correlationImg from '../../assets/images/projects/vitalsigns/correlation.png';
-import respiratoryRateImg from '../../assets/images/projects/vitalsigns/respiratory_rate.png';
-import heartRateImg from '../../assets/images/projects/vitalsigns/heart_rate.png';
-import rrSignalImg from '../../assets/images/projects/vitalsigns/rrsignal.png';
-import heartSignalImg from '../../assets/images/projects/vitalsigns/heartsignal.png';
 import appImg1 from '../../assets/images/projects/vitalsigns/appimg1.png';
 import appImg2 from '../../assets/images/projects/vitalsigns/appimg2.png';
 import appImg3 from '../../assets/images/projects/vitalsigns/appimg3.png';
 import appImg4 from '../../assets/images/projects/vitalsigns/appimg4.png';
+import componentsImg from '../../assets/images/projects/vitalsigns/components.png';
+import correlationImg from '../../assets/images/projects/vitalsigns/correlation.png';
+import heartRateImg from '../../assets/images/projects/vitalsigns/heart_rate.png';
+import heartSignalImg from '../../assets/images/projects/vitalsigns/heartsignal.png';
+import overviewImg from '../../assets/images/projects/vitalsigns/overview.png';
+import respiratoryRateImg from '../../assets/images/projects/vitalsigns/respiratory_rate.png';
+import rrSignalImg from '../../assets/images/projects/vitalsigns/rrsignal.png';
+import signalsImg from '../../assets/images/projects/vitalsigns/signals.png';
+import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
+import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
+import { ProjectSection } from '../../components/projects/ProjectSection';
+import { projectContent } from '../../content/Projects';
+
+import '../../assets/css/font.css';
+import '../../assets/css/tabs.css';
+import '../../assets/css/projects.css';
 
 export const VitalSigns = (): React.JSX.Element => {
   const footerInfo = [

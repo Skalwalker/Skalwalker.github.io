@@ -1,6 +1,6 @@
 import React from 'react';
-import { BiLeftArrowAlt } from 'react-icons/bi';
 import { Button } from 'react-bootstrap';
+import { BiLeftArrowAlt } from 'react-icons/bi';
 
 export const BackButton = (): React.JSX.Element => {
   return (

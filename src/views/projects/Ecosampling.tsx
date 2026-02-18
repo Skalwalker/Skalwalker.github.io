@@ -1,26 +1,24 @@
 import React from 'react';
-import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
-import { ProjectSection } from '../../components/projects/ProjectSection';
-import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
-
-import Container from 'react-bootstrap/Container';
 import Accordion from 'react-bootstrap/Accordion';
-import Figure from 'react-bootstrap/Figure';
 import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Figure from 'react-bootstrap/Figure';
 
-import { projectContent } from '../../content/Projects';
-
-import simulationGif from '../../assets/images/projects/ecosampling/simulation.gif';
-import diagramPng from '../../assets/images/projects/ecosampling/diagram.png';
-import currentJpg from '../../assets/images/projects/ecosampling/current.jpg';
-import foveated2Png from '../../assets/images/projects/ecosampling/foveated_2.png';
-import salience2Png from '../../assets/images/projects/ecosampling/salience_2.png';
-import protos2Png from '../../assets/images/projects/ecosampling/protos_2.png';
-import empiricalDists2Png from '../../assets/images/projects/ecosampling/empirical_dists_2.png';
-import orderDisorderPlotPng from '../../assets/images/projects/ecosampling/order_disorder_plot.png';
 import complexityPlotPng from '../../assets/images/projects/ecosampling/complexity_plot.png';
+import currentJpg from '../../assets/images/projects/ecosampling/current.jpg';
+import diagramPng from '../../assets/images/projects/ecosampling/diagram.png';
+import empiricalDists2Png from '../../assets/images/projects/ecosampling/empirical_dists_2.png';
 import foa2Png from '../../assets/images/projects/ecosampling/foa_2.png';
+import foveated2Png from '../../assets/images/projects/ecosampling/foveated_2.png';
 import ips2Png from '../../assets/images/projects/ecosampling/ips_2.png';
+import orderDisorderPlotPng from '../../assets/images/projects/ecosampling/order_disorder_plot.png';
+import protos2Png from '../../assets/images/projects/ecosampling/protos_2.png';
+import salience2Png from '../../assets/images/projects/ecosampling/salience_2.png';
+import simulationGif from '../../assets/images/projects/ecosampling/simulation.gif';
+import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
+import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
+import { ProjectSection } from '../../components/projects/ProjectSection';
+import { projectContent } from '../../content/Projects';
 
 export const Ecosampling = (): React.JSX.Element => {
   const footerInfo = [

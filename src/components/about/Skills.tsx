@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
 import { Col, Container } from 'react-bootstrap';
+
 import { useSkillsChart } from '../../hooks/useSkillsChart';
 
 import '../../assets/css/sidebar.css';

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { coreContent } from '../../content/About';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
+
+import { coreContent } from '../../content/About';
 
 import '../../assets/css/about.css';
 

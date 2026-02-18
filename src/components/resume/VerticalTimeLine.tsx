@@ -4,6 +4,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import '../../assets/css/experience.css';
 import '../../assets/css/font.css';
 import { experience } from '../../content/Experience';
+
 import React from 'react';
 import { MdWork } from 'react-icons/md';
 import { FaGraduationCap } from 'react-icons/fa';
@@ -65,7 +66,9 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
                     <Button
                       key={btn.button_text}
                       className="float-end"
-                      onClick={() => { this.openInNewTab(btn.button_link); }}
+                      onClick={() => {
+                        this.openInNewTab(btn.button_link);
+                      }}
                       size="sm"
                       variant="outline-primary ms-2 mt-3"
                     >
@@ -75,7 +78,9 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
                     <Button
                       key={btn.button_text}
                       className="float-end"
-                      onClick={() => { this.openInNewTab(btn.button_link); }}
+                      onClick={() => {
+                        this.openInNewTab(btn.button_link);
+                      }}
                       size="sm"
                       variant="outline-secondary ms-2 mt-3"
                     >
@@ -85,7 +90,9 @@ class ExperienceTimeline extends React.Component<myProps, myState> {
                     <Button
                       key={btn.button_text}
                       className="float-end"
-                      onClick={() => { this.openInNewTab(btn.button_link); }}
+                      onClick={() => {
+                        this.openInNewTab(btn.button_link);
+                      }}
                       size="sm"
                       variant="outline-warning ms-2 mt-3"
                     >

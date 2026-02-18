@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useMemo } from 'react';
-
+import type { ISourceOptions } from '@tsparticles/engine';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
-import type { ISourceOptions } from '@tsparticles/engine';
+import React, { useEffect, useState, useMemo } from 'react';
 
 interface BackgroundParticlesProps {
   id: string;

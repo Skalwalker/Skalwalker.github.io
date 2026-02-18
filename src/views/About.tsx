@@ -1,7 +1,8 @@
 import '../assets/css/sidebar.css';
 import React from 'react';
-import { AboutMenu } from '../components/about/AboutMenu';
 import { Container, Row, Col } from 'react-bootstrap';
+
+import { AboutMenu } from '../components/about/AboutMenu';
 import { AboutRouter } from '../routes';
 import '../assets/css/about.css';
 

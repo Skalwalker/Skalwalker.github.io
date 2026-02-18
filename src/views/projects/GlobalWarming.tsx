@@ -1,35 +1,33 @@
 import React from 'react';
-
-import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
-import { ProjectSection } from '../../components/projects/ProjectSection';
-import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
-import { projectContent } from '../../content/Projects';
-
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Figure from 'react-bootstrap/Figure';
-import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Figure from 'react-bootstrap/Figure';
+import Row from 'react-bootstrap/Row';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
 import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
 
-import e3TempImg from '../../assets/images/projects/globalwarming/exps/e3/temp.png';
-import e3Co2Img from '../../assets/images/projects/globalwarming/exps/e3/co2.png';
-import e3YearImg from '../../assets/images/projects/globalwarming/exps/e3/year.png';
-import e4TempImg from '../../assets/images/projects/globalwarming/exps/e4/temp.png';
-import e4Co2Img from '../../assets/images/projects/globalwarming/exps/e4/co2.png';
-import e4YearImg from '../../assets/images/projects/globalwarming/exps/e4/year.png';
-import e2TempImg from '../../assets/images/projects/globalwarming/exps/e2/temp.png';
-import e2Co2Img from '../../assets/images/projects/globalwarming/exps/e2/co2.png';
-import e2YearImg from '../../assets/images/projects/globalwarming/exps/e2/year.png';
-import globalDynamicsImg from '../../assets/images/projects/globalwarming/global_dynamics.png';
-import forestDynamicsImg from '../../assets/images/projects/globalwarming/forest_dynamics.png';
 import co2DynamicsImg from '../../assets/images/projects/globalwarming/co2_dynamics.png';
+import e2Co2Img from '../../assets/images/projects/globalwarming/exps/e2/co2.png';
+import e2TempImg from '../../assets/images/projects/globalwarming/exps/e2/temp.png';
+import e2YearImg from '../../assets/images/projects/globalwarming/exps/e2/year.png';
+import e3Co2Img from '../../assets/images/projects/globalwarming/exps/e3/co2.png';
+import e3TempImg from '../../assets/images/projects/globalwarming/exps/e3/temp.png';
+import e3YearImg from '../../assets/images/projects/globalwarming/exps/e3/year.png';
+import e4Co2Img from '../../assets/images/projects/globalwarming/exps/e4/co2.png';
+import e4TempImg from '../../assets/images/projects/globalwarming/exps/e4/temp.png';
+import e4YearImg from '../../assets/images/projects/globalwarming/exps/e4/year.png';
+import forestDynamicsImg from '../../assets/images/projects/globalwarming/forest_dynamics.png';
+import globalDynamicsImg from '../../assets/images/projects/globalwarming/global_dynamics.png';
+import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
+import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
+import { ProjectSection } from '../../components/projects/ProjectSection';
+import { projectContent } from '../../content/Projects';
 
 export const GlobalWarming = (): React.JSX.Element => {
   const footerInfo = [

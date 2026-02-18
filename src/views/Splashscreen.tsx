@@ -1,6 +1,7 @@
 import type { JSX } from 'react';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
 import { BackgroundParticles } from '../components/shared/BackgroundParticles';
 import '../assets/css/font.css';
 

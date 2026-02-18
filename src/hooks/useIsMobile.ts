@@ -1,28 +1,26 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react';
 
 export const useIsMobile = (breakpoint = 800): boolean => {
-  const [isMobile, setIsMobile] = useState(
-    window.innerWidth < breakpoint
-  )
+  const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
 
   useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout>
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     const handleResize = (): void => {
-      clearTimeout(timeoutId)
+      clearTimeout(timeoutId);
 
       timeoutId = setTimeout(() => {
-        setIsMobile(window.innerWidth < breakpoint)
-      }, 200) 
-    }
+        setIsMobile(window.innerWidth < breakpoint);
+      }, 200);
+    };
 
-    window.addEventListener("resize", handleResize)
+    window.addEventListener('resize', handleResize);
 
     return (): void => {
-      window.removeEventListener("resize", handleResize)
-      clearTimeout(timeoutId)
-    }
-  }, [breakpoint])
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(timeoutId);
+    };
+  }, [breakpoint]);
 
-  return isMobile
-}
+  return isMobile;
+};

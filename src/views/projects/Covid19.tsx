@@ -1,41 +1,38 @@
 import React from 'react';
-import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
-import { ProjectSection } from '../../components/projects/ProjectSection';
-import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
-
-import Table from 'react-bootstrap/Table';
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Figure from 'react-bootstrap/Figure';
-import ListGroup from 'react-bootstrap/ListGroup';
 import { Accordion } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-
-import { projectContent } from '../../content/Projects';
+import Figure from 'react-bootstrap/Figure';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Row from 'react-bootstrap/Row';
+import Tab from 'react-bootstrap/Tab';
+import Table from 'react-bootstrap/Table';
+import Tabs from 'react-bootstrap/Tabs';
 
 import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
 
-// Image imports
-import imgRmsPower from '../../assets/images/projects/covid19/features/rms_power.png';
-import imgZeroCrossing from '../../assets/images/projects/covid19/features/zero_crossing_rate.png';
-import imgSpectralBandwidth from '../../assets/images/projects/covid19/features/spectral_bandwith.png';
-import imgSpectralFlatness from '../../assets/images/projects/covid19/features/spectral_flatness.png';
-import imgSpectralRolloff from '../../assets/images/projects/covid19/features/spectral_rolloff.png';
-import imgMfccs from '../../assets/images/projects/covid19/features/mfccs.png';
-import imgSvmCoswaraCm from '../../assets/images/projects/covid19/svm_coswara_cm.png';
-import imgSvmCoswaraRoc from '../../assets/images/projects/covid19/svm_coswara_roc.png';
-import imgSvmCoughvidCm from '../../assets/images/projects/covid19/svm_coughvid_cm.png';
-import imgSvmCoughvidRoc from '../../assets/images/projects/covid19/svm_coughvid_roc.png';
 import imgCnnCoswaraCm from '../../assets/images/projects/covid19/cnn_coswara_cm.png';
 import imgCnnCoswaraRoc from '../../assets/images/projects/covid19/cnn_coswara_roc.png';
 import imgCnnCoughvidCm from '../../assets/images/projects/covid19/cnn_coughvid_cm.png';
 import imgCnnCoughvidRoc from '../../assets/images/projects/covid19/cnn_coughvid_roc.png';
+import imgMfccs from '../../assets/images/projects/covid19/features/mfccs.png';
+import imgRmsPower from '../../assets/images/projects/covid19/features/rms_power.png';
+import imgSpectralBandwidth from '../../assets/images/projects/covid19/features/spectral_bandwith.png';
+import imgSpectralFlatness from '../../assets/images/projects/covid19/features/spectral_flatness.png';
+import imgSpectralRolloff from '../../assets/images/projects/covid19/features/spectral_rolloff.png';
+import imgZeroCrossing from '../../assets/images/projects/covid19/features/zero_crossing_rate.png';
 import imgProcessDiagram from '../../assets/images/projects/covid19/process_diagram.png';
+import imgSvmCoswaraCm from '../../assets/images/projects/covid19/svm_coswara_cm.png';
+import imgSvmCoswaraRoc from '../../assets/images/projects/covid19/svm_coswara_roc.png';
+import imgSvmCoughvidCm from '../../assets/images/projects/covid19/svm_coughvid_cm.png';
+import imgSvmCoughvidRoc from '../../assets/images/projects/covid19/svm_coughvid_roc.png';
+import { ProjectPageContainer } from '../../components/projects/ProjectPageContainer';
+import { ProjectParagraph } from '../../components/projects/ProjectParagraph';
+import { ProjectSection } from '../../components/projects/ProjectSection';
+import { projectContent } from '../../content/Projects';
 
 const FeaturesAccordion = (): React.JSX.Element => {
   return (

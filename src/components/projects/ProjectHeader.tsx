@@ -3,6 +3,7 @@ import { Col, Row, Button } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 import { FaGithub } from 'react-icons/fa';
 import { IoIosPaper } from 'react-icons/io';
+
 import { ProjectInfo } from './types';
 
 import '../../assets/css/font.css';

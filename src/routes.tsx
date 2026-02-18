@@ -1,19 +1,19 @@
-import { About } from './views/About';
-import { Experience } from './views/Experience';
-import { AchievementView } from './views/Achiev';
-import { Projects } from './views/Projects';
-import Publications from './views/Publications';
+import { Routes, Route, Navigate } from 'react-router';
+
 import { Core } from './components/about/Core';
 import { Likes } from './components/about/Likes';
 import { Skills } from './components/about/Skills';
+import { About } from './views/About';
+import { AchievementView } from './views/Achiev';
 import { Errorscreen } from './views/ErrorScreen';
+import { Experience } from './views/Experience';
+import { Projects } from './views/Projects';
 import { Covid19 } from './views/projects/Covid19';
+import { Ecosampling } from './views/projects/Ecosampling';
 import { GlobalWarming } from './views/projects/GlobalWarming';
 import { Hare } from './views/projects/Hare';
-import { Ecosampling } from './views/projects/Ecosampling';
 import { VitalSigns } from './views/projects/VitalSigns';
-
-import { Routes, Route, Navigate } from 'react-router';
+import Publications from './views/Publications';
 
 export function NavRouter() {
   return (

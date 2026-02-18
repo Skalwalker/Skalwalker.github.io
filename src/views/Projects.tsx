@@ -1,9 +1,10 @@
 import React from 'react';
 import { Col, Row, Button, Container } from 'react-bootstrap';
-import { projectContent } from '../content/Projects';
+
 import { ProjectCard } from '../components/projects/ProjectCard';
 import { ProjectData } from '../components/projects/types';
 import { ScrollButton } from '../components/shared/ScrollButton';
+import { projectContent } from '../content/Projects';
 import { useTagFilter } from '../hooks/useTagFilter';
 import '../assets/css/font.css';
 

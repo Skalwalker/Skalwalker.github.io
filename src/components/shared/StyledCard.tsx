@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import Card from 'react-bootstrap/Card';
+import styled from 'styled-components';
 
 export const StyledCard = styled(Card)`
   &.click_cards:hover {

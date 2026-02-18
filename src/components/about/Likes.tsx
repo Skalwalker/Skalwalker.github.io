@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
+
 import { LikeDesc } from './LikeDesc';
 import { LikeIcon } from './LikeIcon';
 import { likeContent } from '../../content/About';
