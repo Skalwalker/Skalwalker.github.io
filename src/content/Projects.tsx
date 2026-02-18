@@ -42,8 +42,8 @@ export const projectContent = {
       skills: 'Signal Processing, Biomedical Signals, MATLAB, ICA',
       abstract:
         'This project uses a smartphone device to measure heart and respiratory rate, using the composite of the 3-axis from the accelerometer and the 3-axis from the gyroscope sensors. The methodology involves applying independent component analysis (ICA) and Fourier transform to identify the desired values. Results were promising for the respiratory rate with 82% accuracy, while the heart rate provided a good initial estimate, with a 6.84 MAE.',
-      code_link: 'https://github.com/Skalwalker/VitalSignsIMU',
-      paper_link:
+      codeUrl: 'https://github.com/Skalwalker/VitalSignsIMU',
+      paperUrl:
         'https://docs.google.com/presentation/d/1JFS_xKJzNkGZN91v-QUXHumuIu778Toloh1SlQQi8Po/edit?usp=share_link',
     },
     covid: {
@@ -60,8 +60,8 @@ export const projectContent = {
         'Audio Processing, Machine Learning, MFCCs, Python, Sklearn, Signal Processing, Tensorflow',
       abstract:
         "I've trained CNN and SVM models to produce prescreening COVID-19 detection using only the patient's cough. During the pandemic, the availability of testing methods was one of the main challenges in containing the virus. Therefore, I designed C19-Audit, a framework to evaluate if cough audio is sufficient to detect COVID and analyze whether the CNN approach can overcome the SVM.",
-      code_link: 'https://github.com/Skalwalker/C19-Audit/blob/master/notebooks/main.ipynb',
-      paper_link:
+      codeUrl: 'https://github.com/Skalwalker/C19-Audit/blob/master/notebooks/main.ipynb',
+      paperUrl:
         'https://drive.google.com/file/d/1pq3GrozIeHavHbMS2vEDlmYOwQbJ91an/view?usp=sharing',
     },
     globalwarming: {
@@ -77,9 +77,9 @@ export const projectContent = {
       skills: 'Agent-based Simulations, Anylogic, Monte Carlo, System Dynamics',
       abstract:
         'At COP21, 195 nations adopted the Paris Agreement, intending to hold the increase in the global temperature to below 2°C above pre-industrial levels. Where will we be if countries disregard the agreement? I decided to simulate global warming as a relationship between CO2 emissions and world deforestation. Considering that the countries continue their historical trends, simulation results expect the world to reach the temperature recommendation in 2064.',
-      code_link:
+      codeUrl:
         'https://cloud.anylogic.com/model/ba6ea900-9637-4817-a172-226847603ebf?mode=SETTINGS&tab=GENERAL',
-      paper_link:
+      paperUrl:
         'https://drive.google.com/file/d/1ZRBn_5ddMIygHjv697twuZtW5BbO9Cr5/view?usp=sharing',
     },
     bigdata: {
@@ -118,8 +118,8 @@ export const projectContent = {
         'Alpha-stable processes, Langevin SDEs, Lévy flight, Probabilistic Programming, Python, Visual Attention, Random Walks, Sphinx',
       abstract:
         "Modeling visual attention has been a very active research area over the past 25 years [1]. This project derived a Python implementation (PyEcosampling) of the ecological sampling of gaze shift by Boccignone et al. [2]. Their work considers the problem of the variability of visual scan paths produced by human observers. This project's primary focus is to achieve the most reproducibility from the original work, providing a reliable, well-structured python library and comprehensive documentation while maintaining performance.",
-      code_link: 'https://github.com/phuselab/pyEcoSampling',
-      paper_link:
+      codeUrl: 'https://github.com/phuselab/pyEcoSampling',
+      paperUrl:
         'https://drive.google.com/file/d/1zypysCialnEkX04R1ExY0FmDJ9Jg6HyD/view?usp=sharing',
     },
     portfolio: {
@@ -147,8 +147,8 @@ export const projectContent = {
         'DDPG, Finance, LSTM, Machine Learning, Python, Reinforcement Learning, Tensorflow, Time Series',
       abstract:
         "Understanding the stock exchange's intrinsic rules and taking opportunities are not trivial tasks. With that in mind, we developed AURORA: a new hybrid service to trade equities in the stock market, using an autonomous agent-based approach. Using a rational agent capable of perceiving the market and acting upon its perception autonomously, AURORA can manage a portfolio achieving profitability of up to 11.74%.",
-      code_link: 'https://github.com/EmpyreanAI',
-      paper_link: 'https://rdcu.be/cysdA',
+      codeUrl: 'https://github.com/EmpyreanAI',
+      paperUrl: 'https://rdcu.be/cysdA',
     },
     dodfminer: {
       banner: '/img/dodfminer.png',
@@ -172,7 +172,6 @@ export const projectContent = {
       headline: 'Omniwheel robot with LIDAR sensor for a package delivery simulation.',
       target: '_blank',
     },
-    // Number Recognition, Plants Recognition, Breast Cancer Recognition, Spam Recognition
     datascience: {
       banner: '/img/datascience.png',
       title: 'Data Science Projects',
@@ -205,8 +204,8 @@ export const projectContent = {
       highlight: false,
       headline: "Reinforcement Learning communication on Pac-man's ghosts.",
       target: '_blank',
-      code_link: 'https://github.com/Skalwalker/MRLCommunication',
-      paper_link:
+      codeUrl: 'https://github.com/Skalwalker/MRLCommunication',
+      paperUrl:
         'https://drive.google.com/file/d/1Ms01uQN4HshG3UMca5WwqtaDDiPAgcA1/view?usp=sharing',
     },
     medipreco: {
@@ -232,7 +231,6 @@ export const projectContent = {
       headline: 'A collection of computer vision mini-projects from an introductory class.',
       target: '_blank',
     },
-    // College Path, SPA Problem
     graphtheory: {
       banner: '/img/graphtheory.png',
       title: 'Graph Theory Projects',

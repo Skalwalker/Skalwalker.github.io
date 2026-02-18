@@ -34,8 +34,7 @@ import appImg3 from '../../assets/images/projects/vitalsigns/appimg3.png';
 import appImg4 from '../../assets/images/projects/vitalsigns/appimg4.png';
 
 export const VitalSigns = (): React.JSX.Element => {
-  const page_project = projectContent.projects.vitalsigns;
-  const footer_info = [
+  const footerInfo = [
     {
       heading: 'Project Info',
       desc: "Developed in Master's Degree Course - Biomedical Signal Processing - 2023",
@@ -43,7 +42,7 @@ export const VitalSigns = (): React.JSX.Element => {
   ];
 
   return (
-    <ProjectPageContainer project={page_project} footer={footer_info}>
+    <ProjectPageContainer project={projectContent.projects.vitalsigns} footer={footerInfo}>
       <ProjectSection id="intro-header" title="Introduction" variant="first">
         <ProjectParagraph>
           Measuring respiration and heart rate is crucial to diagnosing and monitoring a wide range

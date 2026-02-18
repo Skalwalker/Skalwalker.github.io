@@ -32,8 +32,7 @@ import forestDynamicsImg from '../../assets/images/projects/globalwarming/forest
 import co2DynamicsImg from '../../assets/images/projects/globalwarming/co2_dynamics.png';
 
 export const GlobalWarming = (): React.JSX.Element => {
-  const page_project = projectContent.projects.globalwarming;
-  const footer_info = [
+  const footerInfo = [
     {
       heading: 'Project Info',
       desc: "Developed in Master's Degree Course - Simulations - 2022",
@@ -48,7 +47,7 @@ export const GlobalWarming = (): React.JSX.Element => {
     },
   ];
   return (
-    <ProjectPageContainer project={page_project} footer={footer_info}>
+    <ProjectPageContainer project={projectContent.projects.globalwarming} footer={footerInfo}>
       <ProjectSection key="intro-header" id="intro-header" title="Introduction" variant="first">
         <ProjectParagraph>
           During the past five decades, the Earth&apos;s average temperature has been increasing at

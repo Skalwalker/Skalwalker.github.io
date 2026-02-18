@@ -355,8 +355,7 @@ const ResultsTable = (): React.JSX.Element => {
 };
 
 export const Covid19 = (): React.JSX.Element => {
-  const page_project = projectContent.projects.covid;
-  const footer_info = [
+  const footerInfo = [
     {
       heading: 'Project Info',
       desc: "Developed in Master's Degree Course - Audio Pattern Recognition - 2022",
@@ -368,7 +367,7 @@ export const Covid19 = (): React.JSX.Element => {
   ];
 
   return (
-    <ProjectPageContainer project={page_project} footer={footer_info}>
+    <ProjectPageContainer project={projectContent.projects.covid} footer={footerInfo}>
       <ProjectSection key="intro-header" id="intro-header" title="Introduction" variant="first">
         <ProjectParagraph>
           Keeping in mind the necessity for fast and widely accessible COVID-19 pre-screening

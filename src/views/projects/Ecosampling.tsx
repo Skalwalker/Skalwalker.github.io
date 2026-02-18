@@ -23,8 +23,7 @@ import foa2Png from '../../assets/images/projects/ecosampling/foa_2.png';
 import ips2Png from '../../assets/images/projects/ecosampling/ips_2.png';
 
 export const Ecosampling = (): React.JSX.Element => {
-  const page_project = projectContent.projects.ecosampling;
-  const footer_info = [
+  const footerInfo = [
     {
       heading: 'Project Info',
       desc: "Developed in Master's Degree Course - Affective Computing and Natural Interaction - 2022",
@@ -40,7 +39,7 @@ export const Ecosampling = (): React.JSX.Element => {
   ];
 
   return (
-    <ProjectPageContainer project={page_project} footer={footer_info}>
+    <ProjectPageContainer project={projectContent.projects.ecosampling} footer={footerInfo}>
       <ProjectSection id="intro-header" title="Introduction" variant="first">
         <ProjectParagraph>
           In Boccignone&apos;s original work [1], Ecosampling<sup>1</sup>, he considers the problem

@@ -15,13 +15,14 @@ const variantClassNames = {
   default: 'subtitle_bold mt-4 mb-2',
 };
 
-export const ProjectSection = ({ title, id, variant, children }: ProjectSectionProps): React.JSX.Element => (
+export const ProjectSection = ({
+  title,
+  id,
+  variant,
+  children,
+}: ProjectSectionProps): React.JSX.Element => (
   <Row id={id}>
-    <h2
-      id={id}
-      className={variantClassNames[variant ?? 'default']}
-      style={style.header_style}
-    >
+    <h2 id={id} className={variantClassNames[variant ?? 'default']} style={style.headerStyle}>
       {title}
     </h2>
     {children}
@@ -29,11 +30,11 @@ export const ProjectSection = ({ title, id, variant, children }: ProjectSectionP
 );
 
 const style = {
-  header_style: {
+  headerStyle: {
     fontSize: '30px',
     color: '#60D7F9',
   },
-  paragraph_style: {
+  paragraphStyle: {
     fontSize: '16px',
   },
 };

@@ -31,7 +31,7 @@ const Headings = ({ headings, activeId }: HeadingsProps): React.JSX.Element => (
   </ul>
 );
 
-const TableOfContents = (): React.JSX.Element => {
+export const TableOfContents = (): React.JSX.Element => {
   const [activeId, setActiveId] = useState<string | undefined>();
   const { nestedHeadings } = useHeadingsData();
   useIntersectionObserver(setActiveId);
@@ -70,7 +70,9 @@ const getNestedHeadings = (headingElements: HTMLHeadingElement[]): HeadingData[]
   return nestedHeadings;
 };
 
-const useIntersectionObserver = (setActiveId: React.Dispatch<React.SetStateAction<string | undefined>>): void => {
+const useIntersectionObserver = (
+  setActiveId: React.Dispatch<React.SetStateAction<string | undefined>>
+): void => {
   const headingElementsRef = useRef<Record<string, IntersectionObserverEntry>>({});
   useEffect(() => {
     const callback = (headings: IntersectionObserverEntry[]): void => {
@@ -85,7 +87,8 @@ const useIntersectionObserver = (setActiveId: React.Dispatch<React.SetStateActio
         if (headingElement.isIntersecting) visibleHeadings.push(headingElement);
       });
 
-      const getIndexFromId = (id: string): number => headingElements.findIndex((heading) => heading.id === id);
+      const getIndexFromId = (id: string): number =>
+        headingElements.findIndex((heading) => heading.id === id);
 
       if (visibleHeadings.length === 1) {
         setActiveId(visibleHeadings[0].target.id);
@@ -103,10 +106,12 @@ const useIntersectionObserver = (setActiveId: React.Dispatch<React.SetStateActio
 
     const headingElements = Array.from(document.querySelectorAll('h2, h3'));
 
-    headingElements.forEach((element) => { observer.observe(element); });
+    headingElements.forEach((element) => {
+      observer.observe(element);
+    });
 
-    return (): void => { observer.disconnect(); };
+    return (): void => {
+      observer.disconnect();
+    };
   }, [setActiveId]);
 };
-
-export default TableOfContents;

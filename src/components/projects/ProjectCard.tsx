@@ -32,10 +32,9 @@ const ProjectCardContent = ({ project }: { project: ProjectCardInfo }): React.JS
 );
 
 export const ProjectCard = ({ project }: { project: ProjectCardInfo }): React.JSX.Element => {
-  const card_type = project.target;
   return (
     <>
-      {card_type ? (
+      {project.target ? (
         <a target={project.target} rel="noopener noreferrer" href={project.url}>
           <ProjectCardContent project={project} />
         </a>

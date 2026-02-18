@@ -37,8 +37,7 @@ import petr3LossImg from '../../assets/images/projects/aurora/PETR3_LOSS.png';
 import abev3LossImg from '../../assets/images/projects/aurora/ABEV3_LOSS.png';
 
 export const Hare = (): React.JSX.Element => {
-  const page_project = projectContent.projects.aurora;
-  const footer_info = [
+  const footerInfo = [
     {
       heading: 'Project Info',
       desc: 'Undergraduate Dissertation - Published @ Neural Computing and Application - 2022',
@@ -62,7 +61,7 @@ export const Hare = (): React.JSX.Element => {
   ];
 
   return (
-    <ProjectPageContainer project={page_project} footer={footer_info}>
+    <ProjectPageContainer project={projectContent.projects.aurora} footer={footerInfo}>
       <ProjectSection id="intro-header" title="Introduction" variant="first">
         <ProjectParagraph>
           The study of financial markets and potential predictions of exchanges allow investors to

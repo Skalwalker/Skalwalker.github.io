@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Row, Col, Container } from 'react-bootstrap';
-import TableofContents from './TableofContents';
+import { TableOfContents } from './TableofContents';
 import { Background } from '../shared/Background';
 import { ProjectHeader } from './ProjectHeader';
 import { ProjectFooter } from '../../components/projects/ProjectFooter';
@@ -30,7 +30,7 @@ export const ProjectPageContainer = ({
       </Row>
       <Row className="ms-0 me-0">
         <Col lg={3} md={3} className="d-none d-md-flex">
-          <TableofContents />
+          <TableOfContents />
         </Col>
         <Col lg={7} md={9} style={{ paddingLeft: '0px' }}>
           {children}

@@ -39,16 +39,16 @@ export const ProjectHeader = ({ project }: ProjectHeaderProps): React.JSX.Elemen
       </Row>
       <Row className="ms-0 ps-0 mt-3">
         <div>
-          {project.code_link && (
-            <a target="_blank" rel="noopener noreferrer" href={project.code_link}>
+          {project.codeUrl && (
+            <a target="_blank" rel="noopener noreferrer" href={project.codeUrl}>
               <Button size="sm" className="me-3" variant="outline-primary">
                 View Code
                 <FaGithub color="#60D7F9" className="float-start me-2" size="25"></FaGithub>
               </Button>
             </a>
           )}
-          {project.paper_link && (
-            <a target="_blank" rel="noopener noreferrer" href={project.paper_link}>
+          {project.paperUrl && (
+            <a target="_blank" rel="noopener noreferrer" href={project.paperUrl}>
               <Button size="sm" className="me-3" variant="outline-primary">
                 Read Paper
                 <IoIosPaper color="#60D7F9" className="float-start me-2" size="25"></IoIosPaper>

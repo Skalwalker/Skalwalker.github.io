@@ -13,23 +13,23 @@ export interface InternalProject extends ProjectBase {
   target: '';
   skills: string;
   abstract: string;
-  code_link: string;
-  paper_link: string;
+  codeUrl: string;
+  paperUrl: string;
 }
 
 export interface ExternalProject extends ProjectBase {
   target: '_blank';
   skills?: string;
   abstract?: string;
-  code_link?: string;
-  paper_link?: string;
+  codeUrl?: string;
+  paperUrl?: string;
 }
 
 export type ProjectData = InternalProject | ExternalProject;
 
 export type ProjectInfo = Pick<
   InternalProject,
-  'title' | 'banner' | 'abstract' | 'skills' | 'code_link' | 'paper_link'
+  'title' | 'banner' | 'abstract' | 'skills' | 'codeUrl' | 'paperUrl'
 >;
 
 export type ProjectCardInfo = Pick<
