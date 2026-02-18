@@ -1,5 +1,5 @@
 import { About } from './views/About';
-import Experience from './views/Experience';
+import { Experience } from './views/Experience';
 import { AchievementView } from './views/Achiev';
 import { Projects } from './views/Projects';
 import Publications from './views/Publications';

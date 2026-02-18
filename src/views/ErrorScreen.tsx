@@ -1,13 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { BackgroundParticles } from '../components/shared/BackgroundParticles';
 
 import '../assets/css/font.css';
 
 export const Errorscreen = (): React.JSX.Element => {
   return (
-    <div className="w-100" style={{ height: '100vh', backgroundColor: '#070e20' }}>
-      <BackgroundParticles />
+    <div className="w-100" style={{ height: '100vh' }}>
       <Row className="h-100">
         <Col md={12} className="my-auto">
           <div className="bottom_text">

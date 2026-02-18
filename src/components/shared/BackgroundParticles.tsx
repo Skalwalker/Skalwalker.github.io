@@ -4,7 +4,11 @@ import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import type { ISourceOptions } from '@tsparticles/engine';
 
-export const BackgroundParticles = (): React.JSX.Element => {
+interface BackgroundParticlesProps {
+  id: string;
+}
+
+export const BackgroundParticles = ({ id }: BackgroundParticlesProps): React.JSX.Element => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -30,7 +34,7 @@ export const BackgroundParticles = (): React.JSX.Element => {
         },
         links: {
           color: '#ff30d6',
-          distance: 125,
+          distance: 100,
           enable: true,
           opacity: 0.5,
           width: 1,
@@ -40,7 +44,7 @@ export const BackgroundParticles = (): React.JSX.Element => {
           speed: 1,
         },
         number: {
-          value: 80,
+          value: 100,
           density: {
             enable: true,
           },
@@ -61,5 +65,5 @@ export const BackgroundParticles = (): React.JSX.Element => {
     return <></>;
   }
 
-  return <Particles id="tsparticles" options={options} />;
+  return <Particles id={id} options={options} />;
 };

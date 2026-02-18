@@ -1,33 +1,40 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { NavRouter } from './routes';
-import Splashscreen from './views/Splashscreen';
+import { Splashscreen } from './views/Splashscreen';
+import { BackgroundParticles } from './components/shared/BackgroundParticles';
+import { NavBar } from './components/shared/NavBar';
 import './assets/css/splashscreen.css';
 
-export default function App() {
-  const myRef: any = useRef(null);
-  const [showSplash, setShowSplash] = useState(myRef.current);
+export const App = (): React.JSX.Element => {
+  const myRef = useRef(false);
+  const [showSplash, setShowSplash] = useState(false);
 
   useEffect(() => {
-    if (myRef.current === null) {
+    if (!myRef.current) {
       myRef.current = true;
-      setShowSplash(myRef.current);
+      setShowSplash(true);
 
       setTimeout(() => {
-        console.log('Entrou!');
-        myRef.current = false;
-        setShowSplash(myRef.current);
+        setShowSplash(false);
       }, 4000);
     }
   }, []);
 
   return (
-    <div>
-      {showSplash && (
-        <div className="loader-container">
-          <Splashscreen />
-        </div>
-      )}
-      <NavRouter />
+    <div
+      id="background"
+      style={{ minHeight: '100vh', backgroundColor: '#070e20', position: 'relative' }}
+    >
+      <BackgroundParticles id={'tsparticles'} />
+      <div style={{ position: 'relative', zIndex: 1, minHeight: '100vh' }}>
+        {showSplash && (
+          <div className="loader-container">
+            <Splashscreen />
+          </div>
+        )}
+        <NavBar />
+        <NavRouter />
+      </div>
     </div>
   );
-}
+};
