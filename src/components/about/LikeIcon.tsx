@@ -30,102 +30,113 @@ import hordeIcon from '../../assets/images/icons/horde.svg';
 import gotIcon from '../../assets/images/icons/got.svg';
 import marvelIcon from '../../assets/images/icons/avangers.svg';
 
-interface myState {}
-interface myProps { img: string }
-
-class LikeDesc extends React.Component<myProps, myState> {
-  static defaultProps = {
-    img: 'default',
-  };
-
-  get_icon(img: string) {
+export const LikeIcon = ({ img }: { img: string }): React.JSX.Element => {
+  const getIcon = (): React.JSX.Element => {
     const size = 70;
-    const selected_color = 'white';
+    const defaultColor = 'white';
+    const defaultClass = 'm-auto d-block my-auto';
 
     switch (img) {
       case 'sushi':
-        return <GiSushis className="m-auto d-block my-auto" color={selected_color} size={size} />;
+        return <GiSushis className={defaultClass} color={defaultColor} size={size} />;
       case 'pizza':
-        return (
-          <FaPizzaSlice className="m-auto d-block my-auto" color={selected_color} size={size} />
-        );
+        return <FaPizzaSlice className={defaultClass} color={defaultColor} size={size} />;
       case 'fps':
-        return (
-          <FaCrosshairs className="m-auto d-block my-auto" color={selected_color} size={size} />
-        );
+        return <FaCrosshairs className={defaultClass} color={defaultColor} size={size} />;
       case 'cook':
-        return (
-          <GiCookingPot className="m-auto d-block my-auto" color={selected_color} size={size} />
-        );
+        return <GiCookingPot className={defaultClass} color={defaultColor} size={size} />;
       case 'coffee':
-        return (
-          <BiCoffeeTogo className="m-auto d-block my-auto" color={selected_color} size={size} />
-        );
+        return <BiCoffeeTogo className={defaultClass} color={defaultColor} size={size} />;
       case 'dogs':
-        return <FaDog className="m-auto d-block my-auto" color={selected_color} size={size} />;
+        return <FaDog className={defaultClass} color={defaultColor} size={size} />;
       case 'python':
-        return <FaPython className="m-auto d-block my-auto" color={selected_color} size={size} />;
+        return <FaPython className={defaultClass} color={defaultColor} size={size} />;
       case 'piano':
-        return <MdPiano className="m-auto d-block my-auto" color={selected_color} size={size} />;
+        return <MdPiano className={defaultClass} color={defaultColor} size={size} />;
       case 'robot':
-        return <FaRobot className="m-auto d-block my-auto" color={selected_color} size={size} />;
+        return <FaRobot className={defaultClass} color={defaultColor} size={size} />;
       case 'stock':
-        return (
-          <RiStockFill className="m-auto d-block my-auto" color={selected_color} size={size} />
-        );
+        return <RiStockFill className={defaultClass} color={defaultColor} size={size} />;
       case 'jedi':
         return (
-          <FaJedi className="m-auto d-none d-lg-block my-auto" color={selected_color} size={size} />
+          <FaJedi className="m-auto d-none d-lg-block my-auto" color={defaultColor} size={size} />
         );
       case 'jazz':
-        return (
-          <GiMusicalNotes className="m-auto d-block my-auto" color={selected_color} size={size} />
-        );
+        return <GiMusicalNotes className={defaultClass} color={defaultColor} size={size} />;
       case 'garden':
-        return (
-          <RiPlantFill className="m-auto d-block my-auto" color={selected_color} size={size} />
-        );
+        return <RiPlantFill className={defaultClass} color={defaultColor} size={size} />;
       case 'ai':
-        return (
-          <GiArtificialHive className="m-auto d-block my-auto" color={selected_color} size={size} />
-        );
+        return <GiArtificialHive className={defaultClass} color={defaultColor} size={size} />;
       case 'ds':
-        return <FaKaggle className="m-auto d-block my-auto" color={selected_color} size={size} />;
+        return <FaKaggle className={defaultClass} color={defaultColor} size={size} />;
       case 'santa':
-        return (
-          <MdLocationCity className="m-auto d-block my-auto" color={selected_color} size={size} />
-        );
+        return <MdLocationCity className={defaultClass} color={defaultColor} size={size} />;
       case 'apple':
-        return <FaApple className="m-auto d-block my-auto" color={selected_color} size={size} />;
+        return <FaApple className={defaultClass} color={defaultColor} size={size} />;
       case 'saints':
-        return <img src={saintsIcon} alt="Saints" width={size} height={size} className="m-auto d-block" />;
-      case 'rhcp':
-        return <img src={rhcpIcon} alt="RHCP" width={size} height={size} className="m-auto d-block" />;
-      case 'westworld':
-        return <img src={westworldIcon} alt="Westworld" width={size} height={size} className="m-auto d-block" />;
-      case 'marvel':
-        return <img src={marvelIcon} alt="Marvel" width={size} height={size} className="m-auto d-block" />;
-      case 'board':
         return (
-          <GiDiceTwentyFacesTwenty
-            className="m-auto d-block my-auto"
-            color={selected_color}
-            size={size}
+          <img
+            src={saintsIcon}
+            alt="Saints"
+            width={size}
+            height={size}
+            className="m-auto d-block"
           />
         );
+      case 'rhcp':
+        return (
+          <img src={rhcpIcon} alt="RHCP" width={size} height={size} className="m-auto d-block" />
+        );
+      case 'westworld':
+        return (
+          <img
+            src={westworldIcon}
+            alt="Westworld"
+            width={size}
+            height={size}
+            className="m-auto d-block"
+          />
+        );
+      case 'marvel':
+        return (
+          <img
+            src={marvelIcon}
+            alt="Marvel"
+            width={size}
+            height={size}
+            className="m-auto d-block"
+          />
+        );
+      case 'board':
+        return (
+          <GiDiceTwentyFacesTwenty className={defaultClass} color={defaultColor} size={size} />
+        );
       case 'sandman':
-        return <GiBookmark className="m-auto d-block my-auto" color={selected_color} size={size} />;
+        return <GiBookmark className={defaultClass} color={defaultColor} size={size} />;
       case 'wow':
-        return <img src={hordeIcon} alt="WoW Horde" width={size} height={size} className="m-auto d-block" />;
+        return (
+          <img
+            src={hordeIcon}
+            alt="WoW Horde"
+            width={size}
+            height={size}
+            className="m-auto d-block"
+          />
+        );
       case 'got':
-        return <img src={gotIcon} alt="Game of Thrones" width={size} height={size} className="m-auto d-block" />;
+        return (
+          <img
+            src={gotIcon}
+            alt="Game of Thrones"
+            width={size}
+            height={size}
+            className="m-auto d-block"
+          />
+        );
       default:
-        return <FaVuejs className="m-auto d-block my-auto" color={selected_color} size={size} />;
+        return <FaVuejs className={defaultClass} color={defaultColor} size={size} />;
     }
-  }
+  };
 
-  render() {
-    return <div key={this.props.img}>{this.get_icon(this.props.img)}</div>;
-  }
-}
-export default LikeDesc;
+  return <div key={img}>{getIcon()}</div>;
+};

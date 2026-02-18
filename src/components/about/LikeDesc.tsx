@@ -1,11 +1,5 @@
 import React from 'react';
 
-interface myState {}
-interface myProps { text: any }
-
-class LikeDesc extends React.Component<myProps, myState> {
-  render() {
-    return <h1 className="text-center subtitle">{this.props.text}</h1>;
-  }
-}
-export default LikeDesc;
+export const LikeDesc = ({ text }: { text: string | undefined }): React.JSX.Element => {
+  return <h1 className="text-center subtitle">{text}</h1>;
+};

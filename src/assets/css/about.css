@@ -34,6 +34,12 @@
   }
 }
 
+.skills_chart_container {
+  margin: 10px;
+  height: 60vh;
+  width: 100%;
+}
+
 @media (min-width: 992px) {
   .about_like_style {
     margin-top: 0;
@@ -43,6 +49,10 @@
     margin: 0;
     margin-left: -16px;
     margin-right: -48px;
+  }
+
+  .skills_chart_container {
+    height: 100vh;
   }
 }
 
