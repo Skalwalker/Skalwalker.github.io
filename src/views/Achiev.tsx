@@ -6,8 +6,6 @@ import { achievList } from '../content';
 import { useIsMobile } from '../hooks';
 import { SubtitleBold } from '../styles/primitives';
 
-import '../assets/css/sidebar.css';
-
 export const AchievementView = (): React.JSX.Element => {
   const isMobile = useIsMobile();
   const [achievement, setAchievement] = useState<AchievementContent | null>(null);
