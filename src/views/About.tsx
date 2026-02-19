@@ -10,7 +10,7 @@ export const About = (): React.JSX.Element => {
   return (
     <Container className="h-100 about_view" style={{ height: '92vh' }} fluid>
       <Row>
-        <Col xl={2} lg={3} md={12} className="my-auto h-100">
+        <Col xl={2} lg={3} md={12} className="my-auto h-100 border-lg-end">
           <AboutMenu />
         </Col>
         <Col
