@@ -4,56 +4,58 @@ import { FaGraduationCap } from 'react-icons/fa';
 import { IoLogoTableau } from 'react-icons/io5';
 import { MdDoNotDisturbOnTotalSilence, MdWork } from 'react-icons/md';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import styled from 'styled-components';
 
 import 'react-vertical-timeline-component/style.min.css';
-import '../../assets/css/experience.css';
 
 import { experienceContent, ExperienceType } from '../../content';
 import { Subtitle, Paragraph } from '../../styles/primitives';
 
 export const ExperienceTimeline = (): React.JSX.Element => (
-  <VerticalTimeline className="temp" lineColor="var(--bs-white)">
-    {experienceContent.map((experience) => (
+  <TimelineWrapper>
+    <VerticalTimeline className="temp" lineColor="var(--bs-white)">
+      {experienceContent.map((experience) => (
+        <VerticalTimelineElement
+          key={experience.title}
+          contentStyle={contentStyles[experience.type]}
+          contentArrowStyle={contentArrowStyles[experience.type]}
+          date={`${experience.startYear} - ${experience.endYear}`}
+          iconStyle={iconStyles[experience.type]}
+          icon={typeIcons[experience.type]}
+        >
+          <Subtitle as="h3" className="mb-0">
+            <b>{experience.title}</b>
+          </Subtitle>
+          <Subtitle as="h5" className="mt-1">
+            {experience.company}
+          </Subtitle>
+          {experience.description !== '' && (
+            <Paragraph as="h6" className="mt-4" style={{ whiteSpace: 'pre-line' }}>
+              {experience.description}
+            </Paragraph>
+          )}
+          {experience.button?.map((btn) => (
+            <Button
+              key={btn.btnText}
+              className="float-end"
+              onClick={() => {
+                window.open(btn.btnLink, '_blank', 'noopener,noreferrer');
+              }}
+              size="sm"
+              variant={buttonVariants[experience.type]}
+            >
+              {btn.btnText}
+            </Button>
+          ))}
+        </VerticalTimelineElement>
+      ))}
       <VerticalTimelineElement
-        key={experience.title}
-        contentStyle={contentStyles[experience.type]}
-        contentArrowStyle={contentArrowStyles[experience.type]}
-        date={`${experience.startYear} - ${experience.endYear}`}
-        iconStyle={iconStyles[experience.type]}
-        icon={typeIcons[experience.type]}
-      >
-        <Subtitle as="h3" className="mb-0">
-          <b>{experience.title}</b>
-        </Subtitle>
-        <Subtitle as="h5" className="mt-1">
-          {experience.company}
-        </Subtitle>
-        {experience.description !== '' && (
-          <Paragraph as="h6" className="mt-4" style={{ whiteSpace: 'pre-line' }}>
-            {experience.description}
-          </Paragraph>
-        )}
-        {experience.button?.map((btn) => (
-          <Button
-            key={btn.btnText}
-            className="float-end"
-            onClick={() => {
-              window.open(btn.btnLink, '_blank', 'noopener,noreferrer');
-            }}
-            size="sm"
-            variant={buttonVariants[experience.type]}
-          >
-            {btn.btnText}
-          </Button>
-        ))}
-      </VerticalTimelineElement>
-    ))}
-    <VerticalTimelineElement
-      iconStyle={{ background: 'var(--bs-indigo)', color: '#fff' }}
-      icon={<MdDoNotDisturbOnTotalSilence />}
-      contentStyle={{ borderColor: 'rgba(0, 0, 0, 0)' }}
-    />
-  </VerticalTimeline>
+        iconStyle={{ background: 'var(--bs-indigo)', color: '#fff' }}
+        icon={<MdDoNotDisturbOnTotalSilence />}
+        contentStyle={{ borderColor: 'rgba(0, 0, 0, 0)' }}
+      />
+    </VerticalTimeline>
+  </TimelineWrapper>
 );
 
 const orangeIcon: React.CSSProperties = {
@@ -142,3 +144,11 @@ const typeIcons: Record<ExperienceType, React.JSX.Element> = {
   edu: <FaGraduationCap />,
   other: <IoLogoTableau />,
 };
+
+const TimelineWrapper = styled.div`
+  .vertical-timeline-element-content {
+    box-shadow: none;
+    border-radius: 0.5rem;
+    border-style: solid;
+  }
+`;
