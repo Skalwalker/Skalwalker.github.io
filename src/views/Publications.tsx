@@ -4,8 +4,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import { PaperCard, PaperCardShort, ScrollButton } from '../components';
 import { publicationsContent } from '../content';
 import { useTagFilter } from '../hooks';
-
-import '../assets/css/font.css';
+import { Subtitle, SectionDivider } from '../styles/primitives';
 
 export const Publications = (): JSX.Element => {
   const { toggleTag, isTagActive, matchesTags } = useTagFilter();
@@ -15,10 +14,10 @@ export const Publications = (): JSX.Element => {
   return (
     <Container className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid>
       <Row>
-        <h1 className="subtitle">
+        <Subtitle as="h1">
           Featured <b>Publications</b>
-        </h1>
-        <div className="w-100 mt-2 mb-2" style={{ backgroundColor: 'white', height: '3px' }} />
+        </Subtitle>
+        <SectionDivider className="w-100 mt-2 mb-2" />
       </Row>
       <Row style={{ padding: '8px' }}>
         {publications
@@ -38,7 +37,7 @@ export const Publications = (): JSX.Element => {
         <Col>
           <Row>
             <Col lg={6}>
-              <h1 className="subtitle">Newest</h1>
+              <Subtitle as="h1">Newest</Subtitle>
             </Col>
             {tags.map((name) => (
               <Col key={name} lg={2} style={{ paddingTop: '12px' }} className="d-grid mb-2">
@@ -46,7 +45,6 @@ export const Publications = (): JSX.Element => {
                   onClick={() => {
                     toggleTag(name);
                   }}
-                  className="paragraph"
                   variant={isTagActive(name) ? 'light' : 'outline-light'}
                   size="sm"
                 >
@@ -54,7 +52,7 @@ export const Publications = (): JSX.Element => {
                 </Button>
               </Col>
             ))}
-            <div className="w-100 mt-2 mb-2" style={{ backgroundColor: 'white', height: '3px' }} />
+            <SectionDivider className="w-100 mt-2 mb-2" />
           </Row>
           {publications
             .filter((paper) => !paper.highlight && matchesTags(paper.tags))

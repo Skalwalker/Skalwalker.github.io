@@ -4,6 +4,7 @@ import { Col, Row, Container } from 'react-bootstrap';
 import { AchievCard, AchievDesc, AchievDescModal, AchievementContent } from '../components';
 import { achievList } from '../content';
 import { useIsMobile } from '../hooks';
+import { SubtitleBold } from '../styles/primitives';
 
 import '../assets/css/sidebar.css';
 
@@ -25,10 +26,14 @@ export const AchievementView = (): React.JSX.Element => {
           {achievement ? (
             <AchievDesc content={achievement} />
           ) : (
-            <h2 className="subtitle_bold my-auto" style={{ fontSize: '32px', color: '#FFFFFF' }}>
+            <SubtitleBold
+              as="h2"
+              className="my-auto"
+              style={{ fontSize: '32px', color: '#FFFFFF' }}
+            >
               Hover over an Achievement <br />
               to show description
-            </h2>
+            </SubtitleBold>
           )}
         </Col>
         <Col xl={9} lg={9} md={12} sm={12} className="my-auto">

@@ -23,6 +23,7 @@ import { RiMedalLine, RiStockFill, RiSlideshowLine } from 'react-icons/ri';
 import { SiIos, SiSwift } from 'react-icons/si';
 
 import { StyledCard } from '../../components';
+import { SubtitleBold, Paragraph } from '../../styles/primitives';
 
 interface AchievCardProps {
   title: string;
@@ -91,11 +92,11 @@ export const AchievCard = ({ title, date, img, locked }: AchievCardProps): React
           </Col>
           <Col xl={9} md={9} sm={9} xs={9} style={{ paddingLeft: '0' }}>
             <Card.Body style={{ padding: '0.5rem', paddingLeft: '0' }}>
-              <Card.Title className="subtitle_bold pt-2 mb-1" style={{ fontSize: '18px' }}>
-                {title}
+              <Card.Title className="pt-2 mb-1" style={{ fontSize: '18px' }}>
+                <SubtitleBold as="span">{title}</SubtitleBold>
               </Card.Title>
-              <Card.Text className="paragraph mb-1" style={{ fontSize: '12px' }}>
-                {date}
+              <Card.Text className="mb-1" style={{ fontSize: '12px' }}>
+                <Paragraph as="span">{date}</Paragraph>
               </Card.Text>
             </Card.Body>
           </Col>

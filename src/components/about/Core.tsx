@@ -5,9 +5,9 @@ import { FaGithub } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 
-import { coreContent } from '../../content';
-
 import '../../assets/css/about.css';
+import { coreContent } from '../../content';
+import { Paragraph } from '../../styles/primitives';
 
 export const Core = (): React.JSX.Element => {
   return (
@@ -15,9 +15,7 @@ export const Core = (): React.JSX.Element => {
       <Col className="my-auto about_core_style">
         <Row>
           <Col md={12}>
-            <p className="paragraph" style={{ fontSize: '20px' }}>
-              {coreContent.coreText}
-            </p>
+            <Paragraph style={{ fontSize: '20px' }}>{coreContent.coreText}</Paragraph>
           </Col>
           <Col md={12} className="">
             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/rk_nobre/">

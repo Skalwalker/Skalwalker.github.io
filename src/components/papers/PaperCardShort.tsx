@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 import { PaperCardProps } from './types';
 import { StyledCard } from '../../components';
+import { ParagraphBold, Subtitle } from '../../styles/primitives';
 
 export const PaperCardShort = ({
   title,
@@ -16,7 +17,7 @@ export const PaperCardShort = ({
     <a href={url} style={{ width: '100%' }} target="_blank" rel="noopener noreferrer">
       <StyledCard className="click_cards">
         <Card.Body style={{ padding: '0.8rem' }}>
-          <Card.Text className="mb-0 mt-0 paragraph_bold" style={{ color: 'white' }}>
+          <ParagraphBold as="div" className="mb-0 mt-0" style={{ color: 'white' }}>
             <Row>
               <Col xl={10} md={9} xs={9} style={{ textAlign: 'left' }}>
                 {title}
@@ -25,9 +26,9 @@ export const PaperCardShort = ({
                 {year}
               </Col>
             </Row>
-          </Card.Text>
-          <Card.Subtitle className="subtitle mt-2" style={{ marginTop: '0' }}>
-            {publisher}
+          </ParagraphBold>
+          <Card.Subtitle className="mt-2" style={{ marginTop: '0' }}>
+            <Subtitle as="span">{publisher}</Subtitle>
           </Card.Subtitle>
         </Card.Body>
       </StyledCard>

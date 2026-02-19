@@ -4,8 +4,7 @@ import { Col, Row, Button, Container } from 'react-bootstrap';
 import { ProjectCard, ProjectData, ScrollButton } from '../components';
 import { projectContent } from '../content';
 import { useTagFilter } from '../hooks';
-
-import '../assets/css/font.css';
+import { Subtitle, SectionDivider } from '../styles/primitives';
 
 const FeaturedProjects: React.FC<{ projects: ProjectData[] }> = ({ projects }) => (
   <Row>
@@ -24,7 +23,7 @@ const TagFilterBar: React.FC<{
 }> = ({ tags, isTagActive, onToggle }) => (
   <Row>
     <Col xl={4}>
-      <h1 className="subtitle">Newest</h1>
+      <Subtitle as="h1">Newest</Subtitle>
     </Col>
     {tags.map((name) => (
       <Col xl={2} key={name} style={{ paddingTop: '12px' }} className="d-grid mb-2">
@@ -32,7 +31,6 @@ const TagFilterBar: React.FC<{
           onClick={() => {
             onToggle(name);
           }}
-          className="paragraph"
           variant={isTagActive(name) ? 'light' : 'outline-light'}
           size="sm"
         >
@@ -40,7 +38,7 @@ const TagFilterBar: React.FC<{
         </Button>
       </Col>
     ))}
-    <div className="w-100 mt-2 mb-2" style={{ backgroundColor: 'white', height: '3px' }} />
+    <SectionDivider className="w-100 mt-2 mb-2" />
   </Row>
 );
 
@@ -64,10 +62,10 @@ export const Projects: React.FC = () => {
   return (
     <Container className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid>
       <Row>
-        <h1 className="subtitle">
+        <Subtitle as="h1">
           Featured <b>Projects</b>
-        </h1>
-        <div className="w-100 mt-2 mb-2" style={{ backgroundColor: 'white', height: '3px' }} />
+        </Subtitle>
+        <SectionDivider className="w-100 mt-2 mb-2" />
       </Row>
       <FeaturedProjects projects={featured} />
       <Row className="pt-5">

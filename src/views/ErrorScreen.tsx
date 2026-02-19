@@ -1,29 +1,29 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-import '../assets/css/font.css';
+import { BottomText, TopText, FontText, FontText2 } from '../styles/primitives';
 
 export const Errorscreen = (): React.JSX.Element => {
   return (
     <div className="w-100" style={{ height: '100vh' }}>
       <Row className="h-100">
         <Col md={12} className="my-auto">
-          <div className="bottom_text">
-            <h1 className="font_text" style={style.nameStyle}>
+          <BottomText>
+            <FontText as="h1" style={style.nameStyle}>
               404
               <br />
               Doesn&apos;t look like
               <br /> anything to me
-            </h1>
-            <div className="top_text">
-              <h1 className="font_text_2" style={style.nameStyle}>
+            </FontText>
+            <TopText>
+              <FontText2 as="h1" style={style.nameStyle}>
                 404
                 <br />
                 Doesn&apos;t look like
                 <br /> anything to me
-              </h1>
-            </div>
-          </div>
+              </FontText2>
+            </TopText>
+          </BottomText>
         </Col>
       </Row>
     </div>

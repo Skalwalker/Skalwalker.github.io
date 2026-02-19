@@ -1,15 +1,15 @@
 import React from 'react';
 
-import '../../assets/css/font.css';
+import { Paragraph } from '../../styles/primitives';
 
 export const ProjectParagraph = ({
   children,
 }: {
   children: React.ReactNode;
 }): React.JSX.Element => (
-  <p className="paragraph mt-2" style={style.paragraphStyle}>
+  <Paragraph className="mt-2" style={style.paragraphStyle}>
     {children}
-  </p>
+  </Paragraph>
 );
 
 const style = {

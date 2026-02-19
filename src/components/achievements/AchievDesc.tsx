@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Image } from 'react-bootstrap';
 
 import { AchievementContent } from './types';
+import { SubtitleBold, Paragraph } from '../../styles/primitives';
 
 interface AchievementDescProps {
   content: AchievementContent;
@@ -11,12 +12,12 @@ export const AchievDesc = ({ content }: AchievementDescProps): React.JSX.Element
   return (
     <div className="my-auto">
       <Row>
-        <h1 className="text-start subtitle_bold mb-3" style={{ fontSize: '32px' }}>
+        <SubtitleBold as="h1" className="text-start mb-3" style={{ fontSize: '32px' }}>
           {content.title}
-        </h1>
+        </SubtitleBold>
       </Row>
       <Row className="text-start">
-        <p className="paragraph">{content.desc}</p>
+        <Paragraph>{content.desc}</Paragraph>
       </Row>
       <Row>
         <Image></Image>

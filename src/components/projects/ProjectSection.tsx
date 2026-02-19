@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
 
-import '../../assets/css/font.css';
+import { SubtitleBold } from '../../styles/primitives';
 
 interface ProjectSectionProps {
   title: string;
@@ -11,8 +11,8 @@ interface ProjectSectionProps {
 }
 
 const variantClassNames = {
-  first: 'subtitle_bold mb-2',
-  default: 'subtitle_bold mt-4 mb-2',
+  first: 'mb-2',
+  default: 'mt-4 mb-2',
 };
 
 export const ProjectSection = ({
@@ -22,9 +22,14 @@ export const ProjectSection = ({
   children,
 }: ProjectSectionProps): React.JSX.Element => (
   <Row id={id}>
-    <h2 id={id} className={variantClassNames[variant ?? 'default']} style={style.headerStyle}>
+    <SubtitleBold
+      as="h2"
+      id={id}
+      className={variantClassNames[variant ?? 'default']}
+      style={style.headerStyle}
+    >
       {title}
-    </h2>
+    </SubtitleBold>
     {children}
   </Row>
 );

@@ -14,6 +14,7 @@ import salience2Png from '../../assets/images/projects/ecosampling/salience_2.pn
 import simulationGif from '../../assets/images/projects/ecosampling/simulation.gif';
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
+import { SubtitleBold, Paragraph } from '../../styles/primitives';
 
 export const Ecosampling = (): React.JSX.Element => {
   const footerInfo = [
@@ -59,8 +60,8 @@ export const Ecosampling = (): React.JSX.Element => {
             alt="Example of the PyEcosampling results in a given video"
             src={simulationGif}
           />
-          <Figure.Caption className="paragraph">
-            Example of the PyEcosampling results in a given video
+          <Figure.Caption>
+            <Paragraph as="span">Example of the PyEcosampling results in a given video</Paragraph>
           </Figure.Caption>
         </Figure>
         <ProjectParagraph>
@@ -69,18 +70,24 @@ export const Ecosampling = (): React.JSX.Element => {
           the following contributions:
         </ProjectParagraph>
         <Container>
-          <Card className="subtitle_bold my-3">
-            <Card.Body>A light-weighted python version of the Ecosampling.</Card.Body>
-          </Card>
-          <Card className="subtitle_bold my-3">
-            <Card.Body>
-              A Python implementation of Seo et al. &quot;Static and space-time visual saliency
-              detection by self-resemblance&quot; [4]
-            </Card.Body>
-          </Card>
-          <Card className="subtitle_bold my-3">
-            <Card.Body>A comprehensive web-based documentation of the work.</Card.Body>
-          </Card>
+          <SubtitleBold as="div">
+            <Card className="my-3">
+              <Card.Body>A light-weighted python version of the Ecosampling.</Card.Body>
+            </Card>
+          </SubtitleBold>
+          <SubtitleBold as="div">
+            <Card className="my-3">
+              <Card.Body>
+                A Python implementation of Seo et al. &quot;Static and space-time visual saliency
+                detection by self-resemblance&quot; [4]
+              </Card.Body>
+            </Card>
+          </SubtitleBold>
+          <SubtitleBold as="div">
+            <Card className="my-3">
+              <Card.Body>A comprehensive web-based documentation of the work.</Card.Body>
+            </Card>
+          </SubtitleBold>
         </Container>
       </ProjectSection>
       <ProjectSection id="dev-header" title="Overview">
@@ -101,7 +108,9 @@ export const Ecosampling = (): React.JSX.Element => {
             alt="Diagram of the PyEcosampling system"
             src={diagramPng}
           />
-          <Figure.Caption className="paragraph">Diagram of the PyEcosampling system</Figure.Caption>
+          <Figure.Caption>
+            <Paragraph as="span">Diagram of the PyEcosampling system</Paragraph>
+          </Figure.Caption>
         </Figure>
         <ProjectParagraph>
           The figure above demonstrates the library classes&apos; interaction in creating a focus of
@@ -204,8 +213,8 @@ const StepsAccordion = (): React.JSX.Element => {
                   alt="Frame Processor visualization of a frame"
                   src={currentJpg}
                 />
-                <Figure.Caption className="paragraph">
-                  Frame Processor visualization of a frame
+                <Figure.Caption>
+                  <Paragraph as="span">Frame Processor visualization of a frame</Paragraph>
                 </Figure.Caption>
               </Figure>
             </Container>
@@ -222,8 +231,10 @@ const StepsAccordion = (): React.JSX.Element => {
                   style={{ width: '60%', backgroundColor: 'white' }}
                   src={foveated2Png}
                 />
-                <Figure.Caption className="paragraph">
-                  Foveated Imaging of the current frame using a Gaussian filter
+                <Figure.Caption>
+                  <Paragraph as="span">
+                    Foveated Imaging of the current frame using a Gaussian filter
+                  </Paragraph>
                 </Figure.Caption>
               </Figure>
             </Container>
@@ -264,8 +275,10 @@ const StepsAccordion = (): React.JSX.Element => {
                   style={{ width: '60%', backgroundColor: 'white' }}
                   src={salience2Png}
                 />
-                <Figure.Caption className="paragraph">
-                  Salience Map with the 3D self-resemblance spatial temporal saliency method
+                <Figure.Caption>
+                  <Paragraph as="span">
+                    Salience Map with the 3D self-resemblance spatial temporal saliency method
+                  </Paragraph>
                 </Figure.Caption>
               </Figure>
             </Container>
@@ -294,8 +307,10 @@ const StepsAccordion = (): React.JSX.Element => {
                   style={{ width: '60%', backgroundColor: 'white' }}
                   src={protos2Png}
                 />
-                <Figure.Caption className="paragraph">
-                  Patch map and its proto-objects surrounded by their corresponding ellipses
+                <Figure.Caption>
+                  <Paragraph as="span">
+                    Patch map and its proto-objects surrounded by their corresponding ellipses
+                  </Paragraph>
                 </Figure.Caption>
               </Figure>
             </Container>
@@ -323,9 +338,11 @@ const StepsAccordion = (): React.JSX.Element => {
                   style={{ width: '60%', backgroundColor: 'white' }}
                   src={ips2Png}
                 />
-                <Figure.Caption className="paragraph">
-                  Interest points (red dots) in the current frame. Yellow and green dots represents
-                  both all candidates and the maximum focus of attention.
+                <Figure.Caption>
+                  <Paragraph as="span">
+                    Interest points (red dots) in the current frame. Yellow and green dots
+                    represents both all candidates and the maximum focus of attention.
+                  </Paragraph>
                 </Figure.Caption>
               </Figure>
             </Container>
@@ -344,8 +361,8 @@ const StepsAccordion = (): React.JSX.Element => {
                   style={{ width: '60%', backgroundColor: 'white' }}
                   src={empiricalDists2Png}
                 />
-                <Figure.Caption className="paragraph">
-                  Empirical Distribution for sampled IPs
+                <Figure.Caption>
+                  <Paragraph as="span">Empirical Distribution for sampled IPs</Paragraph>
                 </Figure.Caption>
               </Figure>
             </Container>
@@ -372,8 +389,10 @@ const StepsAccordion = (): React.JSX.Element => {
                   style={{ width: '60%', backgroundColor: 'white' }}
                   src={orderDisorderPlotPng}
                 />
-                <Figure.Caption className="paragraph">
-                  Order and Disorder values for each frame on the end of the experiment
+                <Figure.Caption>
+                  <Paragraph as="span">
+                    Order and Disorder values for each frame on the end of the experiment
+                  </Paragraph>
                 </Figure.Caption>
               </Figure>
               <Figure className="mx-auto text-center">
@@ -383,8 +402,8 @@ const StepsAccordion = (): React.JSX.Element => {
                   style={{ width: '60%', backgroundColor: 'white' }}
                   src={complexityPlotPng}
                 />
-                <Figure.Caption className="paragraph">
-                  Complexity values on the end of the experiment
+                <Figure.Caption>
+                  <Paragraph as="span">Complexity values on the end of the experiment</Paragraph>
                 </Figure.Caption>
               </Figure>
             </Container>
@@ -433,8 +452,8 @@ const StepsAccordion = (): React.JSX.Element => {
                   style={{ width: '60%', backgroundColor: 'white' }}
                   src={foa2Png}
                 />
-                <Figure.Caption className="paragraph">
-                  Final focus of attention for the current frame
+                <Figure.Caption>
+                  <Paragraph as="span">Final focus of attention for the current frame</Paragraph>
                 </Figure.Caption>
               </Figure>
             </Container>

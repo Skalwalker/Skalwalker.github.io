@@ -5,6 +5,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { NavLink } from 'react-router';
 import '../../assets/css/navbar.css';
 
+import { BottomText, FontText } from '../../styles/primitives';
+
 export const NavBar = (): React.JSX.Element => {
   return (
     <Navbar
@@ -17,44 +19,44 @@ export const NavBar = (): React.JSX.Element => {
         <GiHamburgerMenu className="mb-2" color="white" />
       </Navbar.Toggle>
       <Navbar.Brand href="/">
-        <div className="bottom_text">
-          <h1 className="font_text" style={nameStyle}>
+        <BottomText>
+          <FontText as="h1" style={nameStyle}>
             RenatoNobre
-          </h1>
-        </div>
+          </FontText>
+        </BottomText>
       </Navbar.Brand>
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ms-auto">
           <NavLink
-            className="nav-link subtitle"
+            className="nav-link"
             to="/about"
             style={({ isActive }) => (isActive ? buttonActive : {})}
           >
             About
           </NavLink>
           <NavLink
-            className="nav-link subtitle"
+            className="nav-link"
             to="/projects"
             style={({ isActive }) => (isActive ? buttonActive : {})}
           >
             Projects
           </NavLink>
           <NavLink
-            className="nav-link subtitle"
+            className="nav-link"
             to="/publications"
             style={({ isActive }) => (isActive ? buttonActive : {})}
           >
             Publications
           </NavLink>
           <NavLink
-            className="nav-link subtitle"
+            className="nav-link"
             to="/experience"
             style={({ isActive }) => (isActive ? buttonActive : {})}
           >
             Experience
           </NavLink>
           <NavLink
-            className="nav-link subtitle"
+            className="nav-link"
             to="/achivements"
             style={({ isActive }) => (isActive ? buttonActive : {})}
           >

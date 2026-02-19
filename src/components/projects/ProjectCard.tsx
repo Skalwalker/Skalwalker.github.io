@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 
 import { ProjectCardInfo } from './types';
 import { StyledCard } from '../../components';
+import { SubtitleBold, Subtitle, Paragraph } from '../../styles/primitives';
 
 const ProjectCardContent = ({ project }: { project: ProjectCardInfo }): React.JSX.Element => (
   <StyledCard
@@ -12,20 +13,24 @@ const ProjectCardContent = ({ project }: { project: ProjectCardInfo }): React.JS
   >
     <Card.Img variant="top" src={project.banner} style={{ borderRadius: '15px 15px 0 0' }} />
     <Card.Body>
-      <Card.Title className="subtitle-bold mb-1">{project.title}</Card.Title>
-      <Card.Text className="paragraph">{project.headline}</Card.Text>
+      <Card.Title className="mb-1">
+        <SubtitleBold as="span">{project.title}</SubtitleBold>
+      </Card.Title>
+      <Card.Text>
+        <Paragraph as="span">{project.headline}</Paragraph>
+      </Card.Text>
     </Card.Body>
     <Card.Footer>
       <Row>
         <Col>
-          <p className="subtitle" style={{ textAlign: 'left', margin: '0' }}>
+          <Subtitle as="p" style={{ textAlign: 'left', margin: '0' }}>
             {project.language}
-          </p>
+          </Subtitle>
         </Col>
         <Col>
-          <p className="subtitle" style={{ textAlign: 'right', margin: '0' }}>
+          <Subtitle as="p" style={{ textAlign: 'right', margin: '0' }}>
             {project.year}
-          </p>
+          </Subtitle>
         </Col>
       </Row>
     </Card.Footer>

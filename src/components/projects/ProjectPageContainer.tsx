@@ -7,7 +7,6 @@ import { ProjectInfo, FooterSectionType } from './types';
 import { ProjectFooter } from '../../components';
 import { ScrollButton } from '../shared';
 
-import '../../assets/css/font.css';
 import '../../assets/css/stickytable.css';
 import '../../assets/css/projects.css';
 

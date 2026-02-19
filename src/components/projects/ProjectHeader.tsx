@@ -5,8 +5,13 @@ import { FaGithub } from 'react-icons/fa';
 import { IoIosPaper } from 'react-icons/io';
 
 import { ProjectInfo } from './types';
-
-import '../../assets/css/font.css';
+import {
+  BottomProjectText,
+  TopProjectText,
+  FontText,
+  FontText2,
+  Paragraph,
+} from '../../styles/primitives';
 import '../../assets/css/projects.css';
 
 interface ProjectHeaderProps {
@@ -17,20 +22,21 @@ export const ProjectHeader = ({ project }: ProjectHeaderProps): React.JSX.Elemen
   <>
     <Col xl={8} md={7} className="my-auto ps-0">
       <Row className="ms-0 ps-0">
-        <div className="bottom_project_text">
-          <h1 className="font_text title_style">{project.title}</h1>
-          <div className="top_project_text">
-            <h1 className="font_text_2 title_style">{project.title}</h1>
-          </div>
-        </div>
+        <BottomProjectText>
+          <FontText as="h1" className="title_style">
+            {project.title}
+          </FontText>
+          <TopProjectText>
+            <FontText2 as="h1" className="title_style">
+              {project.title}
+            </FontText2>
+          </TopProjectText>
+        </BottomProjectText>
       </Row>
       <Row className="ms-0 ps-0 my-auto">
-        <p
-          className="paragraph"
-          style={{ fontSize: '16px', color: 'white', height: '100%', lineHeight: 1.6 }}
-        >
+        <Paragraph style={{ fontSize: '16px', color: 'white', height: '100%', lineHeight: 1.6 }}>
           {project.abstract}
-        </p>
+        </Paragraph>
       </Row>
       <Row className="ms-0 ps-0">
         <p>

@@ -91,3 +91,45 @@ export const PageContainer = styled.div`
     padding: 30px 20px;
   }
 `;
+
+// ─── Overlay text containers ────────────────────────────────────────────────
+
+/**
+ * Outer container for the acier-bat overlay effect (splash / error screens).
+ * The static FontText sits here; TopText is positioned absolutely on top.
+ * Replaces className="bottom_text".
+ */
+export const BottomText = styled.div`
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+`;
+
+/**
+ * Absolutely-positioned overlay for the animated FontText2 layer.
+ * Replaces className="top_text".
+ */
+export const TopText = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+`;
+
+/**
+ * Project-page variant of BottomText — left-aligned.
+ * Replaces className="bottom_project_text".
+ */
+export const BottomProjectText = styled.div`
+  position: relative;
+  text-align: left;
+`;
+
+/**
+ * Project-page variant of TopText — same absolute overlay.
+ * Replaces className="top_project_text".
+ */
+export const TopProjectText = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+`;

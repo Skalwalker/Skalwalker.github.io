@@ -5,11 +5,11 @@ import { IoLogoTableau } from 'react-icons/io5';
 import { MdDoNotDisturbOnTotalSilence, MdWork } from 'react-icons/md';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
-import { experienceContent, ExperienceType } from '../../content';
-
 import 'react-vertical-timeline-component/style.min.css';
 import '../../assets/css/experience.css';
-import '../../assets/css/font.css';
+
+import { experienceContent, ExperienceType } from '../../content';
+import { Subtitle, Paragraph } from '../../styles/primitives';
 
 export const ExperienceTimeline = (): React.JSX.Element => (
   <VerticalTimeline className="temp" lineColor="var(--bs-white)">
@@ -22,14 +22,16 @@ export const ExperienceTimeline = (): React.JSX.Element => (
         iconStyle={iconStyles[experience.type]}
         icon={typeIcons[experience.type]}
       >
-        <h3 className="mb-0 subtitle">
+        <Subtitle as="h3" className="mb-0">
           <b>{experience.title}</b>
-        </h3>
-        <h5 className="mt-1 subtitle">{experience.company}</h5>
+        </Subtitle>
+        <Subtitle as="h5" className="mt-1">
+          {experience.company}
+        </Subtitle>
         {experience.description !== '' && (
-          <h6 className="mt-4 paragraph" style={{ whiteSpace: 'pre-line' }}>
+          <Paragraph as="h6" className="mt-4" style={{ whiteSpace: 'pre-line' }}>
             {experience.description}
-          </h6>
+          </Paragraph>
         )}
         {experience.button?.map((btn) => (
           <Button

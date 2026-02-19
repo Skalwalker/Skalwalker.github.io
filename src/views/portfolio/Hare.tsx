@@ -27,8 +27,8 @@ import { ProjectPageContainer } from '../../components';
 import { ProjectParagraph } from '../../components';
 import { ProjectSection } from '../../components';
 import { projectContent } from '../../content';
+import { Subtitle, Paragraph } from '../../styles/primitives';
 
-import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
 
@@ -97,9 +97,11 @@ export const Hare = (): React.JSX.Element => {
             style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
             src={systemImg}
           />
-          <Figure.Caption className="paragraph">
-            AURORA&apos;s operational scenario presents the process flow, from data gathering to
-            market interaction. The Figure highlights the Agent Module and its submodules
+          <Figure.Caption>
+            <Paragraph as="span">
+              AURORA&apos;s operational scenario presents the process flow, from data gathering to
+              market interaction. The Figure highlights the Agent Module and its submodules
+            </Paragraph>
           </Figure.Caption>
         </Figure>
         <AuroraModules />
@@ -111,22 +113,24 @@ export const Hare = (): React.JSX.Element => {
           testing the DDPG model and defines the state space, action space, and reward function. The
           following definitions were used:
         </ProjectParagraph>
-        <ListGroup className="w-100 mt-1 mb-3 subtitle" style={{ padding: '12px' }}>
-          <ListGroup.Item>
-            <b>State-Space:</b> Quantity of deallocated money, how much the portfolio is yielding,
-            and for each invested asset: the price, prediction, profitability, risk, and amount in
-            the portfolio.
-          </ListGroup.Item>
-          <ListGroup.Item>
-            <b>Action Space:</b> Vector of actions the agent should make for the assets at the time
-            step. Actions include: buying, selling, or holding and are represented through
-            percentages of quantities and available money.
-          </ListGroup.Item>
-          <ListGroup.Item>
-            <b>Reward:</b> Profit of a Sale, Stock valorization on holding, Buying penalty (because
-            money is being spent), Loss penalty (unprofitable sale).
-          </ListGroup.Item>
-        </ListGroup>
+        <Subtitle as="div">
+          <ListGroup className="w-100 mt-1 mb-3" style={{ padding: '12px' }}>
+            <ListGroup.Item>
+              <b>State-Space:</b> Quantity of deallocated money, how much the portfolio is yielding,
+              and for each invested asset: the price, prediction, profitability, risk, and amount in
+              the portfolio.
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <b>Action Space:</b> Vector of actions the agent should make for the assets at the
+              time step. Actions include: buying, selling, or holding and are represented through
+              percentages of quantities and available money.
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <b>Reward:</b> Profit of a Sale, Stock valorization on holding, Buying penalty
+              (because money is being spent), Loss penalty (unprofitable sale).
+            </ListGroup.Item>
+          </ListGroup>
+        </Subtitle>
       </ProjectSection>
       <ProjectSection id="method-header" title="Methodology">
         <ProjectParagraph>
@@ -179,8 +183,10 @@ export const Hare = (): React.JSX.Element => {
             style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
             src={returnImg}
           />
-          <Figure.Caption className="paragraph">
-            Performance evaluation of the average return of portfolio
+          <Figure.Caption>
+            <Paragraph as="span">
+              Performance evaluation of the average return of portfolio
+            </Paragraph>
           </Figure.Caption>
         </Figure>
         <ProjectParagraph>
@@ -207,7 +213,9 @@ export const Hare = (): React.JSX.Element => {
             style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
             src={fronteiraImg}
           />
-          <Figure.Caption className="paragraph">Portfolio-based efficient frontier</Figure.Caption>
+          <Figure.Caption>
+            <Paragraph as="span">Portfolio-based efficient frontier</Paragraph>
+          </Figure.Caption>
         </Figure>
         <ProjectParagraph>
           The table below shows the results obtained from the AURORA portfolio, comparing it with
@@ -264,7 +272,9 @@ const AuroraModules = (): React.JSX.Element => {
                 style={{ width: '60%', backgroundColor: 'white', padding: '10px' }}
                 src={insiderImg}
               />
-              <Figure.Caption className="paragraph">Overview of the Insider module</Figure.Caption>
+              <Figure.Caption>
+                <Paragraph as="span">Overview of the Insider module</Paragraph>
+              </Figure.Caption>
             </Figure>
             <ProjectParagraph>
               In our service, Insiders were modeled based on an LSTM, a gated RNN network. Gated
@@ -291,7 +301,9 @@ const AuroraModules = (): React.JSX.Element => {
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
                 src={rmmImg}
               />
-              <Figure.Caption className="paragraph">Risk Management Module</Figure.Caption>
+              <Figure.Caption>
+                <Paragraph as="span">Risk Management Module</Paragraph>
+              </Figure.Caption>
             </Figure>
             <ProjectParagraph>
               RMM is modeled in this research using the volume of queries of an asset on Google
@@ -318,8 +330,8 @@ const AuroraModules = (): React.JSX.Element => {
                 style={{ width: '90%', backgroundColor: 'white', padding: '10px' }}
                 src={resamImg}
               />
-              <Figure.Caption className="paragraph">
-                Overview - Resource Allocation Model (ResAM)
+              <Figure.Caption>
+                <Paragraph as="span">Overview - Resource Allocation Model (ResAM)</Paragraph>
               </Figure.Caption>
             </Figure>
             <ProjectParagraph>
@@ -343,55 +355,57 @@ const AuroraModules = (): React.JSX.Element => {
 const ResultsTable = (): React.JSX.Element => {
   return (
     <Container>
-      <Table striped bordered className="mt-1 mb-3 subtitle" responsive>
-        <thead>
-          <tr>
-            <th colSpan={2}>Portfolios</th>
-            <th>Estimated</th>
-            <th>Real</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td rowSpan={2}>Lower risk</td>
-            <td>Profit</td>
-            <td>R$590.00</td>
-            <td>-R$3,000.00</td>
-          </tr>
-          <tr>
-            <td>Profitability</td>
-            <td>1.18%</td>
-            <td>-6%</td>
-          </tr>
-          <tr>
-            <td rowSpan={2}>Higher risk</td>
-            <td>Profit</td>
-            <td>R$2,140.00</td>
-            <td>-R$3,984.00</td>
-          </tr>
-          <tr>
-            <td>Profitability</td>
-            <td>4.28%</td>
-            <td>-7.96%</td>
-          </tr>
-          <tr>
-            <td rowSpan={3}>AURORA</td>
-            <td>Profit</td>
-            <td>-</td>
-            <td>R$5,874.00</td>
-          </tr>
-          <tr>
-            <td>Profitability</td>
-            <td>-</td>
-            <td>11.74%</td>
-          </tr>
-          <tr>
-            <td>Yield - Savings</td>
-            <td>-</td>
-            <td>250.44%</td>
-          </tr>
-        </tbody>
-      </Table>
+      <Subtitle as="div">
+        <Table striped bordered className="mt-1 mb-3" responsive>
+          <thead>
+            <tr>
+              <th colSpan={2}>Portfolios</th>
+              <th>Estimated</th>
+              <th>Real</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowSpan={2}>Lower risk</td>
+              <td>Profit</td>
+              <td>R$590.00</td>
+              <td>-R$3,000.00</td>
+            </tr>
+            <tr>
+              <td>Profitability</td>
+              <td>1.18%</td>
+              <td>-6%</td>
+            </tr>
+            <tr>
+              <td rowSpan={2}>Higher risk</td>
+              <td>Profit</td>
+              <td>R$2,140.00</td>
+              <td>-R$3,984.00</td>
+            </tr>
+            <tr>
+              <td>Profitability</td>
+              <td>4.28%</td>
+              <td>-7.96%</td>
+            </tr>
+            <tr>
+              <td rowSpan={3}>AURORA</td>
+              <td>Profit</td>
+              <td>-</td>
+              <td>R$5,874.00</td>
+            </tr>
+            <tr>
+              <td>Profitability</td>
+              <td>-</td>
+              <td>11.74%</td>
+            </tr>
+            <tr>
+              <td>Yield - Savings</td>
+              <td>-</td>
+              <td>250.44%</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Subtitle>
     </Container>
   );
 };
@@ -399,64 +413,66 @@ const ResultsTable = (): React.JSX.Element => {
 const RLTable = (): React.JSX.Element => {
   return (
     <Container>
-      <Table striped bordered className="mt-1 mb-3 subtitle" responsive>
-        <thead>
-          <tr>
-            <th>Parameter</th>
-            <th>Standard value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Epoch</td>
-            <td>200</td>
-          </tr>
-          <tr>
-            <td>Steps by epoch</td>
-            <td>1000</td>
-          </tr>
-          <tr>
-            <td>Policy learning rate</td>
-            <td>0.0005</td>
-          </tr>
-          <tr>
-            <td>Q-Value learning rate</td>
-            <td>0.0001</td>
-          </tr>
-          <tr>
-            <td>Buffer</td>
-            <td>500,000</td>
-          </tr>
-          <tr>
-            <td>Batch Size</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td>Initial Steps</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>Noise</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>Hidden Layer</td>
-            <td>(16, 16)</td>
-          </tr>
-          <tr>
-            <td>Activation function - Hidden Layer</td>
-            <td>ReLU</td>
-          </tr>
-          <tr>
-            <td>Activation function - Output Layer</td>
-            <td>Tanh</td>
-          </tr>
-          <tr>
-            <td>Test episodes</td>
-            <td>10</td>
-          </tr>
-        </tbody>
-      </Table>
+      <Subtitle as="div">
+        <Table striped bordered className="mt-1 mb-3" responsive>
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Standard value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Epoch</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td>Steps by epoch</td>
+              <td>1000</td>
+            </tr>
+            <tr>
+              <td>Policy learning rate</td>
+              <td>0.0005</td>
+            </tr>
+            <tr>
+              <td>Q-Value learning rate</td>
+              <td>0.0001</td>
+            </tr>
+            <tr>
+              <td>Buffer</td>
+              <td>500,000</td>
+            </tr>
+            <tr>
+              <td>Batch Size</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Initial Steps</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Noise</td>
+              <td>1.0</td>
+            </tr>
+            <tr>
+              <td>Hidden Layer</td>
+              <td>(16, 16)</td>
+            </tr>
+            <tr>
+              <td>Activation function - Hidden Layer</td>
+              <td>ReLU</td>
+            </tr>
+            <tr>
+              <td>Activation function - Output Layer</td>
+              <td>Tanh</td>
+            </tr>
+            <tr>
+              <td>Test episodes</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Subtitle>
     </Container>
   );
 };
@@ -464,110 +480,126 @@ const RLTable = (): React.JSX.Element => {
 const ResultsTabs = (): React.JSX.Element => {
   return (
     <Container>
-      <Tabs
-        defaultActiveKey="best_case"
-        id="uncontrolled-tab-example"
-        className="mt-1 mb-3 w-100 subtitle"
-        fill
-      >
-        <Tab eventKey="best_case" title="Prediction Plots" className="w-100 text-left">
-          <ProjectParagraph>
-            We analyzed how AURORA&apos;s LSTM model behaved in an actual market situation. The goal
-            was to understand the behavior of the predictions over the days. As can be seen in the
-            results, the accuracy was satisfactory for all evaluated stocks. In the worst case, we
-            obtained an accuracy of 80% for VALE3. In contrast, ABEV3 and PETR3 achieved 88% and 93%
-            accuracy, respectively. Despite the promising results, it is noted that the LSTM has a
-            limitation in predicting sudden movement direction changes. On the other hand, in the
-            stock&apos;s continuous movements, the modeled LSTM showed great accuracy and ensured
-            that its previous errors did not affect its performance.
-          </ProjectParagraph>
-          <Figure className="mx-auto text-center">
-            <Row className="mx-auto">
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size_2"
-                  style={{ backgroundColor: 'white' }}
-                  alt="VALE3"
-                  src={vale3PredImg}
-                />
-                <Figure.Caption className="paragraph">VALE3</Figure.Caption>
-              </Col>
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="PETR3"
-                  src={petr3PredImg}
-                />
-                <Figure.Caption className="paragraph">PETR3</Figure.Caption>
-              </Col>
-            </Row>
-          </Figure>
-          <Figure className="mx-auto text-center">
-            <Figure.Image
-              className="proper_img_size_3"
-              style={{ backgroundColor: 'white' }}
-              alt="ABEV3"
-              src={abev3PredImg}
-            />
-            <Figure.Caption className="paragraph">ABEV3</Figure.Caption>
-          </Figure>
-          <ProjectParagraph>
-            The plots show the predictions made by AURORA&apos;s LSTM model for each stock. The cyan
-            line represents the average price in specific time steps. The blue line is the closing
-            price of the stock on that day. The markers represent the correctness of the
-            predictions.
-          </ProjectParagraph>
-        </Tab>
-        <Tab eventKey="likely_case" title="Training Plots" className="w-100 text-left">
-          <ProjectParagraph>
-            The figures below present the loss value behavior in 5000 epochs of training. In the top
-            right, the boxplot shows the dispersion of the cross-validation accuracies for each
-            time-step size. We can notice that over time, such models converged and stabilized
-            before completing 500 training seasons. These findings indicate the ability to
-            generalize models to predict the movement of a given stock without overfitting.
-            Additionally, due to the boxplot&apos;s interquartile amplitude, we can infer that it is
-            possible to model an LSTM in AURORA with a stable, high-accuracy prediction.
-          </ProjectParagraph>
-          <Figure className="mx-auto text-center">
-            <Row className="mx-auto">
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="VALE3"
-                  src={vale3LossImg}
-                />
-                <Figure.Caption className="paragraph">
-                  VALE3 - Performance evaluation of decision-making process for multiple time-steps
-                </Figure.Caption>
-              </Col>
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="PETR3"
-                  src={petr3LossImg}
-                />
-                <Figure.Caption className="paragraph">
-                  PETR3 - Performance evaluation of decision-making process for multiple time-steps
-                </Figure.Caption>
-              </Col>
-            </Row>
-          </Figure>
-          <Figure className="mx-auto text-center">
-            <Figure.Image
-              className="proper_img_size_3"
-              style={{ backgroundColor: 'white' }}
-              alt="ABEV3"
-              src={abev3LossImg}
-            />
-            <Figure.Caption className="paragraph">
-              ABEV3 - Performance evaluation of decision-making process for multiple time-steps
-            </Figure.Caption>
-          </Figure>
-        </Tab>
-      </Tabs>
+      <Subtitle as="div">
+        <Tabs
+          defaultActiveKey="best_case"
+          id="uncontrolled-tab-example"
+          className="mt-1 mb-3 w-100"
+          fill
+        >
+          <Tab eventKey="best_case" title="Prediction Plots" className="w-100 text-left">
+            <ProjectParagraph>
+              We analyzed how AURORA&apos;s LSTM model behaved in an actual market situation. The
+              goal was to understand the behavior of the predictions over the days. As can be seen
+              in the results, the accuracy was satisfactory for all evaluated stocks. In the worst
+              case, we obtained an accuracy of 80% for VALE3. In contrast, ABEV3 and PETR3 achieved
+              88% and 93% accuracy, respectively. Despite the promising results, it is noted that
+              the LSTM has a limitation in predicting sudden movement direction changes. On the
+              other hand, in the stock&apos;s continuous movements, the modeled LSTM showed great
+              accuracy and ensured that its previous errors did not affect its performance.
+            </ProjectParagraph>
+            <Figure className="mx-auto text-center">
+              <Row className="mx-auto">
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size_2"
+                    style={{ backgroundColor: 'white' }}
+                    alt="VALE3"
+                    src={vale3PredImg}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">VALE3</Paragraph>
+                  </Figure.Caption>
+                </Col>
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="PETR3"
+                    src={petr3PredImg}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">PETR3</Paragraph>
+                  </Figure.Caption>
+                </Col>
+              </Row>
+            </Figure>
+            <Figure className="mx-auto text-center">
+              <Figure.Image
+                className="proper_img_size_3"
+                style={{ backgroundColor: 'white' }}
+                alt="ABEV3"
+                src={abev3PredImg}
+              />
+              <Figure.Caption>
+                <Paragraph as="span">ABEV3</Paragraph>
+              </Figure.Caption>
+            </Figure>
+            <ProjectParagraph>
+              The plots show the predictions made by AURORA&apos;s LSTM model for each stock. The
+              cyan line represents the average price in specific time steps. The blue line is the
+              closing price of the stock on that day. The markers represent the correctness of the
+              predictions.
+            </ProjectParagraph>
+          </Tab>
+          <Tab eventKey="likely_case" title="Training Plots" className="w-100 text-left">
+            <ProjectParagraph>
+              The figures below present the loss value behavior in 5000 epochs of training. In the
+              top right, the boxplot shows the dispersion of the cross-validation accuracies for
+              each time-step size. We can notice that over time, such models converged and
+              stabilized before completing 500 training seasons. These findings indicate the ability
+              to generalize models to predict the movement of a given stock without overfitting.
+              Additionally, due to the boxplot&apos;s interquartile amplitude, we can infer that it
+              is possible to model an LSTM in AURORA with a stable, high-accuracy prediction.
+            </ProjectParagraph>
+            <Figure className="mx-auto text-center">
+              <Row className="mx-auto">
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="VALE3"
+                    src={vale3LossImg}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">
+                      VALE3 - Performance evaluation of decision-making process for multiple
+                      time-steps
+                    </Paragraph>
+                  </Figure.Caption>
+                </Col>
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="PETR3"
+                    src={petr3LossImg}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">
+                      PETR3 - Performance evaluation of decision-making process for multiple
+                      time-steps
+                    </Paragraph>
+                  </Figure.Caption>
+                </Col>
+              </Row>
+            </Figure>
+            <Figure className="mx-auto text-center">
+              <Figure.Image
+                className="proper_img_size_3"
+                style={{ backgroundColor: 'white' }}
+                alt="ABEV3"
+                src={abev3LossImg}
+              />
+              <Figure.Caption>
+                <Paragraph as="span">
+                  ABEV3 - Performance evaluation of decision-making process for multiple time-steps
+                </Paragraph>
+              </Figure.Caption>
+            </Figure>
+          </Tab>
+        </Tabs>
+      </Subtitle>
     </Container>
   );
 };

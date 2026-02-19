@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../../assets/css/stickytable.css';
 
+import { Subtitle } from '../../styles/primitives';
+
 interface HeadingData {
   id: string;
   title: string;
@@ -12,7 +14,7 @@ interface HeadingsProps {
 }
 
 const Headings = ({ headings, activeId }: HeadingsProps): React.JSX.Element => (
-  <ul className="subtitle" style={{ paddingLeft: '0px', fontSize: '17px' }}>
+  <Subtitle as="ul" style={{ paddingLeft: '0px', fontSize: '17px' }}>
     {headings.map((heading) => (
       <li key={heading.id} className={heading.id === activeId ? 'active' : ''}>
         <a
@@ -28,7 +30,7 @@ const Headings = ({ headings, activeId }: HeadingsProps): React.JSX.Element => (
         </a>
       </li>
     ))}
-  </ul>
+  </Subtitle>
 );
 
 export const TableOfContents = (): React.JSX.Element => {

@@ -14,9 +14,9 @@ export const colors = {
 
 /** Returns an rgba() string using Bootstrap's RGB channel variables. */
 export const alpha = {
-  primary: (opacity: number): string => `rgba(var(--bs-primary-rgb), ${opacity})`,
-  secondary: (opacity: number): string => `rgba(var(--bs-secondary-rgb), ${opacity})`,
-  warning: (opacity: number): string => `rgba(var(--bs-warning-rgb), ${opacity})`,
+  primary: (opacity: number): string => `rgba(var(--bs-primary-rgb), ${String(opacity)})`,
+  secondary: (opacity: number): string => `rgba(var(--bs-secondary-rgb), ${String(opacity)})`,
+  warning: (opacity: number): string => `rgba(var(--bs-warning-rgb), ${String(opacity)})`,
 } as const;
 
 /** Card / panel style values shared across StyledCard and nav buttons. */

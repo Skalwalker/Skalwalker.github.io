@@ -29,8 +29,8 @@ import imgSvmCoughvidCm from '../../assets/images/projects/covid19/svm_coughvid_
 import imgSvmCoughvidRoc from '../../assets/images/projects/covid19/svm_coughvid_roc.png';
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
+import { SubtitleBold, Subtitle, Paragraph } from '../../styles/primitives';
 
-import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
 
@@ -144,69 +144,71 @@ const FeaturesAccordion = (): React.JSX.Element => {
 const ResultSVMTabs = (): React.JSX.Element => {
   return (
     <Container>
-      <Tabs
-        defaultActiveKey="coswara"
-        id="uncontrolled-tab-example"
-        className="mt-1 mb-3 w-100 subtitle"
-        fill
-      >
-        <Tab eventKey="coswara" title="Coswara SVM" className="w-100 text-center">
-          <Figure className="mx-auto">
-            <Row className="mx-auto">
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size_2"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Validation Set Confusion Matrix"
-                  src={imgSvmCoswaraCm}
-                />
-                <Figure.Caption className="paragraph">
-                  Validation Set Confusion Matrix
-                </Figure.Caption>
-              </Col>
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Receiver Operating Characteristic Curve"
-                  src={imgSvmCoswaraRoc}
-                />
-                <Figure.Caption className="paragraph">
-                  Receiver Operating Characteristic Curve
-                </Figure.Caption>
-              </Col>
-            </Row>
-          </Figure>
-        </Tab>
-        <Tab eventKey="coughvid" title="Coughvid SVM" className="w-100 text-center">
-          <Figure className="mx-auto">
-            <Row className="mx-auto">
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size_2"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Validation Set Confusion Matrix"
-                  src={imgSvmCoughvidCm}
-                />
-                <Figure.Caption className="paragraph">
-                  Validation Set Confusion Matrix
-                </Figure.Caption>
-              </Col>
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Receiver Operating Characteristic Curve"
-                  src={imgSvmCoughvidRoc}
-                />
-                <Figure.Caption className="paragraph">
-                  Receiver Operating Characteristic Curve
-                </Figure.Caption>
-              </Col>
-            </Row>
-          </Figure>
-        </Tab>
-      </Tabs>
+      <Subtitle as="div">
+        <Tabs
+          defaultActiveKey="coswara"
+          id="uncontrolled-tab-example"
+          className="mt-1 mb-3 w-100"
+          fill
+        >
+          <Tab eventKey="coswara" title="Coswara SVM" className="w-100 text-center">
+            <Figure className="mx-auto">
+              <Row className="mx-auto">
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size_2"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Validation Set Confusion Matrix"
+                    src={imgSvmCoswaraCm}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Validation Set Confusion Matrix</Paragraph>
+                  </Figure.Caption>
+                </Col>
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Receiver Operating Characteristic Curve"
+                    src={imgSvmCoswaraRoc}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Receiver Operating Characteristic Curve</Paragraph>
+                  </Figure.Caption>
+                </Col>
+              </Row>
+            </Figure>
+          </Tab>
+          <Tab eventKey="coughvid" title="Coughvid SVM" className="w-100 text-center">
+            <Figure className="mx-auto">
+              <Row className="mx-auto">
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size_2"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Validation Set Confusion Matrix"
+                    src={imgSvmCoughvidCm}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Validation Set Confusion Matrix</Paragraph>
+                  </Figure.Caption>
+                </Col>
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Receiver Operating Characteristic Curve"
+                    src={imgSvmCoughvidRoc}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Receiver Operating Characteristic Curve</Paragraph>
+                  </Figure.Caption>
+                </Col>
+              </Row>
+            </Figure>
+          </Tab>
+        </Tabs>
+      </Subtitle>
     </Container>
   );
 };
@@ -214,69 +216,71 @@ const ResultSVMTabs = (): React.JSX.Element => {
 const ResultCNNTabs = (): React.JSX.Element => {
   return (
     <Container>
-      <Tabs
-        defaultActiveKey="coswara"
-        id="uncontrolled-tab-example"
-        className="mt-1 mb-3 w-100 subtitle"
-        fill
-      >
-        <Tab eventKey="coswara" title="Coswara CNN" className="w-100 text-center">
-          <Figure className="mx-auto">
-            <Row className="mx-auto" style={{ width: '100%' }}>
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size_2"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Validation Set Confusion Matrix"
-                  src={imgCnnCoswaraCm}
-                />
-                <Figure.Caption className="paragraph">
-                  Validation Set Confusion Matrix
-                </Figure.Caption>
-              </Col>
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Receiver Operating Characteristic Curve"
-                  src={imgCnnCoswaraRoc}
-                />
-                <Figure.Caption className="paragraph">
-                  Receiver Operating Characteristic Curve
-                </Figure.Caption>
-              </Col>
-            </Row>
-          </Figure>
-        </Tab>
-        <Tab eventKey="coughvid" title="Coughvid CNN" className="w-100 text-center">
-          <Figure className="mx-auto">
-            <Row className="mx-auto w-100">
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size_2"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Validation Set Confusion Matrix"
-                  src={imgCnnCoughvidCm}
-                />
-                <Figure.Caption className="paragraph">
-                  Validation Set Confusion Matrix
-                </Figure.Caption>
-              </Col>
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Receiver Operating Characteristic Curve"
-                  src={imgCnnCoughvidRoc}
-                />
-                <Figure.Caption className="paragraph">
-                  Receiver Operating Characteristic Curve
-                </Figure.Caption>
-              </Col>
-            </Row>
-          </Figure>
-        </Tab>
-      </Tabs>
+      <Subtitle as="div">
+        <Tabs
+          defaultActiveKey="coswara"
+          id="uncontrolled-tab-example"
+          className="mt-1 mb-3 w-100"
+          fill
+        >
+          <Tab eventKey="coswara" title="Coswara CNN" className="w-100 text-center">
+            <Figure className="mx-auto">
+              <Row className="mx-auto" style={{ width: '100%' }}>
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size_2"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Validation Set Confusion Matrix"
+                    src={imgCnnCoswaraCm}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Validation Set Confusion Matrix</Paragraph>
+                  </Figure.Caption>
+                </Col>
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Receiver Operating Characteristic Curve"
+                    src={imgCnnCoswaraRoc}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Receiver Operating Characteristic Curve</Paragraph>
+                  </Figure.Caption>
+                </Col>
+              </Row>
+            </Figure>
+          </Tab>
+          <Tab eventKey="coughvid" title="Coughvid CNN" className="w-100 text-center">
+            <Figure className="mx-auto">
+              <Row className="mx-auto w-100">
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size_2"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Validation Set Confusion Matrix"
+                    src={imgCnnCoughvidCm}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Validation Set Confusion Matrix</Paragraph>
+                  </Figure.Caption>
+                </Col>
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Receiver Operating Characteristic Curve"
+                    src={imgCnnCoughvidRoc}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Receiver Operating Characteristic Curve</Paragraph>
+                  </Figure.Caption>
+                </Col>
+              </Row>
+            </Figure>
+          </Tab>
+        </Tabs>
+      </Subtitle>
     </Container>
   );
 };
@@ -284,69 +288,71 @@ const ResultCNNTabs = (): React.JSX.Element => {
 const ResultsTable = (): React.JSX.Element => {
   return (
     <Container>
-      <Table striped bordered className="mt-1 mb-3 subtitle" responsive>
-        <thead className="subtitle_bold">
-          <tr>
-            <th rowSpan={2} className="text-center">
-              Datasets
-            </th>
-            <th colSpan={5} className="text-center">
-              Training and Validation Metrics
-            </th>
-          </tr>
-          <tr>
-            <th>Accuracy</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th>F1-Score</th>
-            <th>AUC-ROC</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="subtitle_bold">Coswara SVM</td>
-            <td>0.83/0.71</td>
-            <td>
-              0.86/<b>0.77</b>
-            </td>
-            <td>
-              0.83/<b>0.72</b>
-            </td>
-            <td>
-              0.84/<b>0.72</b>
-            </td>
-            <td>0.85/0.70</td>
-          </tr>
-          <tr>
-            <td className="subtitle_bold">Coughvid SVM</td>
-            <td>0.78/0.61</td>
-            <td>0.78/0.62</td>
-            <td>0.78/0.61</td>
-            <td>0.78/0.61</td>
-            <td>0.78/0.62</td>
-          </tr>
-          <tr>
-            <td className="subtitle_bold">Coswara CNN</td>
-            <td>
-              0.83/<b>0.76</b>
-            </td>
-            <td>0.72/0.52</td>
-            <td>0.68/0.50</td>
-            <td>0.70/0.51</td>
-            <td>
-              0.91/<b>0.73</b>
-            </td>
-          </tr>
-          <tr>
-            <td className="subtitle_bold">Coughvid CNN</td>
-            <td>0.57/0.47</td>
-            <td>0.56/0.45</td>
-            <td>0.78/0.69</td>
-            <td>0.65/0.54</td>
-            <td>0.62/0.52</td>
-          </tr>
-        </tbody>
-      </Table>
+      <Subtitle as="div">
+        <Table striped bordered className="mt-1 mb-3" responsive>
+          <SubtitleBold as="thead">
+            <tr>
+              <th rowSpan={2} className="text-center">
+                Datasets
+              </th>
+              <th colSpan={5} className="text-center">
+                Training and Validation Metrics
+              </th>
+            </tr>
+            <tr>
+              <th>Accuracy</th>
+              <th>Precision</th>
+              <th>Recall</th>
+              <th>F1-Score</th>
+              <th>AUC-ROC</th>
+            </tr>
+          </SubtitleBold>
+          <tbody>
+            <tr>
+              <SubtitleBold as="td">Coswara SVM</SubtitleBold>
+              <td>0.83/0.71</td>
+              <td>
+                0.86/<b>0.77</b>
+              </td>
+              <td>
+                0.83/<b>0.72</b>
+              </td>
+              <td>
+                0.84/<b>0.72</b>
+              </td>
+              <td>0.85/0.70</td>
+            </tr>
+            <tr>
+              <SubtitleBold as="td">Coughvid SVM</SubtitleBold>
+              <td>0.78/0.61</td>
+              <td>0.78/0.62</td>
+              <td>0.78/0.61</td>
+              <td>0.78/0.61</td>
+              <td>0.78/0.62</td>
+            </tr>
+            <tr>
+              <SubtitleBold as="td">Coswara CNN</SubtitleBold>
+              <td>
+                0.83/<b>0.76</b>
+              </td>
+              <td>0.72/0.52</td>
+              <td>0.68/0.50</td>
+              <td>0.70/0.51</td>
+              <td>
+                0.91/<b>0.73</b>
+              </td>
+            </tr>
+            <tr>
+              <SubtitleBold as="td">Coughvid CNN</SubtitleBold>
+              <td>0.57/0.47</td>
+              <td>0.56/0.45</td>
+              <td>0.78/0.69</td>
+              <td>0.65/0.54</td>
+              <td>0.62/0.52</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Subtitle>
     </Container>
   );
 };
@@ -389,18 +395,22 @@ export const Covid19 = (): React.JSX.Element => {
           <b>research questions</b>:
         </ProjectParagraph>
         <Container>
-          <Card className="subtitle_bold my-3">
-            <Card.Body>
-              Can we detect COVID-19 only from cough audio of an infected person, using either
-              traditional or deep learning methods?
-            </Card.Body>
-          </Card>
-          <Card className="subtitle_bold my-3">
-            <Card.Body>
-              Is the CNN architecture feed with log-Mel spectrograms capable of overcoming the
-              results of a traditional SVM classification with traditional feature extraction?
-            </Card.Body>
-          </Card>
+          <SubtitleBold as="div">
+            <Card className="my-3">
+              <Card.Body>
+                Can we detect COVID-19 only from cough audio of an infected person, using either
+                traditional or deep learning methods?
+              </Card.Body>
+            </Card>
+          </SubtitleBold>
+          <SubtitleBold as="div">
+            <Card className="my-3">
+              <Card.Body>
+                Is the CNN architecture feed with log-Mel spectrograms capable of overcoming the
+                results of a traditional SVM classification with traditional feature extraction?
+              </Card.Body>
+            </Card>
+          </SubtitleBold>
         </Container>
         <ProjectParagraph>
           The figure below shows an overview of the C19-Audit framework. C19-Audit receives as input
@@ -416,7 +426,9 @@ export const Covid19 = (): React.JSX.Element => {
             alt="Overview of C19-Audit framework"
             src={imgProcessDiagram}
           />
-          <Figure.Caption className="paragraph">Overview of C19-Audit framework</Figure.Caption>
+          <Figure.Caption>
+            <Paragraph as="span">Overview of C19-Audit framework</Paragraph>
+          </Figure.Caption>
         </Figure>
         <ProjectParagraph>
           After the spectrogram generation, I generated the log Mel spectrogram, representing the
@@ -478,26 +490,28 @@ export const Covid19 = (): React.JSX.Element => {
           &quot;hann&quot; window. For details on the SVM and CNN configuration, please refer to the
           full paper. The experiments were evaluated with the following metrics:
         </ProjectParagraph>
-        <ListGroup className="w-100 mt-1 mb-3 subtitle" style={{ padding: '12px' }}>
-          <ListGroup.Item>
-            <b>Accuracy:</b> How close the models are to the correct value
-          </ListGroup.Item>
-          <ListGroup.Item>
-            <b>Precision:</b> How correct the positive predictions of the models were classified as
-            correct, excluding false negatives
-          </ListGroup.Item>
-          <ListGroup.Item>
-            <b>Recall:</b> How correct the positive predictions of the models were rated correct,
-            excluding false positives.
-          </ListGroup.Item>
-          <ListGroup.Item>
-            <b>F1-Score:</b> The harmonic mean of precision and recall
-          </ListGroup.Item>
-          <ListGroup.Item>
-            <b>AUC-ROC:</b> Aggregate measure of performance across all possible classification
-            thresholds
-          </ListGroup.Item>
-        </ListGroup>
+        <Subtitle as="div">
+          <ListGroup className="w-100 mt-1 mb-3" style={{ padding: '12px' }}>
+            <ListGroup.Item>
+              <b>Accuracy:</b> How close the models are to the correct value
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <b>Precision:</b> How correct the positive predictions of the models were classified
+              as correct, excluding false negatives
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <b>Recall:</b> How correct the positive predictions of the models were rated correct,
+              excluding false positives.
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <b>F1-Score:</b> The harmonic mean of precision and recall
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <b>AUC-ROC:</b> Aggregate measure of performance across all possible classification
+              thresholds
+            </ListGroup.Item>
+          </ListGroup>
+        </Subtitle>
         <ProjectParagraph>
           F1-Score and the AUC-ROC were specially chosen due to the nature of the problem. Both
           datasets are unbalanced, with a higher amount of healthy patients. Therefore accuracy

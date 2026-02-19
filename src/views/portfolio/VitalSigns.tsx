@@ -15,8 +15,8 @@ import rrSignalImg from '../../assets/images/projects/vitalsigns/rrsignal.png';
 import signalsImg from '../../assets/images/projects/vitalsigns/signals.png';
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
+import { Subtitle, Paragraph } from '../../styles/primitives';
 
-import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
 
@@ -82,8 +82,8 @@ export const VitalSigns = (): React.JSX.Element => {
         </ProjectParagraph>
         <Figure className="mx-auto text-center">
           <Figure.Image className="w-100" style={{ width: '100%' }} src={overviewImg} />
-          <Figure.Caption className="paragraph">
-            Overview of the signals&apos; separation pipeline
+          <Figure.Caption>
+            <Paragraph as="span">Overview of the signals&apos; separation pipeline</Paragraph>
           </Figure.Caption>
         </Figure>
         <ProjectParagraph>
@@ -156,8 +156,8 @@ function SubjectExample(): React.JSX.Element {
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
                 src={signalsImg}
               />
-              <Figure.Caption className="paragraph">
-                Accelerometer and Gyroscope Signals
+              <Figure.Caption>
+                <Paragraph as="span">Accelerometer and Gyroscope Signals</Paragraph>
               </Figure.Caption>
             </Figure>
           </Accordion.Body>
@@ -177,8 +177,8 @@ function SubjectExample(): React.JSX.Element {
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
                 src={componentsImg}
               />
-              <Figure.Caption className="paragraph">
-                Resulting components of the ICA process
+              <Figure.Caption>
+                <Paragraph as="span">Resulting components of the ICA process</Paragraph>
               </Figure.Caption>
             </Figure>
           </Accordion.Body>
@@ -202,8 +202,8 @@ function SubjectExample(): React.JSX.Element {
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
                 src={correlationImg}
               />
-              <Figure.Caption className="paragraph">
-                Independent components correlation with sine wave
+              <Figure.Caption>
+                <Paragraph as="span">Independent components correlation with sine wave</Paragraph>
               </Figure.Caption>
             </Figure>
           </Accordion.Body>
@@ -223,8 +223,8 @@ function SubjectExample(): React.JSX.Element {
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
                 src={respiratoryRateImg}
               />
-              <Figure.Caption className="paragraph">
-                Signal waves for the respiratory rate
+              <Figure.Caption>
+                <Paragraph as="span">Signal waves for the respiratory rate</Paragraph>
               </Figure.Caption>
             </Figure>
           </Accordion.Body>
@@ -244,7 +244,9 @@ function SubjectExample(): React.JSX.Element {
                 style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
                 src={heartRateImg}
               />
-              <Figure.Caption className="paragraph">Signal waves for the heart rate</Figure.Caption>
+              <Figure.Caption>
+                <Paragraph as="span">Signal waves for the heart rate</Paragraph>
+              </Figure.Caption>
             </Figure>
           </Accordion.Body>
         </Accordion.Item>
@@ -256,34 +258,36 @@ function SubjectExample(): React.JSX.Element {
 const ResultsTable = (): React.JSX.Element => {
   return (
     <Container>
-      <Table striped bordered className="mt-1 mb-3 subtitle" responsive>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Mean Absolute Error</th>
-            <th>Root Mean Squared Error</th>
-            <th>Accuracy</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <b>Respiratory Rate</b>
-            </td>
-            <td>0.71</td>
-            <td>2.69</td>
-            <td>0.82</td>
-          </tr>
-          <tr>
-            <td>
-              <b>Heart Rate</b>
-            </td>
-            <td>6.84</td>
-            <td>14.57</td>
-            <td>-</td>
-          </tr>
-        </tbody>
-      </Table>
+      <Subtitle as="div">
+        <Table striped bordered className="mt-1 mb-3" responsive>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Mean Absolute Error</th>
+              <th>Root Mean Squared Error</th>
+              <th>Accuracy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <b>Respiratory Rate</b>
+              </td>
+              <td>0.71</td>
+              <td>2.69</td>
+              <td>0.82</td>
+            </tr>
+            <tr>
+              <td>
+                <b>Heart Rate</b>
+              </td>
+              <td>6.84</td>
+              <td>14.57</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Subtitle>
     </Container>
   );
 };
@@ -291,43 +295,45 @@ const ResultsTable = (): React.JSX.Element => {
 const SignalTabs = (): React.JSX.Element => {
   return (
     <Container>
-      <Tabs
-        defaultActiveKey="rr_wave"
-        id="uncontrolled-tab-example"
-        className="mt-1 mb-3 w-100 subtitle"
-        fill
-      >
-        <Tab eventKey="rr_wave" title="Respiratory Signal" className="w-100 text-left">
-          <Figure className="mx-auto text-center mt-4">
-            <Figure.Image className="w-100" style={{ width: '100%' }} src={rrSignalImg} />
-            <Figure.Caption className="paragraph">
-              Respiratory rate identification pipeline
-            </Figure.Caption>
-          </Figure>
-          <ProjectParagraph>
-            First, for the respiratory signal, I apply a bandpass filter, ranging from 0.2 to 0.5Hz
-            (12 to 30 Breaths per Minute), to select the expected respiratory rate interval. After
-            filtering, we perform the traditional process of using the magnitude of the Fourier
-            transform, identify the dominant frequency and multiply it by 60 to obtain the
-            respiratory rate
-          </ProjectParagraph>
-        </Tab>
-        <Tab eventKey="heart_case" title="Heart Signal" className="w-100 text-left">
-          <Figure className="mx-auto text-center mt-4">
-            <Figure.Image className="w-100" style={{ width: '100%' }} src={heartSignalImg} />
-            <Figure.Caption className="paragraph">
-              Heart rate identification pipeline
-            </Figure.Caption>
-          </Figure>
-          <ProjectParagraph>
-            For the heart rate signals, we have more than one signal. Thus we need to generate an
-            aggregated resulting signal, and I did so by applying an L2 Norm to get the magnitude of
-            the combined signals. Following, I applied an 8th-order Butterworth bandpass filter to
-            keep the signal between 0.6 to 3.33Hz (40 to 200 Beats per Minute) and finally followed
-            the last two steps of the respiratory rate identification.
-          </ProjectParagraph>
-        </Tab>
-      </Tabs>
+      <Subtitle as="div">
+        <Tabs
+          defaultActiveKey="rr_wave"
+          id="uncontrolled-tab-example"
+          className="mt-1 mb-3 w-100"
+          fill
+        >
+          <Tab eventKey="rr_wave" title="Respiratory Signal" className="w-100 text-left">
+            <Figure className="mx-auto text-center mt-4">
+              <Figure.Image className="w-100" style={{ width: '100%' }} src={rrSignalImg} />
+              <Figure.Caption>
+                <Paragraph as="span">Respiratory rate identification pipeline</Paragraph>
+              </Figure.Caption>
+            </Figure>
+            <ProjectParagraph>
+              First, for the respiratory signal, I apply a bandpass filter, ranging from 0.2 to
+              0.5Hz (12 to 30 Breaths per Minute), to select the expected respiratory rate interval.
+              After filtering, we perform the traditional process of using the magnitude of the
+              Fourier transform, identify the dominant frequency and multiply it by 60 to obtain the
+              respiratory rate
+            </ProjectParagraph>
+          </Tab>
+          <Tab eventKey="heart_case" title="Heart Signal" className="w-100 text-left">
+            <Figure className="mx-auto text-center mt-4">
+              <Figure.Image className="w-100" style={{ width: '100%' }} src={heartSignalImg} />
+              <Figure.Caption>
+                <Paragraph as="span">Heart rate identification pipeline</Paragraph>
+              </Figure.Caption>
+            </Figure>
+            <ProjectParagraph>
+              For the heart rate signals, we have more than one signal. Thus we need to generate an
+              aggregated resulting signal, and I did so by applying an L2 Norm to get the magnitude
+              of the combined signals. Following, I applied an 8th-order Butterworth bandpass filter
+              to keep the signal between 0.6 to 3.33Hz (40 to 200 Beats per Minute) and finally
+              followed the last two steps of the respiratory rate identification.
+            </ProjectParagraph>
+          </Tab>
+        </Tabs>
+      </Subtitle>
     </Container>
   );
 };
@@ -339,32 +345,32 @@ const AppImagesCarrousel = (): React.JSX.Element => {
         <Figure className="mx-auto text-center mt-4">
           <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg1} />
         </Figure>
-        <Carousel.Caption className="paragraph">
-          <p>Initial view</p>
+        <Carousel.Caption>
+          <Paragraph>Initial view</Paragraph>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
         <Figure className="mx-auto text-center mt-4">
           <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg2} />
         </Figure>
-        <Carousel.Caption className="paragraph">
-          <p>Recording screen with instructions before starting</p>
+        <Carousel.Caption>
+          <Paragraph>Recording screen with instructions before starting</Paragraph>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
         <Figure className="mx-auto text-center mt-4">
           <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg3} />
         </Figure>
-        <Carousel.Caption className="paragraph">
-          <p>Recording screen showing remaining time to finish the record</p>
+        <Carousel.Caption>
+          <Paragraph>Recording screen showing remaining time to finish the record</Paragraph>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
         <Figure className="mx-auto text-center mt-4">
           <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg4} />
         </Figure>
-        <Carousel.Caption className="paragraph">
-          <p>List of saved records to be shared to a computer</p>
+        <Carousel.Caption>
+          <Paragraph>List of saved records to be shared to a computer</Paragraph>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

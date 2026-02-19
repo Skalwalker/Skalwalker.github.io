@@ -15,8 +15,8 @@ import forestDynamicsImg from '../../assets/images/projects/globalwarming/forest
 import globalDynamicsImg from '../../assets/images/projects/globalwarming/global_dynamics.png';
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
+import { SubtitleBold, Subtitle, Paragraph } from '../../styles/primitives';
 
-import '../../assets/css/font.css';
 import '../../assets/css/tabs.css';
 import '../../assets/css/projects.css';
 
@@ -166,154 +166,162 @@ export const GlobalWarming = (): React.JSX.Element => {
 const ResultsTabs = (): React.JSX.Element => {
   return (
     <Container>
-      <Tabs
-        defaultActiveKey="best_case"
-        id="uncontrolled-tab-example"
-        className="mt-1 mb-3 w-100 subtitle"
-        fill
-      >
-        <Tab eventKey="best_case" title="Best Case" className="w-100 text-center">
-          <ProjectParagraph>
-            In the best-case scenario, we observe the highest minimum year of temperature surpasses
-            2101, while the median and the first quartile are the same, 2099, meaning that this year
-            is the most probable in the best-case scenario. At the end of the 100 years, the
-            expected temperature will hit 15.968<sup>o</sup> C (&plusmn; 0.011), 0.168 above the
-            limit. Also, the worst case CO<sub>2</sub> density is expected at 629.934 ppm (&plusmn;
-            2.333).
-          </ProjectParagraph>
-          <Figure className="mx-auto">
-            <Row className="mx-auto">
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Temperature density over 100 years"
-                  src={e3TempImg}
-                />
-                <Figure.Caption className="paragraph">
-                  Temperature density over 100 years
-                </Figure.Caption>
-              </Col>
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="CO2 density over 100 years"
-                  src={e3Co2Img}
-                />
-                <Figure.Caption className="paragraph">
-                  CO<sub>2</sub> density over 100 years
-                </Figure.Caption>
-              </Col>
-            </Row>
-          </Figure>
-          <Figure className="mx-auto">
-            <Figure.Image
-              className="proper_img_size_3"
-              style={{ backgroundColor: 'white' }}
-              alt="Year temperature exceeds recommended"
-              src={e3YearImg}
-            />
-            <Figure.Caption className="paragraph">
-              Year temperature exceeds recommended
-            </Figure.Caption>
-          </Figure>
-        </Tab>
-        <Tab eventKey="likely_case" title="Likely Case" className="w-100 text-center">
-          <ProjectParagraph>
-            In the most likely scenario, the temperature excess year has a minimum in 2062 and a
-            maximum in 2066, while the median and the third quartile are the same, 2064, meaning
-            that this year is the most probable in the best-case scenario. At the end of the 100
-            years, the expected temperature will hit 16.738<sup>o</sup> C (&plusmn; 0.015), 0.938
-            above the limit. Also, the worst case CO<sub>2</sub> density is expected at 646.292 ppm
-            (&plusmn; 2.16).
-          </ProjectParagraph>
-          <Figure className="mx-auto">
-            <Row className="mx-auto">
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Temperature density over 100 years"
-                  src={e4TempImg}
-                />
-                <Figure.Caption className="paragraph">
-                  Temperature density over 100 years
-                </Figure.Caption>
-              </Col>
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="CO2 density over 100 years"
-                  src={e4Co2Img}
-                />
-                <Figure.Caption className="paragraph">
-                  CO<sub>2</sub> density over 100 years
-                </Figure.Caption>
-              </Col>
-            </Row>
-          </Figure>
-          <Figure className="mx-auto">
-            <Figure.Image
-              className="proper_img_size_3"
-              style={{ backgroundColor: 'white' }}
-              alt="Year temperature exceeds recommended"
-              src={e4YearImg}
-            />
-            <Figure.Caption className="paragraph">
-              Year temperature exceeds recommended
-            </Figure.Caption>
-          </Figure>
-        </Tab>
-        <Tab eventKey="worst_case" title="Worst Case" className="w-100 text-center">
-          <ProjectParagraph>
-            In the worst-case scenario, we observe the lowest minimum year of temperature surpasses
-            2040, while the median and the third quartile are the same, 2042, meaning that this year
-            is the most probable in the worst-case scenario. At the end of the 100 years, the
-            expected temperature will hit 18.226<sup>o</sup> C (&plusmn; 0.024), 2.426 above the
-            limit. Also, the worst case CO<sub>2</sub> density is expected at 654.875 ppm (&plusmn;
-            2.167).
-          </ProjectParagraph>
-          <Figure className="mx-auto">
-            <Row className="mx-auto">
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="Temperature density over 100 years"
-                  src={e2TempImg}
-                />
-                <Figure.Caption className="paragraph">
-                  Temperature density over 100 years
-                </Figure.Caption>
-              </Col>
-              <Col md={6} sm={12}>
-                <Figure.Image
-                  className="proper_img_size"
-                  style={{ backgroundColor: 'white' }}
-                  alt="CO2 density over 100 years"
-                  src={e2Co2Img}
-                />
-                <Figure.Caption className="paragraph">
-                  CO<sub>2</sub> density over 100 years
-                </Figure.Caption>
-              </Col>
-            </Row>
-          </Figure>
-          <Figure className="mx-auto">
-            <Figure.Image
-              className="proper_img_size_3"
-              style={{ backgroundColor: 'white' }}
-              alt="Year temperature exceeds recommended"
-              src={e2YearImg}
-            />
-            <Figure.Caption className="paragraph">
-              Year temperature exceeds recommended
-            </Figure.Caption>
-          </Figure>
-        </Tab>
-      </Tabs>
+      <Subtitle as="div">
+        <Tabs
+          defaultActiveKey="best_case"
+          id="uncontrolled-tab-example"
+          className="mt-1 mb-3 w-100"
+          fill
+        >
+          <Tab eventKey="best_case" title="Best Case" className="w-100 text-center">
+            <ProjectParagraph>
+              In the best-case scenario, we observe the highest minimum year of temperature
+              surpasses 2101, while the median and the first quartile are the same, 2099, meaning
+              that this year is the most probable in the best-case scenario. At the end of the 100
+              years, the expected temperature will hit 15.968<sup>o</sup> C (&plusmn; 0.011), 0.168
+              above the limit. Also, the worst case CO<sub>2</sub> density is expected at 629.934
+              ppm (&plusmn; 2.333).
+            </ProjectParagraph>
+            <Figure className="mx-auto">
+              <Row className="mx-auto">
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Temperature density over 100 years"
+                    src={e3TempImg}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Temperature density over 100 years</Paragraph>
+                  </Figure.Caption>
+                </Col>
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="CO2 density over 100 years"
+                    src={e3Co2Img}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">
+                      CO<sub>2</sub> density over 100 years
+                    </Paragraph>
+                  </Figure.Caption>
+                </Col>
+              </Row>
+            </Figure>
+            <Figure className="mx-auto">
+              <Figure.Image
+                className="proper_img_size_3"
+                style={{ backgroundColor: 'white' }}
+                alt="Year temperature exceeds recommended"
+                src={e3YearImg}
+              />
+              <Figure.Caption>
+                <Paragraph as="span">Year temperature exceeds recommended</Paragraph>
+              </Figure.Caption>
+            </Figure>
+          </Tab>
+          <Tab eventKey="likely_case" title="Likely Case" className="w-100 text-center">
+            <ProjectParagraph>
+              In the most likely scenario, the temperature excess year has a minimum in 2062 and a
+              maximum in 2066, while the median and the third quartile are the same, 2064, meaning
+              that this year is the most probable in the best-case scenario. At the end of the 100
+              years, the expected temperature will hit 16.738<sup>o</sup> C (&plusmn; 0.015), 0.938
+              above the limit. Also, the worst case CO<sub>2</sub> density is expected at 646.292
+              ppm (&plusmn; 2.16).
+            </ProjectParagraph>
+            <Figure className="mx-auto">
+              <Row className="mx-auto">
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Temperature density over 100 years"
+                    src={e4TempImg}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Temperature density over 100 years</Paragraph>
+                  </Figure.Caption>
+                </Col>
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="CO2 density over 100 years"
+                    src={e4Co2Img}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">
+                      CO<sub>2</sub> density over 100 years
+                    </Paragraph>
+                  </Figure.Caption>
+                </Col>
+              </Row>
+            </Figure>
+            <Figure className="mx-auto">
+              <Figure.Image
+                className="proper_img_size_3"
+                style={{ backgroundColor: 'white' }}
+                alt="Year temperature exceeds recommended"
+                src={e4YearImg}
+              />
+              <Figure.Caption>
+                <Paragraph as="span">Year temperature exceeds recommended</Paragraph>
+              </Figure.Caption>
+            </Figure>
+          </Tab>
+          <Tab eventKey="worst_case" title="Worst Case" className="w-100 text-center">
+            <ProjectParagraph>
+              In the worst-case scenario, we observe the lowest minimum year of temperature
+              surpasses 2040, while the median and the third quartile are the same, 2042, meaning
+              that this year is the most probable in the worst-case scenario. At the end of the 100
+              years, the expected temperature will hit 18.226<sup>o</sup> C (&plusmn; 0.024), 2.426
+              above the limit. Also, the worst case CO<sub>2</sub> density is expected at 654.875
+              ppm (&plusmn; 2.167).
+            </ProjectParagraph>
+            <Figure className="mx-auto">
+              <Row className="mx-auto">
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="Temperature density over 100 years"
+                    src={e2TempImg}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">Temperature density over 100 years</Paragraph>
+                  </Figure.Caption>
+                </Col>
+                <Col md={6} sm={12}>
+                  <Figure.Image
+                    className="proper_img_size"
+                    style={{ backgroundColor: 'white' }}
+                    alt="CO2 density over 100 years"
+                    src={e2Co2Img}
+                  />
+                  <Figure.Caption>
+                    <Paragraph as="span">
+                      CO<sub>2</sub> density over 100 years
+                    </Paragraph>
+                  </Figure.Caption>
+                </Col>
+              </Row>
+            </Figure>
+            <Figure className="mx-auto">
+              <Figure.Image
+                className="proper_img_size_3"
+                style={{ backgroundColor: 'white' }}
+                alt="Year temperature exceeds recommended"
+                src={e2YearImg}
+              />
+              <Figure.Caption>
+                <Paragraph as="span">Year temperature exceeds recommended</Paragraph>
+              </Figure.Caption>
+            </Figure>
+          </Tab>
+        </Tabs>
+      </Subtitle>
     </Container>
   );
 };
@@ -415,26 +423,34 @@ const DynamicsAccordion = (): React.JSX.Element => {
 const ResearchQuestions = (): React.JSX.Element => {
   return (
     <Container>
-      <Card className="subtitle_bold my-3">
-        <Card.Body>
-          RQ1 - In what year does the world average temperature surpass the recommended temperature
-          limit?
-        </Card.Body>
-      </Card>
-      <Card className="subtitle_bold my-3">
-        <Card.Body>RQ2 - How will the world temperature change over 100 years?</Card.Body>
-      </Card>
-      <Card className="subtitle_bold my-3">
-        <Card.Body>
-          RQ3 - How do the global CO<sub>2</sub> emissions change over 100 years?
-        </Card.Body>
-      </Card>
-      <Card className="subtitle_bold my-3">
-        <Card.Body>
-          RQ4 - In a most probable scenario, what countries are the worst in their Net Zero efforts
-          (balancing CO<sub>2</sub> emissions with forest offset)?
-        </Card.Body>
-      </Card>
+      <SubtitleBold as="div">
+        <Card className="my-3">
+          <Card.Body>
+            RQ1 - In what year does the world average temperature surpass the recommended
+            temperature limit?
+          </Card.Body>
+        </Card>
+      </SubtitleBold>
+      <SubtitleBold as="div">
+        <Card className="my-3">
+          <Card.Body>RQ2 - How will the world temperature change over 100 years?</Card.Body>
+        </Card>
+      </SubtitleBold>
+      <SubtitleBold as="div">
+        <Card className="my-3">
+          <Card.Body>
+            RQ3 - How do the global CO<sub>2</sub> emissions change over 100 years?
+          </Card.Body>
+        </Card>
+      </SubtitleBold>
+      <SubtitleBold as="div">
+        <Card className="my-3">
+          <Card.Body>
+            RQ4 - In a most probable scenario, what countries are the worst in their Net Zero
+            efforts (balancing CO<sub>2</sub> emissions with forest offset)?
+          </Card.Body>
+        </Card>
+      </SubtitleBold>
     </Container>
   );
 };
