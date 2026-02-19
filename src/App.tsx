@@ -3,9 +3,8 @@ import { Col, Row } from 'react-bootstrap';
 
 import { BackgroundParticles, NavBar } from './components';
 import { NavRouter } from './routes';
+import { LoaderContainer } from './styles/primitives';
 import { Splashscreen } from './views';
-
-import './assets/css/splashscreen.css';
 
 export const App = (): React.JSX.Element => {
   const myRef = useRef(false);
@@ -34,9 +33,9 @@ export const App = (): React.JSX.Element => {
       <BackgroundParticles id={'tsparticles'} />
       <div style={{ position: 'relative', zIndex: 1, minHeight: '100vh' }}>
         {showSplash && (
-          <div className="loader-container">
+          <LoaderContainer>
             <Splashscreen />
-          </div>
+          </LoaderContainer>
         )}
         <NavBar />
         <Row className="mx-0 gx-0">

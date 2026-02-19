@@ -92,6 +92,26 @@ export const PageContainer = styled.div`
   }
 `;
 
+// ─── Splash screen ──────────────────────────────────────────────────────────
+
+const fadeOut = keyframes`
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+`;
+
+/**
+ * Full-viewport overlay that fades out after 3 s, used in App.tsx.
+ * Replaces className="loader-container" + splashscreen.css.
+ */
+export const LoaderContainer = styled.div`
+  z-index: 200;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: inline;
+  animation: ${fadeOut} 1s 3s;
+`;
+
 // ─── Overlay text containers ────────────────────────────────────────────────
 
 /**
