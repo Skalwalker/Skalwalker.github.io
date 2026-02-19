@@ -4,15 +4,15 @@ import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
+import styled from 'styled-components';
 
-import '../../assets/css/about.css';
 import { coreContent } from '../../content';
 import { Paragraph } from '../../styles/primitives';
 
 export const Core = (): React.JSX.Element => {
   return (
     <Row style={{ height: '92vh' }}>
-      <Col className="my-auto about_core_style">
+      <AboutCoreCol className="my-auto">
         <Row>
           <Col md={12}>
             <Paragraph style={{ fontSize: '20px' }}>{coreContent.coreText}</Paragraph>
@@ -48,7 +48,17 @@ export const Core = (): React.JSX.Element => {
             </a>
           </Col>
         </Row>
-      </Col>
+      </AboutCoreCol>
     </Row>
   );
 };
+
+const AboutCoreCol = styled(Col)`
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: 768px) {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+`;

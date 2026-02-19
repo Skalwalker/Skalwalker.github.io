@@ -4,16 +4,13 @@ import { GiBookmark, GiCutDiamond } from 'react-icons/gi';
 import { HiCubeTransparent, HiOfficeBuilding } from 'react-icons/hi';
 import { IoMdSchool } from 'react-icons/io';
 import { NavLink } from 'react-router';
+import styled from 'styled-components';
 
-import '../../assets/css/about.css';
 import { coreContent } from '../../content';
 import { Paragraph } from '../../styles/primitives';
 
-const navClass = ({ isActive }: { isActive: boolean }): string =>
-  `about_nav_btn${isActive ? ' about_nav_btn--active' : ''}`;
-
 export const AboutMenu = (): JSX.Element => (
-  <Row className="gy-3 about_menu_container">
+  <AboutMenuRow className="gy-3">
     <Col xs={12} className="d-flex flex-column align-items-center text-center">
       <Image
         src={coreContent.profileImg}
@@ -31,22 +28,56 @@ export const AboutMenu = (): JSX.Element => (
       </Paragraph>
     </Col>
     <Col xs={4} lg={12}>
-      <NavLink to="/about" end className={navClass}>
+      <StyledNavLink to="/about" end>
         <HiCubeTransparent className="me-2 mb-1" size={20} />
         Core
-      </NavLink>
+      </StyledNavLink>
     </Col>
     <Col xs={4} lg={12}>
-      <NavLink to="/about/skills" className={navClass}>
+      <StyledNavLink to="/about/skills">
         <GiBookmark className="me-2 mb-1" size={20} />
         Skills
-      </NavLink>
+      </StyledNavLink>
     </Col>
     <Col xs={4} lg={12}>
-      <NavLink to="/about/likes" className={navClass}>
+      <StyledNavLink to="/about/likes">
         <GiCutDiamond className="me-2 mb-1" size={20} />
         Likes
-      </NavLink>
+      </StyledNavLink>
     </Col>
-  </Row>
+  </AboutMenuRow>
 );
+
+const AboutMenuRow = styled(Row)`
+  padding: 20px 0;
+`;
+
+const StyledNavLink = styled(NavLink)`
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  color: white !important;
+  text-align: center;
+  text-decoration: none !important;
+  font-family: filson-pro, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  background-color: rgba(var(--bs-primary-rgb), 0.3);
+  border: 1.5px solid var(--bs-primary);
+  border-radius: 15px;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(var(--bs-secondary-rgb), 0.3);
+    border-color: var(--bs-secondary);
+    color: white !important;
+  }
+
+  &.active {
+    background-color: rgba(var(--bs-primary-rgb), 0.65);
+    border-color: var(--bs-primary);
+    color: white !important;
+  }
+`;

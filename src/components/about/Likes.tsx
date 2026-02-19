@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
+import styled from 'styled-components';
 
 import { LikeDesc } from './LikeDesc';
 import { LikeIcon } from './LikeIcon';
 import { likeContent } from '../../content';
-import '../../assets/css/about.css';
 
 export const Likes = (): React.JSX.Element => {
   const [shownText, setShownText] = useState<string | undefined>(undefined);
@@ -46,14 +46,22 @@ export const Likes = (): React.JSX.Element => {
               );
             })}
           </Row>
-          <Row
-            className="pt-1 pb-1 pt-lg-3 pe-xl-5 about_like_style"
+          <AboutLikeRow
+            className="pt-1 pb-1 pt-lg-3 pe-xl-5"
             style={{ height: '20px', width: '100%' }}
           >
             <LikeDesc text={shownText} />
-          </Row>
+          </AboutLikeRow>
         </Col>
       </Row>
     </Container>
   );
 };
+
+const AboutLikeRow = styled(Row)`
+  margin-top: -40px;
+
+  @media (min-width: 992px) {
+    margin-top: 0;
+  }
+`;

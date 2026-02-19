@@ -1,18 +1,38 @@
 import type { JSX } from 'react';
 import { Col, Container } from 'react-bootstrap';
+import styled from 'styled-components';
 
 import { useSkillsChart } from '../../hooks';
-
-import '../../assets/css/about.css';
 
 export const Skills = (): JSX.Element => {
   const containerRef = useSkillsChart();
 
   return (
     <Container>
-      <Col className="about_skills_style">
-        <div ref={containerRef} className="skills_chart_container" />
-      </Col>
+      <AboutSkillsCol>
+        <SkillsChartContainer ref={containerRef} />
+      </AboutSkillsCol>
     </Container>
   );
 };
+
+const AboutSkillsCol = styled(Col)`
+  padding: 0;
+  margin: -48px;
+
+  @media (min-width: 992px) {
+    margin: 0;
+    margin-left: -16px;
+    margin-right: -48px;
+  }
+`;
+
+const SkillsChartContainer = styled.div`
+  margin: 10px;
+  height: 60vh;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    height: 90vh;
+  }
+`;
