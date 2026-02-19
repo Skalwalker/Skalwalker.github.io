@@ -29,10 +29,15 @@ import imgSvmCoughvidCm from '../../assets/images/projects/covid19/svm_coughvid_
 import imgSvmCoughvidRoc from '../../assets/images/projects/covid19/svm_coughvid_roc.png';
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
-import { SubtitleBold, Subtitle, Paragraph } from '../../styles/primitives';
+import {
+  SubtitleBold,
+  Subtitle,
+  Paragraph,
+  ProperImgSize,
+  ProperImgSize2,
+} from '../../styles/primitives';
 
 import '../../assets/css/tabs.css';
-import '../../assets/css/projects.css';
 
 const FeaturesAccordion = (): React.JSX.Element => {
   return (
@@ -155,8 +160,7 @@ const ResultSVMTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size_2"
+                  <ProperImgSize2
                     style={{ backgroundColor: 'white' }}
                     alt="Validation Set Confusion Matrix"
                     src={imgSvmCoswaraCm}
@@ -166,8 +170,7 @@ const ResultSVMTabs = (): React.JSX.Element => {
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="Receiver Operating Characteristic Curve"
                     src={imgSvmCoswaraRoc}
@@ -183,8 +186,7 @@ const ResultSVMTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size_2"
+                  <ProperImgSize2
                     style={{ backgroundColor: 'white' }}
                     alt="Validation Set Confusion Matrix"
                     src={imgSvmCoughvidCm}
@@ -194,8 +196,7 @@ const ResultSVMTabs = (): React.JSX.Element => {
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="Receiver Operating Characteristic Curve"
                     src={imgSvmCoughvidRoc}
@@ -227,8 +228,7 @@ const ResultCNNTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto" style={{ width: '100%' }}>
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size_2"
+                  <ProperImgSize2
                     style={{ backgroundColor: 'white' }}
                     alt="Validation Set Confusion Matrix"
                     src={imgCnnCoswaraCm}
@@ -238,8 +238,7 @@ const ResultCNNTabs = (): React.JSX.Element => {
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="Receiver Operating Characteristic Curve"
                     src={imgCnnCoswaraRoc}
@@ -255,8 +254,7 @@ const ResultCNNTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto w-100">
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size_2"
+                  <ProperImgSize2
                     style={{ backgroundColor: 'white' }}
                     alt="Validation Set Confusion Matrix"
                     src={imgCnnCoughvidCm}
@@ -266,8 +264,7 @@ const ResultCNNTabs = (): React.JSX.Element => {
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="Receiver Operating Characteristic Curve"
                     src={imgCnnCoughvidRoc}

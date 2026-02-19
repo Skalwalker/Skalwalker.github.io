@@ -1,5 +1,6 @@
 import React from 'react';
 import { Accordion, Card, Col, Container, Figure, Row, Tab, Tabs } from 'react-bootstrap';
+import styled from 'styled-components';
 
 import co2DynamicsImg from '../../assets/images/projects/globalwarming/co2_dynamics.png';
 import e2Co2Img from '../../assets/images/projects/globalwarming/exps/e2/co2.png';
@@ -15,10 +16,15 @@ import forestDynamicsImg from '../../assets/images/projects/globalwarming/forest
 import globalDynamicsImg from '../../assets/images/projects/globalwarming/global_dynamics.png';
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
-import { SubtitleBold, Subtitle, Paragraph } from '../../styles/primitives';
+import {
+  SubtitleBold,
+  Subtitle,
+  Paragraph,
+  ProperImgSize,
+  ProperImgSize3,
+} from '../../styles/primitives';
 
 import '../../assets/css/tabs.css';
-import '../../assets/css/projects.css';
 
 export const GlobalWarming = (): React.JSX.Element => {
   const footerInfo = [
@@ -90,12 +96,12 @@ export const GlobalWarming = (): React.JSX.Element => {
           world system.
         </ProjectParagraph>
         <Container className="w-100 mt-3 mb-3">
-          <iframe
+          <GlobalWarmingFrame
             title="GlobalWarmingSimulation"
-            className="w-100 global_warming_frame"
+            className="w-100"
             allow="fullscreen"
             src="https://cloud.anylogic.com/assets/embed?modelId=b637dd80-0c8a-4411-a006-f9fedadddd96"
-          ></iframe>
+          ></GlobalWarmingFrame>
         </Container>
         <ProjectParagraph>
           On a deeper view of the key system parameters, climate sensitivity is a term created by
@@ -185,8 +191,7 @@ const ResultsTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="Temperature density over 100 years"
                     src={e3TempImg}
@@ -196,8 +201,7 @@ const ResultsTabs = (): React.JSX.Element => {
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="CO2 density over 100 years"
                     src={e3Co2Img}
@@ -211,8 +215,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
             <Figure className="mx-auto">
-              <Figure.Image
-                className="proper_img_size_3"
+              <ProperImgSize3
                 style={{ backgroundColor: 'white' }}
                 alt="Year temperature exceeds recommended"
                 src={e3YearImg}
@@ -234,8 +237,7 @@ const ResultsTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="Temperature density over 100 years"
                     src={e4TempImg}
@@ -245,8 +247,7 @@ const ResultsTabs = (): React.JSX.Element => {
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="CO2 density over 100 years"
                     src={e4Co2Img}
@@ -260,8 +261,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
             <Figure className="mx-auto">
-              <Figure.Image
-                className="proper_img_size_3"
+              <ProperImgSize3
                 style={{ backgroundColor: 'white' }}
                 alt="Year temperature exceeds recommended"
                 src={e4YearImg}
@@ -283,8 +283,7 @@ const ResultsTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="Temperature density over 100 years"
                     src={e2TempImg}
@@ -294,8 +293,7 @@ const ResultsTabs = (): React.JSX.Element => {
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="CO2 density over 100 years"
                     src={e2Co2Img}
@@ -309,8 +307,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
             <Figure className="mx-auto">
-              <Figure.Image
-                className="proper_img_size_3"
+              <ProperImgSize3
                 style={{ backgroundColor: 'white' }}
                 alt="Year temperature exceeds recommended"
                 src={e2YearImg}
@@ -454,3 +451,27 @@ const ResearchQuestions = (): React.JSX.Element => {
     </Container>
   );
 };
+
+const GlobalWarmingFrame = styled.iframe`
+  height: 300px;
+
+  @media (min-width: 400px) {
+    height: 325px;
+  }
+
+  @media (min-width: 576px) {
+    height: 350px;
+  }
+
+  @media (min-width: 992px) {
+    height: 450px;
+  }
+
+  @media (min-width: 1100px) {
+    height: 500px;
+  }
+
+  @media (min-width: 1600px) {
+    height: 550px;
+  }
+`;

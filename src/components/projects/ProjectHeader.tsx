@@ -3,6 +3,7 @@ import { Col, Row, Button } from 'react-bootstrap';
 import { Image } from 'react-bootstrap';
 import { FaGithub } from 'react-icons/fa';
 import { IoIosPaper } from 'react-icons/io';
+import styled from 'styled-components';
 
 import { ProjectInfo } from './types';
 import {
@@ -12,7 +13,6 @@ import {
   FontText2,
   Paragraph,
 } from '../../styles/primitives';
-import '../../assets/css/projects.css';
 
 interface ProjectHeaderProps {
   project: ProjectInfo;
@@ -23,13 +23,9 @@ export const ProjectHeader = ({ project }: ProjectHeaderProps): React.JSX.Elemen
     <Col xl={8} md={7} className="my-auto ps-0">
       <Row className="ms-0 ps-0">
         <BottomProjectText>
-          <FontText as="h1" className="title_style">
-            {project.title}
-          </FontText>
+          <ProjectTitleText as="h1">{project.title}</ProjectTitleText>
           <TopProjectText>
-            <FontText2 as="h1" className="title_style">
-              {project.title}
-            </FontText2>
+            <ProjectTitleText2 as="h1">{project.title}</ProjectTitleText2>
           </TopProjectText>
         </BottomProjectText>
       </Row>
@@ -79,3 +75,13 @@ export const ProjectHeader = ({ project }: ProjectHeaderProps): React.JSX.Elemen
     </Col>
   </>
 );
+
+const ProjectTitleText = styled(FontText)`
+  color: var(--bs-primary);
+  font-size: 50px;
+`;
+
+const ProjectTitleText2 = styled(FontText2)`
+  color: var(--bs-primary);
+  font-size: 50px;
+`;

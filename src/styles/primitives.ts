@@ -4,6 +4,7 @@
  * Import from here instead of adding one-off className or style={{}}.
  */
 
+import { Figure } from 'react-bootstrap';
 import styled, { keyframes } from 'styled-components';
 
 import { alpha, colors } from './theme';
@@ -110,6 +111,41 @@ export const LoaderContainer = styled.div`
   position: fixed;
   display: inline;
   animation: ${fadeOut} 1s 3s;
+`;
+
+// ─── Project image sizing ────────────────────────────────────────────────────
+
+/** Responsive figure image — 75% mobile, 100% desktop. Replaces proper_img_size. */
+export const ProperImgSize = styled(Figure.Image)`
+  width: 75%;
+  margin-top: 40px;
+
+  @media (min-width: 992px) {
+    width: 100%;
+    margin-top: 0;
+  }
+`;
+
+/** Responsive figure image — 74% mobile, 99% desktop. Replaces proper_img_size_2. */
+export const ProperImgSize2 = styled(Figure.Image)`
+  width: 74%;
+  margin-top: 40px;
+
+  @media (min-width: 992px) {
+    width: 99%;
+    margin-top: 0;
+  }
+`;
+
+/** Responsive figure image — 74% mobile, 50% desktop. Replaces proper_img_size_3. */
+export const ProperImgSize3 = styled(Figure.Image)`
+  width: 74%;
+  margin-top: 40px;
+
+  @media (min-width: 992px) {
+    width: 50%;
+    margin-top: 10px;
+  }
 `;
 
 // ─── Overlay text containers ────────────────────────────────────────────────

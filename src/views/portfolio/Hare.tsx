@@ -27,10 +27,15 @@ import { ProjectPageContainer } from '../../components';
 import { ProjectParagraph } from '../../components';
 import { ProjectSection } from '../../components';
 import { projectContent } from '../../content';
-import { Subtitle, Paragraph } from '../../styles/primitives';
+import {
+  Subtitle,
+  Paragraph,
+  ProperImgSize,
+  ProperImgSize2,
+  ProperImgSize3,
+} from '../../styles/primitives';
 
 import '../../assets/css/tabs.css';
-import '../../assets/css/projects.css';
 
 export const Hare = (): React.JSX.Element => {
   const footerInfo = [
@@ -501,8 +506,7 @@ const ResultsTabs = (): React.JSX.Element => {
             <Figure className="mx-auto text-center">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size_2"
+                  <ProperImgSize2
                     style={{ backgroundColor: 'white' }}
                     alt="VALE3"
                     src={vale3PredImg}
@@ -512,8 +516,7 @@ const ResultsTabs = (): React.JSX.Element => {
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="PETR3"
                     src={petr3PredImg}
@@ -525,12 +528,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
             <Figure className="mx-auto text-center">
-              <Figure.Image
-                className="proper_img_size_3"
-                style={{ backgroundColor: 'white' }}
-                alt="ABEV3"
-                src={abev3PredImg}
-              />
+              <ProperImgSize3 style={{ backgroundColor: 'white' }} alt="ABEV3" src={abev3PredImg} />
               <Figure.Caption>
                 <Paragraph as="span">ABEV3</Paragraph>
               </Figure.Caption>
@@ -555,8 +553,7 @@ const ResultsTabs = (): React.JSX.Element => {
             <Figure className="mx-auto text-center">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="VALE3"
                     src={vale3LossImg}
@@ -569,8 +566,7 @@ const ResultsTabs = (): React.JSX.Element => {
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <Figure.Image
-                    className="proper_img_size"
+                  <ProperImgSize
                     style={{ backgroundColor: 'white' }}
                     alt="PETR3"
                     src={petr3LossImg}
@@ -585,12 +581,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
             <Figure className="mx-auto text-center">
-              <Figure.Image
-                className="proper_img_size_3"
-                style={{ backgroundColor: 'white' }}
-                alt="ABEV3"
-                src={abev3LossImg}
-              />
+              <ProperImgSize3 style={{ backgroundColor: 'white' }} alt="ABEV3" src={abev3LossImg} />
               <Figure.Caption>
                 <Paragraph as="span">
                   ABEV3 - Performance evaluation of decision-making process for multiple time-steps

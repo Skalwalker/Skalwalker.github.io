@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
+import styled from 'styled-components';
 
 import { ProjectHeader } from './ProjectHeader';
 import { TableOfContents } from './TableofContents';
@@ -8,7 +9,6 @@ import { ProjectFooter } from '../../components';
 import { ScrollButton } from '../shared';
 
 import '../../assets/css/stickytable.css';
-import '../../assets/css/projects.css';
 
 interface ProjectPageContainerProps {
   project: ProjectInfo;
@@ -21,7 +21,7 @@ export const ProjectPageContainer = ({
   children,
   footer,
 }: ProjectPageContainerProps): React.JSX.Element => (
-  <Container fluid className="project_page">
+  <ProjectPageWrapper fluid>
     <Row className="ms-0 me-0" style={{ marginTop: '80px', marginBottom: '80px' }}>
       <ProjectHeader project={project} />
     </Row>
@@ -36,5 +36,15 @@ export const ProjectPageContainer = ({
     </Row>
     <ProjectFooter footer={footer} />
     <ScrollButton />
-  </Container>
+  </ProjectPageWrapper>
 );
+
+const ProjectPageWrapper = styled(Container)`
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: 576px) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+`;

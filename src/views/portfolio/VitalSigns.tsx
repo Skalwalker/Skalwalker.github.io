@@ -18,7 +18,6 @@ import { projectContent } from '../../content';
 import { Subtitle, Paragraph } from '../../styles/primitives';
 
 import '../../assets/css/tabs.css';
-import '../../assets/css/projects.css';
 
 export const VitalSigns = (): React.JSX.Element => {
   const footerInfo = [
@@ -340,36 +339,36 @@ const SignalTabs = (): React.JSX.Element => {
 
 const AppImagesCarrousel = (): React.JSX.Element => {
   return (
-    <Carousel style={{ width: '100%' }} className="text-center mx-auto">
-      <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
-        <Figure className="mx-auto text-center mt-4">
-          <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg1} />
+    <Carousel style={{ width: '100%' }} className="text-center mx-auto mt-3">
+      <Carousel.Item>
+        <Figure className="mx-auto w-50">
+          <Figure.Image src={appImg1} />
         </Figure>
-        <Carousel.Caption>
+        <Carousel.Caption className="position-static">
           <Paragraph>Initial view</Paragraph>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
-        <Figure className="mx-auto text-center mt-4">
-          <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg2} />
+      <Carousel.Item>
+        <Figure className="mx-auto w-50">
+          <Figure.Image src={appImg2} />
         </Figure>
-        <Carousel.Caption>
+        <Carousel.Caption className="position-static">
           <Paragraph>Recording screen with instructions before starting</Paragraph>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
-        <Figure className="mx-auto text-center mt-4">
-          <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg3} />
+      <Carousel.Item>
+        <Figure className="mx-auto w-50">
+          <Figure.Image src={appImg3} />
         </Figure>
-        <Carousel.Caption>
+        <Carousel.Caption className="position-static">
           <Paragraph>Recording screen showing remaining time to finish the record</Paragraph>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item style={{ paddingLeft: '210pt', paddingRight: '210pt', paddingBottom: '60pt' }}>
-        <Figure className="mx-auto text-center mt-4">
-          <Figure.Image className="w-100" style={{ width: '100%' }} src={appImg4} />
+      <Carousel.Item>
+        <Figure className="mx-auto w-50">
+          <Figure.Image src={appImg4} />
         </Figure>
-        <Carousel.Caption>
+        <Carousel.Caption className="position-static">
           <Paragraph>List of saved records to be shared to a computer</Paragraph>
         </Carousel.Caption>
       </Carousel.Item>
