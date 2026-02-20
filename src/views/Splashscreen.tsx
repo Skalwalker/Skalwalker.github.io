@@ -1,31 +1,38 @@
 import type { JSX } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import styled from 'styled-components';
 
 import { BackgroundParticles } from '../components';
 import { BottomText, TopText, FontText, FontText2 } from '../styles/primitives';
 
 export const Splashscreen = (): JSX.Element => (
-  <div className="w-100" style={{ height: '100vh', backgroundColor: '#070e20' }}>
+  <SplashContainer className="w-100">
     <BackgroundParticles id="tsparticles-splash" />
     <Row className="h-100">
       <Col md={12} className="my-auto">
         <BottomText>
-          <FontText as="h1" style={nameStyle}>
-            Hi, I am Renato Nobre
-          </FontText>
+          <SplashTitleText as="h1">Hi, I am Renato Nobre</SplashTitleText>
           <TopText>
-            <FontText2 as="h1" style={nameStyle}>
-              Hi, I am Renato Nobre
-            </FontText2>
+            <SplashTitleText2 as="h1">Hi, I am Renato Nobre</SplashTitleText2>
           </TopText>
         </BottomText>
       </Col>
     </Row>
-  </div>
+  </SplashContainer>
 );
 
-const nameStyle = {
-  fontSize: '96px',
-  color: '#60D7F9',
-};
+const SplashContainer = styled.div`
+  height: 100vh;
+  background-color: #070e20;
+`;
+
+const SplashTitleText = styled(FontText)`
+  font-size: 96px;
+  color: #60d7f9;
+`;
+
+const SplashTitleText2 = styled(FontText2)`
+  font-size: 96px;
+  color: #60d7f9;
+`;

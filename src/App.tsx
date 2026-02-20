@@ -1,10 +1,23 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import styled from 'styled-components';
 
 import { BackgroundParticles, NavBar } from './components';
 import { NavRouter } from './routes';
 import { LoaderContainer } from './styles/primitives';
 import { Splashscreen } from './views';
+
+const AppBackground = styled.div`
+  min-height: 100vh;
+  background-color: #070e20;
+  position: relative;
+`;
+
+const AppContent = styled.div`
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+`;
 
 export const App = (): React.JSX.Element => {
   const myRef = useRef(false);
@@ -22,16 +35,9 @@ export const App = (): React.JSX.Element => {
   }, []);
 
   return (
-    <div
-      id="background"
-      style={{
-        minHeight: '100vh',
-        backgroundColor: '#070e20',
-        position: 'relative',
-      }}
-    >
+    <AppBackground id="background">
       <BackgroundParticles id={'tsparticles'} />
-      <div style={{ position: 'relative', zIndex: 1, minHeight: '100vh' }}>
+      <AppContent>
         {showSplash && (
           <LoaderContainer>
             <Splashscreen />
@@ -45,7 +51,7 @@ export const App = (): React.JSX.Element => {
           </Col>
           <Col xl={1} className="d-none d-xl-block" />
         </Row>
-      </div>
-    </div>
+      </AppContent>
+    </AppBackground>
   );
 };
