@@ -19,10 +19,10 @@ const meta: Meta<typeof AchievCard> = {
     },
   },
   args: {
-    title: defaultAchievement?.title ?? 'Graduate',
-    date: defaultAchievement?.earned ?? 'Earned in 2020',
-    img: defaultAchievement?.img ?? 'graduate',
-    locked: defaultAchievement?.locked ?? false,
+    title: defaultAchievement.title,
+    date: defaultAchievement.earned,
+    img: defaultAchievement.img,
+    locked: defaultAchievement.locked,
   },
 };
 

@@ -15,10 +15,10 @@
     "release": "npm run typecheck && npm run lint && npm run format:check && npm run build",
     "predeploy": "npm run release",
     "deploy": "gh-pages -d build",
-    "lint": "eslint '{src,stories}/**/*.{ts,tsx}'",
-    "lint:fix": "eslint '{src,stories}/**/*.{ts,tsx}' --fix",
-    "format": "prettier --write '{src,stories}/**/*.{ts,tsx,css,scss}'",
-    "format:check": "prettier --check '{src,stories}/**/*.{ts,tsx,css,scss}'"
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@tsparticles/react": "^3.0.0",

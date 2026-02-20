@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8WMLSEBT3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', 'G-J8WMLSEBT3');
@@ -13,7 +15,7 @@
     <meta charset="utf-8" />
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-links@2/tsparticles.preset.links.min.js"></script>
     <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="https://use.typekit.net/ivu1dyk.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ivu1dyk.css" />
 
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
@@ -27,42 +29,41 @@
       // When the single page app is loaded further down in this file,
       // the correct url will be waiting in the browser's history for
       // the single page app to route accordingly.
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) {
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
         }
-      }(window.location))
+      })(window.location);
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
-    <link rel="preload" href="/img/arcade.png" as="image">
-    <link rel="preload" href="/img/computervision.png" as="image">
-    <link rel="preload" href="/img/covid19.png" as="image">
-    <link rel="preload" href="/img/datascience.png" as="image">
-    <link rel="preload" href="/img/dodfminer.png" as="image">
-    <link rel="preload" href="/img/ecosampling.png" as="image">
-    <link rel="preload" href="/img/globalwarming2.png" as="image">
-    <link rel="preload" href="/img/graphtheory.png" as="image">
-    <link rel="preload" href="/img/hare.png" as="image">
-    <link rel="preload" href="/img/medipreco.png" as="image">
-    <link rel="preload" href="/img/portfolio.png" as="image">
-    <link rel="preload" href="/img/questionmark.png" as="image">
-    <link rel="preload" href="/img/quotesbook.png" as="image">
-    <link rel="preload" href="/img/sek.png" as="image">
-    <link rel="preload" href="/img/trufes.png" as="image">
-    <link rel="preload" href="/img/zipcode.png" as="image">
+    <link rel="preload" href="/img/arcade.png" as="image" />
+    <link rel="preload" href="/img/computervision.png" as="image" />
+    <link rel="preload" href="/img/covid19.png" as="image" />
+    <link rel="preload" href="/img/datascience.png" as="image" />
+    <link rel="preload" href="/img/dodfminer.png" as="image" />
+    <link rel="preload" href="/img/ecosampling.png" as="image" />
+    <link rel="preload" href="/img/globalwarming2.png" as="image" />
+    <link rel="preload" href="/img/graphtheory.png" as="image" />
+    <link rel="preload" href="/img/hare.png" as="image" />
+    <link rel="preload" href="/img/medipreco.png" as="image" />
+    <link rel="preload" href="/img/portfolio.png" as="image" />
+    <link rel="preload" href="/img/questionmark.png" as="image" />
+    <link rel="preload" href="/img/quotesbook.png" as="image" />
+    <link rel="preload" href="/img/sek.png" as="image" />
+    <link rel="preload" href="/img/trufes.png" as="image" />
+    <link rel="preload" href="/img/zipcode.png" as="image" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Renato Avellar Nobre - Personal Portfolio"
-    />
+    <meta name="description" content="Renato Avellar Nobre - Personal Portfolio" />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
     <title>Renato Nobre</title>

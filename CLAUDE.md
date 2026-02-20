@@ -27,6 +27,7 @@ npm run typecheck    # TypeScript type checking only (tsc -b)
 **Stack:** React 18 + TypeScript + Bootstrap 5 + React Router v6
 
 **Directory Structure:**
+
 - `src/views/` - Page-level components (About, Experience, Achievements, Publications, Projects)
 - `src/components/` - Reusable components organized by feature (about/, achievements/, papers/, projects/, resume/, shared/)
 - `src/assets/` - CSS/SCSS stylesheets and images
@@ -43,6 +44,7 @@ npm run typecheck    # TypeScript type checking only (tsc -b)
 Config files: `eslint.config.js` and `.prettierrc` — always follow these when writing code.
 
 **Key ESLint rules:**
+
 - No default exports (`import/no-default-export`) — use named exports only
 - Import order enforced: builtin → external → internal, alphabetized, with newlines between groups
 - Explicit function return types required (`@typescript-eslint/explicit-function-return-type`)
@@ -52,5 +54,6 @@ Config files: `eslint.config.js` and `.prettierrc` — always follow these when 
 - Arrow functions preferred for callbacks (`prefer-arrow-callback`)
 
 **Key Prettier rules (`.prettierrc`):**
+
 - Single quotes, semicolons, 100-char print width
 - 2-space indentation, trailing commas (ES5), arrow parens always
