@@ -5,8 +5,9 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
+import { defineConfig } from 'eslint/config';
 
-export default tseslint.config(
+export default defineConfig(
   {
     ignores: ['node_modules/', 'build/', 'public/', '*.config.js'],
   },
@@ -120,6 +121,12 @@ export default tseslint.config(
           format: ['PascalCase', 'UPPER_CASE'],
         },
       ],
+    },
+  },
+  {
+    files: ['**/*.stories.ts', '**/*.stories.tsx', 'vite.config.ts', '.storybook/**/*'],
+    rules: {
+      'import/no-default-export': 'off',
     },
   }
 );

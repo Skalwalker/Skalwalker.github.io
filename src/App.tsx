@@ -7,7 +7,7 @@ import { NavRouter } from './routes';
 import { LoaderContainer } from './styles/primitives';
 import { Splashscreen } from './views';
 
-const AppBackground = styled.div`
+export const AppBackground = styled.div`
   min-height: 100vh;
   background-color: #070e20;
   position: relative;
