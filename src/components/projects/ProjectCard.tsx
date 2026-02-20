@@ -1,17 +1,14 @@
 import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router';
+import styled from 'styled-components';
 
 import { ProjectCardInfo } from './types';
-import { StyledCard } from '../../components';
-import { SubtitleBold, Subtitle, Paragraph } from '../../styles/primitives';
+import { SubtitleBold, Subtitle, Paragraph, StyledCard } from '../../styles';
 
 const ProjectCardContent = ({ project }: { project: ProjectCardInfo }): React.JSX.Element => (
-  <StyledCard
-    className="ms-auto me-auto click_cards"
-    style={{ minWidth: '15rem', maxWidth: '18rem', height: '100%' }}
-  >
-    <Card.Img variant="top" src={project.banner} style={{ borderRadius: '15px 15px 0 0' }} />
+  <ProjectCardContainer className="ms-auto me-auto click_cards">
+    <ProjectCardImage variant="top" src={project.banner} />
     <Card.Body>
       <Card.Title className="mb-1">
         <SubtitleBold as="span">{project.title}</SubtitleBold>
@@ -23,18 +20,14 @@ const ProjectCardContent = ({ project }: { project: ProjectCardInfo }): React.JS
     <Card.Footer>
       <Row>
         <Col>
-          <Subtitle as="p" style={{ textAlign: 'left', margin: '0' }}>
-            {project.language}
-          </Subtitle>
+          <LeftSubtitle as="p">{project.language}</LeftSubtitle>
         </Col>
         <Col>
-          <Subtitle as="p" style={{ textAlign: 'right', margin: '0' }}>
-            {project.year}
-          </Subtitle>
+          <RightSubtitle as="p">{project.year}</RightSubtitle>
         </Col>
       </Row>
     </Card.Footer>
-  </StyledCard>
+  </ProjectCardContainer>
 );
 
 export const ProjectCard = ({ project }: { project: ProjectCardInfo }): React.JSX.Element => {
@@ -52,3 +45,23 @@ export const ProjectCard = ({ project }: { project: ProjectCardInfo }): React.JS
     </>
   );
 };
+
+const ProjectCardContainer = styled(StyledCard)`
+  min-width: 15rem;
+  max-width: 18rem;
+  height: 100%;
+`;
+
+const ProjectCardImage = styled(Card.Img)`
+  border-radius: 15px 15px 0 0;
+`;
+
+const LeftSubtitle = styled(Subtitle)`
+  text-align: left;
+  margin: 0;
+`;
+
+const RightSubtitle = styled(Subtitle)`
+  text-align: right;
+  margin: 0;
+`;

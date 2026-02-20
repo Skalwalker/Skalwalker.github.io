@@ -1,17 +1,18 @@
 import React from 'react';
-import { Col, Row, Button, Container } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
+import styled from 'styled-components';
 
 import { ProjectCard, ProjectData, ScrollButton } from '../components';
 import { projectContent } from '../content';
 import { useTagFilter } from '../hooks';
-import { Subtitle, SectionDivider } from '../styles/primitives';
+import { PageFluidContainer, SectionDivider, Subtitle } from '../styles/primitives';
 
 const FeaturedProjects: React.FC<{ projects: ProjectData[] }> = ({ projects }) => (
   <Row>
     {projects.map((project) => (
-      <Col key={project.title} xl={3} lg={6} sm={6} style={{ padding: '10px' }}>
+      <FeaturedProjectCol key={project.title} xl={3} lg={6} sm={6}>
         <ProjectCard project={project} />
-      </Col>
+      </FeaturedProjectCol>
     ))}
   </Row>
 );
@@ -26,7 +27,7 @@ const TagFilterBar: React.FC<{
       <Subtitle as="h1">Newest</Subtitle>
     </Col>
     {tags.map((name) => (
-      <Col xl={2} key={name} style={{ paddingTop: '12px' }} className="d-grid mb-2">
+      <TagFilterCol xl={2} key={name} className="d-grid mb-2">
         <Button
           onClick={() => {
             onToggle(name);
@@ -36,7 +37,7 @@ const TagFilterBar: React.FC<{
         >
           {name}
         </Button>
-      </Col>
+      </TagFilterCol>
     ))}
     <SectionDivider className="w-100 mt-2 mb-2" />
   </Row>
@@ -45,9 +46,9 @@ const TagFilterBar: React.FC<{
 const ProjectGrid: React.FC<{ projects: ProjectData[] }> = ({ projects }) => (
   <Row>
     {projects.map((p) => (
-      <Col key={p.title} xl={3} lg={6} sm={6} style={{ paddingTop: '15px', paddingBottom: '15px' }}>
+      <ProjectGridCol key={p.title} xl={3} lg={6} sm={6}>
         <ProjectCard project={p} />
-      </Col>
+      </ProjectGridCol>
     ))}
   </Row>
 );
@@ -60,7 +61,7 @@ export const Projects: React.FC = () => {
   const filtered = projectList.filter((p) => !p.highlight && matchesTags(p.tags));
 
   return (
-    <Container className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid>
+    <PageFluidContainer fluid>
       <Row>
         <Subtitle as="h1">
           Featured <b>Projects</b>
@@ -75,6 +76,19 @@ export const Projects: React.FC = () => {
         </Col>
       </Row>
       <ScrollButton />
-    </Container>
+    </PageFluidContainer>
   );
 };
+
+const FeaturedProjectCol = styled(Col)`
+  padding: 10px;
+`;
+
+const TagFilterCol = styled(Col)`
+  padding-top: 12px;
+`;
+
+const ProjectGridCol = styled(Col)`
+  padding-top: 15px;
+  padding-bottom: 15px;
+`;

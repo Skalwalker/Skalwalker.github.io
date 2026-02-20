@@ -1,10 +1,11 @@
 import type { JSX } from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
+import styled from 'styled-components';
 
 import { PaperCard, PaperCardShort, ScrollButton } from '../components';
 import { publicationsContent } from '../content';
 import { useTagFilter } from '../hooks';
-import { Subtitle, SectionDivider } from '../styles/primitives';
+import { PageFluidContainer, SectionDivider, Subtitle } from '../styles/primitives';
 
 export const Publications = (): JSX.Element => {
   const { toggleTag, isTagActive, matchesTags } = useTagFilter();
@@ -12,27 +13,27 @@ export const Publications = (): JSX.Element => {
   const { tags, publications } = publicationsContent;
 
   return (
-    <Container className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid>
+    <PageFluidContainer fluid>
       <Row>
         <Subtitle as="h1">
           Featured <b>Publications</b>
         </Subtitle>
         <SectionDivider className="w-100 mt-2 mb-2" />
       </Row>
-      <Row style={{ padding: '8px' }}>
+      <FeaturedRow>
         {publications
           .filter((paper) => paper.highlight)
           .map((paper) => (
-            <Col key={paper.title} lg={6} style={{ padding: '10px' }}>
+            <FeaturedPaperCol key={paper.title} lg={6}>
               <PaperCard
                 title={paper.title}
                 url={paper.url}
                 publisher={paper.publisher}
                 year={paper.year}
               />
-            </Col>
+            </FeaturedPaperCol>
           ))}
-      </Row>
+      </FeaturedRow>
       <Row className="pt-5">
         <Col>
           <Row>
@@ -40,7 +41,7 @@ export const Publications = (): JSX.Element => {
               <Subtitle as="h1">Newest</Subtitle>
             </Col>
             {tags.map((name) => (
-              <Col key={name} lg={2} style={{ paddingTop: '12px' }} className="d-grid mb-2">
+              <TagFilterCol key={name} lg={2} className="d-grid mb-2">
                 <Button
                   onClick={() => {
                     toggleTag(name);
@@ -50,25 +51,41 @@ export const Publications = (): JSX.Element => {
                 >
                   {name}
                 </Button>
-              </Col>
+              </TagFilterCol>
             ))}
             <SectionDivider className="w-100 mt-2 mb-2" />
           </Row>
           {publications
             .filter((paper) => !paper.highlight && matchesTags(paper.tags))
             .map((paper) => (
-              <Row key={paper.title} style={{ padding: '10px', paddingTop: '10px' }}>
+              <PaperRow key={paper.title}>
                 <PaperCardShort
                   title={paper.title}
                   url={paper.url}
                   publisher={paper.publisher}
                   year={paper.year}
                 />
-              </Row>
+              </PaperRow>
             ))}
         </Col>
       </Row>
       <ScrollButton />
-    </Container>
+    </PageFluidContainer>
   );
 };
+
+const FeaturedRow = styled(Row)`
+  padding: 8px;
+`;
+
+const FeaturedPaperCol = styled(Col)`
+  padding: 10px;
+`;
+
+const TagFilterCol = styled(Col)`
+  padding-top: 12px;
+`;
+
+const PaperRow = styled(Row)`
+  padding: 10px;
+`;

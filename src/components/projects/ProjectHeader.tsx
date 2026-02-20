@@ -1,6 +1,5 @@
 import React from 'react';
-import { Col, Row, Button } from 'react-bootstrap';
-import { Image } from 'react-bootstrap';
+import { Col, Row, Button, Image } from 'react-bootstrap';
 import { FaGithub } from 'react-icons/fa';
 import { IoIosPaper } from 'react-icons/io';
 import styled from 'styled-components';
@@ -30,13 +29,11 @@ export const ProjectHeader = ({ project }: ProjectHeaderProps): React.JSX.Elemen
         </BottomProjectText>
       </Row>
       <Row className="ms-0 ps-0 my-auto">
-        <Paragraph style={{ fontSize: '16px', color: 'white', height: '100%', lineHeight: 1.6 }}>
-          {project.abstract}
-        </Paragraph>
+        <ProjectAbstract>{project.abstract}</ProjectAbstract>
       </Row>
       <Row className="ms-0 ps-0">
         <p>
-          <b style={{ color: 'var(--bs-primary)' }}>Skills: </b>
+          <SkillsLabel>Skills: </SkillsLabel>
           {project.skills}
         </p>
       </Row>
@@ -62,16 +59,7 @@ export const ProjectHeader = ({ project }: ProjectHeaderProps): React.JSX.Elemen
       </Row>
     </Col>
     <Col className="ps-2 pe-2 ps-md-5 pe-md-0 my-auto mt-5 mt-xl-0" xl={4} md={5}>
-      <Image
-        className="w-100"
-        src={project.banner}
-        style={{
-          borderRadius: '20px',
-          borderWidth: '5px',
-          border: 'solid',
-          borderColor: 'var(--bs-primary)',
-        }}
-      />
+      <ProjectBannerImage className="w-100" src={project.banner} />
     </Col>
   </>
 );
@@ -84,4 +72,22 @@ const ProjectTitleText = styled(FontText)`
 const ProjectTitleText2 = styled(FontText2)`
   color: var(--bs-primary);
   font-size: 50px;
+`;
+
+const ProjectAbstract = styled(Paragraph)`
+  font-size: 16px;
+  color: white;
+  height: 100%;
+  line-height: 1.6;
+`;
+
+const SkillsLabel = styled.b`
+  color: var(--bs-primary);
+`;
+
+const ProjectBannerImage = styled(Image)`
+  border-radius: 20px;
+  border-width: 5px;
+  border: solid;
+  border-color: var(--bs-primary);
 `;

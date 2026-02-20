@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Image } from 'react-bootstrap';
+import styled from 'styled-components';
 
 import { AchievementContent } from './types';
 import { SubtitleBold, Paragraph } from '../../styles/primitives';
@@ -12,9 +13,9 @@ export const AchievDesc = ({ content }: AchievementDescProps): React.JSX.Element
   return (
     <div className="my-auto">
       <Row>
-        <SubtitleBold as="h1" className="text-start mb-3" style={{ fontSize: '32px' }}>
+        <AchievTitle as="h1" className="text-start mb-3">
           {content.title}
-        </SubtitleBold>
+        </AchievTitle>
       </Row>
       <Row className="text-start">
         <Paragraph>{content.desc}</Paragraph>
@@ -25,3 +26,7 @@ export const AchievDesc = ({ content }: AchievementDescProps): React.JSX.Element
     </div>
   );
 };
+
+const AchievTitle = styled(SubtitleBold)`
+  font-size: 32px;
+`;

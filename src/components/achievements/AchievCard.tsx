@@ -21,8 +21,9 @@ import {
 import { IoIosPaper } from 'react-icons/io';
 import { RiMedalLine, RiStockFill, RiSlideshowLine } from 'react-icons/ri';
 import { SiIos, SiSwift } from 'react-icons/si';
+import styled from 'styled-components';
 
-import { StyledCard } from '../../components';
+// import { StyledCard } from '../../components';
 import { SubtitleBold, Paragraph } from '../../styles/primitives';
 
 interface AchievCardProps {
@@ -81,27 +82,46 @@ export const AchievCard = ({ title, date, img, locked }: AchievCardProps): React
   };
 
   return (
-    <StyledCard
-      className="mt-2 click_cards"
-      style={{ height: '4.65rem', minWidth: '270px', opacity: locked ? '0.5' : '1.0' }}
-    >
+    <AchievCardContainer className="mt-2 click_cards" $locked={locked}>
       <Col>
         <Row>
-          <Col xl={3} md={3} sm={3} xs={3} className="my-auto mx-auto" style={{ padding: '5px' }}>
+          <IconCol xl={3} md={3} sm={3} xs={3} className="my-auto mx-auto">
             {getIcon(img)}
-          </Col>
-          <Col xl={9} md={9} sm={9} xs={9} style={{ paddingLeft: '0' }}>
-            <Card.Body style={{ padding: '0.5rem', paddingLeft: '0' }}>
-              <Card.Title className="pt-2 mb-1" style={{ fontSize: '18px' }}>
+          </IconCol>
+          <Col xl={9} md={9} sm={9} xs={9} className="ps-0">
+            <AchievCardBody>
+              <AchievCardTitle className="pt-2 mb-1">
                 <SubtitleBold as="span">{title}</SubtitleBold>
-              </Card.Title>
-              <Card.Text className="mb-1" style={{ fontSize: '12px' }}>
+              </AchievCardTitle>
+              <AchievCardText className="mb-1">
                 <Paragraph as="span">{date}</Paragraph>
-              </Card.Text>
-            </Card.Body>
+              </AchievCardText>
+            </AchievCardBody>
           </Col>
         </Row>
       </Col>
-    </StyledCard>
+    </AchievCardContainer>
   );
 };
+
+const AchievCardContainer = styled(Card)<{ $locked: boolean }>`
+  height: 4.65rem;
+  min-width: 270px;
+  opacity: ${({ $locked }): string => ($locked ? '0.5' : '1.0')};
+`;
+
+const IconCol = styled(Col)`
+  padding: 5px;
+`;
+
+const AchievCardBody = styled(Card.Body)`
+  padding: 0.5rem 0 0.5rem 0;
+`;
+
+const AchievCardTitle = styled(Card.Title)`
+  font-size: 18px;
+`;
+
+const AchievCardText = styled(Card.Text)`
+  font-size: 12px;
+`;

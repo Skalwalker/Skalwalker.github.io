@@ -4,7 +4,7 @@
  * Import from here instead of adding one-off className or style={{}}.
  */
 
-import { Accordion, Figure, ListGroup, Tabs } from 'react-bootstrap';
+import { Accordion, Container, Figure, ListGroup, Tabs } from 'react-bootstrap';
 import styled, { keyframes } from 'styled-components';
 
 import { alpha, colors } from './theme';
@@ -86,6 +86,18 @@ export const SectionDivider = styled.div`
  * Replaces style={{ padding: '90px', paddingTop: '50px' }} on <Container>.
  */
 export const PageContainer = styled.div`
+  padding: 50px 90px 90px;
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+  }
+`;
+
+/**
+ * Fluid Bootstrap Container with standard page padding.
+ * Replaces className="p-5" style={{ padding: '90px', paddingTop: '50px' }} fluid.
+ */
+export const PageFluidContainer = styled(Container)`
   padding: 50px 90px 90px;
 
   @media (max-width: 768px) {

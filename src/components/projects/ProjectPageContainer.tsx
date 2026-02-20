@@ -20,14 +20,14 @@ export const ProjectPageContainer = ({
   footer,
 }: ProjectPageContainerProps): React.JSX.Element => (
   <ProjectPageWrapper fluid>
-    <Row className="ms-0 me-0" style={{ marginTop: '80px', marginBottom: '80px' }}>
+    <HeaderRow className="ms-0 me-0">
       <ProjectHeader project={project} />
-    </Row>
+    </HeaderRow>
     <Row className="ms-0 me-0">
       <Col lg={3} md={3} className="d-none d-md-flex">
         <TableOfContents />
       </Col>
-      <Col lg={7} md={9} style={{ paddingLeft: '0px' }}>
+      <Col lg={7} md={9} className="ps-0">
         {children}
       </Col>
       <Col lg={2} md={0} className="d-none d-lg-flex"></Col>
@@ -36,6 +36,11 @@ export const ProjectPageContainer = ({
     <ScrollButton />
   </ProjectPageWrapper>
 );
+
+const HeaderRow = styled(Row)`
+  margin-top: 80px;
+  margin-bottom: 80px;
+`;
 
 const ProjectPageWrapper = styled(Container)`
   padding-left: 20px;

@@ -3,6 +3,11 @@ import styled from 'styled-components';
 
 import { Subtitle } from '../../styles/primitives';
 
+const TocList = styled(Subtitle)`
+  padding-left: 0;
+  font-size: 17px;
+`;
+
 interface HeadingData {
   id: string;
   title: string;
@@ -14,7 +19,7 @@ interface HeadingsProps {
 }
 
 const Headings = ({ headings, activeId }: HeadingsProps): React.JSX.Element => (
-  <Subtitle as="ul" style={{ paddingLeft: '0px', fontSize: '17px' }}>
+  <TocList as="ul">
     {headings.map((heading) => (
       <li key={heading.id} className={heading.id === activeId ? 'active' : ''}>
         <a
@@ -30,7 +35,7 @@ const Headings = ({ headings, activeId }: HeadingsProps): React.JSX.Element => (
         </a>
       </li>
     ))}
-  </Subtitle>
+  </TocList>
 );
 
 export const TableOfContents = (): React.JSX.Element => {

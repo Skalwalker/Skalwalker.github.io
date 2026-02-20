@@ -30,9 +30,9 @@ export const ExperienceTimeline = (): React.JSX.Element => (
             {experience.company}
           </Subtitle>
           {experience.description !== '' && (
-            <Paragraph as="h6" className="mt-4" style={{ whiteSpace: 'pre-line' }}>
+            <PreLineParagraph as="h6" className="mt-4">
               {experience.description}
-            </Paragraph>
+            </PreLineParagraph>
           )}
           {experience.button?.map((btn) => (
             <Button
@@ -144,6 +144,10 @@ const typeIcons: Record<ExperienceType, React.JSX.Element> = {
   edu: <FaGraduationCap />,
   other: <IoLogoTableau />,
 };
+
+const PreLineParagraph = styled(Paragraph)`
+  white-space: pre-line;
+`;
 
 const TimelineWrapper = styled.div`
   .vertical-timeline-element-content {

@@ -2,10 +2,10 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import styled from 'styled-components';
 
 import { PaperCardProps } from './types';
-import { StyledCard } from '../../components';
-import { ParagraphBold, Subtitle } from '../../styles/primitives';
+import { StyledCard, ParagraphBold, Subtitle } from '../../styles';
 
 export const PaperCardShort = ({
   title,
@@ -14,24 +14,32 @@ export const PaperCardShort = ({
   year,
 }: PaperCardProps): React.JSX.Element => {
   return (
-    <a href={url} style={{ width: '100%' }} target="_blank" rel="noopener noreferrer">
+    <a href={url} className="w-100 d-block" target="_blank" rel="noopener noreferrer">
       <StyledCard className="click_cards">
-        <Card.Body style={{ padding: '0.8rem' }}>
-          <ParagraphBold as="div" className="mb-0 mt-0" style={{ color: 'white' }}>
+        <PaperCardBody>
+          <ParagraphBold as="div" className="mb-0 mt-0 text-white">
             <Row>
-              <Col xl={10} md={9} xs={9} style={{ textAlign: 'left' }}>
+              <Col xl={10} md={9} xs={9} className="text-start">
                 {title}
               </Col>
-              <Col xl={2} md={3} xs={3} style={{ textAlign: 'right' }}>
+              <Col xl={2} md={3} xs={3} className="text-end">
                 {year}
               </Col>
             </Row>
           </ParagraphBold>
-          <Card.Subtitle className="mt-2" style={{ marginTop: '0' }}>
+          <PaperCardSubtitle className="mt-0">
             <Subtitle as="span">{publisher}</Subtitle>
-          </Card.Subtitle>
-        </Card.Body>
+          </PaperCardSubtitle>
+        </PaperCardBody>
       </StyledCard>
     </a>
   );
 };
+
+const PaperCardBody = styled(Card.Body)`
+  padding: 0.8rem;
+`;
+
+const PaperCardSubtitle = styled(Card.Subtitle)`
+  margin-top: 0;
+`;

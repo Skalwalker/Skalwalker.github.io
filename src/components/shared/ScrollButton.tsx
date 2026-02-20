@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { BiUpArrowAlt } from 'react-icons/bi';
+import styled from 'styled-components';
 
 export const ScrollButton = (): React.JSX.Element => {
   const [visible, setVisible] = useState(false);
@@ -31,26 +32,28 @@ export const ScrollButton = (): React.JSX.Element => {
 
   return (
     <div>
-      <Button
+      <ScrollButtonStyled
         variant="outline-secondary"
         className="float-end"
         onClick={scrollToTop}
-        style={{
-          display: visible ? 'inline' : 'none',
-          position: 'fixed',
-          zIndex: 1,
-          bottom: '30px',
-          height: '50px',
-          width: '50px',
-          right: '0',
-          marginRight: '23px',
-          borderRadius: '25px',
-          padding: '0',
-          backgroundColor: 'rgba(255, 48, 214, 0.3)',
-        }}
+        $visible={visible}
       >
         <BiUpArrowAlt className="mx-auto my-auto" color={'white'} size={35} />
-      </Button>
+      </ScrollButtonStyled>
     </div>
   );
 };
+
+const ScrollButtonStyled = styled(Button)<{ $visible: boolean }>`
+  display: ${({ $visible }): string => ($visible ? 'inline' : 'none')};
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  height: 50px;
+  width: 50px;
+  right: 0;
+  margin-right: 23px;
+  border-radius: 25px;
+  padding: 0;
+  background-color: rgba(255, 48, 214, 0.3);
+`;

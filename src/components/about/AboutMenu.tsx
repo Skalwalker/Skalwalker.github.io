@@ -12,12 +12,7 @@ import { Paragraph } from '../../styles/primitives';
 export const AboutMenu = (): JSX.Element => (
   <AboutMenuRow className="gy-3">
     <Col xs={12} className="d-flex flex-column align-items-center text-center">
-      <Image
-        src={coreContent.profileImg}
-        roundedCircle
-        className="mb-3"
-        style={{ height: '150px', width: '150px' }}
-      />
+      <ProfileImage src={coreContent.profileImg} roundedCircle className="mb-3" />
       <Paragraph className="mb-1">
         <HiOfficeBuilding className="me-1 mb-1" size={16} />
         Software Engineer at Amazon
@@ -80,4 +75,9 @@ const StyledNavLink = styled(NavLink)`
     border-color: var(--bs-primary);
     color: white !important;
   }
+`;
+
+const ProfileImage = styled(Image)`
+  height: 150px;
+  width: 150px;
 `;
