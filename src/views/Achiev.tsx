@@ -1,5 +1,6 @@
 import React, { SetStateAction, useState } from 'react';
 import { Col, Row, Container } from 'react-bootstrap';
+import styled from 'styled-components';
 
 import { AchievCard, AchievDesc, AchievDescModal, AchievementContent } from '../components';
 import { achievList } from '../content';
@@ -11,29 +12,24 @@ export const AchievementView = (): React.JSX.Element => {
   const [achievement, setAchievement] = useState<AchievementContent | null>(null);
 
   return (
-    <Container className="p-4" fluid style={{ height: '92vh' }}>
+    <AchievContainer className="p-4" fluid>
       <Row className="h-100">
-        <Col
+        <AchievDescCol
           xl={3}
           lg={3}
           md={12}
           sm={12}
           className="pr-2 text-center pt-4 pb-4 position-lg-static d-none d-lg-flex h-100"
-          style={{ zIndex: 1 }}
         >
           {achievement ? (
             <AchievDesc content={achievement} />
           ) : (
-            <SubtitleBold
-              as="h2"
-              className="my-auto"
-              style={{ fontSize: '32px', color: '#FFFFFF' }}
-            >
+            <AchievTitleText as="h2" className="my-auto">
               Hover over an Achievement <br />
               to show description
-            </SubtitleBold>
+            </AchievTitleText>
           )}
-        </Col>
+        </AchievDescCol>
         <Col xl={9} lg={9} md={12} sm={12} className="my-auto">
           <Row>
             <AchievMatrix col={1} setAchievement={setAchievement} />
@@ -50,7 +46,7 @@ export const AchievementView = (): React.JSX.Element => {
           }}
         />
       )}
-    </Container>
+    </AchievContainer>
   );
 };
 
@@ -86,3 +82,16 @@ const AchievMatrix = ({ col, setAchievement }: AchievMatrixProps): React.JSX.Ele
     </Col>
   );
 };
+
+const AchievContainer = styled(Container)`
+  height: 92vh;
+`;
+
+const AchievDescCol = styled(Col)`
+  z-index: 1;
+`;
+
+const AchievTitleText = styled(SubtitleBold)`
+  font-size: 32px;
+  color: #ffffff;
+`;

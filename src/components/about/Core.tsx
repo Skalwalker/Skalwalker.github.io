@@ -11,11 +11,11 @@ import { Paragraph } from '../../styles/primitives';
 
 export const Core = (): React.JSX.Element => {
   return (
-    <Row style={{ height: '92vh' }}>
+    <CoreRow>
       <AboutCoreCol className="my-auto">
         <Row>
           <Col md={12}>
-            <Paragraph style={{ fontSize: '20px' }}>{coreContent.coreText}</Paragraph>
+            <CoreParagraph>{coreContent.coreText}</CoreParagraph>
           </Col>
           <Col md={12} className="">
             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/rk_nobre/">
@@ -49,9 +49,17 @@ export const Core = (): React.JSX.Element => {
           </Col>
         </Row>
       </AboutCoreCol>
-    </Row>
+    </CoreRow>
   );
 };
+
+const CoreRow = styled(Row)`
+  height: 92vh;
+`;
+
+const CoreParagraph = styled(Paragraph)`
+  font-size: 20px;
+`;
 
 const AboutCoreCol = styled(Col)`
   padding-left: 10px;

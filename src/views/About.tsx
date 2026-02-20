@@ -7,7 +7,7 @@ import { AboutRouter } from '../routes';
 
 export const About = (): React.JSX.Element => {
   return (
-    <AboutViewContainer className="h-100" style={{ height: '92vh' }} fluid>
+    <AboutViewContainer fluid>
       <Row>
         <BorderLgEndCol lg={3} md={12} className="my-auto h-100">
           <AboutMenu />
@@ -21,6 +21,7 @@ export const About = (): React.JSX.Element => {
 };
 
 const AboutViewContainer = styled(Container)`
+  height: 92vh;
   padding-left: 30px;
   padding-right: 30px;
 

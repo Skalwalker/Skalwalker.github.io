@@ -11,7 +11,7 @@ export const Likes = (): React.JSX.Element => {
 
   return (
     <Container className="h-92">
-      <Row style={{ height: '92vh' }}>
+      <LikesRow>
         <Col
           lg={{ span: 11, offset: 1 }}
           md={{ span: 11, offset: 0.5 }}
@@ -30,7 +30,7 @@ export const Likes = (): React.JSX.Element => {
                   xs={4}
                   className="me-0 mb-3 me-xl-2 me-lg-1"
                 >
-                  <div
+                  <LikeIconWrapper
                     className="m-auto"
                     onMouseEnter={() => {
                       setShownText(likeIcon.title);
@@ -38,27 +38,34 @@ export const Likes = (): React.JSX.Element => {
                     onMouseLeave={() => {
                       setShownText(undefined);
                     }}
-                    style={{ height: '70px', width: '70px' }}
                   >
                     <LikeIcon img={likeIcon.img}></LikeIcon>
-                  </div>
+                  </LikeIconWrapper>
                 </Col>
               );
             })}
           </Row>
-          <AboutLikeRow
-            className="pt-1 pb-1 pt-lg-3 pe-xl-5"
-            style={{ height: '20px', width: '100%' }}
-          >
+          <AboutLikeRow className="pt-1 pb-1 pt-lg-3 pe-xl-5">
             <LikeDesc text={shownText} />
           </AboutLikeRow>
         </Col>
-      </Row>
+      </LikesRow>
     </Container>
   );
 };
 
+const LikesRow = styled(Row)`
+  height: 92vh;
+`;
+
+const LikeIconWrapper = styled.div`
+  height: 70px;
+  width: 70px;
+`;
+
 const AboutLikeRow = styled(Row)`
+  height: 20px;
+  width: 100%;
   margin-top: -40px;
 
   @media (min-width: 992px) {
