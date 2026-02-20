@@ -8,8 +8,6 @@ import { ProjectInfo, FooterSectionType } from './types';
 import { ProjectFooter } from '../../components';
 import { ScrollButton } from '../shared';
 
-import '../../assets/css/stickytable.css';
-
 interface ProjectPageContainerProps {
   project: ProjectInfo;
   children: React.ReactNode;
@@ -46,5 +44,19 @@ const ProjectPageWrapper = styled(Container)`
   @media (min-width: 576px) {
     padding-left: 70px;
     padding-right: 70px;
+  }
+
+  h2,
+  h3 {
+    scroll-margin-top: 16px;
+    font-family: filson-pro, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  p {
+    font-family: objektiv-mk1, sans-serif;
+    font-weight: 200;
+    font-style: normal;
   }
 `;

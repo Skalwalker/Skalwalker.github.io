@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../../assets/css/stickytable.css';
+import styled from 'styled-components';
 
 import { Subtitle } from '../../styles/primitives';
 
@@ -39,9 +39,9 @@ export const TableOfContents = (): React.JSX.Element => {
   useIntersectionObserver(setActiveId);
 
   return (
-    <nav className="tableofcontent" aria-label="Table of contents">
+    <TableOfContentsNav aria-label="Table of contents">
       <Headings headings={nestedHeadings} activeId={activeId} />
-    </nav>
+    </TableOfContentsNav>
   );
 };
 
@@ -117,3 +117,31 @@ const useIntersectionObserver = (
     };
   }, [setActiveId]);
 };
+
+const TableOfContentsNav = styled.nav`
+  position: sticky;
+  position: -webkit-sticky;
+  top: 24px;
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  li.active > a {
+    color: var(--bs-primary);
+    font-family: filson-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  li > a:hover {
+    color: var(--bs-secondary);
+    font-family: filson-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+  }
+`;
