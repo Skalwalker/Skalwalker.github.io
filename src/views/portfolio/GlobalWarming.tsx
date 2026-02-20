@@ -17,12 +17,16 @@ import globalDynamicsImg from '../../assets/images/projects/globalwarming/global
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
 import {
-  SubtitleBold,
-  Subtitle,
+  FigureImg60,
+  FigureImg80,
+  FigureImg90,
   Paragraph,
   ProperImgSize,
   ProperImgSize3,
+  StyledAccordion,
   StyledTabs,
+  Subtitle,
+  SubtitleBold,
 } from '../../styles/primitives';
 
 export const GlobalWarming = (): React.JSX.Element => {
@@ -190,21 +194,13 @@ const ResultsTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
-                    alt="Temperature density over 100 years"
-                    src={e3TempImg}
-                  />
+                  <ProperImgSize alt="Temperature density over 100 years" src={e3TempImg} />
                   <Figure.Caption>
                     <Paragraph as="span">Temperature density over 100 years</Paragraph>
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
-                    alt="CO2 density over 100 years"
-                    src={e3Co2Img}
-                  />
+                  <ProperImgSize alt="CO2 density over 100 years" src={e3Co2Img} />
                   <Figure.Caption>
                     <Paragraph as="span">
                       CO<sub>2</sub> density over 100 years
@@ -214,11 +210,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
             <Figure className="mx-auto">
-              <ProperImgSize3
-                style={{ backgroundColor: 'white' }}
-                alt="Year temperature exceeds recommended"
-                src={e3YearImg}
-              />
+              <ProperImgSize3 alt="Year temperature exceeds recommended" src={e3YearImg} />
               <Figure.Caption>
                 <Paragraph as="span">Year temperature exceeds recommended</Paragraph>
               </Figure.Caption>
@@ -236,21 +228,13 @@ const ResultsTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
-                    alt="Temperature density over 100 years"
-                    src={e4TempImg}
-                  />
+                  <ProperImgSize alt="Temperature density over 100 years" src={e4TempImg} />
                   <Figure.Caption>
                     <Paragraph as="span">Temperature density over 100 years</Paragraph>
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
-                    alt="CO2 density over 100 years"
-                    src={e4Co2Img}
-                  />
+                  <ProperImgSize alt="CO2 density over 100 years" src={e4Co2Img} />
                   <Figure.Caption>
                     <Paragraph as="span">
                       CO<sub>2</sub> density over 100 years
@@ -260,11 +244,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
             <Figure className="mx-auto">
-              <ProperImgSize3
-                style={{ backgroundColor: 'white' }}
-                alt="Year temperature exceeds recommended"
-                src={e4YearImg}
-              />
+              <ProperImgSize3 alt="Year temperature exceeds recommended" src={e4YearImg} />
               <Figure.Caption>
                 <Paragraph as="span">Year temperature exceeds recommended</Paragraph>
               </Figure.Caption>
@@ -282,21 +262,13 @@ const ResultsTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
-                    alt="Temperature density over 100 years"
-                    src={e2TempImg}
-                  />
+                  <ProperImgSize alt="Temperature density over 100 years" src={e2TempImg} />
                   <Figure.Caption>
                     <Paragraph as="span">Temperature density over 100 years</Paragraph>
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
-                    alt="CO2 density over 100 years"
-                    src={e2Co2Img}
-                  />
+                  <ProperImgSize alt="CO2 density over 100 years" src={e2Co2Img} />
                   <Figure.Caption>
                     <Paragraph as="span">
                       CO<sub>2</sub> density over 100 years
@@ -306,11 +278,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
             <Figure className="mx-auto">
-              <ProperImgSize3
-                style={{ backgroundColor: 'white' }}
-                alt="Year temperature exceeds recommended"
-                src={e2YearImg}
-              />
+              <ProperImgSize3 alt="Year temperature exceeds recommended" src={e2YearImg} />
               <Figure.Caption>
                 <Paragraph as="span">Year temperature exceeds recommended</Paragraph>
               </Figure.Caption>
@@ -325,7 +293,7 @@ const ResultsTabs = (): React.JSX.Element => {
 const DynamicsAccordion = (): React.JSX.Element => {
   return (
     <Container className="mt-3 mb-3">
-      <Accordion defaultActiveKey="0" style={{ color: 'var(--bs-white)' }}>
+      <StyledAccordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header as="h3">Global Dynamics</Accordion.Header>
           <Accordion.Body className="text-left">
@@ -341,11 +309,7 @@ const DynamicsAccordion = (): React.JSX.Element => {
             </ProjectParagraph>
             <Container className="mx-auto text-center">
               <Figure>
-                <Figure.Image
-                  className="w-80"
-                  style={{ width: '60%', backgroundColor: 'white' }}
-                  src={globalDynamicsImg}
-                />
+                <FigureImg60 src={globalDynamicsImg} />
               </Figure>
             </Container>
             <ProjectParagraph>
@@ -368,11 +332,7 @@ const DynamicsAccordion = (): React.JSX.Element => {
               area using a historically based initial size.
             </ProjectParagraph>
             <Figure className="mx-auto text-center">
-              <Figure.Image
-                className="w-80"
-                style={{ width: '80%', backgroundColor: 'white' }}
-                src={forestDynamicsImg}
-              />
+              <FigureImg80 src={forestDynamicsImg} />
             </Figure>
             <ProjectParagraph>
               As the simulation develops, a current forest area net change is sampled each year from
@@ -393,11 +353,7 @@ const DynamicsAccordion = (): React.JSX.Element => {
               generated.
             </ProjectParagraph>
             <Figure className="mx-auto text-center">
-              <Figure.Image
-                className="w-90"
-                style={{ width: '90%', backgroundColor: 'white' }}
-                src={co2DynamicsImg}
-              />
+              <FigureImg90 src={co2DynamicsImg} />
             </Figure>
             <ProjectParagraph>
               Each country starts with a CO<sub>2</sub> stock, and this value increases (or
@@ -411,7 +367,7 @@ const DynamicsAccordion = (): React.JSX.Element => {
             </ProjectParagraph>
           </Accordion.Body>
         </Accordion.Item>
-      </Accordion>
+      </StyledAccordion>
     </Container>
   );
 };

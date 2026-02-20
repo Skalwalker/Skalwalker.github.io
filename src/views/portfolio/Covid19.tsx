@@ -29,18 +29,24 @@ import imgSvmCoughvidRoc from '../../assets/images/projects/covid19/svm_coughvid
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
 import {
-  SubtitleBold,
-  Subtitle,
+  FigureImg70,
+  FigureImg80,
+  FigureImg90,
+  PaddedListGroup,
   Paragraph,
+  PrimaryLink,
   ProperImgSize,
   ProperImgSize2,
+  StyledAccordion,
   StyledTabs,
+  Subtitle,
+  SubtitleBold,
 } from '../../styles/primitives';
 
 const FeaturesAccordion = (): React.JSX.Element => {
   return (
     <Container>
-      <Accordion defaultActiveKey="0" style={{ color: 'var(--bs-white)' }}>
+      <StyledAccordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header as="h3">RMS Power</Accordion.Header>
           <Accordion.Body className="text-center">
@@ -48,11 +54,7 @@ const FeaturesAccordion = (): React.JSX.Element => {
               Compute root-mean-square (RMS) value for each frame [4].
             </ProjectParagraph>
             <Figure className="mx-auto">
-              <Figure.Image
-                className="w-80"
-                style={{ width: '80%', backgroundColor: 'white' }}
-                src={imgRmsPower}
-              />
+              <FigureImg80 src={imgRmsPower} />
             </Figure>
           </Accordion.Body>
         </Accordion.Item>
@@ -65,16 +67,12 @@ const FeaturesAccordion = (): React.JSX.Element => {
               of the frame [4].
             </ProjectParagraph>
             <Figure className="mx-auto">
-              <Figure.Image
-                className="w-80"
-                style={{ width: '80%', backgroundColor: 'white' }}
-                src={imgZeroCrossing}
-              />
+              <FigureImg80 src={imgZeroCrossing} />
             </Figure>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-          <Accordion.Header as="h3">Spectral Centroid & Spread</Accordion.Header>
+          <Accordion.Header as="h3">Spectral Centroid &amp; Spread</Accordion.Header>
           <Accordion.Body className="text-center">
             <ProjectParagraph>
               The spectral centroid and the spectral spread are two simple measures of spectral
@@ -82,11 +80,7 @@ const FeaturesAccordion = (): React.JSX.Element => {
               spectrum, while the spread is the second central moment of the spectrum [4].
             </ProjectParagraph>
             <Figure className="mx-auto">
-              <Figure.Image
-                className="w-90"
-                style={{ width: '90%', backgroundColor: 'white' }}
-                src={imgSpectralBandwidth}
-              />
+              <FigureImg90 src={imgSpectralBandwidth} />
             </Figure>
           </Accordion.Body>
         </Accordion.Item>
@@ -99,11 +93,7 @@ const FeaturesAccordion = (): React.JSX.Element => {
               spectrum is similar to white noise [4].
             </ProjectParagraph>
             <Figure className="mx-auto">
-              <Figure.Image
-                className="w-80"
-                style={{ width: '80%', backgroundColor: 'white' }}
-                src={imgSpectralFlatness}
-              />
+              <FigureImg80 src={imgSpectralFlatness} />
             </Figure>
           </Accordion.Body>
         </Accordion.Item>
@@ -115,11 +105,7 @@ const FeaturesAccordion = (): React.JSX.Element => {
               distribution of the spectrum is concentrated [4].
             </ProjectParagraph>
             <Figure className="mx-auto">
-              <Figure.Image
-                className="w-90"
-                style={{ width: '90%', backgroundColor: 'white' }}
-                src={imgSpectralRolloff}
-              />
+              <FigureImg90 src={imgSpectralRolloff} />
             </Figure>
           </Accordion.Body>
         </Accordion.Item>
@@ -131,15 +117,11 @@ const FeaturesAccordion = (): React.JSX.Element => {
               extract the Cepstral Coefficients using Discrete Cosine Transform (DCT) [4].
             </ProjectParagraph>
             <Figure className="mx-auto">
-              <Figure.Image
-                className="w-90"
-                style={{ width: '90%', backgroundColor: 'white' }}
-                src={imgMfccs}
-              />
+              <FigureImg90 src={imgMfccs} />
             </Figure>
           </Accordion.Body>
         </Accordion.Item>
-      </Accordion>
+      </StyledAccordion>
     </Container>
   );
 };
@@ -158,18 +140,13 @@ const ResultSVMTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <ProperImgSize2
-                    style={{ backgroundColor: 'white' }}
-                    alt="Validation Set Confusion Matrix"
-                    src={imgSvmCoswaraCm}
-                  />
+                  <ProperImgSize2 alt="Validation Set Confusion Matrix" src={imgSvmCoswaraCm} />
                   <Figure.Caption>
                     <Paragraph as="span">Validation Set Confusion Matrix</Paragraph>
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
                   <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
                     alt="Receiver Operating Characteristic Curve"
                     src={imgSvmCoswaraRoc}
                   />
@@ -184,18 +161,13 @@ const ResultSVMTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <ProperImgSize2
-                    style={{ backgroundColor: 'white' }}
-                    alt="Validation Set Confusion Matrix"
-                    src={imgSvmCoughvidCm}
-                  />
+                  <ProperImgSize2 alt="Validation Set Confusion Matrix" src={imgSvmCoughvidCm} />
                   <Figure.Caption>
                     <Paragraph as="span">Validation Set Confusion Matrix</Paragraph>
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
                   <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
                     alt="Receiver Operating Characteristic Curve"
                     src={imgSvmCoughvidRoc}
                   />
@@ -224,20 +196,15 @@ const ResultCNNTabs = (): React.JSX.Element => {
         >
           <Tab eventKey="coswara" title="Coswara CNN" className="w-100 text-center">
             <Figure className="mx-auto">
-              <Row className="mx-auto" style={{ width: '100%' }}>
+              <Row className="mx-auto w-100">
                 <Col md={6} sm={12}>
-                  <ProperImgSize2
-                    style={{ backgroundColor: 'white' }}
-                    alt="Validation Set Confusion Matrix"
-                    src={imgCnnCoswaraCm}
-                  />
+                  <ProperImgSize2 alt="Validation Set Confusion Matrix" src={imgCnnCoswaraCm} />
                   <Figure.Caption>
                     <Paragraph as="span">Validation Set Confusion Matrix</Paragraph>
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
                   <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
                     alt="Receiver Operating Characteristic Curve"
                     src={imgCnnCoswaraRoc}
                   />
@@ -252,18 +219,13 @@ const ResultCNNTabs = (): React.JSX.Element => {
             <Figure className="mx-auto">
               <Row className="mx-auto w-100">
                 <Col md={6} sm={12}>
-                  <ProperImgSize2
-                    style={{ backgroundColor: 'white' }}
-                    alt="Validation Set Confusion Matrix"
-                    src={imgCnnCoughvidCm}
-                  />
+                  <ProperImgSize2 alt="Validation Set Confusion Matrix" src={imgCnnCoughvidCm} />
                   <Figure.Caption>
                     <Paragraph as="span">Validation Set Confusion Matrix</Paragraph>
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
                   <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
                     alt="Receiver Operating Characteristic Curve"
                     src={imgCnnCoughvidRoc}
                   />
@@ -360,7 +322,7 @@ export const Covid19 = (): React.JSX.Element => {
     },
     {
       heading: 'References',
-      desc: '[1]\tY. E. Erdogan and A. Narin, “Covid-19 detection with traditional and deep features on cough acoustic signals,” Computers in Biology and Medicine, vol. 136, p. 104765, 2021.\n\n[2]\tL. Orlandic, T. Teijeiro, and D. Atienza, “The coughvid crowdsourcing dataset, a corpus for the study of large-scale cough analysis algorithms,” Scientific Data, vol. 8, no. 1, pp. 1-10, 2021\n\n[3]\tA. Imran, I. Posokhova, H. N. Qureshi, U. Masood, M. S. Riaz, K. Ali, C. N. John, M. I. Hussain, and M. Nabeel, “Ai4covid-19: Ai enabled preliminary diagnosis for covid-19 from cough samples via an app,” Informatics in Medicine Unlocked, vol. 20, p. 100378, 2020.\n\n[4]\tT. Giannakopoulos and A. Pikrakis, “Introduction to audio analysis: a MATLAB® approach.” Academic Press, 2014.\n\n[5]\tS. S. Stevens and J. Volkmann, “The relation of pitch to frequency: A revised scale,” The American Journal of Psychology, vol. 53, no. 3, pp. 329-353, 1940.\n\n[6]\tN. Sharma, P. Krishnan, R. Kumar, S. Ramoji, S. R. Chetupalli, P. K. Ghosh, S. Ganapathy et al., “Coswara a database of breathing, cough, and voice sounds for covid-19 diagnosis,” arXiv preprint arXiv:2005.10548, 2020.',
+      desc: '[1]\tY. E. Erdogan and A. Narin, "Covid-19 detection with traditional and deep features on cough acoustic signals," Computers in Biology and Medicine, vol. 136, p. 104765, 2021.\n\n[2]\tL. Orlandic, T. Teijeiro, and D. Atienza, "The coughvid crowdsourcing dataset, a corpus for the study of large-scale cough analysis algorithms," Scientific Data, vol. 8, no. 1, pp. 1-10, 2021\n\n[3]\tA. Imran, I. Posokhova, H. N. Qureshi, U. Masood, M. S. Riaz, K. Ali, C. N. John, M. I. Hussain, and M. Nabeel, "Ai4covid-19: Ai enabled preliminary diagnosis for covid-19 from cough samples via an app," Informatics in Medicine Unlocked, vol. 20, p. 100378, 2020.\n\n[4]\tT. Giannakopoulos and A. Pikrakis, "Introduction to audio analysis: a MATLAB® approach." Academic Press, 2014.\n\n[5]\tS. S. Stevens and J. Volkmann, "The relation of pitch to frequency: A revised scale," The American Journal of Psychology, vol. 53, no. 3, pp. 329-353, 1940.\n\n[6]\tN. Sharma, P. Krishnan, R. Kumar, S. Ramoji, S. R. Chetupalli, P. K. Ghosh, S. Ganapathy et al., "Coswara a database of breathing, cough, and voice sounds for covid-19 diagnosis," arXiv preprint arXiv:2005.10548, 2020.',
     },
   ];
 
@@ -415,12 +377,7 @@ export const Covid19 = (): React.JSX.Element => {
           audio spectrogram and the audio&apos;s time-domain features [4].
         </ProjectParagraph>
         <Figure className="mx-auto text-center">
-          <Figure.Image
-            className="w-70"
-            style={{ width: '70%' }}
-            alt="Overview of C19-Audit framework"
-            src={imgProcessDiagram}
-          />
+          <FigureImg70 alt="Overview of C19-Audit framework" src={imgProcessDiagram} />
           <Figure.Caption>
             <Paragraph as="span">Overview of C19-Audit framework</Paragraph>
           </Figure.Caption>
@@ -446,25 +403,23 @@ export const Covid19 = (): React.JSX.Element => {
       <ProjectSection key="ds-header" id="datasets-header" title="Datasets">
         <ProjectParagraph>
           I selected two different datasets to evaluate the proposed methodology. The{' '}
-          <a
+          <PrimaryLink
             href="https://github.com/iiscleap/Coswara-Data"
             target="_blank"
             rel="noreferrer"
-            style={{ color: 'var(--bs-primary)' }}
           >
             Coswara dataset
-          </a>{' '}
+          </PrimaryLink>{' '}
           contained sound samples collected via worldwide crowdsourcing using a web application. The
           dataset has audio samples from more than 941 participants recorded at a sampling frequency
           of 48 kHz [6]. Additionally, the{' '}
-          <a
+          <PrimaryLink
             href="https://www.kaggle.com/andrewmvd/covid19-cough-audio-classification"
             target="_blank"
             rel="noreferrer"
-            style={{ color: 'var(--bs-primary)' }}
           >
             Coughvid dataset
-          </a>{' '}
+          </PrimaryLink>{' '}
           provides over 25,000 crowdsourced cough recordings representing various participants&apos;
           demographics and COVID-19 statuses, with a subset of 2,800 recordings labeled by
           experienced physicians [2].
@@ -486,7 +441,7 @@ export const Covid19 = (): React.JSX.Element => {
           full paper. The experiments were evaluated with the following metrics:
         </ProjectParagraph>
         <Subtitle as="div">
-          <ListGroup className="w-100 mt-1 mb-3" style={{ padding: '12px' }}>
+          <PaddedListGroup className="w-100 mt-1 mb-3">
             <ListGroup.Item>
               <b>Accuracy:</b> How close the models are to the correct value
             </ListGroup.Item>
@@ -505,7 +460,7 @@ export const Covid19 = (): React.JSX.Element => {
               <b>AUC-ROC:</b> Aggregate measure of performance across all possible classification
               thresholds
             </ListGroup.Item>
-          </ListGroup>
+          </PaddedListGroup>
         </Subtitle>
         <ProjectParagraph>
           F1-Score and the AUC-ROC were specially chosen due to the nature of the problem. Both

@@ -14,7 +14,13 @@ import salience2Png from '../../assets/images/projects/ecosampling/salience_2.pn
 import simulationGif from '../../assets/images/projects/ecosampling/simulation.gif';
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
-import { SubtitleBold, Paragraph } from '../../styles/primitives';
+import {
+  FigureImg60,
+  Paragraph,
+  StyledAccordion,
+  SubtitleBold,
+  WhiteBgImg,
+} from '../../styles/primitives';
 
 export const Ecosampling = (): React.JSX.Element => {
   const footerInfo = [
@@ -54,9 +60,8 @@ export const Ecosampling = (): React.JSX.Element => {
           movements) within the same framework.
         </ProjectParagraph>
         <Figure className="mx-auto text-center">
-          <Figure.Image
+          <WhiteBgImg
             className="w-100"
-            style={{ backgroundColor: 'white' }}
             alt="Example of the PyEcosampling results in a given video"
             src={simulationGif}
           />
@@ -102,9 +107,8 @@ export const Ecosampling = (): React.JSX.Element => {
           functionalities.
         </ProjectParagraph>
         <Figure className="mx-auto text-center">
-          <Figure.Image
+          <WhiteBgImg
             className="w-75 p-2"
-            style={{ backgroundColor: 'white' }}
             alt="Diagram of the PyEcosampling system"
             src={diagramPng}
           />
@@ -192,7 +196,7 @@ export const Ecosampling = (): React.JSX.Element => {
 const StepsAccordion = (): React.JSX.Element => {
   return (
     <Container className="mt-3 mb-3">
-      <Accordion defaultActiveKey="0" style={{ color: 'var(--bs-white)' }}>
+      <StyledAccordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header as="h3">FrameProcessor Class</Accordion.Header>
           <Accordion.Body className="text-left">
@@ -207,12 +211,7 @@ const StepsAccordion = (): React.JSX.Element => {
             </ProjectParagraph>
             <Container className="mx-auto text-center">
               <Figure>
-                <Figure.Image
-                  className="h-100"
-                  style={{ width: '60%', backgroundColor: 'white' }}
-                  alt="Frame Processor visualization of a frame"
-                  src={currentJpg}
-                />
+                <FigureImg60 alt="Frame Processor visualization of a frame" src={currentJpg} />
                 <Figure.Caption>
                   <Paragraph as="span">Frame Processor visualization of a frame</Paragraph>
                 </Figure.Caption>
@@ -226,9 +225,8 @@ const StepsAccordion = (): React.JSX.Element => {
             </ProjectParagraph>
             <Container className="mx-auto text-center">
               <Figure>
-                <Figure.Image
+                <FigureImg60
                   alt="Foveated Imaging of the current frame using a Gaussian filter"
-                  style={{ width: '60%', backgroundColor: 'white' }}
                   src={foveated2Png}
                 />
                 <Figure.Caption>
@@ -269,10 +267,8 @@ const StepsAccordion = (): React.JSX.Element => {
             </ProjectParagraph>
             <Container className="mx-auto text-center">
               <Figure>
-                <Figure.Image
-                  className="w-80"
+                <FigureImg60
                   alt="Salience Map with the 3D self-resemblance spatial temporal saliency method"
-                  style={{ width: '60%', backgroundColor: 'white' }}
                   src={salience2Png}
                 />
                 <Figure.Caption>
@@ -301,10 +297,8 @@ const StepsAccordion = (): React.JSX.Element => {
             </ProjectParagraph>
             <Container className="mx-auto text-center">
               <Figure className="mx-auto text-center">
-                <Figure.Image
-                  className="w-80"
+                <FigureImg60
                   alt="Patch map and its proto-objects surrounded by their corresponding ellipses"
-                  style={{ width: '60%', backgroundColor: 'white' }}
                   src={protos2Png}
                 />
                 <Figure.Caption>
@@ -332,10 +326,8 @@ const StepsAccordion = (): React.JSX.Element => {
             </ProjectParagraph>
             <Container className="mx-auto text-center">
               <Figure className="mx-auto text-center">
-                <Figure.Image
-                  className="w-80"
+                <FigureImg60
                   alt="Interest points (red dots) in the current frame. Yellow and green dots represents both all candidates and the maximum focus of attention."
-                  style={{ width: '60%', backgroundColor: 'white' }}
                   src={ips2Png}
                 />
                 <Figure.Caption>
@@ -355,10 +347,8 @@ const StepsAccordion = (): React.JSX.Element => {
             </ProjectParagraph>
             <Container className="mx-auto text-center">
               <Figure className="mx-auto text-center">
-                <Figure.Image
-                  className="w-80"
+                <FigureImg60
                   alt="Empirical Distribution for sampled IPs"
-                  style={{ width: '60%', backgroundColor: 'white' }}
                   src={empiricalDists2Png}
                 />
                 <Figure.Caption>
@@ -383,10 +373,8 @@ const StepsAccordion = (): React.JSX.Element => {
             </ProjectParagraph>
             <Container className="mx-auto text-center">
               <Figure className="mx-auto text-center">
-                <Figure.Image
-                  className="w-80"
+                <FigureImg60
                   alt="Order and Disorder values for each frame on the end of the experiment"
-                  style={{ width: '60%', backgroundColor: 'white' }}
                   src={orderDisorderPlotPng}
                 />
                 <Figure.Caption>
@@ -396,10 +384,8 @@ const StepsAccordion = (): React.JSX.Element => {
                 </Figure.Caption>
               </Figure>
               <Figure className="mx-auto text-center">
-                <Figure.Image
-                  className="w-80"
+                <FigureImg60
                   alt="Complexity values on the end of the experiment"
-                  style={{ width: '60%', backgroundColor: 'white' }}
                   src={complexityPlotPng}
                 />
                 <Figure.Caption>
@@ -446,12 +432,7 @@ const StepsAccordion = (): React.JSX.Element => {
             </ProjectParagraph>
             <Container className="mx-auto text-center">
               <Figure className="mx-auto text-center">
-                <Figure.Image
-                  className="w-80"
-                  alt="Final focus of attention for the current frame"
-                  style={{ width: '60%', backgroundColor: 'white' }}
-                  src={foa2Png}
-                />
+                <FigureImg60 alt="Final focus of attention for the current frame" src={foa2Png} />
                 <Figure.Caption>
                   <Paragraph as="span">Final focus of attention for the current frame</Paragraph>
                 </Figure.Caption>
@@ -459,7 +440,7 @@ const StepsAccordion = (): React.JSX.Element => {
             </Container>
           </Accordion.Body>
         </Accordion.Item>
-      </Accordion>
+      </StyledAccordion>
     </Container>
   );
 };

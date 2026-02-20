@@ -4,7 +4,7 @@
  * Import from here instead of adding one-off className or style={{}}.
  */
 
-import { Figure, Tabs } from 'react-bootstrap';
+import { Accordion, Figure, ListGroup, Tabs } from 'react-bootstrap';
 import styled, { keyframes } from 'styled-components';
 
 import { alpha, colors } from './theme';
@@ -119,6 +119,7 @@ export const LoaderContainer = styled.div`
 export const ProperImgSize = styled(Figure.Image)`
   width: 75%;
   margin-top: 40px;
+  background-color: white;
 
   @media (min-width: 992px) {
     width: 100%;
@@ -130,6 +131,7 @@ export const ProperImgSize = styled(Figure.Image)`
 export const ProperImgSize2 = styled(Figure.Image)`
   width: 74%;
   margin-top: 40px;
+  background-color: white;
 
   @media (min-width: 992px) {
     width: 99%;
@@ -141,6 +143,7 @@ export const ProperImgSize2 = styled(Figure.Image)`
 export const ProperImgSize3 = styled(Figure.Image)`
   width: 74%;
   margin-top: 40px;
+  background-color: white;
 
   @media (min-width: 992px) {
     width: 50%;
@@ -200,4 +203,83 @@ export const StyledTabs = styled(Tabs)`
   .tab-content {
     width: 100%;
   }
+`;
+
+// ─── Accordion ───────────────────────────────────────────────────────────────
+
+/**
+ * Accordion with white text color for dark-background project pages.
+ * Replaces style={{ color: 'var(--bs-white)' }} on <Accordion>.
+ */
+export const StyledAccordion = styled(Accordion)`
+  color: var(--bs-white);
+`;
+
+// ─── Fixed-width figure images ────────────────────────────────────────────────
+
+/** Figure.Image with white background; width controlled by className prop. */
+export const WhiteBgImg = styled(Figure.Image)`
+  background-color: white;
+`;
+
+/** Figure.Image at 60% width with white background. */
+export const FigureImg60 = styled(Figure.Image)`
+  width: 60%;
+  background-color: white;
+`;
+
+/** Figure.Image at 70% width (no background override). */
+export const FigureImg70 = styled(Figure.Image)`
+  width: 70%;
+`;
+
+/** Figure.Image at 80% width with white background. */
+export const FigureImg80 = styled(Figure.Image)`
+  width: 80%;
+  background-color: white;
+`;
+
+/** Figure.Image at 90% width with white background. */
+export const FigureImg90 = styled(Figure.Image)`
+  width: 90%;
+  background-color: white;
+`;
+
+/** Figure.Image at 60% width with white background and 10px padding. */
+export const FigureImgPad60 = styled(Figure.Image)`
+  width: 60%;
+  background-color: white;
+  padding: 10px;
+`;
+
+/** Figure.Image at 80% width with white background and 10px padding. */
+export const FigureImgPad80 = styled(Figure.Image)`
+  width: 80%;
+  background-color: white;
+  padding: 10px;
+`;
+
+/** Figure.Image at 90% width with white background and 10px padding. */
+export const FigureImgPad90 = styled(Figure.Image)`
+  width: 90%;
+  background-color: white;
+  padding: 10px;
+`;
+
+// ─── List / Links ─────────────────────────────────────────────────────────────
+
+/**
+ * ListGroup with inner padding.
+ * Replaces style={{ padding: '12px' }} on <ListGroup>.
+ */
+export const PaddedListGroup = styled(ListGroup)`
+  padding: 12px;
+`;
+
+/**
+ * Anchor link in Bootstrap primary colour.
+ * Replaces style={{ color: 'var(--bs-primary)' }} on <a>.
+ */
+export const PrimaryLink = styled.a`
+  color: var(--bs-primary);
 `;

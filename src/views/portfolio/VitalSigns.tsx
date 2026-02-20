@@ -15,7 +15,13 @@ import rrSignalImg from '../../assets/images/projects/vitalsigns/rrsignal.png';
 import signalsImg from '../../assets/images/projects/vitalsigns/signals.png';
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
-import { Subtitle, Paragraph, StyledTabs } from '../../styles/primitives';
+import {
+  FigureImgPad80,
+  Paragraph,
+  StyledAccordion,
+  StyledTabs,
+  Subtitle,
+} from '../../styles/primitives';
 
 export const VitalSigns = (): React.JSX.Element => {
   const footerInfo = [
@@ -78,7 +84,7 @@ export const VitalSigns = (): React.JSX.Element => {
           signal and assigning all other components as heart rate signals.
         </ProjectParagraph>
         <Figure className="mx-auto text-center">
-          <Figure.Image className="w-100" style={{ width: '100%' }} src={overviewImg} />
+          <Figure.Image className="w-100" src={overviewImg} />
           <Figure.Caption>
             <Paragraph as="span">Overview of the signals&apos; separation pipeline</Paragraph>
           </Figure.Caption>
@@ -139,7 +145,7 @@ export const VitalSigns = (): React.JSX.Element => {
 function SubjectExample(): React.JSX.Element {
   return (
     <Container className="mt-3 mb-3">
-      <Accordion defaultActiveKey="0" style={{ color: 'var(--bs-white)' }}>
+      <StyledAccordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header as="h3">Accelerometer and Gyroscope Signals</Accordion.Header>
           <Accordion.Body className="text-left">
@@ -148,11 +154,7 @@ function SubjectExample(): React.JSX.Element {
               the 3-axis accelerometer. The picture describes those signals in 60 seconds.
             </ProjectParagraph>
             <Figure className="mx-auto  text-center">
-              <Figure.Image
-                className="w-80"
-                style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={signalsImg}
-              />
+              <FigureImgPad80 src={signalsImg} />
               <Figure.Caption>
                 <Paragraph as="span">Accelerometer and Gyroscope Signals</Paragraph>
               </Figure.Caption>
@@ -169,11 +171,7 @@ function SubjectExample(): React.JSX.Element {
               added after the signal identification.
             </ProjectParagraph>
             <Figure className="mx-auto text-center">
-              <Figure.Image
-                className="w-80"
-                style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={componentsImg}
-              />
+              <FigureImgPad80 src={componentsImg} />
               <Figure.Caption>
                 <Paragraph as="span">Resulting components of the ICA process</Paragraph>
               </Figure.Caption>
@@ -194,11 +192,7 @@ function SubjectExample(): React.JSX.Element {
               respiratory rate.
             </ProjectParagraph>
             <Figure className="mx-auto text-center">
-              <Figure.Image
-                className="w-90"
-                style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={correlationImg}
-              />
+              <FigureImgPad80 src={correlationImg} />
               <Figure.Caption>
                 <Paragraph as="span">Independent components correlation with sine wave</Paragraph>
               </Figure.Caption>
@@ -215,11 +209,7 @@ function SubjectExample(): React.JSX.Element {
               it gets precisely the patient&apos;s RR, 21 breaths per minute.
             </ProjectParagraph>
             <Figure className="mx-auto text-center">
-              <Figure.Image
-                className="w-90"
-                style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={respiratoryRateImg}
-              />
+              <FigureImgPad80 src={respiratoryRateImg} />
               <Figure.Caption>
                 <Paragraph as="span">Signal waves for the respiratory rate</Paragraph>
               </Figure.Caption>
@@ -236,18 +226,14 @@ function SubjectExample(): React.JSX.Element {
               three beats below the actual value.
             </ProjectParagraph>
             <Figure className="mx-auto text-center">
-              <Figure.Image
-                className="w-90"
-                style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={heartRateImg}
-              />
+              <FigureImgPad80 src={heartRateImg} />
               <Figure.Caption>
                 <Paragraph as="span">Signal waves for the heart rate</Paragraph>
               </Figure.Caption>
             </Figure>
           </Accordion.Body>
         </Accordion.Item>
-      </Accordion>
+      </StyledAccordion>
     </Container>
   );
 }
@@ -301,7 +287,7 @@ const SignalTabs = (): React.JSX.Element => {
         >
           <Tab eventKey="rr_wave" title="Respiratory Signal" className="w-100 text-left">
             <Figure className="mx-auto text-center mt-4">
-              <Figure.Image className="w-100" style={{ width: '100%' }} src={rrSignalImg} />
+              <Figure.Image className="w-100" src={rrSignalImg} />
               <Figure.Caption>
                 <Paragraph as="span">Respiratory rate identification pipeline</Paragraph>
               </Figure.Caption>
@@ -316,7 +302,7 @@ const SignalTabs = (): React.JSX.Element => {
           </Tab>
           <Tab eventKey="heart_case" title="Heart Signal" className="w-100 text-left">
             <Figure className="mx-auto text-center mt-4">
-              <Figure.Image className="w-100" style={{ width: '100%' }} src={heartSignalImg} />
+              <Figure.Image className="w-100" src={heartSignalImg} />
               <Figure.Caption>
                 <Paragraph as="span">Heart rate identification pipeline</Paragraph>
               </Figure.Caption>
@@ -337,7 +323,7 @@ const SignalTabs = (): React.JSX.Element => {
 
 const AppImagesCarrousel = (): React.JSX.Element => {
   return (
-    <Carousel style={{ width: '100%' }} className="text-center mx-auto mt-3">
+    <Carousel className="w-100 text-center mx-auto mt-3">
       <Carousel.Item>
         <Figure className="mx-auto w-50">
           <Figure.Image src={appImg1} />

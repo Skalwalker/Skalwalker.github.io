@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, Col, Container, Figure, Row, Tab, Table, ListGroup } from 'react-bootstrap';
+import { Accordion, Col, Container, Figure, ListGroup, Row, Tab, Table } from 'react-bootstrap';
 
 import abev3LossImg from '../../assets/images/projects/aurora/ABEV3_LOSS.png';
 import abev3PredImg from '../../assets/images/projects/aurora/ABEV3_pred.png';
@@ -18,12 +18,17 @@ import { ProjectParagraph } from '../../components';
 import { ProjectSection } from '../../components';
 import { projectContent } from '../../content';
 import {
-  Subtitle,
+  FigureImgPad60,
+  FigureImgPad80,
+  FigureImgPad90,
+  PaddedListGroup,
   Paragraph,
   ProperImgSize,
   ProperImgSize2,
   ProperImgSize3,
+  StyledAccordion,
   StyledTabs,
+  Subtitle,
 } from '../../styles/primitives';
 
 export const Hare = (): React.JSX.Element => {
@@ -86,11 +91,7 @@ export const Hare = (): React.JSX.Element => {
           them. The Figure below shows an overview of AURORA&apos;s service and operation.
         </ProjectParagraph>
         <Figure className="mx-auto text-center">
-          <Figure.Image
-            className="w-80"
-            style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-            src={systemImg}
-          />
+          <FigureImgPad80 src={systemImg} />
           <Figure.Caption>
             <Paragraph as="span">
               AURORA&apos;s operational scenario presents the process flow, from data gathering to
@@ -108,7 +109,7 @@ export const Hare = (): React.JSX.Element => {
           following definitions were used:
         </ProjectParagraph>
         <Subtitle as="div">
-          <ListGroup className="w-100 mt-1 mb-3" style={{ padding: '12px' }}>
+          <PaddedListGroup className="w-100 mt-1 mb-3">
             <ListGroup.Item>
               <b>State-Space:</b> Quantity of deallocated money, how much the portfolio is yielding,
               and for each invested asset: the price, prediction, profitability, risk, and amount in
@@ -123,7 +124,7 @@ export const Hare = (): React.JSX.Element => {
               <b>Reward:</b> Profit of a Sale, Stock valorization on holding, Buying penalty
               (because money is being spent), Loss penalty (unprofitable sale).
             </ListGroup.Item>
-          </ListGroup>
+          </PaddedListGroup>
         </Subtitle>
       </ProjectSection>
       <ProjectSection id="method-header" title="Methodology">
@@ -172,11 +173,7 @@ export const Hare = (): React.JSX.Element => {
           average return during the experiments.
         </ProjectParagraph>
         <Figure className="mx-auto text-center">
-          <Figure.Image
-            className="w-80"
-            style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-            src={returnImg}
-          />
+          <FigureImgPad80 src={returnImg} />
           <Figure.Caption>
             <Paragraph as="span">
               Performance evaluation of the average return of portfolio
@@ -202,11 +199,7 @@ export const Hare = (): React.JSX.Element => {
           return of 4.28% with a risk of 80%.
         </ProjectParagraph>
         <Figure className="mx-auto text-center">
-          <Figure.Image
-            className="w-80"
-            style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-            src={fronteiraImg}
-          />
+          <FigureImgPad80 src={fronteiraImg} />
           <Figure.Caption>
             <Paragraph as="span">Portfolio-based efficient frontier</Paragraph>
           </Figure.Caption>
@@ -246,7 +239,7 @@ export const Hare = (): React.JSX.Element => {
 const AuroraModules = (): React.JSX.Element => {
   return (
     <Container className="mt-3 mb-3">
-      <Accordion defaultActiveKey="0" style={{ color: 'var(--bs-white)' }}>
+      <StyledAccordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header as="h3">
             Insiders - Predictor Module for Stock&apos;s Movements
@@ -261,11 +254,7 @@ const AuroraModules = (): React.JSX.Element => {
               indicating that a stock is increasing in value and zero showing a decrease.
             </ProjectParagraph>
             <Figure className="mx-auto  text-center">
-              <Figure.Image
-                className="w-80"
-                style={{ width: '60%', backgroundColor: 'white', padding: '10px' }}
-                src={insiderImg}
-              />
+              <FigureImgPad60 src={insiderImg} />
               <Figure.Caption>
                 <Paragraph as="span">Overview of the Insider module</Paragraph>
               </Figure.Caption>
@@ -290,11 +279,7 @@ const AuroraModules = (): React.JSX.Element => {
               reflect an asset&apos;s present situation in the market.
             </ProjectParagraph>
             <Figure className="mx-auto text-center">
-              <Figure.Image
-                className="w-80"
-                style={{ width: '80%', backgroundColor: 'white', padding: '10px' }}
-                src={rmmImg}
-              />
+              <FigureImgPad80 src={rmmImg} />
               <Figure.Caption>
                 <Paragraph as="span">Risk Management Module</Paragraph>
               </Figure.Caption>
@@ -319,11 +304,7 @@ const AuroraModules = (): React.JSX.Element => {
               money.
             </ProjectParagraph>
             <Figure className="mx-auto text-center">
-              <Figure.Image
-                className="w-90"
-                style={{ width: '90%', backgroundColor: 'white', padding: '10px' }}
-                src={resamImg}
-              />
+              <FigureImgPad90 src={resamImg} />
               <Figure.Caption>
                 <Paragraph as="span">Overview - Resource Allocation Model (ResAM)</Paragraph>
               </Figure.Caption>
@@ -341,7 +322,7 @@ const AuroraModules = (): React.JSX.Element => {
             </ProjectParagraph>
           </Accordion.Body>
         </Accordion.Item>
-      </Accordion>
+      </StyledAccordion>
     </Container>
   );
 };
@@ -495,21 +476,13 @@ const ResultsTabs = (): React.JSX.Element => {
             <Figure className="mx-auto text-center">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <ProperImgSize2
-                    style={{ backgroundColor: 'white' }}
-                    alt="VALE3"
-                    src={vale3PredImg}
-                  />
+                  <ProperImgSize2 alt="VALE3" src={vale3PredImg} />
                   <Figure.Caption>
                     <Paragraph as="span">VALE3</Paragraph>
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
-                    alt="PETR3"
-                    src={petr3PredImg}
-                  />
+                  <ProperImgSize alt="PETR3" src={petr3PredImg} />
                   <Figure.Caption>
                     <Paragraph as="span">PETR3</Paragraph>
                   </Figure.Caption>
@@ -517,7 +490,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
             <Figure className="mx-auto text-center">
-              <ProperImgSize3 style={{ backgroundColor: 'white' }} alt="ABEV3" src={abev3PredImg} />
+              <ProperImgSize3 alt="ABEV3" src={abev3PredImg} />
               <Figure.Caption>
                 <Paragraph as="span">ABEV3</Paragraph>
               </Figure.Caption>
@@ -542,11 +515,7 @@ const ResultsTabs = (): React.JSX.Element => {
             <Figure className="mx-auto text-center">
               <Row className="mx-auto">
                 <Col md={6} sm={12}>
-                  <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
-                    alt="VALE3"
-                    src={vale3LossImg}
-                  />
+                  <ProperImgSize alt="VALE3" src={vale3LossImg} />
                   <Figure.Caption>
                     <Paragraph as="span">
                       VALE3 - Performance evaluation of decision-making process for multiple
@@ -555,11 +524,7 @@ const ResultsTabs = (): React.JSX.Element => {
                   </Figure.Caption>
                 </Col>
                 <Col md={6} sm={12}>
-                  <ProperImgSize
-                    style={{ backgroundColor: 'white' }}
-                    alt="PETR3"
-                    src={petr3LossImg}
-                  />
+                  <ProperImgSize alt="PETR3" src={petr3LossImg} />
                   <Figure.Caption>
                     <Paragraph as="span">
                       PETR3 - Performance evaluation of decision-making process for multiple
@@ -570,7 +535,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
             <Figure className="mx-auto text-center">
-              <ProperImgSize3 style={{ backgroundColor: 'white' }} alt="ABEV3" src={abev3LossImg} />
+              <ProperImgSize3 alt="ABEV3" src={abev3LossImg} />
               <Figure.Caption>
                 <Paragraph as="span">
                   ABEV3 - Performance evaluation of decision-making process for multiple time-steps
