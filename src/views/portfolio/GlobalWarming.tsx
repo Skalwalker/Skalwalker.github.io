@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, Card, Col, Container, Figure, Row, Tab, Tabs } from 'react-bootstrap';
+import { Accordion, Card, Col, Container, Figure, Row, Tab } from 'react-bootstrap';
 import styled from 'styled-components';
 
 import co2DynamicsImg from '../../assets/images/projects/globalwarming/co2_dynamics.png';
@@ -22,9 +22,8 @@ import {
   Paragraph,
   ProperImgSize,
   ProperImgSize3,
+  StyledTabs,
 } from '../../styles/primitives';
-
-import '../../assets/css/tabs.css';
 
 export const GlobalWarming = (): React.JSX.Element => {
   const footerInfo = [
@@ -173,7 +172,7 @@ const ResultsTabs = (): React.JSX.Element => {
   return (
     <Container>
       <Subtitle as="div">
-        <Tabs
+        <StyledTabs
           defaultActiveKey="best_case"
           id="uncontrolled-tab-example"
           className="mt-1 mb-3 w-100"
@@ -317,7 +316,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Figure.Caption>
             </Figure>
           </Tab>
-        </Tabs>
+        </StyledTabs>
       </Subtitle>
     </Container>
   );

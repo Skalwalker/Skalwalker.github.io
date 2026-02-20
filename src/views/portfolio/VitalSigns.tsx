@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, Carousel, Container, Figure, Tab, Table, Tabs } from 'react-bootstrap';
+import { Accordion, Carousel, Container, Figure, Tab, Table } from 'react-bootstrap';
 
 import appImg1 from '../../assets/images/projects/vitalsigns/appimg1.png';
 import appImg2 from '../../assets/images/projects/vitalsigns/appimg2.png';
@@ -15,9 +15,7 @@ import rrSignalImg from '../../assets/images/projects/vitalsigns/rrsignal.png';
 import signalsImg from '../../assets/images/projects/vitalsigns/signals.png';
 import { ProjectPageContainer, ProjectParagraph, ProjectSection } from '../../components';
 import { projectContent } from '../../content';
-import { Subtitle, Paragraph } from '../../styles/primitives';
-
-import '../../assets/css/tabs.css';
+import { Subtitle, Paragraph, StyledTabs } from '../../styles/primitives';
 
 export const VitalSigns = (): React.JSX.Element => {
   const footerInfo = [
@@ -295,7 +293,7 @@ const SignalTabs = (): React.JSX.Element => {
   return (
     <Container>
       <Subtitle as="div">
-        <Tabs
+        <StyledTabs
           defaultActiveKey="rr_wave"
           id="uncontrolled-tab-example"
           className="mt-1 mb-3 w-100"
@@ -331,7 +329,7 @@ const SignalTabs = (): React.JSX.Element => {
               followed the last two steps of the respiratory rate identification.
             </ProjectParagraph>
           </Tab>
-        </Tabs>
+        </StyledTabs>
       </Subtitle>
     </Container>
   );

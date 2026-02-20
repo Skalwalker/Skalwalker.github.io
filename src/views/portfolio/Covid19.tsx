@@ -9,7 +9,6 @@ import {
   Row,
   Tab,
   Table,
-  Tabs,
 } from 'react-bootstrap';
 
 import imgCnnCoswaraCm from '../../assets/images/projects/covid19/cnn_coswara_cm.png';
@@ -35,9 +34,8 @@ import {
   Paragraph,
   ProperImgSize,
   ProperImgSize2,
+  StyledTabs,
 } from '../../styles/primitives';
-
-import '../../assets/css/tabs.css';
 
 const FeaturesAccordion = (): React.JSX.Element => {
   return (
@@ -150,7 +148,7 @@ const ResultSVMTabs = (): React.JSX.Element => {
   return (
     <Container>
       <Subtitle as="div">
-        <Tabs
+        <StyledTabs
           defaultActiveKey="coswara"
           id="uncontrolled-tab-example"
           className="mt-1 mb-3 w-100"
@@ -208,7 +206,7 @@ const ResultSVMTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
           </Tab>
-        </Tabs>
+        </StyledTabs>
       </Subtitle>
     </Container>
   );
@@ -218,7 +216,7 @@ const ResultCNNTabs = (): React.JSX.Element => {
   return (
     <Container>
       <Subtitle as="div">
-        <Tabs
+        <StyledTabs
           defaultActiveKey="coswara"
           id="uncontrolled-tab-example"
           className="mt-1 mb-3 w-100"
@@ -276,7 +274,7 @@ const ResultCNNTabs = (): React.JSX.Element => {
               </Row>
             </Figure>
           </Tab>
-        </Tabs>
+        </StyledTabs>
       </Subtitle>
     </Container>
   );

@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-  Accordion,
-  Col,
-  Container,
-  Figure,
-  Row,
-  Tab,
-  Table,
-  Tabs,
-  ListGroup,
-} from 'react-bootstrap';
+import { Accordion, Col, Container, Figure, Row, Tab, Table, ListGroup } from 'react-bootstrap';
 
 import abev3LossImg from '../../assets/images/projects/aurora/ABEV3_LOSS.png';
 import abev3PredImg from '../../assets/images/projects/aurora/ABEV3_pred.png';
@@ -33,9 +23,8 @@ import {
   ProperImgSize,
   ProperImgSize2,
   ProperImgSize3,
+  StyledTabs,
 } from '../../styles/primitives';
-
-import '../../assets/css/tabs.css';
 
 export const Hare = (): React.JSX.Element => {
   const footerInfo = [
@@ -486,7 +475,7 @@ const ResultsTabs = (): React.JSX.Element => {
   return (
     <Container>
       <Subtitle as="div">
-        <Tabs
+        <StyledTabs
           defaultActiveKey="best_case"
           id="uncontrolled-tab-example"
           className="mt-1 mb-3 w-100"
@@ -589,7 +578,7 @@ const ResultsTabs = (): React.JSX.Element => {
               </Figure.Caption>
             </Figure>
           </Tab>
-        </Tabs>
+        </StyledTabs>
       </Subtitle>
     </Container>
   );

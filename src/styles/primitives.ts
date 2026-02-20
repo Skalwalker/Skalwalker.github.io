@@ -4,7 +4,7 @@
  * Import from here instead of adding one-off className or style={{}}.
  */
 
-import { Figure } from 'react-bootstrap';
+import { Figure, Tabs } from 'react-bootstrap';
 import styled, { keyframes } from 'styled-components';
 
 import { alpha, colors } from './theme';
@@ -188,4 +188,16 @@ export const TopProjectText = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
+`;
+
+// ─── Tabs ────────────────────────────────────────────────────────────────────
+
+/**
+ * Ensures .tab-content fills 100% width inside project-page Tabs.
+ * Replaces tabs.css. Used in Covid19, GlobalWarming, Hare, VitalSigns.
+ */
+export const StyledTabs = styled(Tabs)`
+  .tab-content {
+    width: 100%;
+  }
 `;
