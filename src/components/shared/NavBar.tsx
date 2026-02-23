@@ -52,10 +52,10 @@ export const NavBar = (): React.JSX.Element => {
           </NavLink>
           <NavLink
             className="nav-link"
-            to="/achivements"
+            to="/achievements"
             style={({ isActive }) => (isActive ? buttonActive : {})}
           >
-            Achivements
+            Achievements
           </NavLink>
         </Nav>
       </Navbar.Collapse>

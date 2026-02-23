@@ -27,7 +27,7 @@ export const NavRouter = (): React.JSX.Element => {
         <Route path="skills" element={<Skills />} />
       </Route>
       <Route path="/experience" element={<Experience />} />
-      <Route path="/achivements" element={<AchievementView />} />
+      <Route path="/achievements" element={<AchievementView />} />
       <Route path="/publications" element={<Publications />} />
       <Route path="/projects">
         <Route index element={<Projects />} />

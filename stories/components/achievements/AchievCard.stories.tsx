@@ -4,7 +4,8 @@ import { AchievCard } from '../../../src/components/achievements/AchievCard';
 import { achievList } from '../../../src/content';
 
 const iconOptions = Array.from(new Set(achievList.map((item) => item.img)));
-const defaultAchievement = achievList[0];
+const unlockedAchievement = achievList.find((item) => !item.locked) ?? achievList[0];
+const lockedAchievement = achievList.find((item) => item.locked) ?? achievList[0];
 
 const meta: Meta<typeof AchievCard> = {
   title: 'Achievements/AchievCard',
@@ -19,10 +20,10 @@ const meta: Meta<typeof AchievCard> = {
     },
   },
   args: {
-    title: defaultAchievement.title,
-    date: defaultAchievement.earned,
-    img: defaultAchievement.img,
-    locked: defaultAchievement.locked,
+    title: unlockedAchievement.title,
+    date: unlockedAchievement.earned,
+    img: unlockedAchievement.img,
+    locked: unlockedAchievement.locked,
   },
 };
 
@@ -30,4 +31,13 @@ export default meta;
 
 type Story = StoryObj<typeof AchievCard>;
 
-export const Default: Story = {};
+export const Unlocked: Story = {};
+
+export const Locked: Story = {
+  args: {
+    title: lockedAchievement.title,
+    date: lockedAchievement.earned,
+    img: lockedAchievement.img,
+    locked: true,
+  },
+};
