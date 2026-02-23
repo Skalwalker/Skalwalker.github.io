@@ -20,7 +20,7 @@ const withMemoryRouter: Decorator = (fn, context): JSX.Element => {
 };
 
 const preview: Preview = {
-  tags: ['autodocs'],
+  tags: ['autodocs', 'a11y'],
   decorators: [withMemoryRouter],
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, within } from 'storybook/test';
 
 import { PaperCard } from '../../../src/components/papers/PaperCard';
 
@@ -26,7 +27,14 @@ export default meta;
 
 type Story = StoryObj<typeof PaperCard>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    const link = canvas.getByRole('link');
+    await expect(link).toHaveAttribute('href', args.url);
+    await expect(link).toHaveAttribute('target', '_blank');
+  },
+};
 
 export const LongTitle: Story = {
   args: {

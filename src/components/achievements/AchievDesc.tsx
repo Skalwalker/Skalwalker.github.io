@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Image } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
 import { AchievementContent } from './types';
@@ -19,9 +19,6 @@ export const AchievDesc = ({ content }: AchievementDescProps): React.JSX.Element
       </Row>
       <Row className="text-start">
         <Paragraph>{content.desc}</Paragraph>
-      </Row>
-      <Row>
-        <Image></Image>
       </Row>
     </div>
   );

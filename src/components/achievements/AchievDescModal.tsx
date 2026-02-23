@@ -9,7 +9,7 @@ export const AchievDescModal = ({
   callback,
 }: AchievementModalProps): React.JSX.Element => {
   return (
-    <Modal className="d-lg-none" onHide={callback} centered>
+    <Modal show className="d-lg-none" onHide={callback} centered>
       <Modal.Header closeButton>
         <Modal.Title>
           <SubtitleBold as="span">{content.title}</SubtitleBold>

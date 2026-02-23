@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from 'storybook/test';
+import { expect, fn, userEvent, within } from 'storybook/test';
 
 import { AchievDescModal } from '../../../src/components/achievements/AchievDescModal';
 import { achievList } from '../../../src/content';
@@ -23,4 +23,15 @@ export default meta;
 
 type Story = StoryObj<typeof AchievDescModal>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    viewport: { defaultViewport: 'mobile' },
+  },
+  play: async ({ args }) => {
+    const body = within(document.body);
+    await expect(body.getByText(achievList[0].title)).toBeInTheDocument();
+    await expect(body.getByText(achievList[0].desc)).toBeInTheDocument();
+    await userEvent.click(body.getByRole('button', { name: /close/i, hidden: true }));
+    await expect(args.callback).toHaveBeenCalledOnce();
+  },
+};
