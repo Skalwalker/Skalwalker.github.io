@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from 'storybook/test';
 
 import { AchievDescModal } from '../../../src/components/achievements/AchievDescModal';
 import { achievList } from '../../../src/content';
@@ -9,9 +10,12 @@ const meta: Meta<typeof AchievDescModal> = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    callback: { description: 'Called when the modal is dismissed' },
+  },
   args: {
     content: achievList[0],
-    callback: (): void => undefined,
+    callback: fn(),
   },
 };
 
