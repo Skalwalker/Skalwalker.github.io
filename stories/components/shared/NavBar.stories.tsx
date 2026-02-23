@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import type { JSX } from 'react';
-import { MemoryRouter } from 'react-router';
 
 import { NavBar } from '../../../src/components/shared/NavBar';
 
@@ -9,6 +7,7 @@ const meta: Meta<typeof NavBar> = {
   component: NavBar,
   parameters: {
     layout: 'fullscreen',
+    memoryRouter: { initialEntries: ['/projects'] },
   },
 };
 
@@ -16,10 +15,4 @@ export default meta;
 
 type Story = StoryObj<typeof NavBar>;
 
-export const Default: Story = {
-  render: (): JSX.Element => (
-    <MemoryRouter initialEntries={['/projects']}>
-      <NavBar />
-    </MemoryRouter>
-  ),
-};
+export const Default: Story = {};

@@ -1,9 +1,27 @@
-import type { Preview } from '@storybook/react';
+import type { Decorator, Preview } from '@storybook/react';
+import type { JSX } from 'react';
+import { MemoryRouter } from 'react-router';
 import '../src/assets/css/theme.scss';
 import './preview.css';
 
+interface MemoryRouterParameters {
+  initialEntries?: string[];
+}
+
+const withMemoryRouter: Decorator = (fn, context): JSX.Element => {
+  const Story = fn;
+  const routerParams = context.parameters.memoryRouter as MemoryRouterParameters | undefined;
+  const initialEntries = routerParams?.initialEntries ?? ['/'];
+  return (
+    <MemoryRouter initialEntries={initialEntries}>
+      <Story />
+    </MemoryRouter>
+  );
+};
+
 const preview: Preview = {
   tags: ['autodocs'],
+  decorators: [withMemoryRouter],
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {

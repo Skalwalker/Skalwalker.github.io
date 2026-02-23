@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import type { JSX } from 'react';
-import { MemoryRouter } from 'react-router';
 
 import { ProjectCard } from '../../../src/components/projects/ProjectCard';
 import type { ProjectCardInfo } from '../../../src/components/projects/types';
@@ -41,11 +39,6 @@ export const Internal: Story = {
   args: {
     project: internalProject,
   },
-  render: (args): JSX.Element => (
-    <MemoryRouter>
-      <ProjectCard {...args} />
-    </MemoryRouter>
-  ),
 };
 
 export const External: Story = {
