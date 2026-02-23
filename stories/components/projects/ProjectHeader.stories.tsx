@@ -30,10 +30,33 @@ export default meta;
 
 type Story = StoryObj<typeof ProjectHeader>;
 
-export const Default: Story = {
-  render: (args): JSX.Element => (
-    <Row className="align-items-center">
-      <ProjectHeader {...args} />
-    </Row>
-  ),
+const withRow = (args: { project: ProjectInfo }): JSX.Element => (
+  <Row className="align-items-center">
+    <ProjectHeader {...args} />
+  </Row>
+);
+
+export const WithBothLinks: Story = {
+  render: withRow,
+};
+
+export const CodeOnly: Story = {
+  args: {
+    project: { ...sampleProject, paperUrl: '' },
+  },
+  render: withRow,
+};
+
+export const PaperOnly: Story = {
+  args: {
+    project: { ...sampleProject, codeUrl: '' },
+  },
+  render: withRow,
+};
+
+export const NoLinks: Story = {
+  args: {
+    project: { ...sampleProject, codeUrl: '', paperUrl: '' },
+  },
+  render: withRow,
 };
