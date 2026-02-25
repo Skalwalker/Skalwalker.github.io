@@ -107,7 +107,7 @@ export const AchievCard = ({ title, date, img, locked }: AchievCardProps): React
 const AchievCardContainer = styled(Card)<{ $locked: boolean }>`
   height: 4.65rem;
   min-width: 270px;
-  opacity: ${({ $locked }): string => ($locked ? '0.5' : '1.0')};
+  opacity: ${({ $locked }): string => ($locked ? '0.7' : '1.0')};
 `;
 
 const IconCol = styled(Col)`

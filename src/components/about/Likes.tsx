@@ -32,6 +32,8 @@ export const Likes = (): React.JSX.Element => {
                 >
                   <LikeIconWrapper
                     className="m-auto"
+                    role="img"
+                    aria-label={likeIcon.title}
                     onMouseEnter={() => {
                       setShownText(likeIcon.title);
                     }}

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 export const BackButton = (): React.JSX.Element => {
   return (
     <div>
-      <BackButtonStyled variant="outline-light" className="float-start">
+      <BackButtonStyled variant="outline-light" className="float-start" aria-label="Go back">
         <BiLeftArrowAlt className="mx-auto my-auto" color={'white'} size={25} />
       </BackButtonStyled>
     </div>

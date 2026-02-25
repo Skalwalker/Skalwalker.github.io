@@ -26,11 +26,11 @@ export const ExperienceTimeline = (): React.JSX.Element => (
           <Subtitle as="h3" className="mb-0">
             <b>{experience.title}</b>
           </Subtitle>
-          <Subtitle as="h5" className="mt-1">
+          <Subtitle as="h4" className="mt-1">
             {experience.company}
           </Subtitle>
           {experience.description !== '' && (
-            <PreLineParagraph as="h6" className="mt-4">
+            <PreLineParagraph as="h5" className="mt-4">
               {experience.description}
             </PreLineParagraph>
           )}

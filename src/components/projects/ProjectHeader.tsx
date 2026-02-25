@@ -59,7 +59,7 @@ export const ProjectHeader = ({ project }: ProjectHeaderProps): React.JSX.Elemen
       </Row>
     </Col>
     <Col className="ps-2 pe-2 ps-md-5 pe-md-0 my-auto mt-5 mt-xl-0" xl={4} md={5}>
-      <ProjectBannerImage className="w-100" src={project.banner} />
+      <ProjectBannerImage className="w-100" src={project.banner} alt={`${project.title} banner`} />
     </Col>
   </>
 );

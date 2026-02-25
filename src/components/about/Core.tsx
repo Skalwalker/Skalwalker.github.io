@@ -18,7 +18,12 @@ export const Core = (): React.JSX.Element => {
             <CoreParagraph>{coreContent.coreText}</CoreParagraph>
           </Col>
           <Col md={12} className="">
-            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/rk_nobre/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/rk_nobre/"
+              aria-label="Instagram"
+            >
               <FaInstagram
                 color="#60D7F9"
                 className="d-inline-block float-end ms-2"
@@ -29,6 +34,7 @@ export const Core = (): React.JSX.Element => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/rk-nobre/"
+              aria-label="LinkedIn"
             >
               <FaLinkedin
                 color="#60D7F9"
@@ -36,14 +42,24 @@ export const Core = (): React.JSX.Element => {
                 size="40"
               ></FaLinkedin>
             </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/Skalwalker">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Skalwalker"
+              aria-label="GitHub"
+            >
               <FaGithub
                 color="#60D7F9"
                 className="d-inline-block float-end ms-2"
                 size="40"
               ></FaGithub>
             </a>
-            <a target="_blank" rel="noopener noreferrer" href="mailto: rekanobre@gmail.com">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto: rekanobre@gmail.com"
+              aria-label="Email"
+            >
               <GrMail color="#60D7F9" className="d-inline-block float-end ms-2" size="40"></GrMail>
             </a>
           </Col>

@@ -57,6 +57,6 @@ export const Locked: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await expect(canvas.getByText('Achievement Locked')).toBeInTheDocument();
-    await expect(getCardOpacity(canvasElement)).toBe('0.5');
+    await expect(getCardOpacity(canvasElement)).toBe('0.7');
   },
 };

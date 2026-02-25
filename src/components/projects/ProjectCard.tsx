@@ -8,7 +8,7 @@ import { SubtitleBold, Subtitle, Paragraph, StyledCard } from '../../styles';
 
 const ProjectCardContent = ({ project }: { project: ProjectCardInfo }): React.JSX.Element => (
   <ProjectCardContainer className="ms-auto me-auto click_cards">
-    <ProjectCardImage variant="top" src={project.banner} />
+    <ProjectCardImage variant="top" src={project.banner} alt={`${project.title} preview`} />
     <Card.Body>
       <Card.Title className="mb-1">
         <SubtitleBold as="span">{project.title}</SubtitleBold>

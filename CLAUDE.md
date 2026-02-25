@@ -12,15 +12,17 @@ Personal portfolio website for Renato Avellar Nobre, built with React and TypeSc
 npm start            # Development server at localhost:3000
 npm run build        # Production build to /build
 npm run deploy       # Build and deploy to GitHub Pages (runs release first)
-npm run release      # Full pre-release check: typecheck + lint + format:check + build
+npm run release      # Full pre-release check: typecheck + lint + format:check + build + test
+npm run test         # Run Storybook interaction + a11y tests via Vitest (browser mode, Playwright)
 npm run lint         # Run ESLint
 npm run lint:fix     # Run ESLint with auto-fix
 npm run format       # Format code with Prettier
 npm run format:check # Check formatting without modifying
 npm run typecheck    # TypeScript type checking only (tsc -b)
+npm run storybook    # Start Storybook dev server on port 6006
 ```
 
-**Workflow:** Before committing, always run `npm run release` to catch type errors, lint violations, and formatting issues. Use `npm run lint:fix` and `npm run format` to auto-fix issues, then re-run `npm run release` to confirm clean.
+**Workflow:** Before committing, always run `npm run release` to catch type errors, lint violations, formatting issues, and test failures. Use `npm run lint:fix` and `npm run format` to auto-fix issues, then re-run `npm run release` to confirm clean.
 
 ## Architecture
 
@@ -34,6 +36,10 @@ npm run typecheck    # TypeScript type checking only (tsc -b)
 - `src/routes.tsx` - All route definitions with React Router
 - `src/App.tsx` - Root component with splash screen logic
 - `public/` - Static assets including project preview images
+- `stories/` - Storybook stories organized by feature, mirroring `src/components/` structure
+- `.storybook/` - Storybook configuration (main.tsx, preview.tsx, vitest.setup.ts)
+
+**Testing:** Storybook-driven testing via `@storybook/addon-vitest` running in Playwright browser mode. Stories in `stories/` can include `play` functions for interaction tests (using `storybook/test` utilities: `expect`, `within`, `userEvent`, `fn`). Accessibility tests run automatically on all stories via the `a11y` tag set in preview.tsx. Config lives in `vite.config.ts` under `test.projects[0]` (project name: `storybook`).
 
 **Routing:** Root (`/`) redirects to `/about`. About section has nested routes for Core, Likes, and Skills. Projects section has individual pages for each project (covid_19, aurora, global_warming, ecosampling, vital_signs).
 

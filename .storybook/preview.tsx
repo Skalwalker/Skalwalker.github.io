@@ -23,6 +23,7 @@ const preview: Preview = {
   tags: ['autodocs', 'a11y'],
   decorators: [withMemoryRouter],
   parameters: {
+    a11y: { test: 'error' },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {

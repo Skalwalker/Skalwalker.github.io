@@ -37,6 +37,7 @@ export const ScrollButton = (): React.JSX.Element => {
         className="float-end"
         onClick={scrollToTop}
         $visible={visible}
+        aria-label="Scroll to top"
       >
         <BiUpArrowAlt className="mx-auto my-auto" color={'white'} size={35} />
       </ScrollButtonStyled>

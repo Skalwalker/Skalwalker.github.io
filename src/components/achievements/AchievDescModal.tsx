@@ -9,9 +9,15 @@ export const AchievDescModal = ({
   callback,
 }: AchievementModalProps): React.JSX.Element => {
   return (
-    <Modal show className="d-lg-none" onHide={callback} centered>
+    <Modal
+      show
+      className="d-lg-none"
+      onHide={callback}
+      centered
+      aria-labelledby="achiev-modal-title"
+    >
       <Modal.Header closeButton>
-        <Modal.Title>
+        <Modal.Title id="achiev-modal-title">
           <SubtitleBold as="span">{content.title}</SubtitleBold>
         </Modal.Title>
       </Modal.Header>
