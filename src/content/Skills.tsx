@@ -109,14 +109,6 @@ export const skills: SkillContent[] = [
     desc: 'Led frontend development at Amazon\nusing React and TypeScript.\nCreated 20+ shared components\nfor a multi-market planning platform.',
   },
   {
-    title: 'Node.js',
-    years: 3,
-    projects: 4,
-    selfEval: 7,
-    group: 3,
-    desc: 'Runtime for serverless backend\nservices on AWS Lambda.\nUsed across multiple microservices\nat Amazon.',
-  },
-  {
     title: 'FastAPI',
     years: 2,
     projects: 2,
