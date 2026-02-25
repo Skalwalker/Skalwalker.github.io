@@ -13,7 +13,7 @@ interface CoreType {
 export const coreContent: CoreType = {
   profileImg: profileImg,
   coreText:
-    'I am a Software Developer Engineer at Amazon and a passionate data scientist. Passionate about Reinforcement Learning and Deep Learning methods for solving social-environmental problems. I am also highly motivated by research activities, where I have participated in publishing five papers. I have also developed diverse practical projects with multiple technical skills. Beyond my work, I am an excellent cook, I love playing games, and I am learning to play the piano.',
+    'I am a full-stack software engineer working across React/TypeScript frontends, serverless APIs, and data engineering pipelines on AWS. Currently at Amazon in Luxembourg, I build and own features end-to-end on an internal capacity planning platform used across multiple global markets. I also have a research background in AI and autonomous systems, with five peer-reviewed publications in reinforcement learning, deep learning, and agent-based modeling. Beyond my work, I am an excellent cook, I love playing games, and I am learning to play the piano.',
 };
 
 export const likeContent: LikeType[] = [

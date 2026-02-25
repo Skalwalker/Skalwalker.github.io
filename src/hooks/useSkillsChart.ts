@@ -8,6 +8,7 @@ interface SkillNode extends d3.SimulationNodeDatum {
   name: string;
   group: number;
   size: number;
+  desc?: string;
 }
 
 const MOBILE_SCALE_FACTOR = 1.3;
@@ -27,24 +28,48 @@ export const useSkillsChart = (): RefObject<HTMLDivElement | null> => {
 
       const scaleFactor = isMobile ? MOBILE_SCALE_FACTOR : 1;
       const strokeWidth = isMobile ? 3 : 4;
+      const baseSize = isMobile ? 1 : 3;
 
       const skillData: SkillNode[] = skills.map((skill) => ({
         name: skill.title,
         group: skill.group,
-        size: skill.linkedin + skill.years + skill.projects + skill.selfEval,
+        size: baseSize + skill.years + skill.projects + skill.selfEval,
+        desc: skill.desc,
       }));
+
+      d3.select(container).selectAll('.skill-tooltip').remove();
+      const tooltip = d3
+        .select(container)
+        .append('div')
+        .attr('class', 'skill-tooltip')
+        .style('position', 'absolute')
+        .style('pointer-events', 'none')
+        .style('color', 'white')
+        .style('padding', '10px 14px')
+        .style('border-radius', '8px')
+        .style('font-size', '13px')
+        .style('font-family', '"objektiv-mk1", sans-serif')
+        .style('font-weight', '200')
+        .style('line-height', '1.5')
+        .style('white-space', 'pre-line')
+        .style('max-width', '220px')
+        .style('opacity', 0)
+        .style('transition', 'opacity 0.15s ease')
+        .style('z-index', '10');
+
+      let isDragging = false;
 
       const svg = d3.select(container).append('svg').attr('width', width).attr('height', height);
 
       const x = d3
         .scaleOrdinal<number, number>()
-        .domain([1, 2, 4, 3])
-        .range([0.3 * width, 0.5 * width, 0.7 * width, 0.9 * width]);
+        .domain([1, 2, 3, 4])
+        .range([0.2 * width, 0.4 * width, 0.6 * width, 0.8 * width]);
 
       const color = d3
         .scaleOrdinal<number, string>()
-        .domain([2, 4, 1, 3])
-        .range(['#ff30d6', '#FF6E27', '#60D7F9', '#FFFFFF']);
+        .domain([1, 2, 3, 4])
+        .range(['#60D7F9', '#ff30d6', '#FFFFFF', '#FF6E27']);
 
       const g = svg.append('g').attr('class', 'everything');
       const nodesGroup = g.append('g').attr('class', 'nodes');
@@ -119,10 +144,73 @@ export const useSkillsChart = (): RefObject<HTMLDivElement | null> => {
 
       simulationRef.current = simulation;
 
+      const showTooltip = (_event: MouseEvent | TouchEvent, d: SkillNode): void => {
+        if (isDragging || d.desc === undefined) return;
+        const bubbleX = d.x ?? 0;
+        const bubbleY = d.y ?? 0;
+        const radius = (d.size * 3 > 40 ? d.size * 3 : 40) / scaleFactor;
+        const gap = 8;
+        const tooltipColor = d3
+          .scaleOrdinal<number, string>()
+          .domain([1, 2, 3, 4])
+          .range(['#5595B4', '#A73698', '#B7B8BC', '#A9522B']);
+        const tooltipBg = tooltipColor(d.group);
+        const textColor = d.group === 3 ? '#1a1a1a' : 'white';
+        tooltip
+          .html(d.desc)
+          .style('background', tooltipBg)
+          .style('color', textColor)
+          .style('opacity', 1);
+
+        const tooltipNode = tooltip.node();
+        if (tooltipNode === null) return;
+        const tooltipRect = tooltipNode.getBoundingClientRect();
+        const tw = tooltipRect.width;
+        const th = tooltipRect.height;
+
+        let tooltipX = bubbleX - tw / 2;
+        let tooltipY = bubbleY + radius + gap;
+
+        if (tooltipY + th > height) {
+          tooltipY = bubbleY - radius - gap - th;
+        }
+
+        if (tooltipX + tw > width) {
+          tooltipX = bubbleX + radius + gap;
+          tooltipY = bubbleY - th / 2;
+        }
+
+        if (tooltipX < 0) {
+          tooltipX = bubbleX + radius + gap;
+          tooltipY = bubbleY - th / 2;
+        }
+
+        tooltip.style('left', `${String(tooltipX)}px`).style('top', `${String(tooltipY)}px`);
+      };
+
+      const hideTooltip = (): void => {
+        tooltip.style('opacity', 0);
+      };
+
+      node
+        .on('mouseenter', (event: MouseEvent, d: SkillNode) => {
+          showTooltip(event, d);
+        })
+        .on('mouseleave', hideTooltip);
+
+      if (isMobile) {
+        node.on('touchstart', (event: TouchEvent, d: SkillNode) => {
+          showTooltip(event, d);
+        });
+        node.on('touchend', hideTooltip);
+      }
+
       const dragStarted = (
         event: d3.D3DragEvent<SVGGElement, SkillNode, SkillNode>,
         d: SkillNode
       ): void => {
+        isDragging = true;
+        hideTooltip();
         if (event.active === 0) simulation.alphaTarget(0.03).restart();
         d.fx = d.x;
         d.fy = d.y;
@@ -140,6 +228,7 @@ export const useSkillsChart = (): RefObject<HTMLDivElement | null> => {
         event: d3.D3DragEvent<SVGGElement, SkillNode, SkillNode>,
         d: SkillNode
       ): void => {
+        isDragging = false;
         if (event.active === 0) simulation.alphaTarget(0.03);
         d.fx = null;
         d.fy = null;

@@ -28,6 +28,7 @@ const AboutSkillsCol = styled(Col)`
 `;
 
 const SkillsChartContainer = styled.div`
+  position: relative;
   margin: 10px;
   height: 60vh;
   width: 100%;

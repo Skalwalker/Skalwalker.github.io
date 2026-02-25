@@ -23,7 +23,8 @@ export const experienceContent: ExperienceContent[] = [
     startYear: '2024',
     endYear: 'Present',
     company: 'Amazon',
-    description: 'Software Developer Engineer for Amazon Logistics in Luxembourg.',
+    description:
+      'Building and owning features end-to-end on a capacity planning platform used across multiple global markets. Work spans React/TypeScript frontends, serverless microservices (Lambda, Step Functions, API Gateway), and data pipelines (Glue) on AWS.',
   },
   {
     type: 'work',
@@ -31,7 +32,8 @@ export const experienceContent: ExperienceContent[] = [
     startYear: '2023',
     endYear: '2024',
     company: 'Amazon',
-    description: 'Data Engineer Intern for Amazon Logistics in Italy.',
+    description:
+      'Built and deployed ETL data pipelines for a capacity planning automation system using PySpark, AWS Glue, and S3. Designed a data validation framework and provisioned cloud infrastructure (CDK, CloudFormation, EventBridge).',
     button: [
       {
         btnLink:
@@ -44,9 +46,10 @@ export const experienceContent: ExperienceContent[] = [
     type: 'edu',
     title: 'M.Sc. in Computer Science',
     startYear: '2021',
-    endYear: '2023',
+    endYear: '2025',
     company: 'Università degli Studi di Milano',
-    description: 'Current GPA: 28 out of a 30 scale',
+    description:
+      'Graduated 110/110 cum laude (highest distinction). Thesis: Simulating Global Warming by Descriptive and Predictive Models — integrating agent-based modeling and system dynamics to evaluate climate mitigation strategies.',
   },
   {
     type: 'work',
@@ -89,7 +92,7 @@ export const experienceContent: ExperienceContent[] = [
     endYear: '2022',
     company: 'Stefanini Brasil',
     description:
-      'Developed Machine Learning solutions for the customer Banco do Brasil, the 2nd biggest bank in the country. We used Deep Learning, Clustering, and Natural Language Processing techniques to improve services and efficiency.',
+      'Developed ML solutions for Banco do Brasil, the second-largest bank in Brazil. Built a customer segmentation pipeline using autoencoders (TensorFlow) powering personalized experiences for 23 million app users, and an NLP classification model (scikit-learn, HuggingFace) for regulatory document analysis.',
   },
   {
     type: 'work',
@@ -98,7 +101,7 @@ export const experienceContent: ExperienceContent[] = [
     endYear: '2021',
     company: 'Department of Computer Science, University of Brasilia',
     description:
-      'Responsible for developing a product to extract structured information from the official government newsletter. The project demanded knowledge in extract information in PDF format and textual pattern recognition. Technologies included Python, Agile Methodology, Tesseract OCR Engine, Docker, and multiple others.',
+      'Developed a document extraction software to parse and categorize government proceedings from the Federal District official gazette, supporting government transparency and public resource auditability. Built an OCR-based layer using Tesseract to digitize unstructured PDF publications.',
     button: [
       {
         btnLink: 'https://nido.unb.br/',
@@ -113,7 +116,7 @@ export const experienceContent: ExperienceContent[] = [
     endYear: '2020',
     company: 'University of Brasília (UnB)',
     description:
-      'Relevant Coursework: Introduction to Artificial Intelligence, Principles of Computational Vision, Fundamentals of Intelligent Systems, Linear Algebra, Probability & Statistics, Databases.',
+      'Thesis on autonomous agent-oriented trading systems using supervised and deep reinforcement learning, later published in Neural Computing and Applications.',
     button: [
       {
         btnLink:
@@ -163,7 +166,7 @@ export const experienceContent: ExperienceContent[] = [
     endYear: '2018',
     company: 'iLevel Tecnologia (Startup Company)',
     description:
-      'Developed the first iOS version for the MediPreço app. MediPreço allows the user to know the best prices for medicine from nearby drugstores in a simple and practical way.',
+      'Designed and developed the first iOS version of MediPreço (Swift, Xcode), a mobile app enabling users to locate nearby drugstores, compare medicine prices, and find the best deals in their area.',
     button: [
       {
         btnLink: 'https://portal.medipreco.com.br/#/para-voce',
@@ -213,7 +216,7 @@ export const experienceContent: ExperienceContent[] = [
     endYear: '2017',
     company: 'Synergia Consultoria Socioambiental',
     description:
-      'Automation of spreadsheets in the project to survey the damages from the Bento Rodrigues dam disaster. The project was responsible for guaranteeing a social pact with the affected families, complementing and integrating several studies.',
+      'Developed Excel VBA automation to streamline damage data collection and reporting for affected families following the Bento Rodrigues dam disaster, enabling structured compensation requests as part of a broader social reparation effort.',
   },
   {
     type: 'edu',
