@@ -24,7 +24,7 @@ const TagFilterBar: React.FC<{
 }> = ({ tags, isTagActive, onToggle }) => (
   <Row>
     <Col xl={4}>
-      <Subtitle as="h1">Newest</Subtitle>
+      <Subtitle as="h1">Latest</Subtitle>
     </Col>
     {tags.map((name) => (
       <TagFilterCol xl={2} key={name} className="d-grid mb-2">

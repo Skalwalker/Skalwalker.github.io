@@ -38,7 +38,7 @@ export const Publications = (): JSX.Element => {
         <Col>
           <Row>
             <Col lg={6}>
-              <Subtitle as="h1">Newest</Subtitle>
+              <Subtitle as="h1">Latest</Subtitle>
             </Col>
             {tags.map((name) => (
               <TagFilterCol key={name} lg={2} className="d-grid mb-2">
